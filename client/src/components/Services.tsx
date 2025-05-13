@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import eliminacionVello from "../assets/images/eliminacion_vello.png";
+import micropigmentacion from "../assets/images/micropigmentacion3.jpg";
 
 const services = [
   {
@@ -23,16 +25,16 @@ const services = [
     title: "Eliminación del Vello",
     description: "Disfruta de una piel suave y libre de vello con nuestros métodos efectivos, seguros y de larga duración.",
     price: "Desde 35€",
-    image: "/images/depilacion.png",
-    alt: "Eliminación del vello"
+    image: eliminacionVello,
+    alt: "Eliminación del vello con láser"
   },
   {
     id: 4,
     title: "Micropigmentación",
     description: "Realza tus rasgos naturales con técnicas de pigmentación semi-permanente para cejas, labios y ojos.",
     price: "Desde 150€",
-    image: "/images/micropigmentacion.png",
-    alt: "Micropigmentación"
+    image: micropigmentacion,
+    alt: "Micropigmentación profesional"
   },
   {
     id: 5,
