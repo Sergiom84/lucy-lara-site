@@ -1,9 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* Custom fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 :root {
   /* Light theme colors */
@@ -17,11 +16,11 @@
   --card-foreground: 20 14.3% 4.1%;
   --border: 20 5.9% 90%;
   --input: 20 5.9% 90%;
-  --primary: 340 80% 87%;  /* Brand pink #f8c9d4 */
-  --primary-foreground: 355 30% 15%;
+  --primary: 328 48% 34%;  /* Brand burgundy #8b2154 */
+  --primary-foreground: 0 0% 100%;
   --secondary: 175 35% 74%;  /* Brand teal #a4d6d1 */
   --secondary-foreground: 175 50% 15%;
-  --accent: 335 70% 70%;  /* Brand accent pink #e77ea8 */
+  --accent: 328 48% 34%;  /* Brand accent burgundy #8b2154 */
   --accent-foreground: 0 0% 100%;
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 60 9.1% 97.8%;
@@ -126,11 +125,11 @@
 /* Brand specific utility classes */
 @layer utilities {
   .bg-primary {
-    @apply bg-[#f8c9d4];
+    @apply bg-[#8b2154];
   }
   
   .bg-primary-dark {
-    @apply bg-[#e5b6c1];
+    @apply bg-[#6d1a43];
   }
   
   .bg-secondary {
@@ -142,11 +141,11 @@
   }
   
   .bg-accent {
-    @apply bg-[#e77ea8];
+    @apply bg-[#8b2154];
   }
   
   .bg-accent-dark {
-    @apply bg-[#d46a94];
+    @apply bg-[#6d1a43];
   }
   
   .bg-neutral {
@@ -158,6 +157,6 @@
   }
   
   .text-accent {
-    @apply text-[#e77ea8];
+    @apply text-[#8b2154];
   }
 }

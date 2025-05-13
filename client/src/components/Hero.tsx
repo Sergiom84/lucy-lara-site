@@ -20,7 +20,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Descubre tu belleza natural
+          Centro de Belleza Lucy Lara
         </motion.h1>
         
         <motion.p 
@@ -29,7 +29,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Bienvenido a nuestro exclusivo centro de belleza y bienestar donde cuidamos de ti con los tratamientos más avanzados.
+          Tu exclusivo centro de belleza y estética donde cuidamos de ti con los tratamientos más avanzados.
         </motion.p>
         
         <motion.div 
@@ -40,13 +40,13 @@ const Hero = () => {
         >
           <a 
             href="#servicios" 
-            className="bg-accent hover:bg-accentDark text-white px-8 py-3 rounded-full text-lg transition-colors"
+            className="bg-accent hover:bg-accent-dark text-white px-8 py-3 rounded text-lg transition-colors"
           >
             Nuestros servicios
           </a>
           <a 
             href="#reserva" 
-            className="bg-white hover:bg-gray-50 text-accent px-8 py-3 rounded-full text-lg transition-colors"
+            className="bg-white hover:bg-gray-50 text-accent px-8 py-3 rounded text-lg transition-colors"
           >
             Reservar ahora
           </a>
