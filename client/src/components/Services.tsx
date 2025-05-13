@@ -23,7 +23,7 @@ const services = [
     title: "Eliminación del Vello",
     description: "Disfruta de una piel suave y libre de vello con nuestros métodos efectivos, seguros y de larga duración.",
     price: "Desde 35€",
-    image: "images/depilacion.png",
+    image: "/images/depilacion.png",
     alt: "Eliminación del vello"
   },
   {
@@ -31,7 +31,7 @@ const services = [
     title: "Micropigmentación",
     description: "Realza tus rasgos naturales con técnicas de pigmentación semi-permanente para cejas, labios y ojos.",
     price: "Desde 150€",
-    image: "images/micropigmentacion.png",
+    image: "/images/micropigmentacion.png",
     alt: "Micropigmentación"
   },
   {
@@ -97,12 +97,13 @@ const Services = () => {
               whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05)" }}
               transition={{ duration: 0.3 }}
             >
-              <img 
-                src={service.image} 
-                alt={service.alt} 
-                className="w-full h-48 object-cover object-center"
-                style={{ borderRadius: "8px 8px 0 0" }}
-              />
+              <div className="h-48 w-full overflow-hidden" style={{ borderRadius: "8px 8px 0 0" }}>
+                <img 
+                  src={service.image} 
+                  alt={service.alt} 
+                  className="w-full h-full object-cover object-center"
+                />
+              </div>
               <div className="p-6">
                 <h3 className="font-playfair text-xl font-semibold mb-2">
                   {service.title}
