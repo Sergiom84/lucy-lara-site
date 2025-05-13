@@ -46,23 +46,20 @@ const Hero = () => {
             opacity: currentSlide === index ? 1 : 0,
             zIndex: currentSlide === index ? 0 : -1
           }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 1.5, ease: "easeInOut" }}
         >
           <div 
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ 
               backgroundImage: `url('${image}')`,
-              filter: "brightness(0.75)"
+              filter: "brightness(0.9)"
             }}
           />
-          <div className="absolute inset-0 bg-black bg-opacity-40" />
+          <div className="absolute inset-0 bg-black bg-opacity-20" />
         </motion.div>
       ))}
       
-      {/* Overlay Text */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <h2 className="text-white/30 text-[150px] font-light tracking-widest">BELLEZA</h2>
-      </div>
+      {/* No overlay text anymore as requested */}
       
       {/* Content */}
       <div className="relative container mx-auto px-4 h-full flex flex-col items-center justify-center text-center">

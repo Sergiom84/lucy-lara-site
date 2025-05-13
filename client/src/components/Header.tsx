@@ -10,7 +10,6 @@ const Header = () => {
   
   // Navigation links (updated based on user request)
   const navLinks = [
-    { href: "#tratamientos", label: "Tratamientos" },
     { href: "#productos", label: "Productos" },
     { href: "#promociones", label: "Promociones" },
     { href: "#galeria", label: "Galería" },
@@ -56,14 +55,18 @@ const Header = () => {
       {/* Main Header */}
       <header className={`sticky top-0 z-50 bg-[#3a3a3a] text-white transition-all duration-300 ${scrolled ? "shadow-md" : ""}`}>
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-          {/* Logo and Name in California Style */}
+          {/* Logo Image */}
           <div className="flex items-center">
-            <Link href="/" className="flex flex-col">
-              <div className="text-2xl font-serif flex items-baseline">
-                <span className="text-3xl font-light italic tracking-wider">Lucy</span>
-                <span className="ml-1 text-3xl font-light italic tracking-wider">Lara</span>
+            <Link href="/" className="flex items-center">
+              <img 
+                src="images/logo-lucylara.png" 
+                alt="Lucy Lara Centro de Belleza y Estética" 
+                className="h-14 w-auto mr-2" 
+              />
+              <div className="flex flex-col text-white ml-2">
+                <span className="text-2xl font-light tracking-wide">Lucy Lara</span>
+                <span className="text-[#8b2154] text-xs uppercase tracking-wider">Centro de belleza y estética</span>
               </div>
-              <span className="text-[#8b2154] text-sm uppercase tracking-widest font-light">Centro de belleza y estética</span>
             </Link>
           </div>
           
