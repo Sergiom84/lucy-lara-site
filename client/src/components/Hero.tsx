@@ -1,16 +1,23 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
+// Importación directa de imágenes
+import imagen1 from "@assets/Entrada1.jpg";
+import imagen2 from "@assets/Entrada2.jpg";
+import imagen3 from "@assets/Mueble.jpg";
+import imagen4 from "@assets/Cabina2.jpg";
+import imagen5 from "@assets/Cabina3.jpg";
+
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   
   // Imágenes del carrusel
   const carouselImages = [
-    "/images/Entrada1.jpg",
-    "/images/Entrada2.jpg",
-    "/images/Mueble.jpg",
-    "/images/Cabina2.jpg",
-    "/images/Cabina3.jpg"
+    imagen1,
+    imagen2,
+    imagen3,
+    imagen4,
+    imagen5
   ];
   
   // Auto-rotación del carrusel
@@ -33,18 +40,23 @@ const Hero = () => {
       {carouselImages.map((image, index) => (
         <motion.div
           key={index}
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ 
-            backgroundImage: `url('${image}')`,
-            filter: "brightness(0.75)"
-          }}
+          className="absolute inset-0"
           initial={{ opacity: 0 }}
           animate={{ 
             opacity: currentSlide === index ? 1 : 0,
             zIndex: currentSlide === index ? 0 : -1
           }}
           transition={{ duration: 1 }}
-        />
+        >
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ 
+              backgroundImage: `url('${image}')`,
+              filter: "brightness(0.75)"
+            }}
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-40" />
+        </motion.div>
       ))}
       
       {/* Overlay Text */}
