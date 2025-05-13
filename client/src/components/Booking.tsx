@@ -301,7 +301,7 @@ const Booking = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-lg mb-1">Dirección</h4>
-                    <p className="text-textLight">Calle Belleza 123, 28001 Madrid</p>
+                    <p className="text-textLight">Calle Alegría de la Huerta 22, 28041 - Madrid</p>
                   </div>
                 </div>
                 
@@ -311,7 +311,7 @@ const Booking = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-lg mb-1">Teléfono</h4>
-                    <p className="text-textLight">+34 912 345 678</p>
+                    <p className="text-textLight">91 505 20 67 | 684 203 633</p>
                   </div>
                 </div>
                 
@@ -321,7 +321,7 @@ const Booking = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-lg mb-1">Email</h4>
-                    <p className="text-textLight">info@beautywellness.com</p>
+                    <p className="text-textLight">centrodebelleza@centroesteticalucylara.es</p>
                   </div>
                 </div>
                 
@@ -331,9 +331,9 @@ const Booking = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-lg mb-1">Horario</h4>
-                    <p className="text-textLight">Lunes a Viernes: 10:00 - 20:00</p>
-                    <p className="text-textLight">Sábado: 10:00 - 14:00</p>
-                    <p className="text-textLight">Domingo: Cerrado</p>
+                    <p className="text-textLight">Lunes a viernes: 10:00 - 13:30</p>
+                    <p className="text-textLight">Lunes a viernes: 16:00 - 19:30</p>
+                    <p className="text-textLight">Fines de semana: Cerrado</p>
                   </div>
                 </div>
               </div>
@@ -359,7 +359,7 @@ const Booking = () => {
               <div className="mt-8">
                 {/* Google Map */}
                 <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12144.42814679646!2d-3.7026599614282227!3d40.42675782610712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422997800a3c81%3A0xc436dec1618c2269!2sMadrid%2C%20Spain!5e0!3m2!1sen!2suk!4v1655380177835!5m2!1sen!2suk" 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.349854262797!2d-3.7031678231309764!3d40.37895205710547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4227c8ff4a748d%3A0x31f055f4d6e0bbb5!2sC.%20Alegr%C3%ADa%20de%20la%20Huerta%2C%2022%2C%2028041%20Madrid!5e0!3m2!1ses!2ses!4v1716647810279!5m2!1ses!2ses" 
                   width="100%" 
                   height="200" 
                   style={{ border: 0, borderRadius: '0.75rem' }}
