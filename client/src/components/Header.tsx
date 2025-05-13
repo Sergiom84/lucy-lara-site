@@ -67,7 +67,7 @@ const Header = () => {
           <div className="flex flex-col items-center">
             <Link href="/" className="flex flex-col items-center">
               <img 
-                src="/images/logo-lucylara.png" 
+                src="images/logo-lucylara.png" 
                 alt="Lucy Lara" 
                 className="h-24 w-auto"
               />
