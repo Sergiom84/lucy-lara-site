@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Light theme colors */
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 340 80% 87%;  /* Brand pink #f8c9d4 */
+  --primary-foreground: 355 30% 15%;
+  --secondary: 175 35% 74%;  /* Brand teal #a4d6d1 */
+  --secondary-foreground: 175 50% 15%;
+  --accent: 335 70% 70%;  /* Brand accent pink #e77ea8 */
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+  --radius: 0.5rem;
+  
+  /* Additional brand colors */
+  --primary-dark: 340 30% 82%; /* #e5b6c1 */
+  --secondary-dark: 175 26% 66%; /* #8fc2bd */
+  --accent-dark: 335 60% 62%; /* #d46a94 */
+  --neutral: 0 0% 98%; /* #f9f9f9 */
+  --neutral-dark: 0 0% 96%; /* #f4f4f4 */
+  --text-dark: 0 0% 20%; /* #333333 */
+  --text-light: 0 0% 40%; /* #666666 */
+  
+  /* Chart colors */
+  --chart-1: var(--primary);
+  --chart-2: var(--secondary);
+  --chart-3: var(--accent);
+  --chart-4: 210 70% 70%;
+  --chart-5: 50 70% 70%;
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 340 80% 87%;
+  --primary-foreground: 355 30% 15%;
+  --secondary: 175 35% 74%;
+  --secondary-foreground: 175 50% 15%;
+  --accent: 335 70% 70%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-inter antialiased bg-background text-foreground;
+  }
+  
+  /* Font family overrides */
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* Custom animation classes */
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out;
+  }
+  
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Brand specific utility classes */
+@layer utilities {
+  .bg-primary {
+    @apply bg-[#f8c9d4];
+  }
+  
+  .bg-primary-dark {
+    @apply bg-[#e5b6c1];
+  }
+  
+  .bg-secondary {
+    @apply bg-[#a4d6d1];
+  }
+  
+  .bg-secondary-dark {
+    @apply bg-[#8fc2bd];
+  }
+  
+  .bg-accent {
+    @apply bg-[#e77ea8];
+  }
+  
+  .bg-accent-dark {
+    @apply bg-[#d46a94];
+  }
+  
+  .bg-neutral {
+    @apply bg-[#f9f9f9];
+  }
+  
+  .bg-neutral-dark {
+    @apply bg-[#f4f4f4];
+  }
+  
+  .text-accent {
+    @apply text-[#e77ea8];
+  }
+}
