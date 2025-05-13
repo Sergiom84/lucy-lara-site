@@ -63,7 +63,7 @@ const Header = () => {
                 <span className="text-3xl font-light italic tracking-wider">Lucy</span>
                 <span className="ml-1 text-3xl font-light italic tracking-wider">Lara</span>
               </div>
-              <span className="text-[#66d1bd] text-sm uppercase tracking-widest font-light">Centro de belleza y estética</span>
+              <span className="text-[#8b2154] text-sm uppercase tracking-widest font-light">Centro de belleza y estética</span>
             </Link>
           </div>
           
@@ -74,8 +74,8 @@ const Header = () => {
                 <a 
                   key={index}
                   href={link.href} 
-                  className={`text-white hover:text-[#66d1bd] transition-colors relative py-2 px-1 uppercase text-sm tracking-wide
-                    ${location === link.href ? "border-b border-[#66d1bd]" : ""}`}
+                  className={`text-white hover:text-[#8b2154] transition-colors relative py-2 px-1 uppercase text-sm tracking-wide
+                    ${location === link.href ? "border-b border-[#8b2154]" : ""}`}
                 >
                   {link.label}
                 </a>
@@ -86,13 +86,13 @@ const Header = () => {
               
               {/* Icons */}
               <div className="flex items-center space-x-4 ml-4">
-                <a href="#" className="text-white hover:text-[#66d1bd]">
+                <a href="#" className="text-white hover:text-[#8b2154]">
                   <Search className="h-5 w-5" />
                 </a>
-                <a href="#" className="text-white hover:text-[#66d1bd]">
+                <a href="#" className="text-white hover:text-[#8b2154]">
                   <ShoppingBag className="h-5 w-5" />
                 </a>
-                <a href="#" className="text-white hover:text-[#66d1bd]">
+                <a href="#" className="text-white hover:text-[#8b2154]">
                   <User className="h-5 w-5" />
                 </a>
               </div>
@@ -123,7 +123,7 @@ const Header = () => {
                   <motion.a 
                     key={index}
                     href={link.href}
-                    className="text-white hover:text-[#66d1bd] py-2 transition-colors uppercase text-sm tracking-wide"
+                    className="text-white hover:text-[#8b2154] py-2 transition-colors uppercase text-sm tracking-wide"
                     onClick={handleLinkClick}
                     initial={{ x: -20, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
@@ -138,13 +138,13 @@ const Header = () => {
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: navLinks.length * 0.1 }}
                 >
-                  <a href="#" className="text-white hover:text-[#66d1bd]">
+                  <a href="#" className="text-white hover:text-[#8b2154]">
                     <Search className="h-5 w-5" />
                   </a>
-                  <a href="#" className="text-white hover:text-[#66d1bd]">
+                  <a href="#" className="text-white hover:text-[#8b2154]">
                     <ShoppingBag className="h-5 w-5" />
                   </a>
-                  <a href="#" className="text-white hover:text-[#66d1bd]">
+                  <a href="#" className="text-white hover:text-[#8b2154]">
                     <User className="h-5 w-5" />
                   </a>
                 </motion.div>

@@ -1,20 +1,55 @@
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const Hero = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  
+  // Imágenes del carrusel
+  const carouselImages = [
+    "/images/Entrada1.jpg",
+    "/images/Entrada2.jpg",
+    "/images/Mueble.jpg",
+    "/images/Cabina2.jpg",
+    "/images/Cabina3.jpg"
+  ];
+  
+  // Auto-rotación del carrusel
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
+    }, 5000);
+    
+    return () => clearInterval(interval);
+  }, [carouselImages.length]);
+  
+  // Cambiar slide manualmente
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
+  
   return (
     <section id="inicio" className="relative h-[80vh] min-h-[600px] overflow-hidden">
-      {/* Background Image with Overlay */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ 
-          backgroundImage: "url('https://images.unsplash.com/photo-1470259078422-826894b933aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')", 
-          filter: "brightness(0.75)" 
-        }}
-      />
+      {/* Background Image Carousel with Overlay */}
+      {carouselImages.map((image, index) => (
+        <motion.div
+          key={index}
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ 
+            backgroundImage: `url('${image}')`,
+            filter: "brightness(0.75)"
+          }}
+          initial={{ opacity: 0 }}
+          animate={{ 
+            opacity: currentSlide === index ? 1 : 0,
+            zIndex: currentSlide === index ? 0 : -1
+          }}
+          transition={{ duration: 1 }}
+        />
+      ))}
       
-      {/* Overlay Text SPA */}
+      {/* Overlay Text */}
       <div className="absolute inset-0 flex items-center justify-center">
-        <h2 className="text-white/30 text-[150px] font-light tracking-widest">SPA</h2>
+        <h2 className="text-white/30 text-[150px] font-light tracking-widest">BELLEZA</h2>
       </div>
       
       {/* Content */}
@@ -26,7 +61,7 @@ const Hero = () => {
           transition={{ duration: 1 }}
         >
           <h1 className="font-serif text-6xl font-light text-white mb-4 tracking-wide uppercase">
-            Spa & Belleza
+            Belleza
           </h1>
           <div className="h-[1px] bg-white/50 w-full my-4"></div>
           <p className="text-xl text-white/90 uppercase tracking-wider font-light mb-8">
@@ -42,7 +77,7 @@ const Hero = () => {
         >
           <a 
             href="#tratamientos" 
-            className="bg-[#66d1bd] hover:bg-[#55c1ad] text-white px-8 py-3 rounded-none text-lg transition-colors"
+            className="bg-[#8b2154] hover:bg-[#7a1c49] text-white px-8 py-3 rounded-none text-lg transition-colors"
           >
             Ver tratamientos
           </a>
@@ -57,11 +92,13 @@ const Hero = () => {
       
       {/* Dot Indicators */}
       <div className="absolute bottom-10 left-0 right-0 flex justify-center space-x-2">
-        {[...Array(6)].map((_, i) => (
-          <div 
+        {carouselImages.map((_, i) => (
+          <button 
             key={i} 
-            className={`w-2 h-2 rounded-full ${i === 0 ? 'bg-white' : 'bg-white/40'}`}
-          ></div>
+            onClick={() => goToSlide(i)}
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${i === currentSlide ? 'bg-white scale-125' : 'bg-white/40'}`}
+            aria-label={`Diapositiva ${i + 1}`}
+          ></button>
         ))}
       </div>
     </section>
