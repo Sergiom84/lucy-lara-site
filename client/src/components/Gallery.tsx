@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import BeforeAfterSlider from "./BeforeAfterSlider";
 // Importar imágenes directamente
 import centro1 from "../assets/images/centro1-small.jpg";
 import centro2 from "../assets/images/centro2-small.jpg";
@@ -21,26 +20,6 @@ const facilityImages = [
     id: 3,
     src: centro3,
     alt: "Área de belleza con detalles elegantes en color burgundy"
-  }
-];
-
-// Before/After images
-const beforeAfterImages = [
-  {
-    id: 1,
-    beforeSrc: "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    afterSrc: "https://images.unsplash.com/photo-1519165816461-3ea9d99e97a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    beforeAlt: "Antes del tratamiento facial",
-    afterAlt: "Después del tratamiento facial",
-    title: "Tratamiento Facial Rejuvenecedor"
-  },
-  {
-    id: 2,
-    beforeSrc: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    afterSrc: "https://images.unsplash.com/photo-1562898963-e1dceb7bdc6a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    beforeAlt: "Antes del tratamiento capilar",
-    afterAlt: "Después del tratamiento capilar",
-    title: "Tratamiento Capilar Intensivo"
   }
 ];
 
@@ -77,13 +56,13 @@ const Gallery = () => {
             Nuestra Galería
           </h2>
           <p className="text-textLight max-w-2xl mx-auto">
-            Explora nuestras instalaciones y conoce los resultados que hemos conseguido
+            Explora nuestras modernas instalaciones diseñadas para tu confort
           </p>
         </motion.div>
         
         {/* Facility Images */}
         <motion.div 
-          className="mb-16"
+          className="mb-12"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
@@ -117,38 +96,6 @@ const Gallery = () => {
                   src={image.src} 
                   alt={image.alt} 
                   className="w-full h-full object-cover object-center"
-                />
-              </motion.div>
-            ))}
-          </motion.div>
-        </motion.div>
-        
-        {/* Before/After Section */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
-          variants={containerVariants}
-        >
-          <motion.h3 
-            className="font-playfair text-2xl font-medium mb-8 text-center"
-            variants={itemVariants}
-          >
-            Antes y Después
-          </motion.h3>
-          
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 gap-8"
-            variants={containerVariants}
-          >
-            {beforeAfterImages.map((image) => (
-              <motion.div key={image.id} variants={itemVariants}>
-                <BeforeAfterSlider
-                  beforeImage={image.beforeSrc}
-                  afterImage={image.afterSrc}
-                  beforeAlt={image.beforeAlt}
-                  afterAlt={image.afterAlt}
-                  title={image.title}
                 />
               </motion.div>
             ))}
