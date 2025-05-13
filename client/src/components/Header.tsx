@@ -8,12 +8,13 @@ const Header = () => {
   const [location] = useLocation();
   const [scrolled, setScrolled] = useState(false);
   
-  // Navigation links (updated to match image)
+  // Navigation links (updated based on user request)
   const navLinks = [
-    { href: "#inicio", label: "Home" },
-    { href: "#reserva", label: "Appointments" },
-    { href: "#servicios", label: "Promotions" },
-    { href: "#gift-cards", label: "Gift Cards" }
+    { href: "#tratamientos", label: "Tratamientos" },
+    { href: "#productos", label: "Productos" },
+    { href: "#promociones", label: "Promociones" },
+    { href: "#galeria", label: "Galería" },
+    { href: "#contacto", label: "Contacto" }
   ];
 
   // Handle scroll effect for sticky header
@@ -32,80 +33,66 @@ const Header = () => {
 
   return (
     <>
-      {/* Top Info Bar */}
-      <div className="bg-[#f2f2f2] text-gray-700 py-2">
-        <div className="container mx-auto px-4 flex justify-between items-center">
-          <div className="flex items-center space-x-4">
-            <div className="flex items-center text-sm">
-              <Phone className="h-4 w-4 mr-1" /> 
-              <span>91 505 20 67 | 684 203 633</span>
-            </div>
-            <div className="flex items-center text-sm">
-              <Mail className="h-4 w-4 mr-1" /> 
-              <span>centrodebeleza@centroesteticalucylara.es</span>
-            </div>
-          </div>
-          <div className="flex items-center space-x-3">
-            <a href="#" className="text-gray-700 hover:text-[#8b2154]">
-              <Facebook className="h-5 w-5" />
-            </a>
-            <a href="#" className="text-gray-700 hover:text-[#8b2154]">
-              <Instagram className="h-5 w-5" />
-            </a>
-          </div>
+      {/* Promo Bar with contact info */}
+      <div className="bg-[#f8e3cf] text-[#333] py-2 flex justify-center items-center gap-8">
+        <div className="flex items-center text-sm">
+          <Phone className="h-4 w-4 mr-1 text-[#8b2154]" /> 
+          <span>91 505 20 67 | 684 203 633</span>
+        </div>
+        <div className="flex items-center text-sm">
+          <Mail className="h-4 w-4 mr-1 text-[#8b2154]" /> 
+          <span>centrodebeleza@centroesteticalucylara.es</span>
+        </div>
+        <div className="flex items-center space-x-3">
+          <a href="#" className="text-gray-700 hover:text-[#8b2154]">
+            <Facebook className="h-5 w-5" />
+          </a>
+          <a href="#" className="text-gray-700 hover:text-[#8b2154]">
+            <Instagram className="h-5 w-5" />
+          </a>
         </div>
       </div>
       
-      {/* Promo Bar - Similar to the one in the image */}
-      <div className="bg-[#f8e3cf] text-[#333] py-2 text-center font-medium">
-        <span>10% OFF ALL GIFT CARDS</span>
-      </div>
-      
       {/* Main Header */}
-      <header className={`sticky top-0 z-50 backdrop-blur-md transition-all duration-300 ${scrolled ? "bg-white/90 shadow-sm" : "bg-white"}`}>
+      <header className={`sticky top-0 z-50 bg-[#3a3a3a] text-white transition-all duration-300 ${scrolled ? "shadow-md" : ""}`}>
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-          <div className="flex flex-col items-center">
-            <Link href="/" className="flex flex-col items-center">
-              <img 
-                src="images/logo-lucylara.png" 
-                alt="Lucy Lara" 
-                className="h-24 w-auto"
-              />
-              <span className="mt-1 text-[#8b2154] text-sm font-medium">Centro de belleza y estética</span>
+          {/* Logo and Name in California Style */}
+          <div className="flex items-center">
+            <Link href="/" className="flex flex-col">
+              <div className="text-2xl font-serif flex items-baseline">
+                <span className="text-3xl font-light italic tracking-wider">Lucy</span>
+                <span className="ml-1 text-3xl font-light italic tracking-wider">Lara</span>
+              </div>
+              <span className="text-[#66d1bd] text-sm uppercase tracking-widest font-light">Centro de belleza y estética</span>
             </Link>
           </div>
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center">
-            <div className="flex space-x-8 items-center border-b-2 border-[#8b2154]">
+            <div className="flex space-x-6 items-center">
               {navLinks.map((link, index) => (
                 <a 
                   key={index}
                   href={link.href} 
-                  className={`text-gray-700 hover:text-[#8b2154] transition-colors relative py-2 px-2
-                    ${location === link.href ? "text-[#8b2154] border-b-2 border-[#8b2154] -mb-[2px]" : ""}`}
+                  className={`text-white hover:text-[#66d1bd] transition-colors relative py-2 px-1 uppercase text-sm tracking-wide
+                    ${location === link.href ? "border-b border-[#66d1bd]" : ""}`}
                 >
                   {link.label}
                 </a>
               ))}
-              <div className="relative px-2 py-2 group">
-                <span className="flex items-center cursor-pointer text-gray-700 hover:text-[#8b2154]">
-                  More <span className="ml-1">▼</span>
-                </span>
-              </div>
               
               {/* Divider */}
-              <span className="text-gray-400 text-xl font-light">|</span>
+              <span className="text-gray-500 text-xl font-light ml-4">|</span>
               
               {/* Icons */}
-              <div className="flex items-center space-x-4">
-                <a href="#" className="text-gray-700 hover:text-[#8b2154]">
+              <div className="flex items-center space-x-4 ml-4">
+                <a href="#" className="text-white hover:text-[#66d1bd]">
                   <Search className="h-5 w-5" />
                 </a>
-                <a href="#" className="text-gray-700 hover:text-[#8b2154]">
+                <a href="#" className="text-white hover:text-[#66d1bd]">
                   <ShoppingBag className="h-5 w-5" />
                 </a>
-                <a href="#" className="text-gray-700 hover:text-[#8b2154]">
+                <a href="#" className="text-white hover:text-[#66d1bd]">
                   <User className="h-5 w-5" />
                 </a>
               </div>
@@ -114,7 +101,7 @@ const Header = () => {
           
           {/* Mobile Navigation Button */}
           <button 
-            className="md:hidden text-gray-700 focus:outline-none" 
+            className="md:hidden text-white focus:outline-none" 
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -125,7 +112,7 @@ const Header = () => {
         <AnimatePresence>
           {mobileMenuOpen && (
             <motion.div 
-              className="md:hidden bg-white absolute w-full shadow-md z-20"
+              className="md:hidden bg-[#3a3a3a] absolute w-full shadow-md z-20"
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
@@ -136,7 +123,7 @@ const Header = () => {
                   <motion.a 
                     key={index}
                     href={link.href}
-                    className="text-gray-700 hover:text-[#8b2154] py-2 transition-colors"
+                    className="text-white hover:text-[#66d1bd] py-2 transition-colors uppercase text-sm tracking-wide"
                     onClick={handleLinkClick}
                     initial={{ x: -20, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
@@ -151,13 +138,13 @@ const Header = () => {
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: navLinks.length * 0.1 }}
                 >
-                  <a href="#" className="text-gray-700 hover:text-[#8b2154]">
+                  <a href="#" className="text-white hover:text-[#66d1bd]">
                     <Search className="h-5 w-5" />
                   </a>
-                  <a href="#" className="text-gray-700 hover:text-[#8b2154]">
+                  <a href="#" className="text-white hover:text-[#66d1bd]">
                     <ShoppingBag className="h-5 w-5" />
                   </a>
-                  <a href="#" className="text-gray-700 hover:text-[#8b2154]">
+                  <a href="#" className="text-white hover:text-[#66d1bd]">
                     <User className="h-5 w-5" />
                   </a>
                 </motion.div>
