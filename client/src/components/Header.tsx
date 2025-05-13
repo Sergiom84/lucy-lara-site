@@ -54,7 +54,7 @@ const Header = () => {
       </div>
       
       {/* Main Header - More Translucent */}
-      <header className={`sticky top-[2.5rem] z-50 bg-[#3a3a3a]/50 backdrop-blur-[2px] text-white transition-all duration-300 ${scrolled ? "shadow-md" : ""}`}>
+      <header className={`sticky top-[2.5rem] z-50 bg-[#3a3a3a]/35 backdrop-blur-[1px] text-white transition-all duration-300 ${scrolled ? "shadow-md" : ""}`}>
         <div className="container mx-auto px-4 py-2 flex justify-between items-center">
           {/* Logo Image - Using transparent logo */}
           <div className="flex items-center">
@@ -109,7 +109,7 @@ const Header = () => {
         <AnimatePresence>
           {mobileMenuOpen && (
             <motion.div 
-              className="md:hidden bg-[#3a3a3a]/50 backdrop-blur-[2px] absolute w-full shadow-md z-20"
+              className="md:hidden bg-[#3a3a3a]/35 backdrop-blur-[1px] absolute w-full shadow-md z-20"
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
