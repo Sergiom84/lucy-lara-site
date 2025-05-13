@@ -28,19 +28,19 @@ const Footer = () => {
   const contactInfo = [
     { 
       icon: <MapPin size={16} className="mt-1 text-accent" />, 
-      text: "Calle Belleza 123, 28001 Madrid" 
+      text: "Calle Alegría de la Huerta 22, 28041 - Madrid" 
     },
     { 
       icon: <Phone size={16} className="mt-1 text-accent" />, 
-      text: "+34 912 345 678" 
+      text: "91 505 20 67 | 684 203 633" 
     },
     { 
       icon: <Mail size={16} className="mt-1 text-accent" />, 
-      text: "info@beautywellness.com" 
+      text: "centrodebelleza@centroesteticalucylara.es" 
     },
     { 
       icon: <Clock size={16} className="mt-1 text-accent" />, 
-      text: "Lun-Vie: 10:00 - 20:00\nSáb: 10:00 - 14:00" 
+      text: "Lunes a viernes: 10:00 - 13:30\n16:00 - 19:30" 
     }
   ];
 
@@ -51,10 +51,10 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <h3 className="text-xl font-playfair font-semibold mb-4">
-              Beauty<span className="text-accent">&</span>Wellness
+              Centro de Estética <span className="text-accent">Lucy Lara</span>
             </h3>
             <p className="text-gray-400 mb-4">
-              Tu centro de belleza y bienestar donde cuidamos de ti con los tratamientos más avanzados.
+              Tu centro de belleza y bienestar donde cuidamos de ti con los tratamientos más avanzados y personalizados.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-accent transition-colors">
@@ -124,7 +124,7 @@ const Footer = () => {
         <div className="border-t border-gray-700 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              © {new Date().getFullYear()} Beauty&Wellness. Todos los derechos reservados.
+              © {new Date().getFullYear()} Centro de Estética Lucy Lara. Todos los derechos reservados.
             </p>
             <div className="flex space-x-6">
               <a href="#" className="text-gray-400 hover:text-accent text-sm transition-colors">

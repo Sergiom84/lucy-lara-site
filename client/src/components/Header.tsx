@@ -41,7 +41,7 @@ const Header = () => {
         </div>
         <div className="flex items-center text-sm">
           <Mail className="h-4 w-4 mr-1 text-[#8b2154]" /> 
-          <span>centrodebeleza@centroesteticalucylara.es</span>
+          <span>centrodebelleza@centroesteticalucylara.es</span>
         </div>
         <div className="flex items-center space-x-3">
           <a href="#" className="text-gray-700 hover:text-[#8b2154]">
