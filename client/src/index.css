@@ -122,6 +122,14 @@
   }
 }
 
+/* Carousel styles */
+.carousel-image {
+  transition: opacity 1.5s ease-in-out;
+  will-change: opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
 /* Brand specific utility classes */
 @layer utilities {
   .bg-primary {

@@ -61,12 +61,8 @@ const Header = () => {
               <img 
                 src="images/logo-lucylara.png" 
                 alt="Lucy Lara Centro de Belleza y Estética" 
-                className="h-14 w-auto mr-2" 
+                className="h-14 w-auto" 
               />
-              <div className="flex flex-col text-white ml-2">
-                <span className="text-2xl font-light tracking-wide">Lucy Lara</span>
-                <span className="text-[#8b2154] text-xs uppercase tracking-wider">Centro de belleza y estética</span>
-              </div>
             </Link>
           </div>
           

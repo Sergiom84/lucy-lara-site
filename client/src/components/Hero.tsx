@@ -20,14 +20,21 @@ const Hero = () => {
     imagen5
   ];
   
-  // Auto-rotación del carrusel
+  // Pre-carga de imágenes para evitar destellos
   useEffect(() => {
+    // Precargar todas las imágenes para evitar destellos
+    carouselImages.forEach(src => {
+      const img = new Image();
+      img.src = src;
+    });
+    
+    // Auto-rotación del carrusel
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
     }, 5000);
     
     return () => clearInterval(interval);
-  }, [carouselImages.length]);
+  }, [carouselImages]);
   
   // Cambiar slide manualmente
   const goToSlide = (index: number) => {
@@ -36,30 +43,24 @@ const Hero = () => {
   
   return (
     <section id="inicio" className="relative h-[80vh] min-h-[600px] overflow-hidden">
-      {/* Background Image Carousel with Overlay */}
-      {carouselImages.map((image, index) => (
-        <motion.div
-          key={index}
-          className="absolute inset-0"
-          initial={{ opacity: 0 }}
-          animate={{ 
-            opacity: currentSlide === index ? 1 : 0,
-            zIndex: currentSlide === index ? 0 : -1
-          }}
-          transition={{ duration: 1.5, ease: "easeInOut" }}
-        >
-          <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ 
-              backgroundImage: `url('${image}')`,
-              filter: "brightness(0.9)"
-            }}
-          />
-          <div className="absolute inset-0 bg-black bg-opacity-20" />
-        </motion.div>
-      ))}
-      
-      {/* No overlay text anymore as requested */}
+      {/* Background Image Carousel */}
+      <div className="absolute inset-0">
+        {carouselImages.map((image, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 carousel-image ${
+              currentSlide === index ? 'opacity-100' : 'opacity-0'
+            }`}
+          >
+            <img
+              src={image}
+              alt={`Imagen ${index + 1}`}
+              className="absolute w-full h-full object-cover object-center"
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-15" />
+          </div>
+        ))}
+      </div>
       
       {/* Content */}
       <div className="relative container mx-auto px-4 h-full flex flex-col items-center justify-center text-center">
@@ -69,9 +70,6 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <h1 className="font-serif text-6xl font-light text-white mb-4 tracking-wide uppercase">
-            Belleza
-          </h1>
           <div className="h-[1px] bg-white/50 w-full my-4"></div>
           <p className="text-xl text-white/90 uppercase tracking-wider font-light mb-8">
             Relájate y renueva tu belleza
