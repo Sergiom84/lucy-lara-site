@@ -34,7 +34,7 @@ const Header = () => {
   return (
     <>
       {/* Promo Bar with contact info */}
-      <div className="bg-[#f8e3cf] text-[#333] py-2 flex justify-center items-center gap-8">
+      <div className="bg-[#f8e3cf] text-[#333] py-2 flex justify-center items-center gap-8 sticky top-0 z-50">
         <div className="flex items-center text-sm">
           <Phone className="h-4 w-4 mr-1 text-[#8b2154]" /> 
           <span>91 505 20 67 | 684 203 633</span>
@@ -53,16 +53,16 @@ const Header = () => {
         </div>
       </div>
       
-      {/* Main Header - Translucent */}
-      <header className={`sticky top-0 z-50 bg-[#3a3a3a]/75 backdrop-blur-sm text-white transition-all duration-300 ${scrolled ? "shadow-md" : ""}`}>
-        <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+      {/* Main Header - More Translucent */}
+      <header className={`sticky top-[2.5rem] z-50 bg-[#3a3a3a]/50 backdrop-blur-[2px] text-white transition-all duration-300 ${scrolled ? "shadow-md" : ""}`}>
+        <div className="container mx-auto px-4 py-2 flex justify-between items-center">
           {/* Logo Image - Using transparent logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
               <img 
                 src={LogoTransparent} 
                 alt="Lucy Lara Centro de Belleza y Estética" 
-                className="h-20 w-auto" 
+                className="h-16 w-auto" 
               />
             </Link>
           </div>
@@ -105,11 +105,11 @@ const Header = () => {
           </button>
         </div>
         
-        {/* Mobile Navigation Menu with Animation - Also translucent */}
+        {/* Mobile Navigation Menu with Animation - More translucent */}
         <AnimatePresence>
           {mobileMenuOpen && (
             <motion.div 
-              className="md:hidden bg-[#3a3a3a]/85 backdrop-blur-sm absolute w-full shadow-md z-20"
+              className="md:hidden bg-[#3a3a3a]/50 backdrop-blur-[2px] absolute w-full shadow-md z-20"
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}

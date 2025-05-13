@@ -54,7 +54,7 @@ const Hero = () => {
   };
   
   return (
-    <section id="inicio" className="relative h-[85vh] min-h-[650px] overflow-hidden bg-gray-800 -mt-[8rem]">
+    <section id="inicio" className="relative h-[85vh] min-h-[650px] overflow-hidden bg-gray-800 -mt-[6.5rem]">
       {/* Precarga de imágenes - invisible pero ayuda a evitar destellos */}
       <div className="hidden">
         {carouselImages.map((src, i) => (
