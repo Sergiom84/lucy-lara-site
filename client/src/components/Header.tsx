@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Phone, Mail, Facebook, Instagram, Search, ShoppingBag, User } from "lucide-react";
+import { Menu, X, Phone, Mail, Facebook, Instagram, Search, ShoppingBag } from "lucide-react";
+import LogoTransparent from "../assets/images/Logo-transparent.png";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -52,16 +53,16 @@ const Header = () => {
         </div>
       </div>
       
-      {/* Main Header */}
-      <header className={`sticky top-0 z-50 bg-[#3a3a3a] text-white transition-all duration-300 ${scrolled ? "shadow-md" : ""}`}>
+      {/* Main Header - Translucent */}
+      <header className={`sticky top-0 z-50 bg-[#3a3a3a]/75 backdrop-blur-sm text-white transition-all duration-300 ${scrolled ? "shadow-md" : ""}`}>
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-          {/* Logo Image */}
+          {/* Logo Image - Using transparent logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
               <img 
-                src="images/logo-lucylara.png" 
+                src={LogoTransparent} 
                 alt="Lucy Lara Centro de Belleza y Estética" 
-                className="h-14 w-auto" 
+                className="h-20 w-auto" 
               />
             </Link>
           </div>
@@ -81,18 +82,15 @@ const Header = () => {
               ))}
               
               {/* Divider */}
-              <span className="text-gray-500 text-xl font-light ml-4">|</span>
+              <span className="text-gray-300 text-xl font-light ml-4">|</span>
               
-              {/* Icons */}
+              {/* Icons - Removed User icon */}
               <div className="flex items-center space-x-4 ml-4">
                 <a href="#" className="text-white hover:text-[#8b2154]">
                   <Search className="h-5 w-5" />
                 </a>
                 <a href="#" className="text-white hover:text-[#8b2154]">
                   <ShoppingBag className="h-5 w-5" />
-                </a>
-                <a href="#" className="text-white hover:text-[#8b2154]">
-                  <User className="h-5 w-5" />
                 </a>
               </div>
             </div>
@@ -107,11 +105,11 @@ const Header = () => {
           </button>
         </div>
         
-        {/* Mobile Navigation Menu with Animation */}
+        {/* Mobile Navigation Menu with Animation - Also translucent */}
         <AnimatePresence>
           {mobileMenuOpen && (
             <motion.div 
-              className="md:hidden bg-[#3a3a3a] absolute w-full shadow-md z-20"
+              className="md:hidden bg-[#3a3a3a]/85 backdrop-blur-sm absolute w-full shadow-md z-20"
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
@@ -142,9 +140,6 @@ const Header = () => {
                   </a>
                   <a href="#" className="text-white hover:text-[#8b2154]">
                     <ShoppingBag className="h-5 w-5" />
-                  </a>
-                  <a href="#" className="text-white hover:text-[#8b2154]">
-                    <User className="h-5 w-5" />
                   </a>
                 </motion.div>
               </div>
