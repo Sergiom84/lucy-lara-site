@@ -23,7 +23,7 @@ const services = [
     title: "Eliminación del Vello",
     description: "Disfruta de una piel suave y libre de vello con nuestros métodos efectivos, seguros y de larga duración.",
     price: "Desde 35€",
-    image: "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+    image: "images/depilacion.png",
     alt: "Eliminación del vello"
   },
   {
@@ -31,7 +31,7 @@ const services = [
     title: "Micropigmentación",
     description: "Realza tus rasgos naturales con técnicas de pigmentación semi-permanente para cejas, labios y ojos.",
     price: "Desde 150€",
-    image: "https://images.unsplash.com/photo-1522337094846-8a4b3169de3a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+    image: "images/micropigmentacion.png",
     alt: "Micropigmentación"
   },
   {
@@ -100,7 +100,8 @@ const Services = () => {
               <img 
                 src={service.image} 
                 alt={service.alt} 
-                className="w-full h-48 object-cover"
+                className="w-full h-48 object-cover object-center"
+                style={{ borderRadius: "8px 8px 0 0" }}
               />
               <div className="p-6">
                 <h3 className="font-playfair text-xl font-semibold mb-2">
