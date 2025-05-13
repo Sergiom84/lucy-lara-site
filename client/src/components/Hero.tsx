@@ -10,31 +10,43 @@ import imagen5 from "@assets/Cabina3.jpg";
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
   
   // Imágenes del carrusel
-  const carouselImages = [
-    imagen1,
-    imagen2,
-    imagen3,
-    imagen4,
-    imagen5
-  ];
+  const carouselImages = [imagen1, imagen2, imagen3, imagen4, imagen5];
   
   // Pre-carga de imágenes para evitar destellos
   useEffect(() => {
     // Precargar todas las imágenes para evitar destellos
-    carouselImages.forEach(src => {
-      const img = new Image();
-      img.src = src;
-    });
+    const loadImages = async () => {
+      // Crear promesas para cargar cada imagen
+      const imagePromises = carouselImages.map(src => {
+        return new Promise((resolve) => {
+          const img = new Image();
+          img.src = src;
+          img.onload = resolve;
+          img.onerror = resolve; // Resolver incluso si hay error
+        });
+      });
+      
+      // Esperar a que se carguen todas las imágenes
+      await Promise.all(imagePromises);
+      setImagesLoaded(true);
+    };
     
-    // Auto-rotación del carrusel
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
-    }, 5000);
-    
-    return () => clearInterval(interval);
-  }, [carouselImages]);
+    loadImages();
+  }, []);
+  
+  // Auto-rotación del carrusel
+  useEffect(() => {
+    if (imagesLoaded) {
+      const interval = setInterval(() => {
+        setCurrentSlide(prev => (prev + 1) % carouselImages.length);
+      }, 5000);
+      
+      return () => clearInterval(interval);
+    }
+  }, [imagesLoaded, carouselImages.length]);
   
   // Cambiar slide manualmente
   const goToSlide = (index: number) => {
@@ -42,28 +54,41 @@ const Hero = () => {
   };
   
   return (
-    <section id="inicio" className="relative h-[80vh] min-h-[600px] overflow-hidden">
-      {/* Background Image Carousel */}
+    <section id="inicio" className="relative h-[80vh] min-h-[600px] overflow-hidden bg-gray-800">
+      {/* Precarga de imágenes - invisible pero ayuda a evitar destellos */}
+      <div className="hidden">
+        {carouselImages.map((src, i) => (
+          <img key={`preload-${i}`} src={src} alt="" />
+        ))}
+      </div>
+      
+      {/* Slides (fondo) */}
       <div className="absolute inset-0">
-        {carouselImages.map((image, index) => (
+        {carouselImages.map((src, index) => (
           <div
             key={index}
-            className={`absolute inset-0 carousel-image ${
-              currentSlide === index ? 'opacity-100' : 'opacity-0'
-            }`}
+            className="absolute inset-0"
+            style={{
+              opacity: currentSlide === index ? 1 : 0,
+              transition: 'opacity 1.5s ease-in-out',
+              zIndex: currentSlide === index ? 10 : 0,
+            }}
           >
-            <img
-              src={image}
-              alt={`Imagen ${index + 1}`}
-              className="absolute w-full h-full object-cover object-center"
+            <div 
+              className="absolute inset-0 bg-cover bg-center"
+              style={{
+                backgroundImage: `url(${src})`,
+                filter: 'brightness(0.9)',
+              }}
             />
-            <div className="absolute inset-0 bg-black bg-opacity-15" />
+            {/* Overlay para mejorar la visibilidad del texto */}
+            <div className="absolute inset-0 bg-black opacity-20" />
           </div>
         ))}
       </div>
       
-      {/* Content */}
-      <div className="relative container mx-auto px-4 h-full flex flex-col items-center justify-center text-center">
+      {/* Contenido del slider */}
+      <div className="relative z-20 container mx-auto px-4 h-full flex flex-col items-center justify-center text-center">
         <motion.div 
           className="max-w-4xl mx-auto"
           initial={{ opacity: 0 }}
@@ -71,7 +96,7 @@ const Hero = () => {
           transition={{ duration: 1 }}
         >
           <div className="h-[1px] bg-white/50 w-full my-4"></div>
-          <p className="text-xl text-white/90 uppercase tracking-wider font-light mb-8">
+          <p className="text-xl text-white uppercase tracking-wider font-light mb-8">
             Relájate y renueva tu belleza
           </p>
         </motion.div>
@@ -83,13 +108,13 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <a 
-            href="#tratamientos" 
+            href="#productos" 
             className="bg-[#8b2154] hover:bg-[#7a1c49] text-white px-8 py-3 rounded-none text-lg transition-colors"
           >
-            Ver tratamientos
+            Ver productos
           </a>
           <a 
-            href="#reserva" 
+            href="#contacto" 
             className="bg-transparent border border-white hover:bg-white/10 text-white px-8 py-3 rounded-none text-lg transition-colors"
           >
             Reservar cita
@@ -97,15 +122,15 @@ const Hero = () => {
         </motion.div>
       </div>
       
-      {/* Dot Indicators */}
-      <div className="absolute bottom-10 left-0 right-0 flex justify-center space-x-2">
+      {/* Indicadores (puntos) */}
+      <div className="absolute bottom-10 left-0 right-0 flex justify-center space-x-3 z-20">
         {carouselImages.map((_, i) => (
           <button 
             key={i} 
             onClick={() => goToSlide(i)}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${i === currentSlide ? 'bg-white scale-125' : 'bg-white/40'}`}
+            className={`w-2 h-2 rounded-full ${i === currentSlide ? 'bg-white' : 'bg-white/40'}`}
             aria-label={`Diapositiva ${i + 1}`}
-          ></button>
+          />
         ))}
       </div>
     </section>
