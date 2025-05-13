@@ -12,30 +12,6 @@ const services = [
   },
   {
     id: 2,
-    title: "Masajes Terapéuticos",
-    description: "Alivia tensiones y relaja cuerpo y mente con nuestras técnicas de masaje adaptadas a tus necesidades.",
-    price: "Desde 55€",
-    image: "https://images.unsplash.com/photo-1600334129128-685c5582fd35?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-    alt: "Masaje terapéutico"
-  },
-  {
-    id: 3,
-    title: "Manicura y Pedicura",
-    description: "Cuida tus manos y pies con nuestros tratamientos de belleza que incluyen las últimas tendencias en diseño de uñas.",
-    price: "Desde 35€",
-    image: "https://pixabay.com/get/g5279546a99e919619b7796977c2cb4b703ba8dc3b30b714c3c3825c12da98ff647fcf700602104137432628bdc545ae771e2ba2eba327b0e6426ad4f930359ea_1280.jpg",
-    alt: "Manicura y pedicura"
-  },
-  {
-    id: 4,
-    title: "Tratamientos Capilares",
-    description: "Recupera la salud y el brillo de tu cabello con nuestros tratamientos especializados para todo tipo de cabello.",
-    price: "Desde 40€",
-    image: "https://images.unsplash.com/photo-1560869713-7d0a29430803?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-    alt: "Tratamientos capilares"
-  },
-  {
-    id: 5,
     title: "Tratamientos Corporales",
     description: "Mima tu cuerpo con nuestros tratamientos que combinan técnicas de relajación y productos revitalizantes.",
     price: "Desde 60€",
@@ -43,12 +19,28 @@ const services = [
     alt: "Tratamientos corporales"
   },
   {
-    id: 6,
-    title: "Maquillaje Profesional",
-    description: "Resalta tu belleza natural con nuestro servicio de maquillaje para ocasiones especiales o tu día a día.",
-    price: "Desde 50€",
-    image: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-    alt: "Maquillaje profesional"
+    id: 3,
+    title: "Eliminación del Vello",
+    description: "Disfruta de una piel suave y libre de vello con nuestros métodos efectivos, seguros y de larga duración.",
+    price: "Desde 35€",
+    image: "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+    alt: "Eliminación del vello"
+  },
+  {
+    id: 4,
+    title: "Micropigmentación",
+    description: "Realza tus rasgos naturales con técnicas de pigmentación semi-permanente para cejas, labios y ojos.",
+    price: "Desde 150€",
+    image: "https://images.unsplash.com/photo-1522337094846-8a4b3169de3a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+    alt: "Micropigmentación"
+  },
+  {
+    id: 5,
+    title: "Otros Tratamientos",
+    description: "Descubre nuestra gama completa de tratamientos personalizados para satisfacer todas tus necesidades de belleza.",
+    price: "Consultar",
+    image: "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+    alt: "Otros tratamientos"
   }
 ];
 
