@@ -5,18 +5,18 @@ import BeforeAfterSlider from "./BeforeAfterSlider";
 const facilityImages = [
   {
     id: 1,
-    src: "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-    alt: "Recepción del centro"
+    src: "/images/centro1.jpg",
+    alt: "Sala de tratamientos con equipamiento médico estético"
   },
   {
     id: 2,
-    src: "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-    alt: "Sala de tratamientos"
+    src: "/images/centro2.jpg",
+    alt: "Espacio para tratamientos faciales con equipamiento avanzado"
   },
   {
     id: 3,
-    src: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-    alt: "Área de relajación"
+    src: "/images/centro3.jpg",
+    alt: "Área de belleza con detalles elegantes en color burgundy"
   }
 ];
 
@@ -91,20 +91,30 @@ const Gallery = () => {
           >
             Nuestro Centro
           </motion.h3>
+          <motion.p
+            className="text-textLight max-w-3xl mx-auto text-center mb-8"
+            variants={itemVariants}
+          >
+            Instalaciones modernas y elegantes diseñadas para tu comodidad y bienestar durante todos nuestros tratamientos.
+          </motion.p>
           
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
             variants={containerVariants}
           >
             {facilityImages.map((image) => (
-              <motion.img 
+              <motion.div
                 key={image.id}
-                src={image.src} 
-                alt={image.alt} 
-                className="rounded-xl shadow-md hover:shadow-lg transition-shadow w-full h-64 object-cover"
+                className="rounded-xl shadow-md hover:shadow-lg transition-shadow overflow-hidden h-64"
                 variants={itemVariants}
                 whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
-              />
+              >
+                <img 
+                  src={image.src} 
+                  alt={image.alt} 
+                  className="w-full h-full object-cover object-center"
+                />
+              </motion.div>
             ))}
           </motion.div>
         </motion.div>
