@@ -1,21 +1,25 @@
 import { motion } from "framer-motion";
 import BeforeAfterSlider from "./BeforeAfterSlider";
+// Importar imágenes directamente
+import centro1 from "../assets/images/centro1-small.jpg";
+import centro2 from "../assets/images/centro2-small.jpg";
+import centro3 from "../assets/images/centro3-small.jpg";
 
 // Gallery images
 const facilityImages = [
   {
     id: 1,
-    src: "/images/centro1.jpg",
+    src: centro1,
     alt: "Sala de tratamientos con equipamiento médico estético"
   },
   {
     id: 2,
-    src: "/images/centro2.jpg",
+    src: centro2,
     alt: "Espacio para tratamientos faciales con equipamiento avanzado"
   },
   {
     id: 3,
-    src: "/images/centro3.jpg",
+    src: centro3,
     alt: "Área de belleza con detalles elegantes en color burgundy"
   }
 ];
