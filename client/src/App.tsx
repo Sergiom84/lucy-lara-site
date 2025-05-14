@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
+import ProductDetail from "@/pages/ProductDetail";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Chatbot from "@/components/Chatbot";
 import { useAnalytics } from "./hooks/use-analytics";
@@ -16,6 +17,7 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/productos/:id" component={ProductDetail} />
       <Route component={NotFound} />
     </Switch>
   );
