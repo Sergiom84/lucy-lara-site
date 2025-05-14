@@ -140,6 +140,11 @@ const ProductDetail = () => {
               </div>
               
               <div className="mb-8">
+                <h2 className="font-medium text-lg mb-3">Ingredientes activos</h2>
+                <p className="text-textLight">{producto.ingredientes}</p>
+              </div>
+              
+              <div className="mb-8">
                 <h2 className="font-medium text-lg mb-3">Modo de uso</h2>
                 <p className="text-textLight">{producto.modo_uso}</p>
               </div>
