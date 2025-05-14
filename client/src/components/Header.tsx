@@ -61,11 +61,10 @@ const Header = () => {
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
               <span className="flex items-center">
-                <span className="text-white font-playfair text-3xl italic mr-2">Lucy Lara</span>
                 <img 
                   src={logoFigura} 
                   alt="Logo Lucy Lara" 
-                  className="h-10 w-auto" 
+                  className="h-12 w-auto" 
                 />
               </span>
             </Link>
