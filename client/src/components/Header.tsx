@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone, Mail, Facebook, Instagram, Search, ShoppingBag } from "lucide-react";
-import LogoTransparent from "../assets/images/Logo-transparent.png";
+import LogoTransparent from "../assets/images/nuevo-logo.webp";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

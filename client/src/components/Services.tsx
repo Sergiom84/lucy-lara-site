@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import eliminacionVello from "../assets/images/eliminacion_vello.png";
 import micropigmentacion from "../assets/images/micropigmentacion3.jpg";
+import micropigmentacion2 from "../assets/images/micropigmentacion2.jpg";
 
 const services = [
   {
@@ -41,8 +42,8 @@ const services = [
     title: "Otros Tratamientos",
     description: "Descubre nuestra gama completa de tratamientos personalizados para satisfacer todas tus necesidades de belleza.",
     price: "Consultar",
-    image: "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-    alt: "Otros tratamientos"
+    image: micropigmentacion2,
+    alt: "Tratamiento de micropigmentación"
   }
 ];
 
