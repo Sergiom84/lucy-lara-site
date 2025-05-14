@@ -10,6 +10,7 @@ import cremaPielManchas from "../assets/images/Crema_cuidado_Piel_con_Machas.png
 import cremaDespigmentante from "../assets/images/Crema_Despigmentación.png";
 import cremaEfectoSeda from "../assets/images/Crema_Efecto_Seda.png";
 import espumaLimpiadora from "../assets/images/Espuma_Limpiadora.png";
+import protectorSolar from "../assets/images/Protector_Solar.png";
 
 // Nuestro Centro images
 const facilityImages = [
@@ -71,6 +72,14 @@ const productos = [
     precio: "41€",
     imagen: espumaLimpiadora,
     alt: "Espuma limpiadora Lucy Lara"
+  },
+  {
+    id: 6,
+    titulo: "Protector Solar 50+",
+    descripcion: "Hidratación + Protección Solar",
+    precio: "36€",
+    imagen: protectorSolar,
+    alt: "Protector solar con hidratación Lucy Lara"
   }
 ];
 
