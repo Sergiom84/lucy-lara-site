@@ -3,6 +3,7 @@ import { Link, useLocation } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone, Mail, Facebook, Instagram, Search, ShoppingBag } from "lucide-react";
 import LogoTransparent from "../assets/images/nuevo-logo.webp";
+import logoFigura from "../assets/images/logo-figura.webp";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -59,11 +60,14 @@ const Header = () => {
           {/* Logo Image - Using transparent logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
-              <img 
-                src={LogoTransparent} 
-                alt="Lucy Lara Centro de Belleza y Estética" 
-                className="h-16 w-auto" 
-              />
+              <span className="flex items-center">
+                <span className="text-white font-playfair text-3xl italic mr-2">Lucy Lara</span>
+                <img 
+                  src={logoFigura} 
+                  alt="Logo Lucy Lara" 
+                  className="h-10 w-auto" 
+                />
+              </span>
             </Link>
           </div>
           
