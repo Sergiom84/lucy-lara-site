@@ -7,6 +7,7 @@ import centro2 from "../assets/images/Nuestro_centro2.jpg";
 import centro3 from "../assets/images/Nuestro_centro3.jpg";
 import cremaContornoOjos from "../assets/images/Crema_cortono_de_ojos.png";
 import cremaPielManchas from "../assets/images/Crema_cuidado_Piel_con_Machas.png";
+import cremaDespigmentante from "../assets/images/Crema_Despigmentación.png";
 
 // Nuestro Centro images
 const facilityImages = [
@@ -44,6 +45,14 @@ const productos = [
     precio: "30€",
     imagen: cremaPielManchas,
     alt: "Crema cuidado piel con manchas Lucy Lara"
+  },
+  {
+    id: 3,
+    titulo: "Crema Despigmentante",
+    descripcion: "acción despigmentante.",
+    precio: "28€",
+    imagen: cremaDespigmentante,
+    alt: "Crema despigmentante Lucy Lara"
   }
 ];
 

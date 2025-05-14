@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import cremaContornoOjos from "../assets/images/Crema_cortono_de_ojos.png";
 import cremaPielManchas from "../assets/images/Crema_cuidado_Piel_con_Machas.png";
+import cremaDespigmentante from "../assets/images/Crema_Despigmentación.png";
 
 interface Producto {
   id: number;
@@ -59,6 +60,21 @@ const productosData: ProductosData = {
     precio: "30€",
     imagen: cremaPielManchas,
     alt: "Crema cuidado piel con manchas Lucy Lara"
+  },
+  "3": {
+    id: 3,
+    titulo: "Crema Despigmentante",
+    descripcion: "acción despigmentante.",
+    descripcionLarga: "Crema despigmentante de noche para todo tipo de pieles. Su amplia variedad de activos permite tratar cosmetológicamente las manchas tanto faciales como corporales, generando un efecto clarificante significativo.",
+    beneficios: [
+      "Despigmentación",
+      "Aclara las manchas localizadas y atenúa el tono de la piel"
+    ],
+    ingredientes: "Ácido Kójico, Fítico, Glicólico, Arbutina, Nicotinamida, Extracto de Regaliz y Péptidos Despigmentantes. 30 ml",
+    modo_uso: "Aplicar por la noche sobre la mancha específica a tratar o repartir cuatro gotas entre frente, mejillas y barbilla y extender sin frotar en exceso. Recomendamos aplicar protección solar máxima a diario y no lavar el rostro con jabón para evitar resecar la piel en exceso. En caso de irritación, suspender temporalmente el tratamiento e intentar repetir su uso probando con menos cantidad.",
+    precio: "28€",
+    imagen: cremaDespigmentante,
+    alt: "Crema despigmentante Lucy Lara"
   }
 };
 
