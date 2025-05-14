@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { IdCard, UserRound, Flower } from "lucide-react";
-import recepcionTamara from "../assets/images/recepcion-tamara.jpg";
+import recepcion2 from "../assets/images/Recepción2.jpg";
 
 const Welcome = () => {
   // Animation variants
@@ -33,7 +33,7 @@ const Welcome = () => {
             variants={itemVariants}
           >
             <img 
-              src={recepcionTamara} 
+              src={recepcion2} 
               alt="Recepción del Centro de Estética Lucy Lara" 
               className="rounded-2xl shadow-lg w-full h-auto object-cover"
             />

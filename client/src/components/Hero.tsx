@@ -2,11 +2,12 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 // Importación directa de imágenes
-import imagen1 from "@assets/Entrada1.jpg";
+import imagen1 from "../assets/images/Entrada1.jpg";
 import imagen2 from "@assets/Entrada2.jpg";
 import imagen3 from "@assets/Mueble.jpg";
 import imagen4 from "@assets/Cabina2.jpg";
 import imagen5 from "@assets/Cabina3.jpg";
+import logoFigura from "../assets/images/logo-figura.webp";
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
