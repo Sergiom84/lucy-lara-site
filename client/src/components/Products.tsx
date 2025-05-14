@@ -9,6 +9,7 @@ import cremaContornoOjos from "../assets/images/Crema_cortono_de_ojos.png";
 import cremaPielManchas from "../assets/images/Crema_cuidado_Piel_con_Machas.png";
 import cremaDespigmentante from "../assets/images/Crema_Despigmentación.png";
 import cremaEfectoSeda from "../assets/images/Crema_Efecto_Seda.png";
+import espumaLimpiadora from "../assets/images/Espuma_Limpiadora.png";
 
 // Nuestro Centro images
 const facilityImages = [
@@ -62,6 +63,14 @@ const productos = [
     precio: "39€",
     imagen: cremaEfectoSeda,
     alt: "Crema efecto seda Lucy Lara"
+  },
+  {
+    id: 5,
+    titulo: "Espuma Limpiadora",
+    descripcion: "Mousse Limpiadora",
+    precio: "41€",
+    imagen: espumaLimpiadora,
+    alt: "Espuma limpiadora Lucy Lara"
   }
 ];
 

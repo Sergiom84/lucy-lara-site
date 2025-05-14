@@ -9,6 +9,7 @@ import cremaContornoOjos from "../assets/images/Crema_cortono_de_ojos.png";
 import cremaPielManchas from "../assets/images/Crema_cuidado_Piel_con_Machas.png";
 import cremaDespigmentante from "../assets/images/Crema_Despigmentación.png";
 import cremaEfectoSeda from "../assets/images/Crema_Efecto_Seda.png";
+import espumaLimpiadora from "../assets/images/Espuma_Limpiadora.png";
 
 interface Producto {
   id: number;
@@ -91,6 +92,22 @@ const productosData: ProductosData = {
     precio: "39€",
     imagen: cremaEfectoSeda,
     alt: "Crema efecto seda Lucy Lara"
+  },
+  "5": {
+    id: 5,
+    titulo: "Espuma Limpiadora",
+    descripcion: "Mousse Limpiadora",
+    descripcionLarga: "Es una mousse que permite limpiar a diario todo tipo de las pieles. Emulsiona perfectamente los residuos de la superficie de la piel (maquillaje, grasa), limpiándola en profundidad.",
+    beneficios: [
+      "Limpieza profunda",
+      "Elimina maquillaje y grasa",
+      "Apta para todo tipo de pieles"
+    ],
+    ingredientes: "Ácido Glicólico, Avena, Manzanilla y base Foam de limpieza. 150 ml",
+    modo_uso: "Con el rostro humedecido, extender con las manos con un suave masaje. Retirar con abundante agua y aplicar Tónico Facial.",
+    precio: "41€",
+    imagen: espumaLimpiadora,
+    alt: "Espuma limpiadora Lucy Lara"
   }
 };
 
