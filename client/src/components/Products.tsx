@@ -95,7 +95,7 @@ const Products = () => {
                 whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05)" }}
                 transition={{ duration: 0.3 }}
               >
-                <Link href={`/productos/${producto.id}`}>
+                <div onClick={() => window.location.href = `/productos/${producto.id}`}>
                   <div className="h-64 w-full overflow-hidden" style={{ borderRadius: "8px 8px 0 0" }}>
                     <img 
                       src={producto.imagen} 
@@ -122,7 +122,7 @@ const Products = () => {
                       </span>
                     </div>
                   </div>
-                </Link>
+                </div>
               </motion.div>
             ))}
           </motion.div>

@@ -30,15 +30,15 @@ const productosData: ProductosData = {
     id: 1,
     titulo: "Crema Contorno de Ojos",
     descripcion: "Lifting periocular. Reductor de bolsas.",
-    descripcionLarga: "Crema especializada para el contorno de ojos con efecto lifting periocular y reductor de bolsas. Formulada con ingredientes activos que ayudan a disminuir las líneas de expresión, ojeras y bolsas, proporcionando una mirada más fresca y descansada.",
+    descripcionLarga: "Crema lifting periocular reductor de bolsas, formulada para el cuidado antiarrugas y la disminución de ojeras y bolsas. Trata los principales signos del envejecimiento del área periocular —arrugas finas, surcos, patas de gallo, líneas de expresión, bolsas y ojeras— relajando la musculatura y aportando un efecto lifting.",
     beneficios: [
+      "Cuidado antiarrugas",
+      "Reducción visible de bolsas y ojeras",
       "Efecto lifting inmediato",
-      "Reduce visiblemente las bolsas",
-      "Hidrata intensamente la zona del contorno",
-      "Ilumina y revitaliza la mirada"
+      "Relaja y tonifica la zona periocular"
     ],
-    ingredientes: "Agua, Butileno Glicol, Glicerina, Ciclopentasiloxano, Extracto de Alga, Proteína Hidrolizada de Trigo, Cafeína, Vitamina E, Ácido Hialurónico, Pantenol, Niacinamida.",
-    modo_uso: "Aplicar mañana y noche una pequeña cantidad con ligeros toques sobre el contorno de los ojos, desde el lagrimal hasta la sien.",
+    ingredientes: "Colágeno Natural, Ácido Hialurónico de bajo peso molecular, Matrixyl 3000®, Rhamnosoft®, Argireline®, Eyeseryl®, Alfa-Bisabolol, Aceite de Germen de Trigo y Aceite. 30 ml",
+    modo_uso: "Aplicar a toques por la mañana y por la noche sobre el contorno de los ojos.",
     precio: "35€",
     imagen: cremaContornoOjos,
     alt: "Crema contorno de ojos Lucy Lara"
@@ -73,11 +73,9 @@ const ProductDetail = () => {
       <div className="min-h-screen flex flex-col items-center justify-center p-4">
         <h1 className="text-2xl font-semibold mb-4">Producto no encontrado</h1>
         <p className="mb-6">Lo sentimos, el producto que buscas no está disponible.</p>
-        <Link href="/#productos">
-          <a className="bg-accent hover:bg-accentDark text-white px-6 py-2 rounded-full transition-colors inline-flex items-center">
-            <ArrowLeft size={16} className="mr-2" />
-            Volver a productos
-          </a>
+        <Link href="/#productos" className="bg-accent hover:bg-accentDark text-white px-6 py-2 rounded-full transition-colors inline-flex items-center">
+          <ArrowLeft size={16} className="mr-2" />
+          Volver a productos
         </Link>
       </div>
     );
@@ -95,11 +93,9 @@ const ProductDetail = () => {
       <main className="pt-32 pb-16 md:py-24">
         <div className="container mx-auto px-4">
           {/* Navegación de regreso */}
-          <Link href="/#productos">
-            <a className="inline-flex items-center text-accent hover:text-accentDark mb-8 transition-colors">
-              <ArrowLeft size={16} className="mr-2" />
-              Volver a productos
-            </a>
+          <Link href="/#productos" className="inline-flex items-center text-accent hover:text-accentDark mb-8 transition-colors">
+            <ArrowLeft size={16} className="mr-2" />
+            Volver a productos
           </Link>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
