@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Welcome from "@/components/Welcome";
 import Services from "@/components/Services";
-import Gallery from "@/components/Gallery";
+import Products from "@/components/Products";
 import Testimonials from "@/components/Testimonials";
 import Booking from "@/components/Booking";
 import Footer from "@/components/Footer";
@@ -28,7 +28,7 @@ const Home = () => {
       <Hero />
       <Welcome />
       <Services />
-      <Gallery />
+      <Products />
       <Testimonials />
       <Booking />
       <Footer />
