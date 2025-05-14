@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import cremaContornoOjos from "../assets/images/Crema_cortono_de_ojos.png";
 import cremaPielManchas from "../assets/images/Crema_cuidado_Piel_con_Machas.png";
 import cremaDespigmentante from "../assets/images/Crema_Despigmentación.png";
+import cremaEfectoSeda from "../assets/images/Crema_Efecto_Seda.png";
 
 interface Producto {
   id: number;
@@ -75,6 +76,21 @@ const productosData: ProductosData = {
     precio: "28€",
     imagen: cremaDespigmentante,
     alt: "Crema despigmentante Lucy Lara"
+  },
+  "4": {
+    id: 4,
+    titulo: "Crema Efecto Seda",
+    descripcion: "Reafirmante facial",
+    descripcionLarga: "Crema Efecto Seda genera un efecto lifting inmediato. Previene y trata la flacidez facial devolviendo a la piel su luminosidad, tonificación y elasticidad. Su especial textura efecto seda es ideal como base de maquillaje.",
+    beneficios: [
+      "Reafirmación",
+      "Luminosidad"
+    ],
+    ingredientes: "DMAE, Vitamina C, Ácido Tióctico, Glicerol, Aloe Vera y Vitamina E. 50 ml",
+    modo_uso: "Aplicar por la mañana y por la noche sobre cara, cuello y escote. Su contenido en Vitamina C puede producir irritación en pieles sensibles.",
+    precio: "39€",
+    imagen: cremaEfectoSeda,
+    alt: "Crema efecto seda Lucy Lara"
   }
 };
 

@@ -8,6 +8,7 @@ import centro3 from "../assets/images/Nuestro_centro3.jpg";
 import cremaContornoOjos from "../assets/images/Crema_cortono_de_ojos.png";
 import cremaPielManchas from "../assets/images/Crema_cuidado_Piel_con_Machas.png";
 import cremaDespigmentante from "../assets/images/Crema_Despigmentación.png";
+import cremaEfectoSeda from "../assets/images/Crema_Efecto_Seda.png";
 
 // Nuestro Centro images
 const facilityImages = [
@@ -53,6 +54,14 @@ const productos = [
     precio: "28€",
     imagen: cremaDespigmentante,
     alt: "Crema despigmentante Lucy Lara"
+  },
+  {
+    id: 4,
+    titulo: "Crema Efecto Seda",
+    descripcion: "Reafirmante facial",
+    precio: "39€",
+    imagen: cremaEfectoSeda,
+    alt: "Crema efecto seda Lucy Lara"
   }
 ];
 
