@@ -6,6 +6,7 @@ import centro1 from "../assets/images/Nuestro_centro1.jpg";
 import centro2 from "../assets/images/Nuestro_centro2.jpg";
 import centro3 from "../assets/images/Nuestro_centro3.jpg";
 import cremaContornoOjos from "../assets/images/Crema_cortono_de_ojos.png";
+import cremaPielManchas from "../assets/images/Crema_cuidado_Piel_con_Machas.png";
 
 // Nuestro Centro images
 const facilityImages = [
@@ -35,6 +36,14 @@ const productos = [
     precio: "35€",
     imagen: cremaContornoOjos,
     alt: "Crema contorno de ojos Lucy Lara"
+  },
+  {
+    id: 2,
+    titulo: "Crema Cuidado Piel con Manchas",
+    descripcion: "Cuidado diario de la piel con tendencia pigmentaria",
+    precio: "30€",
+    imagen: cremaPielManchas,
+    alt: "Crema cuidado piel con manchas Lucy Lara"
   }
 ];
 

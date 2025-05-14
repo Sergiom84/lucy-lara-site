@@ -6,6 +6,7 @@ import { ArrowLeft, ShoppingCart } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import cremaContornoOjos from "../assets/images/Crema_cortono_de_ojos.png";
+import cremaPielManchas from "../assets/images/Crema_cuidado_Piel_con_Machas.png";
 
 interface Producto {
   id: number;
@@ -42,6 +43,22 @@ const productosData: ProductosData = {
     precio: "35€",
     imagen: cremaContornoOjos,
     alt: "Crema contorno de ojos Lucy Lara"
+  },
+  "2": {
+    id: 2,
+    titulo: "Crema Cuidado Piel con Manchas",
+    descripcion: "Cuidado diario de la piel con tendencia pigmentaria",
+    descripcionLarga: "Crema despigmentante de día para todo tipo de pieles. Exclusiva fórmula que combina agentes despigmentantes para manchas y discromías con activos antiarrugas. Se funde con la piel sin aportar grasa dejando un aspecto aterciopelado. Protección solar baja.",
+    beneficios: [
+      "Atenúa el tono de la piel",
+      "Despigmentante",
+      "Hidratante y antiedad"
+    ],
+    ingredientes: "Factor Natural de Hidratación, Isoflavonas de Soja Liposomadas, Moléculas señal derivadas de la leche activadas y estabilizadas, Glicerol, Lisado de Bifidobacterias, Aloe Vera, Activos de Bellis Perennis, Polipéptido Bioactivos (Citoquinas), Filtro solar. 50 ml",
+    modo_uso: "Aplicar por la mañana como crema de día sobre cara, cuello y escote. Repetir la aplicación en caso de exposición solar intensa. Recomendamos aplicar protección solar máxima a diario.",
+    precio: "30€",
+    imagen: cremaPielManchas,
+    alt: "Crema cuidado piel con manchas Lucy Lara"
   }
 };
 
