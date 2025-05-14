@@ -11,6 +11,7 @@ import cremaDespigmentante from "../assets/images/Crema_Despigmentación.png";
 import cremaEfectoSeda from "../assets/images/Crema_Efecto_Seda.png";
 import espumaLimpiadora from "../assets/images/Espuma_Limpiadora.png";
 import protectorSolar from "../assets/images/Protector_Solar.png";
+import serumVitaminaC from "../assets/images/Serum_Vitamina_C.png";
 
 interface Producto {
   id: number;
@@ -126,6 +127,22 @@ const productosData: ProductosData = {
     precio: "36€",
     imagen: protectorSolar,
     alt: "Protector solar 50+ Lucy Lara"
+  },
+  "7": {
+    id: 7,
+    titulo: "Sérum Vitamina C",
+    descripcion: "Sérum Efecto Lifting",
+    descripcionLarga: "Sérum de día y de noche de efecto lifting inmediato para todo tipo de pieles. Previene y trata las arrugas y el envejecimiento. Recupera las pieles apagadas y fatigadas, devolviéndoles su luz natural.",
+    beneficios: [
+      "Efecto lifting",
+      "Luminosidad",
+      "Antiarrugas"
+    ],
+    ingredientes: "Vitamina C, Ginkgo Biloba, DMAE y PhytoproteoglycanosⓇ. 30 ml",
+    modo_uso: "Aplicar por la mañana y por la noche con un suave masaje. A continuación, aplicar su crema habitual.",
+    precio: "28€",
+    imagen: serumVitaminaC,
+    alt: "Sérum Vitamina C Lucy Lara"
   }
 };
 

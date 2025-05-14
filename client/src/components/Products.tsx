@@ -11,6 +11,7 @@ import cremaDespigmentante from "../assets/images/Crema_Despigmentación.png";
 import cremaEfectoSeda from "../assets/images/Crema_Efecto_Seda.png";
 import espumaLimpiadora from "../assets/images/Espuma_Limpiadora.png";
 import protectorSolar from "../assets/images/Protector_Solar.png";
+import serumVitaminaC from "../assets/images/Serum_Vitamina_C.png";
 
 // Nuestro Centro images
 const facilityImages = [
@@ -80,6 +81,14 @@ const productos = [
     precio: "36€",
     imagen: protectorSolar,
     alt: "Protector solar con hidratación Lucy Lara"
+  },
+  {
+    id: 7,
+    titulo: "Sérum Vitamina C",
+    descripcion: "Sérum Efecto Lifting",
+    precio: "28€",
+    imagen: serumVitaminaC,
+    alt: "Sérum Vitamina C efecto lifting Lucy Lara"
   }
 ];
 
