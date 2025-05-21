@@ -38,14 +38,13 @@ const productosData: ProductosData = {
     id: 1,
     titulo: "Crema Contorno de Ojos",
     descripcion: "Lifting periocular. Reductor de bolsas.",
-    descripcionLarga: "Crema lifting periocular reductor de bolsas, formulada para el cuidado antiarrugas y la disminución de ojeras y bolsas. Trata los principales signos del envejecimiento del área periocular —arrugas finas, surcos, patas de gallo, líneas de expresión, bolsas y ojeras— relajando la musculatura y aportando un efecto lifting.",
+    descripcionLarga: "Trata los principales signos del envejecimiento del área periocular de todo tipo de pieles: arrugas finas, surcos. patas de galio, lineas de expresión, bolsas y ojeras. Relaja la musculatura periocular generando un efecto lifting.",
     beneficios: [
       "Cuidado antiarrugas",
-      "Reducción visible de bolsas y ojeras",
-      "Efecto lifting inmediato",
-      "Relaja y tonifica la zona periocular"
+      "Reducción de bolsas y ojeras"
     ],
-    ingredientes: "Colágeno Natural, Ácido Hialurónico de bajo peso molecular, Matrixyl 3000®, Rhamnosoft®, Argireline®, Eyeseryl®, Alfa-Bisabolol, Aceite de Germen de Trigo y Aceite. 30 ml",
+    ingredientes: "Colágeno Natural 5%, Ácido Hialurónico de bajo peso molecular, Matrixyl 3000 2%. Rhamnosoft 1%, Argireline® 5%, Eyeseryl® 10%, Alfa-Bisabolol 0.5%, Aceite de Germen de Trigo y Aceite de Jojoba.",
+    presentacion: "30 ml",
     modo_uso: "Aplicar a toques por la mañana y por la noche sobre el contorno de los ojos.",
     precio: "35€",
     imagen: cremaContornoOjos,
