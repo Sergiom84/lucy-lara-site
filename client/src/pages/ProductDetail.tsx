@@ -143,7 +143,8 @@ const productosData: ProductosData = {
       "Luminosidad",
       "Antiarrugas"
     ],
-    ingredientes: "Vitamina C, Ginkgo Biloba, DMAE y PhytoproteoglycanosⓇ. 30 ml",
+    ingredientes: "Vitamina C 4%, Ginkgo Biloba 1%, DMAE 2% y Phytoproteoglycanos 15%",
+    presentacion: "30 ml",
     modo_uso: "Aplicar por la mañana y por la noche con un suave masaje. A continuación, aplicar su crema habitual.",
     precio: "28€",
     imagen: serumVitaminaC,
