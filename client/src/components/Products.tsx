@@ -12,6 +12,7 @@ import cremaEfectoSeda from "../assets/images/Crema_Efecto_Seda.png";
 import espumaLimpiadora from "../assets/images/Espuma_Limpiadora.png";
 import protectorSolar from "../assets/images/Protector_Solar.png";
 import serumVitaminaC from "../assets/images/Serum_Vitamina_C.png";
+import cremaHidratanteOilFree from "../assets/images/Crema_Hidratante_Oil_Free.png";
 
 // Nuestro Centro images
 const facilityImages = [
@@ -89,6 +90,14 @@ const productos = [
     precio: "28€",
     imagen: serumVitaminaC,
     alt: "Sérum Vitamina C efecto lifting Lucy Lara"
+  },
+  {
+    id: 8,
+    titulo: "Crema Hidratante Oil-Free",
+    descripcion: "Hidratación Facial Oil-Free Piel Grasa",
+    precio: "40€",
+    imagen: cremaHidratanteOilFree,
+    alt: "Crema hidratante oil-free Lucy Lara"
   }
 ];
 

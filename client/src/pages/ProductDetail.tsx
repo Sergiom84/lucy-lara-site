@@ -12,6 +12,7 @@ import cremaEfectoSeda from "../assets/images/Crema_Efecto_Seda.png";
 import espumaLimpiadora from "../assets/images/Espuma_Limpiadora.png";
 import protectorSolar from "../assets/images/Protector_Solar.png";
 import serumVitaminaC from "../assets/images/Serum_Vitamina_C.png";
+import cremaHidratanteOilFree from "../assets/images/Crema_Hidratante_Oil_Free.png";
 
 interface Producto {
   id: number;
@@ -145,6 +146,22 @@ const productosData: ProductosData = {
     precio: "28€",
     imagen: serumVitaminaC,
     alt: "Sérum Vitamina C Lucy Lara"
+  },
+  "8": {
+    id: 8,
+    titulo: "Crema Hidratante Oil-Free",
+    descripcion: "Hidratación Facial Oil-Free Piel Grasa",
+    descripcionLarga: "Hidratacion y cuidado de las pieles mixtas-grasas con tendencia acnéica. Regula y controla el exceso de grasa caracteristico de estas pieles. Con protección solar baja.",
+    beneficios: [
+      "Regulación de la piel mixta",
+      "Hidronutricion"
+    ],
+    ingredientes: "Acido Glicólico tamponado 2%, Factor Natural de Hidratación 1%, Aloe Vera, Filtro Solar, Mimosa 5%, Calendula 2%, Alfa-Bisabolol 0.5%, Derivado de Aguacate seborregulador 0.9% y Base oil-free.",
+    presentacion: "50 ml",
+    modo_uso: "Aplicar por la mañana y por la noche con un suave masaje. Podría imitar si se aplica sobre una piel excesivamente desengrasada con jabón o soluciones alcohólicas.",
+    precio: "40€",
+    imagen: cremaHidratanteOilFree,
+    alt: "Crema hidratante oil-free Lucy Lara"
   }
 };
 
