@@ -34,7 +34,7 @@ const facilityImages = [
   }
 ];
 
-// Productos
+// Productos (ordenados alfabéticamente)
 const productos = [
   {
     id: 1,
@@ -70,30 +70,6 @@ const productos = [
   },
   {
     id: 5,
-    titulo: "Espuma Limpiadora",
-    descripcion: "Mousse Limpiadora",
-    precio: "41€",
-    imagen: espumaLimpiadora,
-    alt: "Espuma limpiadora Lucy Lara"
-  },
-  {
-    id: 6,
-    titulo: "Protector Solar 50+",
-    descripcion: "Hidratación con Protección Solar",
-    precio: "36€",
-    imagen: protectorSolar,
-    alt: "Protector solar con hidratación Lucy Lara"
-  },
-  {
-    id: 7,
-    titulo: "Sérum Vitamina C",
-    descripcion: "Sérum Efecto Lifting",
-    precio: "28€",
-    imagen: serumVitaminaC,
-    alt: "Sérum Vitamina C efecto lifting Lucy Lara"
-  },
-  {
-    id: 8,
     titulo: "Crema Hidratante Oil-Free",
     descripcion: "Hidratación Facial Oil-Free Piel Grasa",
     precio: "40€",
@@ -101,12 +77,36 @@ const productos = [
     alt: "Crema hidratante oil-free Lucy Lara"
   },
   {
-    id: 9,
+    id: 6,
+    titulo: "Espuma Limpiadora",
+    descripcion: "Mousse Limpiadora",
+    precio: "41€",
+    imagen: espumaLimpiadora,
+    alt: "Espuma limpiadora Lucy Lara"
+  },
+  {
+    id: 7,
     titulo: "Gel Rosa Mosqueta",
     descripcion: "Regenerador Celular",
     precio: "23€",
     imagen: gelRosaMosqueta,
     alt: "Gel Rosa Mosqueta regenerador celular Lucy Lara"
+  },
+  {
+    id: 8,
+    titulo: "Protector Solar 50+",
+    descripcion: "Hidratación con Protección Solar",
+    precio: "36€",
+    imagen: protectorSolar,
+    alt: "Protector solar con hidratación Lucy Lara"
+  },
+  {
+    id: 9,
+    titulo: "Sérum Vitamina C",
+    descripcion: "Sérum Efecto Lifting",
+    precio: "28€",
+    imagen: serumVitaminaC,
+    alt: "Sérum Vitamina C efecto lifting Lucy Lara"
   }
 ];
 
