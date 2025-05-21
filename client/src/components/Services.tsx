@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import eliminacionVello from "../assets/images/eliminacion_vello.png";
 import micropigmentacion from "../assets/images/micropigmentacion3.jpg";
 import micropigmentacion2 from "../assets/images/micropigmentacion2.jpg";
+import tratamientoFacial from "../assets/images/tratamiento 8.jpg";
 
 const services = [
   {
@@ -10,8 +11,8 @@ const services = [
     title: "Tratamientos Faciales",
     description: "Rejuvenece tu piel con nuestros tratamientos personalizados que combinan técnicas avanzadas y productos naturales.",
     price: "Desde 45€",
-    image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-    alt: "Tratamiento facial"
+    image: tratamientoFacial,
+    alt: "Tratamiento facial profesional en Centro de Estética Lucy Lara"
   },
   {
     id: 2,
