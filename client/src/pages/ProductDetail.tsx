@@ -20,6 +20,7 @@ interface Producto {
   descripcionLarga: string;
   beneficios: string[];
   ingredientes: string;
+  presentacion?: string;
   modo_uso: string;
   precio: string;
   imagen: string;
@@ -89,7 +90,8 @@ const productosData: ProductosData = {
       "Reafirmación",
       "Luminosidad"
     ],
-    ingredientes: "DMAE, Vitamina C, Ácido Tióctico, Glicerol, Aloe Vera y Vitamina E. 50 ml",
+    ingredientes: "DMAE, Vitamina C, Ácido Tióctico, Glicerol, Aloe Vera y Vitamina E.",
+    presentacion: "50 ml",
     modo_uso: "Aplicar por la mañana y por la noche sobre cara, cuello y escote. Su contenido en Vitamina C puede producir irritación en pieles sensibles.",
     precio: "39€",
     imagen: cremaEfectoSeda,
@@ -244,6 +246,13 @@ const ProductDetail = () => {
                 <h2 className="font-medium text-lg mb-3">Ingredientes activos</h2>
                 <p className="text-textLight">{producto.ingredientes}</p>
               </div>
+              
+              {producto.presentacion && (
+                <div className="mb-8">
+                  <h2 className="font-medium text-lg mb-3">Presentación</h2>
+                  <p className="text-textLight">{producto.presentacion}</p>
+                </div>
+              )}
               
               <div className="mb-8">
                 <h2 className="font-medium text-lg mb-3">Modo de uso</h2>
