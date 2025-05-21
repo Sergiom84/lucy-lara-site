@@ -10,6 +10,7 @@ import cremaPielManchas from "../assets/images/Crema_cuidado_Piel_con_Machas.png
 import cremaDespigmentante from "../assets/images/Crema_Despigmentación.png";
 import cremaEfectoSeda from "../assets/images/Crema_Efecto_Seda.png";
 import espumaLimpiadora from "../assets/images/Espuma_Limpiadora.png";
+import lecheLimpiadoraFacial from "../assets/images/Leche_Limpiadora_Facial.png";
 import protectorSolar from "../assets/images/Protector_Solar.png";
 import protectorSolarColor from "../assets/images/Protector_Solar_Color.png";
 import serumVitaminaC from "../assets/images/Serum_Vitamina_C.png";
@@ -95,6 +96,14 @@ const productos = [
   },
   {
     id: 8,
+    titulo: "Leche Limpiadora Facial",
+    descripcion: "Limpieza Facial Hidratante",
+    precio: "45€",
+    imagen: lecheLimpiadoraFacial,
+    alt: "Leche limpiadora facial Lucy Lara"
+  },
+  {
+    id: 9,
     titulo: "Protector Solar 50+",
     descripcion: "Hidratación con Protección Solar",
     precio: "36€",
@@ -102,7 +111,7 @@ const productos = [
     alt: "Protector solar con hidratación Lucy Lara"
   },
   {
-    id: 9,
+    id: 10,
     titulo: "Protector Solar 50+ Color",
     descripcion: "Hidratación con Protección Solar",
     precio: "37€",
@@ -110,7 +119,7 @@ const productos = [
     alt: "Protector solar con color Lucy Lara"
   },
   {
-    id: 10,
+    id: 11,
     titulo: "Sérum Vitamina C",
     descripcion: "Sérum Efecto Lifting",
     precio: "28€",

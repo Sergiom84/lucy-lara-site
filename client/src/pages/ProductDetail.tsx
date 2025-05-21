@@ -10,6 +10,7 @@ import cremaPielManchas from "../assets/images/Crema_cuidado_Piel_con_Machas.png
 import cremaDespigmentante from "../assets/images/Crema_Despigmentación.png";
 import cremaEfectoSeda from "../assets/images/Crema_Efecto_Seda.png";
 import espumaLimpiadora from "../assets/images/Espuma_Limpiadora.png";
+import lecheLimpiadoraFacial from "../assets/images/Leche_Limpiadora_Facial.png";
 import protectorSolar from "../assets/images/Protector_Solar.png";
 import protectorSolarColor from "../assets/images/Protector_Solar_Color.png";
 import serumVitaminaC from "../assets/images/Serum_Vitamina_C.png";
@@ -153,6 +154,21 @@ const productosData: ProductosData = {
   },
   "8": {
     id: 8,
+    titulo: "Leche Limpiadora Facial",
+    descripcion: "Limpieza Facial Hidratante",
+    descripcionLarga: "Limpieza y desmaquillado diario de todo tipo de pieles, incluso de las más sensibles. Combina perfectamente la eliminación de todas las impurezas y residuos que hay en la superficie de la piel (maquillaje, polución....) con su hidronutrición, manteniendo su integridad y equilibrio cutáneo.",
+    beneficios: [
+      "Desmaquillante"
+    ],
+    ingredientes: "Aceite Almendras Dulces 10%, Emolientes de Cadena Media 6%, Glicerina 5%, Extractos de Avena 3%, Manzanilla 3%, Siliconas hidratantes y Excipiente emoliente facial exento de ceras.",
+    presentacion: "200 ml",
+    modo_uso: "Aplicar con un algodón o disco desmaquillador en cara y cuello. Retirar con un disco desmaquillador húmedo y aplicar Tónico Facial. Uso diario.",
+    precio: "45€",
+    imagen: lecheLimpiadoraFacial,
+    alt: "Leche limpiadora facial Lucy Lara"
+  },
+  "9": {
+    id: 9,
     titulo: "Protector Solar 50+",
     descripcion: "Hidratación con Protección Solar",
     descripcionLarga: "Protección solar muy alta con color a base de filtros orgánicos e inorgánicos que garantizan una protección de la piel sobre la radiación solar UVA y UVB y su amplio espectro. Indicado para todo tipo de piel, su contenido en Colágeno y Ácido Hialurónico aporta hidratación y un efecto maquillaje con un tacto aterciopelado no graso.",
@@ -169,8 +185,8 @@ const productosData: ProductosData = {
     imagen: protectorSolar,
     alt: "Protector solar 50+ Lucy Lara"
   },
-  "9": {
-    id: 9,
+  "10": {
+    id: 10,
     titulo: "Protector Solar 50+ Color",
     descripcion: "Hidratación con Protección Solar",
     descripcionLarga: "Protección solar muy alta con color a base de filtros orgánicos e inorgánicos que garantizan una protección de la piel sobre la radiación solar UVA y UVB y su amplio espectro. Indicado para todo tipo de piel, su contenido en Colágeno y Ácido Hialurónico aporta hidratación y un efecto maquillaje con un tacto aterciopelado no graso.",
@@ -187,8 +203,8 @@ const productosData: ProductosData = {
     imagen: protectorSolarColor,
     alt: "Protector solar con color Lucy Lara"
   },
-  "10": {
-    id: 10,
+  "11": {
+    id: 11,
     titulo: "Sérum Vitamina C",
     descripcion: "Sérum Efecto Lifting",
     descripcionLarga: "Sérum de día y de noche de efecto lifting inmediato para todo tipo de pieles. Previene y trata las arrugas y el envejecimiento. Recupera las pieles apagadas y fatigadas, devolviéndoles su luz natural.",
