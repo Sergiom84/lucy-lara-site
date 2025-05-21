@@ -14,7 +14,7 @@ import lecheLimpiadoraFacial from "../assets/images/Leche_Limpiadora_Facial.png"
 import protectorSolar from "../assets/images/Protector_Solar.png";
 import protectorSolarColor from "../assets/images/Protector_Solar_Color.png";
 import serumVitaminaC from "../assets/images/Serum_Vitamina_C.png";
-import cremaHidratanteOilFree from "../assets/images/Crema_Hidratante_Oil_Free.png";
+import cremaHidratanteOilFree from "../assets/images/Crema_Hidratante_Oil.png";
 import gelRosaMosqueta from "../assets/images/Gel_Rosa_Mosqueta.png";
 
 interface Producto {
