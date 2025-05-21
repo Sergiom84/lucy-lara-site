@@ -79,7 +79,7 @@ const productos = [
   {
     id: 6,
     titulo: "Protector Solar 50+",
-    descripcion: "Hidratación + Protección Solar",
+    descripcion: "Hidratación con Protección Solar",
     precio: "36€",
     imagen: protectorSolar,
     alt: "Protector solar con hidratación Lucy Lara"

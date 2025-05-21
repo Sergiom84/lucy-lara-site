@@ -119,7 +119,7 @@ const productosData: ProductosData = {
   "6": {
     id: 6,
     titulo: "Protector Solar 50+",
-    descripcion: "Hidratación + Protección Solar",
+    descripcion: "Hidratación con Protección Solar",
     descripcionLarga: "Protección solar muy alta con color a base de filtros orgánicos e inorgánicos que garantizan una protección de la piel sobre la radiación solar UVA y UVB y su amplio espectro. Indicado para todo tipo de piel, su contenido en Colágeno y Ácido Hialurónico aporta hidratación y un efecto maquillaje con un tacto aterciopelado no graso.",
     beneficios: [
       "Protección UVA y UVB",
@@ -127,7 +127,8 @@ const productosData: ProductosData = {
       "Hidratación profunda",
       "Textura no grasa"
     ],
-    ingredientes: "Filtros físicos y químicos, Ácido Hialurónico, Colágeno y Pigmentos que aportan color. 50 ml",
+    ingredientes: "Filtros físicos y químicos, Ácido Hialurónico, Colágeno y Pigmentos que aportan color.",
+    presentacion: "50 ml",
     modo_uso: "Aplicar por la mañana o cada vez que se precise. Reaplicar cada 2 horas en caso de exposición solar intensa.",
     precio: "36€",
     imagen: protectorSolar,
