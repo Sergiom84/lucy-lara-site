@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import eliminacionVello from "../assets/images/eliminacion_vello.png";
-import micropigmentacion from "../assets/images/micropigmentacion3.jpg";
+import micropigmentacion from "../assets/images/Micropigmentación_Alex.jpg";
 import micropigmentacion2 from "../assets/images/micropigmentacion2.jpg";
 import tratamientoFacial from "../assets/images/tratamiento 8.jpg";
 
@@ -36,7 +36,7 @@ const services = [
     description: "Realza tus rasgos naturales con técnicas de pigmentación semi-permanente para cejas, labios y ojos.",
     price: "Desde 150€",
     image: micropigmentacion,
-    alt: "Micropigmentación profesional"
+    alt: "Servicio de micropigmentación profesional para hombres y mujeres"
   },
   {
     id: 5,
