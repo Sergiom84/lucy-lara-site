@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import eliminacionVello from "../assets/images/eliminacion_vello.png";
+import eliminacionVello from "../assets/images/Eliminación_Vello_Tamara.jpg";
 import micropigmentacion from "../assets/images/Micropigmentación_Alex.jpg";
 import micropigmentacion2 from "../assets/images/micropigmentacion2.jpg";
 import tratamientoFacial from "../assets/images/tratamiento 8.jpg";
@@ -28,7 +28,7 @@ const services = [
     description: "Disfruta de una piel suave y libre de vello con nuestros métodos efectivos, seguros y de larga duración.",
     price: "Desde 35€",
     image: eliminacionVello,
-    alt: "Eliminación del vello con láser"
+    alt: "Tratamiento profesional de eliminación de vello con láser en Centro de Estética Lucy Lara"
   },
   {
     id: 4,
