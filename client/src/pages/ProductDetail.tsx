@@ -71,7 +71,7 @@ const productosData: ProductosData = {
   "3": {
     id: 3,
     titulo: "Crema Despigmentante",
-    descripcion: "acción despigmentante.",
+    descripcion: "Acción Despigmentante",
     descripcionLarga: "Crema despigmentante de noche para todo tipo de pieles. Su amplia variedad de activos permite tratar cosmetológicamente las manchas tanto faciales como corporales, generando un efecto clarificante significativo.",
     beneficios: [
       "Despigmentación",

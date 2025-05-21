@@ -54,7 +54,7 @@ const productos = [
   {
     id: 3,
     titulo: "Crema Despigmentante",
-    descripcion: "acción despigmentante.",
+    descripcion: "Acción Despigmentante",
     precio: "28€",
     imagen: cremaDespigmentante,
     alt: "Crema despigmentante Lucy Lara"
