@@ -13,6 +13,7 @@ import espumaLimpiadora from "../assets/images/Espuma_Limpiadora.png";
 import protectorSolar from "../assets/images/Protector_Solar.png";
 import serumVitaminaC from "../assets/images/Serum_Vitamina_C.png";
 import cremaHidratanteOilFree from "../assets/images/Crema_Hidratante_Oil_Free.png";
+import gelRosaMosqueta from "../assets/images/Gel_Rosa_Mosqueta.png";
 
 interface Producto {
   id: number;
@@ -164,6 +165,22 @@ const productosData: ProductosData = {
     precio: "40€",
     imagen: cremaHidratanteOilFree,
     alt: "Crema hidratante oil-free Lucy Lara"
+  },
+  "9": {
+    id: 9,
+    titulo: "Gel Rosa Mosqueta",
+    descripcion: "Regenerador Celular",
+    descripcionLarga: "Su uso diario regenera, recupera, hidrata, renueva y mejora las pieles más estropeadas, con imperfecciones y marcas cutáneas.",
+    beneficios: [
+      "Regenerador de piel",
+      "Cicatrices y marcas"
+    ],
+    ingredientes: "Aceite de Rosa Mosqueta.",
+    presentacion: "30 ml",
+    modo_uso: "Aplicar por la mañana y por la noche con un suave masaje. A continuación, aplicar su crema habitual.",
+    precio: "23€",
+    imagen: gelRosaMosqueta,
+    alt: "Gel Rosa Mosqueta Lucy Lara"
   }
 };
 

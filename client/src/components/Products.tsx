@@ -13,6 +13,7 @@ import espumaLimpiadora from "../assets/images/Espuma_Limpiadora.png";
 import protectorSolar from "../assets/images/Protector_Solar.png";
 import serumVitaminaC from "../assets/images/Serum_Vitamina_C.png";
 import cremaHidratanteOilFree from "../assets/images/Crema_Hidratante_Oil_Free.png";
+import gelRosaMosqueta from "../assets/images/Gel_Rosa_Mosqueta.png";
 
 // Nuestro Centro images
 const facilityImages = [
@@ -98,6 +99,14 @@ const productos = [
     precio: "40€",
     imagen: cremaHidratanteOilFree,
     alt: "Crema hidratante oil-free Lucy Lara"
+  },
+  {
+    id: 9,
+    titulo: "Gel Rosa Mosqueta",
+    descripcion: "Regenerador Celular",
+    precio: "23€",
+    imagen: gelRosaMosqueta,
+    alt: "Gel Rosa Mosqueta regenerador celular Lucy Lara"
   }
 ];
 
