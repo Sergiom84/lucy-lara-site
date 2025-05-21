@@ -77,7 +77,8 @@ const productosData: ProductosData = {
       "Despigmentación",
       "Aclara las manchas localizadas y atenúa el tono de la piel"
     ],
-    ingredientes: "Ácido Kójico, Fítico, Glicólico, Arbutina, Nicotinamida, Extracto de Regaliz y Péptidos Despigmentantes. 30 ml",
+    ingredientes: "Ácido Kójico 4%, Fitico 2%, Glicólico 2%, Arbutina 3%, Nicotinamida 1%. Extracto de Regaliz 0.1% y Péptidos Despigmentantes.",
+    presentacion: "30 ml",
     modo_uso: "Aplicar por la noche sobre la mancha específica a tratar o repartir cuatro gotas entre frente, mejillas y barbilla y extender sin frotar en exceso. Recomendamos aplicar protección solar máxima a diario y no lavar el rostro con jabón para evitar resecar la piel en exceso. En caso de irritación, suspender temporalmente el tratamiento e intentar repetir su uso probando con menos cantidad.",
     precio: "28€",
     imagen: cremaDespigmentante,
