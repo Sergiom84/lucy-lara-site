@@ -11,6 +11,7 @@ import cremaDespigmentante from "../assets/images/Crema_Despigmentación.png";
 import cremaEfectoSeda from "../assets/images/Crema_Efecto_Seda.png";
 import espumaLimpiadora from "../assets/images/Espuma_Limpiadora.png";
 import protectorSolar from "../assets/images/Protector_Solar.png";
+import protectorSolarColor from "../assets/images/Protector_Solar_Color.png";
 import serumVitaminaC from "../assets/images/Serum_Vitamina_C.png";
 import cremaHidratanteOilFree from "../assets/images/Crema_Hidratante_Oil_Free.png";
 import gelRosaMosqueta from "../assets/images/Gel_Rosa_Mosqueta.png";
@@ -170,6 +171,24 @@ const productosData: ProductosData = {
   },
   "9": {
     id: 9,
+    titulo: "Protector Solar 50+ Color",
+    descripcion: "Hidratación con Protección Solar",
+    descripcionLarga: "Protección solar muy alta con color a base de filtros orgánicos e inorgánicos que garantizan una protección de la piel sobre la radiación solar UVA y UVB y su amplio espectro. Indicado para todo tipo de piel, su contenido en Colágeno y Ácido Hialurónico aporta hidratación y un efecto maquillaje con un tacto aterciopelado no graso.",
+    beneficios: [
+      "Protección UVA y UVB",
+      "Efecto maquillaje",
+      "Hidratación profunda",
+      "Textura no grasa"
+    ],
+    ingredientes: "Filtros físicos y químicos, Ácido Hialurónico, Colágeno y Pigmentos que aportan color.",
+    presentacion: "50 ml",
+    modo_uso: "Aplicar por la mañana o cada vez que se precise. Reaplicar cada 2 horas en caso de exposición solar intensa.",
+    precio: "37€",
+    imagen: protectorSolarColor,
+    alt: "Protector solar con color Lucy Lara"
+  },
+  "10": {
+    id: 10,
     titulo: "Sérum Vitamina C",
     descripcion: "Sérum Efecto Lifting",
     descripcionLarga: "Sérum de día y de noche de efecto lifting inmediato para todo tipo de pieles. Previene y trata las arrugas y el envejecimiento. Recupera las pieles apagadas y fatigadas, devolviéndoles su luz natural.",

@@ -11,6 +11,7 @@ import cremaDespigmentante from "../assets/images/Crema_Despigmentación.png";
 import cremaEfectoSeda from "../assets/images/Crema_Efecto_Seda.png";
 import espumaLimpiadora from "../assets/images/Espuma_Limpiadora.png";
 import protectorSolar from "../assets/images/Protector_Solar.png";
+import protectorSolarColor from "../assets/images/Protector_Solar_Color.png";
 import serumVitaminaC from "../assets/images/Serum_Vitamina_C.png";
 import cremaHidratanteOilFree from "../assets/images/Crema_Hidratante_Oil_Free.png";
 import gelRosaMosqueta from "../assets/images/Gel_Rosa_Mosqueta.png";
@@ -102,6 +103,14 @@ const productos = [
   },
   {
     id: 9,
+    titulo: "Protector Solar 50+ Color",
+    descripcion: "Hidratación con Protección Solar",
+    precio: "37€",
+    imagen: protectorSolarColor,
+    alt: "Protector solar con color Lucy Lara"
+  },
+  {
+    id: 10,
     titulo: "Sérum Vitamina C",
     descripcion: "Sérum Efecto Lifting",
     precio: "28€",
