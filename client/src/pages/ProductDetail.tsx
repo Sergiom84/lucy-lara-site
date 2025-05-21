@@ -219,6 +219,22 @@ const productosData: ProductosData = {
     precio: "28€",
     imagen: serumVitaminaC,
     alt: "Sérum Vitamina C Lucy Lara"
+  },
+  "12": {
+    id: 12,
+    titulo: "Tónico Facial",
+    descripcion: "Tonifica y Equilibra el Cutis",
+    descripcionLarga: "Es el complemento de limpieza facial diario para todo tipo de pieles que aportan un efecto fresco, descongestivo y de hidratación único.",
+    beneficios: [
+      "Reequilibra la piel",
+      "Tonificación"
+    ],
+    ingredientes: "Extracto de Manzanilla 10%, Agua de Rosas 2,5%, Glicerol 5% y Agua Termal.",
+    presentacion: "200 ml",
+    modo_uso: "Aplicar con un algodón o disco desmaquillador dando ligeros toques por todo el rostro y cuello.",
+    precio: "38€",
+    imagen: protectorSolar, // Imagen temporal
+    alt: "Tónico facial Lucy Lara"
   }
 };
 

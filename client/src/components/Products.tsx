@@ -36,6 +36,10 @@ const facilityImages = [
   }
 ];
 
+// Producto temporal para tónico facial (sin imagen)
+import defaultProductImage from "../assets/images/Protector_Solar.png"; // Usamos temporalmente otra imagen
+// Nota: reemplazar esta imagen cuando tengamos la del Tónico Facial
+
 // Productos (ordenados alfabéticamente)
 const productos = [
   {
@@ -125,6 +129,14 @@ const productos = [
     precio: "28€",
     imagen: serumVitaminaC,
     alt: "Sérum Vitamina C efecto lifting Lucy Lara"
+  },
+  {
+    id: 12,
+    titulo: "Tónico Facial",
+    descripcion: "Tonifica y Equilibra el Cutis",
+    precio: "38€",
+    imagen: defaultProductImage, // Imagen temporal
+    alt: "Tónico facial Lucy Lara"
   }
 ];
 
