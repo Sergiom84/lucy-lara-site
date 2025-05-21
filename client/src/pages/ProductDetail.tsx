@@ -61,7 +61,8 @@ const productosData: ProductosData = {
       "Despigmentante",
       "Hidratante y antiedad"
     ],
-    ingredientes: "Factor Natural de Hidratación, Isoflavonas de Soja Liposomadas, Moléculas señal derivadas de la leche activadas y estabilizadas, Glicerol, Lisado de Bifidobacterias, Aloe Vera, Activos de Bellis Perennis, Polipéptido Bioactivos (Citoquinas), Filtro solar. 50 ml",
+    ingredientes: "Factor Natural de Hidratación 5%, Isoflavonas de Soja Liposomadas 2%, Moléculas señal derivadas de la leche activadas y estabilizadas 5%, Glicerol 3%, Lisado de Bifidobacterias 5%, Aloe Vera, Activos de Bellis Perennis 4%, Polipéptido Bioactivos (Citoquinas) 0.5%, Filtro solar",
+    presentacion: "50 ml",
     modo_uso: "Aplicar por la mañana como crema de día sobre cara, cuello y escote. Repetir la aplicación en caso de exposición solar intensa. Recomendamos aplicar protección solar máxima a diario.",
     precio: "30€",
     imagen: cremaPielManchas,
