@@ -34,6 +34,7 @@ interface ProductosData {
 }
 
 // En un proyecto real, esta información vendría de una API o base de datos
+// Productos ordenados alfabéticamente
 const productosData: ProductosData = {
   "1": {
     id: 1,
@@ -102,6 +103,22 @@ const productosData: ProductosData = {
   },
   "5": {
     id: 5,
+    titulo: "Crema Hidratante Oil-Free",
+    descripcion: "Hidratación Facial Oil-Free Piel Grasa",
+    descripcionLarga: "Hidratacion y cuidado de las pieles mixtas-grasas con tendencia acnéica. Regula y controla el exceso de grasa caracteristico de estas pieles. Con protección solar baja.",
+    beneficios: [
+      "Regulación de la piel mixta",
+      "Hidronutricion"
+    ],
+    ingredientes: "Acido Glicólico tamponado 2%, Factor Natural de Hidratación 1%, Aloe Vera, Filtro Solar, Mimosa 5%, Calendula 2%, Alfa-Bisabolol 0.5%, Derivado de Aguacate seborregulador 0.9% y Base oil-free.",
+    presentacion: "50 ml",
+    modo_uso: "Aplicar por la mañana y por la noche con un suave masaje. Podría imitar si se aplica sobre una piel excesivamente desengrasada con jabón o soluciones alcohólicas.",
+    precio: "40€",
+    imagen: cremaHidratanteOilFree,
+    alt: "Crema hidratante oil-free Lucy Lara"
+  },
+  "6": {
+    id: 6,
     titulo: "Espuma Limpiadora",
     descripcion: "Mousse Limpiadora",
     descripcionLarga: "Es una mousse que permite limpiar a diario todo tipo de las pieles. Emulsiona perfectamente los residuos de la superficie de la piel (maquillaje, grasa), limpiándola en profundidad.",
@@ -110,14 +127,31 @@ const productosData: ProductosData = {
       "Elimina maquillaje y grasa",
       "Apta para todo tipo de pieles"
     ],
-    ingredientes: "Ácido Glicólico, Avena, Manzanilla y base Foam de limpieza. 150 ml",
+    ingredientes: "Ácido Glicólico, Avena, Manzanilla y base Foam de limpieza.",
+    presentacion: "150 ml",
     modo_uso: "Con el rostro humedecido, extender con las manos con un suave masaje. Retirar con abundante agua y aplicar Tónico Facial.",
     precio: "41€",
     imagen: espumaLimpiadora,
     alt: "Espuma limpiadora Lucy Lara"
   },
-  "6": {
-    id: 6,
+  "7": {
+    id: 7,
+    titulo: "Gel Rosa Mosqueta",
+    descripcion: "Regenerador Celular",
+    descripcionLarga: "Su uso diario regenera, recupera, hidrata, renueva y mejora las pieles más estropeadas, con imperfecciones y marcas cutáneas.",
+    beneficios: [
+      "Regenerador de piel",
+      "Cicatrices y marcas"
+    ],
+    ingredientes: "Aceite de Rosa Mosqueta.",
+    presentacion: "30 ml",
+    modo_uso: "Aplicar por la mañana y por la noche con un suave masaje. A continuación, aplicar su crema habitual.",
+    precio: "23€",
+    imagen: gelRosaMosqueta,
+    alt: "Gel Rosa Mosqueta Lucy Lara"
+  },
+  "8": {
+    id: 8,
     titulo: "Protector Solar 50+",
     descripcion: "Hidratación con Protección Solar",
     descripcionLarga: "Protección solar muy alta con color a base de filtros orgánicos e inorgánicos que garantizan una protección de la piel sobre la radiación solar UVA y UVB y su amplio espectro. Indicado para todo tipo de piel, su contenido en Colágeno y Ácido Hialurónico aporta hidratación y un efecto maquillaje con un tacto aterciopelado no graso.",
@@ -134,8 +168,8 @@ const productosData: ProductosData = {
     imagen: protectorSolar,
     alt: "Protector solar 50+ Lucy Lara"
   },
-  "7": {
-    id: 7,
+  "9": {
+    id: 9,
     titulo: "Sérum Vitamina C",
     descripcion: "Sérum Efecto Lifting",
     descripcionLarga: "Sérum de día y de noche de efecto lifting inmediato para todo tipo de pieles. Previene y trata las arrugas y el envejecimiento. Recupera las pieles apagadas y fatigadas, devolviéndoles su luz natural.",
@@ -150,38 +184,6 @@ const productosData: ProductosData = {
     precio: "28€",
     imagen: serumVitaminaC,
     alt: "Sérum Vitamina C Lucy Lara"
-  },
-  "8": {
-    id: 8,
-    titulo: "Crema Hidratante Oil-Free",
-    descripcion: "Hidratación Facial Oil-Free Piel Grasa",
-    descripcionLarga: "Hidratacion y cuidado de las pieles mixtas-grasas con tendencia acnéica. Regula y controla el exceso de grasa caracteristico de estas pieles. Con protección solar baja.",
-    beneficios: [
-      "Regulación de la piel mixta",
-      "Hidronutricion"
-    ],
-    ingredientes: "Acido Glicólico tamponado 2%, Factor Natural de Hidratación 1%, Aloe Vera, Filtro Solar, Mimosa 5%, Calendula 2%, Alfa-Bisabolol 0.5%, Derivado de Aguacate seborregulador 0.9% y Base oil-free.",
-    presentacion: "50 ml",
-    modo_uso: "Aplicar por la mañana y por la noche con un suave masaje. Podría imitar si se aplica sobre una piel excesivamente desengrasada con jabón o soluciones alcohólicas.",
-    precio: "40€",
-    imagen: cremaHidratanteOilFree,
-    alt: "Crema hidratante oil-free Lucy Lara"
-  },
-  "9": {
-    id: 9,
-    titulo: "Gel Rosa Mosqueta",
-    descripcion: "Regenerador Celular",
-    descripcionLarga: "Su uso diario regenera, recupera, hidrata, renueva y mejora las pieles más estropeadas, con imperfecciones y marcas cutáneas.",
-    beneficios: [
-      "Regenerador de piel",
-      "Cicatrices y marcas"
-    ],
-    ingredientes: "Aceite de Rosa Mosqueta.",
-    presentacion: "30 ml",
-    modo_uso: "Aplicar por la mañana y por la noche con un suave masaje. A continuación, aplicar su crema habitual.",
-    precio: "23€",
-    imagen: gelRosaMosqueta,
-    alt: "Gel Rosa Mosqueta Lucy Lara"
   }
 };
 
