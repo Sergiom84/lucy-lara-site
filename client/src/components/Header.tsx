@@ -10,12 +10,15 @@ const Header = () => {
   const [location] = useLocation();
   const [scrolled, setScrolled] = useState(false);
   
+  // Determine if we're on the home page or a product page
+  const isHomePage = location === "/";
+  
   // Navigation links (updated based on user request)
   const navLinks = [
-    { href: "#productos", label: "Productos" },
-    { href: "#promociones", label: "Promociones" },
-    { href: "#galeria", label: "Galería" },
-    { href: "#contacto", label: "Contacto" }
+    { href: isHomePage ? "#productos" : "/#productos", label: "Productos" },
+    { href: isHomePage ? "#promociones" : "/#promociones", label: "Promociones" },
+    { href: isHomePage ? "#galeria" : "/#galeria", label: "Galería" },
+    { href: isHomePage ? "#contacto" : "/#contacto", label: "Contacto" }
   ];
 
   // Handle scroll effect for sticky header

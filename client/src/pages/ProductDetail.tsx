@@ -270,7 +270,15 @@ const ProductDetail = () => {
       <main className="pt-32 pb-16 md:py-24">
         <div className="container mx-auto px-4">
           {/* Navegación de regreso */}
-          <Link href="/#productos" className="inline-flex items-center text-accent hover:text-accentDark mb-8 transition-colors">
+          <Link 
+            href="/#productos" 
+            className="inline-flex items-center text-accent hover:text-accentDark mb-8 transition-colors" 
+            onClick={(e) => {
+              // Esto asegura que volvamos a la página principal y luego nos desplacemos a la sección de productos
+              window.location.href = "/#productos";
+              e.preventDefault(); // Prevenir comportamiento predeterminado de Link
+            }}
+          >
             <ArrowLeft size={16} className="mr-2" />
             Volver a productos
           </Link>
