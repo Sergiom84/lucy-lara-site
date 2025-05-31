@@ -200,57 +200,50 @@ const TratamientosFaciales = () => {
             variants={containerVariants}
           >
             {tratamientosFaciales.map((tratamiento) => (
-              <motion.div 
-                key={tratamiento.id}
-                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
-                variants={itemVariants}
-                whileHover={{ y: -8 }}
-              >
-                {/* Imagen del tratamiento */}
-                <div className="h-48 overflow-hidden">
-                  <img 
-                    src={tratamiento.imagen} 
-                    alt={tratamiento.alt} 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                
-                {/* Contenido de la tarjeta */}
-                <div className="p-6">
-                  <h3 className="font-playfair text-xl font-semibold mb-2">
-                    {tratamiento.nombre}
-                  </h3>
-                  
-                  <div className="flex items-center gap-4 mb-3 text-sm text-textLight">
-                    {tratamiento.duracion && (
-                      <span>{tratamiento.duracion}</span>
-                    )}
-                    <span>•</span>
-                    <span>{tratamiento.frecuencia}</span>
+              <Link key={tratamiento.id} href={`/tratamiento-facial/${tratamiento.id}`}>
+                <motion.div 
+                  className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer"
+                  variants={itemVariants}
+                  whileHover={{ y: -8 }}
+                >
+                  {/* Imagen del tratamiento */}
+                  <div className="h-48 overflow-hidden">
+                    <img 
+                      src={tratamiento.imagen} 
+                      alt={tratamiento.alt} 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   
-                  <p className="text-textLight mb-4 text-sm">
-                    {tratamiento.descripcion}
-                  </p>
-                  
-                  <div className="flex items-center justify-between">
-                    <span className="text-2xl font-semibold text-accent">
-                      {tratamiento.precio}
-                    </span>
-                    <div className="flex gap-2">
-                      <Link 
-                        href={`/tratamiento-facial/${tratamiento.id}`}
-                        className="bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-full transition-colors font-medium text-sm"
-                      >
-                        Ver detalles
-                      </Link>
-                      <button className="bg-accent hover:bg-accentDark text-white px-4 py-2 rounded-full transition-colors font-medium text-sm">
-                        Reservar
-                      </button>
+                  {/* Contenido de la tarjeta */}
+                  <div className="p-6">
+                    <h3 className="font-playfair text-xl font-semibold mb-2">
+                      {tratamiento.nombre}
+                    </h3>
+                    
+                    <div className="flex items-center gap-4 mb-3 text-sm text-textLight">
+                      {tratamiento.duracion && (
+                        <span>{tratamiento.duracion}</span>
+                      )}
+                      <span>•</span>
+                      <span>{tratamiento.frecuencia}</span>
+                    </div>
+                    
+                    <p className="text-textLight mb-4 text-sm">
+                      {tratamiento.descripcion}
+                    </p>
+                    
+                    <div className="flex items-center justify-between">
+                      <span className="text-2xl font-semibold text-accent">
+                        {tratamiento.precio}
+                      </span>
+                      <span className="text-accent text-sm font-medium">
+                        Ver detalles →
+                      </span>
                     </div>
                   </div>
-                </div>
-              </motion.div>
+                </motion.div>
+              </Link>
             ))}
           </motion.div>
           
