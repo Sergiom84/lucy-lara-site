@@ -4,7 +4,12 @@ import { Link } from "wouter";
 import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import tratamientoFacial from "@assets/tratamiento 8.jpg";
+import renovacionProfundaSvg from "@/assets/svg/renovacion-profunda.svg";
+import renovacionCristalSvg from "@/assets/svg/renovacion-cristal.svg";
+import descansoVitalidadSvg from "@/assets/svg/descanso-vitalidad.svg";
+import equilibrioTotalSvg from "@/assets/svg/equilibrio-total.svg";
+import purezaBasicaSvg from "@/assets/svg/pureza-basica.svg";
+import purezaCompletaSvg from "@/assets/svg/pureza-completa.svg";
 
 interface TratamientoFacial {
   id: number;
@@ -34,7 +39,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Masaje relajante junto con una mascarilla acorde de las necesidades de la piel",
       "Acabamos el tratamiento con una crema finalizadora"
     ],
-    imagen: tratamientoFacial,
+    imagen: renovacionProfundaSvg,
     alt: "Tratamiento facial de renovación profunda"
   },
   {
@@ -52,7 +57,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Masaje relajante junto con una mascarilla acorde de las necesidades de la piel",
       "Acabamos el tratamiento con una crema finalizadora"
     ],
-    imagen: tratamientoFacial,
+    imagen: renovacionCristalSvg,
     alt: "Tratamiento facial renovación de cristal con microdermoabrasión"
   },
   {
@@ -69,7 +74,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Finalizamos el tratamiento con las gafas de presoterapia",
       "Reducen bolsas, ojeras y fatiga ocular, dejando la mirada más luminosa y descansada"
     ],
-    imagen: tratamientoFacial,
+    imagen: descansoVitalidadSvg,
     alt: "Tratamiento facial descanso y vitalidad con presoterapia ocular"
   },
   {
@@ -88,7 +93,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Masaje relajante junto con una mascarilla acorde de las necesidades de la piel",
       "Acabamos el tratamiento con una crema finalizadora"
     ],
-    imagen: tratamientoFacial,
+    imagen: equilibrioTotalSvg,
     alt: "Tratamiento facial equilibrio total con presoterapia"
   },
   {
@@ -106,7 +111,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Crema final para una hidratación duradera",
       "Tratamiento para pieles que no necesiten una limpieza en profundidad"
     ],
-    imagen: tratamientoFacial,
+    imagen: purezaBasicaSvg,
     alt: "Tratamiento facial pureza y frescura básica"
   },
   {
@@ -125,7 +130,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Masaje relajante junto con una mascarilla acorde de las necesidades de la piel",
       "Acabamos el tratamiento con una crema finalizadora"
     ],
-    imagen: tratamientoFacial,
+    imagen: purezaCompletaSvg,
     alt: "Tratamiento facial pureza y frescura completa con Led"
   }
 ];

@@ -1,0 +1,43 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="balanceGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0e6ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e6d9ff;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="bodyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b2154;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#8b2154;stop-opacity:0.1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="#faf8ff"/>
+  
+  <!-- Face -->
+  <ellipse cx="200" cy="120" rx="60" ry="70" fill="url(#balanceGradient)" stroke="#d4c4ff" stroke-width="2"/>
+  
+  <!-- Body representation -->
+  <rect x="170" y="190" width="60" height="80" rx="30" fill="url(#bodyGradient)" stroke="#8b2154" stroke-width="1" opacity="0.7"/>
+  
+  <!-- Presotherapy legs -->
+  <ellipse cx="150" cy="250" rx="15" ry="40" fill="url(#bodyGradient)" stroke="#8b2154" stroke-width="2" opacity="0.8"/>
+  <ellipse cx="250" cy="250" rx="15" ry="40" fill="url(#bodyGradient)" stroke="#8b2154" stroke-width="2" opacity="0.8"/>
+  
+  <!-- Circulation arrows -->
+  <path d="M 140 220 L 145 215 L 150 220 M 145 215 L 145 235" stroke="#8b2154" stroke-width="2" fill="none"/>
+  <path d="M 255 235 L 250 230 L 245 235 M 250 230 L 250 250" stroke="#8b2154" stroke-width="2" fill="none"/>
+  
+  <!-- Balance symbols -->
+  <circle cx="80" cy="80" r="20" fill="none" stroke="#8b2154" stroke-width="2" opacity="0.6"/>
+  <line x1="70" y1="80" x2="90" y2="80" stroke="#8b2154" stroke-width="2" opacity="0.6"/>
+  <line x1="80" y1="70" x2="80" y2="90" stroke="#8b2154" stroke-width="2" opacity="0.6"/>
+  
+  <!-- Wellness waves -->
+  <path d="M 50 150 Q 100 140 150 150 Q 200 160 250 150 Q 300 140 350 150" stroke="#8b2154" stroke-width="2" fill="none" opacity="0.4"/>
+  <path d="M 50 170 Q 100 160 150 170 Q 200 180 250 170 Q 300 160 350 170" stroke="#8b2154" stroke-width="2" fill="none" opacity="0.3"/>
+  
+  <!-- Equipment representation -->
+  <rect x="320" y="60" width="25" height="40" rx="5" fill="#8b2154" opacity="0.7"/>
+  <circle cx="332" cy="70" r="5" fill="#fff"/>
+  <text x="332" y="95" text-anchor="middle" fill="#8b2154" font-size="8">PRESS</text>
+</svg>

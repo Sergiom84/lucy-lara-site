@@ -1,0 +1,39 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="crystalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e6f3ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#cce7ff;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="microGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#8b2154;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#8b2154;stop-opacity:0.3" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f0f8ff"/>
+  
+  <!-- Face outline -->
+  <ellipse cx="200" cy="180" rx="80" ry="90" fill="url(#crystalGradient)" stroke="#b3d9ff" stroke-width="2"/>
+  
+  <!-- Microdermabrasion crystals -->
+  <circle cx="180" cy="150" r="3" fill="#8b2154" opacity="0.6"/>
+  <circle cx="220" cy="160" r="2" fill="#8b2154" opacity="0.7"/>
+  <circle cx="190" cy="180" r="2.5" fill="#8b2154" opacity="0.5"/>
+  <circle cx="210" cy="200" r="3" fill="#8b2154" opacity="0.6"/>
+  <circle cx="170" cy="190" r="2" fill="#8b2154" opacity="0.8"/>
+  
+  <!-- Exfoliation pattern -->
+  <path d="M 140 130 Q 200 140 260 130" stroke="#8b2154" stroke-width="1" fill="none" opacity="0.4" stroke-dasharray="3,2"/>
+  <path d="M 140 160 Q 200 170 260 160" stroke="#8b2154" stroke-width="1" fill="none" opacity="0.4" stroke-dasharray="3,2"/>
+  <path d="M 140 190 Q 200 200 260 190" stroke="#8b2154" stroke-width="1" fill="none" opacity="0.4" stroke-dasharray="3,2"/>
+  
+  <!-- Crystal sparkles -->
+  <polygon points="100,60 102,66 108,66 103,70 105,76 100,72 95,76 97,70 92,66 98,66" fill="#8b2154" opacity="0.6"/>
+  <polygon points="320,50 322,56 328,56 323,60 325,66 320,62 315,66 317,60 312,56 318,56" fill="#8b2154" opacity="0.5"/>
+  
+  <!-- Device representation -->
+  <rect x="60" y="120" width="30" height="60" rx="5" fill="#8b2154" opacity="0.8"/>
+  <circle cx="75" cy="140" r="8" fill="#fff" opacity="0.9"/>
+  <text x="75" y="145" text-anchor="middle" fill="#8b2154" font-size="8" font-weight="bold">µ</text>
+</svg>

@@ -1,0 +1,43 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="relaxGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8f5e8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d4edda;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="eyeGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#8b2154;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#8b2154;stop-opacity:0.1" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f8fdf8"/>
+  
+  <!-- Face outline -->
+  <ellipse cx="200" cy="180" rx="80" ry="90" fill="url(#relaxGradient)" stroke="#c3e6cb" stroke-width="2"/>
+  
+  <!-- Presotherapy glasses -->
+  <ellipse cx="170" cy="150" rx="25" ry="15" fill="url(#eyeGradient)" stroke="#8b2154" stroke-width="2" opacity="0.8"/>
+  <ellipse cx="230" cy="150" rx="25" ry="15" fill="url(#eyeGradient)" stroke="#8b2154" stroke-width="2" opacity="0.8"/>
+  
+  <!-- Bridge connection -->
+  <rect x="195" y="145" width="10" height="10" rx="2" fill="#8b2154" opacity="0.6"/>
+  
+  <!-- Relaxation waves -->
+  <path d="M 130 120 Q 150 115 170 120 Q 190 125 210 120 Q 230 115 250 120 Q 270 125 290 120" stroke="#8b2154" stroke-width="2" fill="none" opacity="0.4"/>
+  <path d="M 130 130 Q 150 125 170 130 Q 190 135 210 130 Q 230 125 250 130 Q 270 135 290 130" stroke="#8b2154" stroke-width="2" fill="none" opacity="0.3"/>
+  
+  <!-- Eye area improvement indicators -->
+  <circle cx="160" cy="140" r="3" fill="#fff" opacity="0.8"/>
+  <circle cx="180" cy="140" r="3" fill="#fff" opacity="0.8"/>
+  <circle cx="220" cy="140" r="3" fill="#fff" opacity="0.8"/>
+  <circle cx="240" cy="140" r="3" fill="#fff" opacity="0.8"/>
+  
+  <!-- Spa elements -->
+  <rect x="60" y="60" width="40" height="20" rx="10" fill="#8b2154" opacity="0.3"/>
+  <text x="80" y="75" text-anchor="middle" fill="#8b2154" font-size="10" font-weight="bold">REST</text>
+  
+  <!-- Decorative leaves -->
+  <path d="M 320 80 Q 330 70 340 80 Q 330 90 320 80" fill="#8b2154" opacity="0.4"/>
+  <path d="M 310 100 Q 320 90 330 100 Q 320 110 310 100" fill="#8b2154" opacity="0.3"/>
+</svg>
