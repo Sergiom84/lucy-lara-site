@@ -122,13 +122,23 @@ const Services = () => {
                   <span className="text-accent font-medium">
                     {service.price}
                   </span>
-                  <a 
-                    href="#reserva" 
-                    className="text-accent hover:text-accentDark font-medium flex items-center gap-1 group"
-                  >
-                    Reservar 
-                    <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-                  </a>
+                  {service.link ? (
+                    <Link 
+                      href={service.link}
+                      className="text-accent hover:text-accentDark font-medium flex items-center gap-1 group"
+                    >
+                      {service.linkText}
+                      <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                  ) : (
+                    <a 
+                      href="#reserva" 
+                      className="text-accent hover:text-accentDark font-medium flex items-center gap-1 group"
+                    >
+                      Reservar 
+                      <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                    </a>
+                  )}
                 </div>
               </div>
             </motion.div>

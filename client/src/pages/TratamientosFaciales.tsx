@@ -4,7 +4,7 @@ import { Link } from "wouter";
 import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import tratamientoFacial from "../assets/images/tratamiento 8.jpg";
+import tratamientoFacial from "@assets/tratamiento 8.jpg";
 
 interface TratamientoFacial {
   id: number;
