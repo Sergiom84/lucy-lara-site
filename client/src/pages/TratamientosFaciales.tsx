@@ -237,9 +237,17 @@ const TratamientosFaciales = () => {
                     <span className="text-2xl font-semibold text-accent">
                       {tratamiento.precio}
                     </span>
-                    <button className="bg-accent hover:bg-accentDark text-white px-6 py-2 rounded-full transition-colors font-medium">
-                      Reservar
-                    </button>
+                    <div className="flex gap-2">
+                      <Link 
+                        href={`/tratamiento-facial/${tratamiento.id}`}
+                        className="bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-full transition-colors font-medium text-sm"
+                      >
+                        Ver detalles
+                      </Link>
+                      <button className="bg-accent hover:bg-accentDark text-white px-4 py-2 rounded-full transition-colors font-medium text-sm">
+                        Reservar
+                      </button>
+                    </div>
                   </div>
                 </div>
               </motion.div>

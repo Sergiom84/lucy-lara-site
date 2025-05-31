@@ -7,6 +7,7 @@ import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import ProductDetail from "@/pages/ProductDetail";
 import TratamientosFaciales from "@/pages/TratamientosFaciales";
+import TratamientoDetalle from "@/pages/TratamientoDetalle";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Chatbot from "@/components/Chatbot";
 import { useAnalytics } from "./hooks/use-analytics";
@@ -20,6 +21,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/productos/:id" component={ProductDetail} />
       <Route path="/tratamientos-faciales" component={TratamientosFaciales} />
+      <Route path="/tratamiento-facial/:id" component={TratamientoDetalle} />
       <Route component={NotFound} />
     </Switch>
   );
