@@ -28,156 +28,690 @@ interface TratamientoFacial {
 const tratamientosFaciales: TratamientoFacial[] = [
   {
     id: 1,
-    nombre: "Limpieza de Cutis Simple",
-    precio: "30€",
-    duracion: "30 min",
-    frecuencia: "Cada 15 días",
-    descripcion: "Limpieza básica que desmaquilla, limpia y tonifica la piel dejándola fresca y renovada.",
-    descripcionLarga: "La Limpieza de Cutis Simple es el tratamiento perfecto para mantener tu piel limpia y fresca. Este tratamiento básico pero efectivo desmaquilla profundamente, limpia y tonifica la piel, siendo ideal para el mantenimiento regular de la salud cutánea.",
+    nombre: "Renovación profunda - higiene facial completa",
+    precio: "61,00€",
+    duracion: "60 min",
+    frecuencia: "1 vez al mes",
+    descripcion: "Tratamiento de limpieza profunda que hidrata, revitaliza y equilibra la piel.",
+    descripcionLarga: "Tratamiento de limpieza profunda que hidrata, revitaliza y equilibra la piel. Sus pasos son limpieza de la piel junto con su tonificación, exfoliación mecánica, extracción de comedones para una oxigenación y limpieza de la piel, masaje relajante junto con una mascarilla acorde de las necesidades de la piel y acabamos el tratamiento con una crema finalizadora.",
     pasos: [
-      "Desmaquillado completo del rostro",
-      "Limpieza profunda de la piel",
-      "Tonificación para equilibrar el pH cutáneo",
-      "Hidratación final según tipo de piel"
+      "Limpieza de la piel junto con su tonificación",
+      "Exfoliación mecánica",
+      "Extracción de comedones para una oxigenación y limpieza de la piel",
+      "Masaje relajante junto con una mascarilla acorde de las necesidades de la piel",
+      "Acabamos el tratamiento con una crema finalizadora"
     ],
     beneficios: [
-      "Eliminación completa del maquillaje",
-      "Piel limpia y fresca",
-      "Poros libres de impurezas",
-      "Equilibrio del pH cutáneo",
-      "Preparación ideal para otros tratamientos"
+      "Hidrata la piel en profundidad",
+      "Revitaliza y equilibra la piel",
+      "Oxigena y limpia los poros",
+      "Elimina impurezas y comedones",
+      "Proporciona nutrición específica según tipo de piel"
     ],
-    imagen: purezaBasicaSvg,
-    alt: "Limpieza de cutis simple"
+    imagen: renovacionProfundaSvg,
+    alt: "Renovación profunda - higiene facial completa"
   },
   {
     id: 2,
-    nombre: "Exfoliación",
-    precio: "35€",
-    duracion: "30 min",
+    nombre: "Renovación de cristal - higiene facial completa con microdermoabrasión",
+    precio: "71,00€",
+    duracion: "70 min",
     frecuencia: "1 vez al mes",
-    descripcion: "Exfoliación profunda que elimina células muertas y revela una piel más suave y luminosa.",
-    descripcionLarga: "La Exfoliación es un tratamiento esencial para renovar la superficie de la piel. Elimina las células muertas acumuladas, mejora la textura cutánea y prepara la piel para absorber mejor los productos de cuidado, revelando un cutis más suave y luminoso.",
+    descripcion: "Tratamiento de limpieza profunda que hidrata, pule y oxigena.",
+    descripcionLarga: "Tratamiento de limpieza profunda que hidrata, pule y oxigena. Sus pasos son limpieza de la piel junto con su tonificación, extracción de comedones para una oxigenación y limpieza de la piel, microdermoabrasión que exfolia en profundidad, suaviza la textura de la piel y aporta luminosidad, eliminando las células muertas e imperfecciones, finalizando este paso llegamos al momento más deseado, masaje relajante junto con una mascarilla acorde de las necesidades de la piel y acabamos el tratamiento con una crema finalizadora.",
     pasos: [
-      "Limpieza previa de la piel",
-      "Aplicación de exfoliante específico",
-      "Masaje circular para eliminar células muertas",
-      "Retirada del producto con agua tibia",
-      "Tonificación e hidratación final"
+      "Limpieza de la piel junto con su tonificación",
+      "Extracción de comedones para una oxigenación y limpieza de la piel",
+      "Microdermoabrasión que exfolia en profundidad, suaviza la textura de la piel y aporta luminosidad",
+      "Eliminando las células muertas e imperfecciones",
+      "Masaje relajante junto con una mascarilla acorde de las necesidades de la piel",
+      "Acabamos el tratamiento con una crema finalizadora"
     ],
     beneficios: [
-      "Renovación celular acelerada",
-      "Textura de piel más suave",
-      "Mayor luminosidad facial",
-      "Mejor absorción de productos",
-      "Estimulación de la circulación"
+      "Exfoliación profunda y efectiva",
+      "Suaviza la textura de la piel",
+      "Aporta luminosidad",
+      "Elimina células muertas e imperfecciones",
+      "Hidrata, pule y oxigena la piel"
     ],
     imagen: renovacionCristalSvg,
-    alt: "Exfoliación facial profesional"
+    alt: "Renovación de cristal con microdermoabrasión"
   },
   {
     id: 3,
-    nombre: "Higiene + Extracción",
-    precio: "45€",
-    duracion: "60 min",
+    nombre: "Descanso y vitalidad - higiene facial completa con presoterapia ocular",
+    precio: "71,00€",
+    duracion: "70 min",
     frecuencia: "1 vez al mes",
-    descripcion: "Limpieza profunda con extracción de comedones para purificar los poros y oxigenar la piel.",
-    descripcionLarga: "La Higiene + Extracción es un tratamiento completo que combina limpieza profunda con extracción manual de comedones. Ideal para pieles con tendencia grasa o con impurezas, este tratamiento purifica los poros en profundidad y oxigena la piel.",
+    descripcion: "Tratamiento de limpieza profunda que hidrata, revitaliza y equilibra la piel.",
+    descripcionLarga: "Tratamiento de limpieza profunda que hidrata, revitaliza y equilibra la piel. Sus pasos son limpieza de la piel junto con su tonificación, exfoliación mecánica, extracción de comedones para una oxigenación y limpieza de la piel, finalizaremos el tratamiento con las gafas de presoterapia, que reducen bolsas, ojeras y fatiga ocular, dejando la mirada más luminosa y descansada.",
     pasos: [
-      "Desmaquillado y limpieza inicial",
-      "Vaporización para abrir los poros",
-      "Extracción manual de comedones",
-      "Aplicación de tónico desinfectante",
-      "Mascarilla calmante",
-      "Hidratación final personalizada"
+      "Limpieza de la piel junto con su tonificación",
+      "Exfoliación mecánica",
+      "Extracción de comedones para una oxigenación y limpieza de la piel",
+      "Finalizaremos el tratamiento con las gafas de presoterapia",
+      "Reducen bolsas, ojeras y fatiga ocular, dejando la mirada más luminosa y descansada"
     ],
     beneficios: [
-      "Poros profundamente limpios",
-      "Eliminación de puntos negros",
-      "Oxigenación celular mejorada",
-      "Prevención de imperfecciones",
-      "Piel más clara y uniforme"
+      "Reduce bolsas y ojeras",
+      "Elimina la fatiga ocular",
+      "Deja la mirada más luminosa y descansada",
+      "Hidrata y revitaliza la piel",
+      "Oxigena y limpia los poros"
     ],
-    imagen: renovacionProfundaSvg,
-    alt: "Higiene facial con extracción"
+    imagen: descansoVitalidadSvg,
+    alt: "Descanso y vitalidad con presoterapia ocular"
   },
   {
     id: 4,
-    nombre: "Higiene + Peeling",
-    precio: "55€",
-    duracion: "60 min",
-    frecuencia: "1 vez cada 2 meses",
-    descripcion: "Tratamiento que combina higiene facial con peeling químico para renovar y rejuvenecer la piel.",
-    descripcionLarga: "La Higiene + Peeling es un tratamiento avanzado que combina la limpieza profunda con un peeling químico suave. Este procedimiento renueva las capas superficiales de la piel, mejora la textura y reduce imperfecciones, proporcionando un cutis más joven y radiante.",
+    nombre: "Equilibrio total - higiene facial con presoterapia",
+    precio: "79€",
+    duracion: "80 min",
+    frecuencia: "1 vez al mes",
+    descripcion: "Tratamiento de limpieza profunda que hidrata, revitaliza la cara y el cuerpo.",
+    descripcionLarga: "Tratamiento de limpieza profunda que hidrata, revitaliza la cara y el cuerpo. El tratamiento va acompañado de presoterapia en piernas, que activa la circulación, reduce la retención de líquidos y proporciona una sensación de ligereza y bienestar integral. La higiene consta en limpieza de la piel junto con su tonificación, exfoliación mecánica, extracción de comedones para una oxigenación y limpieza de la piel, masaje relajante junto con una mascarilla acorde de las necesidades de la piel y acabamos el tratamiento con una crema finalizadora.",
     pasos: [
-      "Limpieza y preparación de la piel",
-      "Aplicación de peeling químico específico",
-      "Tiempo de actuación controlado",
-      "Neutralización del peeling",
-      "Mascarilla calmante post-peeling",
-      "Protección solar obligatoria"
+      "El tratamiento va acompañado de presoterapia en piernas",
+      "Activa la circulación, reduce la retención de líquidos y proporciona una sensación de ligereza y bienestar integral",
+      "La higiene consta en limpieza de la piel junto con su tonificación",
+      "Exfoliación mecánica, extracción de comedones para una oxigenación y limpieza de la piel",
+      "Masaje relajante junto con una mascarilla acorde de las necesidades de la piel",
+      "Acabamos el tratamiento con una crema finalizadora"
     ],
     beneficios: [
-      "Renovación celular acelerada",
-      "Reducción de manchas superficiales",
-      "Mejora de líneas finas",
-      "Textura más uniforme",
-      "Estimulación del colágeno"
+      "Activa la circulación",
+      "Reduce la retención de líquidos",
+      "Proporciona sensación de ligereza y bienestar integral",
+      "Hidrata y revitaliza cara y cuerpo",
+      "Oxigena y limpia la piel facial"
     ],
     imagen: equilibrioTotalSvg,
-    alt: "Higiene facial con peeling"
+    alt: "Equilibrio total con presoterapia"
   },
   {
     id: 5,
-    nombre: "Higiene + Radiofrecuencia",
-    precio: "70€",
-    duracion: "75 min",
-    frecuencia: "1 vez al mes",
-    descripcion: "Limpieza facial completa con radiofrecuencia para tensar, reafirmar y rejuvenecer la piel.",
-    descripcionLarga: "La Higiene + Radiofrecuencia combina una limpieza facial profunda con tecnología de radiofrecuencia. Este tratamiento estimula la producción natural de colágeno, tensa la piel, reduce la flacidez y proporciona un efecto lifting natural inmediato.",
+    nombre: "Pureza y frescura - higiene facial",
+    precio: "55€",
+    duracion: "45 min",
+    frecuencia: "Según necesidad",
+    descripcion: "Higiene facial básica, hidratante y revitalizante.",
+    descripcionLarga: "Higiene facial básica, hidratante y revitalizante. El ritual esencial para limpiar y revitalizar la piel sin extracción. Incluye limpieza profunda, tonificación, exfoliación mecánica, aplicación de ampolla hidratante, masaje relajante, mascarilla adaptada a tu piel y crema final para una hidratación duradera. Tratamiento para pieles que no necesiten una limpieza en profundidad.",
     pasos: [
-      "Limpieza profunda inicial",
-      "Preparación de la piel para radiofrecuencia",
-      "Aplicación de gel conductor",
-      "Tratamiento con radiofrecuencia en zonas específicas",
-      "Mascarilla tensor post-tratamiento",
-      "Hidratación y protección final"
+      "El ritual esencial para limpiar y revitalizar la piel sin extracción",
+      "Incluye limpieza profunda, tonificación",
+      "Exfoliación mecánica, aplicación de ampolla hidratante",
+      "Masaje relajante, mascarilla adaptada a tu piel",
+      "Crema final para una hidratación duradera",
+      "Tratamiento para pieles que no necesiten una limpieza en profundidad"
     ],
     beneficios: [
-      "Efecto tensor inmediato",
-      "Estimulación del colágeno",
-      "Reducción de flacidez",
-      "Mejora del óvalo facial",
-      "Piel más firme y tonificada"
+      "Limpia y revitaliza sin agresión",
+      "Hidratación profunda y duradera",
+      "Ideal para pieles sensibles",
+      "No requiere extracción",
+      "Aporta frescura y vitalidad"
     ],
-    imagen: descansoVitalidadSvg,
-    alt: "Higiene facial con radiofrecuencia"
+    imagen: purezaBasicaSvg,
+    alt: "Pureza y frescura - higiene facial"
   },
   {
     id: 6,
-    nombre: "Higiene + LED",
-    precio: "60€",
-    duracion: "60 min",
+    nombre: "Pureza y frescura - higiene facial",
+    precio: "89€",
+    duracion: "75 min",
     frecuencia: "1 vez al mes",
-    descripcion: "Limpieza facial con terapia LED para regenerar, calmar y revitalizar la piel en profundidad.",
-    descripcionLarga: "La Higiene + LED es un tratamiento innovador que combina limpieza facial profunda con fototerapia LED. Esta tecnología de luz estimula la regeneración celular, calma la inflamación y revitaliza la piel, proporcionando resultados visibles desde la primera sesión.",
+    descripcion: "Tratamiento de limpieza profunda que hidrata, revitaliza y equilibra la piel.",
+    descripcionLarga: "Tratamiento de limpieza profunda que hidrata, revitaliza y equilibra la piel. Sus pasos son limpieza de la piel junto con su tonificación, exfoliación mecánica, extracción de comedones para una oxigenación y limpieza de la piel, realizando la higiene comenzaremos con el tratamiento de fotoestimulación Led, que activa la regeneración celular, mejora la hidratación y aporta un efecto calmante, dejando la piel revitalizada y luminosa, masaje relajante junto con una mascarilla acorde de las necesidades de la piel y acabamos el tratamiento con una crema finalizadora.",
     pasos: [
-      "Limpieza y preparación facial completa",
-      "Extracción si es necesaria",
-      "Aplicación de mascarilla específica",
-      "Sesión de fototerapia LED (15-20 minutos)",
-      "Retirada de mascarilla",
-      "Hidratación y protección final"
+      "Limpieza de la piel junto con su tonificación",
+      "Exfoliación mecánica",
+      "Extracción de comedones para una oxigenación y limpieza de la piel",
+      "Realizando la higiene comenzaremos con el tratamiento de fotoestimulación Led",
+      "Activa la regeneración celular, mejora la hidratación y aporta un efecto calmante",
+      "Masaje relajante junto con una mascarilla acorde de las necesidades de la piel",
+      "Acabamos el tratamiento con una crema finalizadora"
     ],
     beneficios: [
-      "Regeneración celular acelerada",
-      "Efecto antiinflamatorio",
-      "Estimulación del colágeno",
-      "Mejora de la textura cutánea",
-      "Luminosidad y vitalidad aumentada"
+      "Estimula la regeneración celular",
+      "Mejora la hidratación",
+      "Aporta efecto calmante",
+      "Deja la piel revitalizada y luminosa",
+      "Limpieza profunda completa"
     ],
     imagen: purezaCompletaSvg,
-    alt: "Higiene facial con terapia LED"
+    alt: "Pureza y frescura con LED"
+  },
+  {
+    id: 7,
+    nombre: "Brisa de seda - higiene facial suave",
+    precio: "55,00€",
+    duracion: "45 min",
+    frecuencia: "1 vez al mes",
+    descripcion: "Una limpieza delicada diseñada para pieles sensibles y reactivas.",
+    descripcionLarga: "Una limpieza delicada diseñada para pieles sensibles y reactivas. Ayuda a eliminar impurezas sin agredir, manteniendo el natural de la piel y aportando frescura y suavidad. Sus pasos son limpieza de la piel junto con su tonificación, peeling enzimático, masaje relajante junto con una mascarilla calmante y finalizaremos el tratamiento con una crema refrescante y reparadora.",
+    pasos: [
+      "Limpieza de la piel junto con su tonificación",
+      "Peeling enzimático",
+      "Masaje relajante junto con una mascarilla calmante",
+      "Finalizaremos el tratamiento con una crema refrescante y reparadora"
+    ],
+    beneficios: [
+      "Elimina impurezas sin agredir",
+      "Mantiene el equilibrio natural de la piel",
+      "Aporta frescura y suavidad",
+      "Ideal para pieles sensibles y reactivas",
+      "Efecto refrescante y reparador"
+    ],
+    imagen: purezaBasicaSvg,
+    alt: "Brisa de seda - higiene facial suave"
+  },
+  {
+    id: 8,
+    nombre: "Calma profunda - higiene facial completa",
+    precio: "61,00€",
+    duracion: "60 min",
+    frecuencia: "1 vez al mes",
+    descripcion: "Un tratamiento de limpieza profunda adaptado a pieles sensibles.",
+    descripcionLarga: "Un tratamiento de limpieza profunda adaptado a pieles sensibles. Sus pasos son limpieza de la piel junto con su tonificación, peeling enzimático, extracción cuidadosa para liberar los poros, seguido de un masaje relajante junto con una mascarilla calmante y finalizaremos el tratamiento con una crema refrescante y reparadora que calma, reduce las rojeces y fortalece la barrera cutánea.",
+    pasos: [
+      "Limpieza de la piel junto con su tonificación",
+      "Peeling enzimático",
+      "Extracción cuidadosa para liberar los poros",
+      "Masaje relajante junto con una mascarilla calmante",
+      "Finalizaremos el tratamiento con una crema refrescante y reparadora",
+      "Calma, reduce las rojeces y fortalece la barrera cutánea"
+    ],
+    beneficios: [
+      "Adaptado especialmente para pieles sensibles",
+      "Calma y reduce las rojeces",
+      "Fortalece la barrera cutánea",
+      "Extracción cuidadosa y no agresiva",
+      "Efecto reparador profundo"
+    ],
+    imagen: descansoVitalidadSvg,
+    alt: "Calma profunda - higiene facial completa"
+  },
+  {
+    id: 9,
+    nombre: "Ritual serenidad - hig. facial + fotobioestimulación + cuidado específico",
+    precio: "89,00€",
+    duracion: "75 min",
+    frecuencia: "1 vez al mes",
+    descripcion: "Una combinación perfecta para pieles sensibles que necesitan un tratamiento global.",
+    descripcionLarga: "Una combinación perfecta para pieles sensibles que necesitan un tratamiento global. Incluye higiene facial suave sin agresión, cosmética especializada en calmar la piel y fotobioestimulación Led, que potencia la renovación celular y refuerza la barrera protectora de la piel. Ideal para pieles con rosácea, cuperosis, alergias o reactividad extrema.",
+    pasos: [
+      "Higiene facial suave sin agresión",
+      "Cosmética especializada en calmar la piel",
+      "Fotobioestimulación Led que potencia la renovación celular",
+      "Refuerza la barrera protectora de la piel",
+      "Tratamiento específico para pieles reactivas"
+    ],
+    beneficios: [
+      "Ideal para pieles con rosácea, cuperosis, alergias",
+      "Calma la reactividad extrema",
+      "Potencia la renovación celular",
+      "Refuerza la barrera protectora",
+      "Tratamiento global sin agresión"
+    ],
+    imagen: purezaCompletaSvg,
+    alt: "Ritual serenidad con fotobioestimulación"
+  },
+  {
+    id: 10,
+    nombre: "Luz calmante - fotobioestimulación para la piel sensible",
+    precio: "89,00€",
+    duracion: "60 min",
+    frecuencia: "1 vez en semana",
+    descripcion: "La fotobioestimulación trabaja en profundidad para regenerar y calmar la piel.",
+    descripcionLarga: "La fotobioestimulación trabaja en profundidad para regenerar y calmar la piel, reduciendo rojeces y mejorando la tolerancia cutánea. Es perfecto para pieles con rosácea, cuperosis o sensibilidad extrema, aportando un efecto antiinflamatorio y reparador sin agresión.",
+    pasos: [
+      "Preparación específica para piel sensible",
+      "Aplicación de fotobioestimulación Led",
+      "Trabaja en profundidad para regenerar y calmar",
+      "Reduce rojeces y mejora la tolerancia cutánea",
+      "Efecto antiinflamatorio y reparador"
+    ],
+    beneficios: [
+      "Perfecto para pieles con rosácea y cuperosis",
+      "Reduce rojeces visiblemente",
+      "Mejora la tolerancia cutánea",
+      "Efecto antiinflamatorio",
+      "Reparación sin agresión"
+    ],
+    imagen: purezaCompletaSvg,
+    alt: "Luz calmante - fotobioestimulación"
+  },
+  {
+    id: 11,
+    nombre: "Pureza equilibrante - higiene facial suave",
+    precio: "55,00€",
+    duracion: "45 min",
+    frecuencia: "1 vez al mes",
+    descripcion: "Limpieza profunda sin extracción para pieles grasas y mixtas.",
+    descripcionLarga: "Limpieza profunda sin extracción para pieles grasas y mixtas, utilizando la línea que regula el exceso de grasa, afina el poro y deja la piel fresca y equilibrada, sin sensación de tirantez.",
+    pasos: [
+      "Limpieza profunda específica para pieles grasas",
+      "Utilización de línea reguladora del exceso de grasa",
+      "Afinamiento del poro",
+      "Equilibrio sin sensación de tirantez",
+      "Frescura y confort final"
+    ],
+    beneficios: [
+      "Regula el exceso de grasa",
+      "Afina el poro visiblemente",
+      "Deja la piel fresca y equilibrada",
+      "Sin sensación de tirantez",
+      "Ideal para pieles grasas y mixtas"
+    ],
+    imagen: equilibrioTotalSvg,
+    alt: "Pureza equilibrante - higiene facial suave"
+  },
+  {
+    id: 12,
+    nombre: "Equilibrio puro - tratamiento cosmético regulador",
+    precio: "65,00€",
+    duracion: "60 min",
+    frecuencia: "1 vez por semana",
+    descripcion: "Tratamiento sin aparatología que trabaja únicamente con la línea Dermo controle.",
+    descripcionLarga: "Tratamiento sin aparatología que trabaja únicamente con la línea Dermo controle, regulando la producción de sebo, minimizando los poros y matificando la piel sin deshidratarla. Ideal para quienes prefieren una solución cosmética natural.",
+    pasos: [
+      "Aplicación de la línea Dermo controle",
+      "Regulación de la producción de sebo",
+      "Minimización de los poros",
+      "Matificación sin deshidratación",
+      "Solución cosmética natural"
+    ],
+    beneficios: [
+      "Regula la producción de sebo",
+      "Minimiza los poros",
+      "Matifica sin deshidratar",
+      "Solución natural sin aparatología",
+      "Ideal para pieles grasas"
+    ],
+    imagen: equilibrioTotalSvg,
+    alt: "Equilibrio puro - tratamiento cosmético"
+  },
+  {
+    id: 13,
+    nombre: "Luz antiacne - tratamiento intensivo bioestimulación",
+    precio: "79,00€",
+    duracion: "60 min",
+    frecuencia: "1 vez por semana",
+    descripcion: "Tratamiento enfocado en pieles con acné inflamatorio o brotes recurrentes.",
+    descripcionLarga: "Tratamiento enfocado en pieles con acné inflamatorio o brotes recurrentes. Se realiza fotobioestimulación en varias sesiones, ayudando a reducir la inflamación, acelerar la cicatrización y prevenir nuevas imperfecciones.",
+    pasos: [
+      "Preparación específica para piel con acné",
+      "Fotobioestimulación en múltiples sesiones",
+      "Reducción de la inflamación",
+      "Aceleración de la cicatrización",
+      "Prevención de nuevas imperfecciones"
+    ],
+    beneficios: [
+      "Reduce la inflamación del acné",
+      "Acelera la cicatrización",
+      "Previene nuevos brotes",
+      "Tratamiento específico para acné",
+      "Resultados progresivos"
+    ],
+    imagen: purezaCompletaSvg,
+    alt: "Luz antiacne - bioestimulación"
+  },
+  {
+    id: 14,
+    nombre: "Renovación profunda - higiene facial completa",
+    precio: "61,00€",
+    duracion: "60 min",
+    frecuencia: "1 vez al mes",
+    descripcion: "Tratamiento completo de limpieza profunda con extracción de impurezas.",
+    descripcionLarga: "Tratamiento completo de limpieza profunda con extracción de impurezas, tonificación y exfoliación con productos específicos. Ideal para pieles con tendencia acneica o exceso de grasa que necesitan purificación y equilibrio. Sus pasos son limpieza de la piel junto con su tonificación, extracción de comedones para una oxigenación y limpieza de la piel, mascarilla astringente y purificante, acabamos el tratamiento con una crema refrescante.",
+    pasos: [
+      "Limpieza de la piel junto con su tonificación",
+      "Extracción de comedones para una oxigenación y limpieza de la piel",
+      "Mascarilla astringente y purificante",
+      "Acabamos el tratamiento con una crema refrescante"
+    ],
+    beneficios: [
+      "Purificación profunda",
+      "Eliminación de impurezas y comedones",
+      "Equilibrio de pieles grasas",
+      "Oxigenación celular",
+      "Efecto astringente y purificante"
+    ],
+    imagen: renovacionProfundaSvg,
+    alt: "Renovación profunda - higiene facial completa"
+  },
+  {
+    id: 15,
+    nombre: "Stop acné - higiene facial completa + fotobioestimulación",
+    precio: "89,00€",
+    duracion: "75 min",
+    frecuencia: "1 vez en semana",
+    descripcion: "Higiene facial con extracción potenciada con fotobioestimulación.",
+    descripcionLarga: "Higiene facial con extracción potenciada con fotobioestimulación, que reduce inflamaciones, acelera la regeneración y ayuda a cicatrizar marcas de acné. Perfecto para pieles con brotes activos o que buscan mejorar su textura.",
+    pasos: [
+      "Higiene facial completa con extracción",
+      "Aplicación de fotobioestimulación específica",
+      "Reducción de inflamaciones",
+      "Aceleración de la regeneración",
+      "Cicatrización de marcas de acné"
+    ],
+    beneficios: [
+      "Reduce inflamaciones activas",
+      "Acelera la regeneración celular",
+      "Ayuda a cicatrizar marcas de acné",
+      "Perfecto para brotes activos",
+      "Mejora la textura de la piel"
+    ],
+    imagen: purezaCompletaSvg,
+    alt: "Stop acné con fotobioestimulación"
+  },
+  {
+    id: 16,
+    nombre: "Luz pura - hig. facial completa + microdermoabrasión + cosmética antimanchas",
+    precio: "71,00€",
+    duracion: "70 min",
+    frecuencia: "1 vez al mes",
+    descripcion: "Recupera la claridad y uniformidad de tu piel con esta higiene diseñada para combatir las manchas.",
+    descripcionLarga: "Recupera la claridad y uniformidad de tu piel con esta higiene diseñada para combatir las manchas y revelar un rostro radiante. Exfolia, renueva y unifica. Este tratamiento combina la precisión de la microdermoabrasión con punta de diamante y la potencia de activos despigmentantes para eliminar células muertas, atenuar manchas y mejorar la luminosidad. La piel se transforma en un lienzo limpio y preparado para absorber mejor los tratamientos posteriores. Ideal para quienes buscan un aspecto fresco, uniforme y rejuvenecido.",
+    pasos: [
+      "Recupera la claridad y uniformidad de tu piel",
+      "Exfolia, renueva y unifica",
+      "Microdermoabrasión con punta de diamante",
+      "Aplicación de activos despigmentantes",
+      "Eliminación de células muertas y atenuación de manchas",
+      "Mejora de la luminosidad",
+      "Preparación para tratamientos posteriores"
+    ],
+    beneficios: [
+      "Atenúa manchas visiblemente",
+      "Unifica el tono de la piel",
+      "Mejora la luminosidad",
+      "Elimina células muertas",
+      "Prepara la piel para absorber mejor tratamientos",
+      "Aspecto fresco y rejuvenecido"
+    ],
+    imagen: renovacionCristalSvg,
+    alt: "Luz pura - microdermoabrasión antimanchas"
+  },
+  {
+    id: 17,
+    nombre: "Luz renovada - Fotorejuvenecimiento antimanchas",
+    precio: "89,00€",
+    duracion: "60 min",
+    frecuencia: "1 sesión cada 2 semanas (mínimo 6 sesiones)",
+    descripcion: "Gracias a la tecnología de luz pulsada intensa (IPL), este tratamiento actúa directamente sobre la hiperpigmentación.",
+    descripcionLarga: "Gracias a la tecnología de luz pulsada intensa (IPL), este tratamiento actúa directamente sobre la hiperpigmentación, descomponiendo las manchas y estimulando la producción de colágeno. Además de unificar el tono, mejora la textura y aporta firmeza, dejando la piel visiblemente rejuvenecida.",
+    pasos: [
+      "Aplicación de tecnología IPL (luz pulsada intensa)",
+      "Actuación directa sobre la hiperpigmentación",
+      "Descomposición de las manchas",
+      "Estimulación de la producción de colágeno",
+      "Unificación del tono",
+      "Mejora de la textura y aporte de firmeza"
+    ],
+    beneficios: [
+      "Elimina manchas de hiperpigmentación",
+      "Estimula la producción de colágeno",
+      "Unifica el tono de la piel",
+      "Mejora la textura cutánea",
+      "Aporta firmeza",
+      "Piel visiblemente rejuvenecida"
+    ],
+    imagen: purezaCompletaSvg,
+    alt: "Luz renovada - fotorejuvenecimiento IPL"
+  },
+  {
+    id: 18,
+    nombre: "Skin glow - dermapen antimanchas",
+    precio: "99,00€",
+    duracion: "75 min",
+    frecuencia: "Cada 2 semanas",
+    descripcion: "Tratamiento para pieles con hiperpigmentación, este tratamiento combina dermapen con activos despigmentantes.",
+    descripcionLarga: "Tratamiento para pieles con hiperpigmentación, este tratamiento combina dermapen con activos despigmentantes para mejorar el tono de la piel y reducir manchas. Tratamiento adaptado a cada tipo de piel para lograr una corrección progresiva y visible. Atenúa las manchas y unifica el tono de la piel.",
+    pasos: [
+      "Evaluación del tipo de piel",
+      "Aplicación de dermapen con activos despigmentantes",
+      "Tratamiento adaptado y personalizado",
+      "Corrección progresiva de la hiperpigmentación",
+      "Unificación del tono de la piel"
+    ],
+    beneficios: [
+      "Mejora el tono de la piel",
+      "Reduce manchas de hiperpigmentación",
+      "Atenúa las manchas progresivamente",
+      "Unifica el tono",
+      "Tratamiento personalizado"
+    ],
+    imagen: renovacionCristalSvg,
+    alt: "Skin glow - dermapen antimanchas"
+  },
+  {
+    id: 19,
+    nombre: "Luz perfecta - Tratamiento facial cosmético despigmentante",
+    precio: "65,00€",
+    duracion: "60 min",
+    frecuencia: "1 sesión semanal durante el primer mes, luego 1 cada 15 días",
+    descripcion: "Este tratamiento es la opción perfecta para quienes buscan atenuar el tono desigual y devolver la vitalidad a su rostro sin recurrir a aparatología.",
+    descripcionLarga: "Este tratamiento es la opción perfecta para quienes buscan atenuar el tono desigual y devolver la vitalidad a su rostro sin recurrir a aparatología. Un cóctel avanzado de vitamina C, ácido kójico y niacinamida trabaja en profundidad para aclarar la piel, reducir las manchas y aportar un resplandor saludable. Pauta del tratamiento: Limpieza con emulsión específica según el tipo de piel, aplicación de peeling enzimático con ácidos despigmentantes, masaje con cóctel despigmentante, mascarilla específica y crema + protector solar SPF 50. Recomendación en casa: uso diario de crema antimanchas + fotoprotector.",
+    pasos: [
+      "Limpieza con emulsión específica según el tipo de piel",
+      "Aplicación de peeling enzimático con ácidos despigmentantes",
+      "Masaje con cóctel despigmentante (vitamina C, ácido kójico y niacinamida)",
+      "Mascarilla específica",
+      "Crema + protector solar SPF 50"
+    ],
+    beneficios: [
+      "Atenúa el tono desigual",
+      "Devuelve vitalidad al rostro",
+      "Aclara la piel naturalmente",
+      "Reduce las manchas",
+      "Aporta resplandor saludable",
+      "Sin necesidad de aparatología"
+    ],
+    imagen: equilibrioTotalSvg,
+    alt: "Luz perfecta - tratamiento despigmentante"
+  },
+  {
+    id: 20,
+    nombre: "Flash de juventud - Fotorejuvenecimiento",
+    precio: "89,00€",
+    duracion: "60 min",
+    frecuencia: "1 vez cada 15 días",
+    descripcion: "Fotorejuvenecimiento facial para una piel radiante. Utiliza la última tecnología en fotorejuvenecimiento para estimular la producción de colágeno, reducir arrugas y mejorar la elasticidad de la piel.",
+    descripcionLarga: "Fotorejuvenecimiento facial para una piel radiante. Utiliza la última tecnología en fotorejuvenecimiento para estimular la producción de colágeno, reducir arrugas y mejorar la elasticidad de la piel. Ideal para pieles maduras. Protocolo 100% personalizado en cada sesión. Piel más firme, tersa y rejuvenecida.",
+    pasos: [
+      "Evaluación personalizada de la piel",
+      "Aplicación de tecnología de fotorejuvenecimiento",
+      "Estimulación de la producción de colágeno",
+      "Reducción de arrugas",
+      "Mejora de la elasticidad",
+      "Protocolo 100% personalizado"
+    ],
+    beneficios: [
+      "Estimula la producción de colágeno",
+      "Reduce arrugas visiblemente",
+      "Mejora la elasticidad de la piel",
+      "Ideal para pieles maduras",
+      "Piel más firme y tersa",
+      "Rejuvenecimiento visible"
+    ],
+    imagen: purezaCompletaSvg,
+    alt: "Flash de juventud - fotorejuvenecimiento"
+  },
+  {
+    id: 21,
+    nombre: "Higiene Facial Suprema",
+    precio: "55,00€",
+    duracion: "45 min",
+    frecuencia: "1 vez al mes",
+    descripcion: "Tratamiento de limpieza profunda sin extracción, diseñado para pieles que han perdido su luz.",
+    descripcionLarga: "Tratamiento de limpieza profunda sin extracción, diseñado para pieles que han perdido su luz. Combinación de enzimas renovadoras, cócteles revitalizantes y masaje lifting que devuelve suavidad y frescura. Ideal para pieles envejecidas, tristes, apagadas y con falta de vitalidad.",
+    pasos: [
+      "Limpieza profunda sin extracción",
+      "Aplicación de enzimas renovadoras",
+      "Cócteles revitalizantes",
+      "Masaje lifting",
+      "Devolución de suavidad y frescura"
+    ],
+    beneficios: [
+      "Devuelve la luz a la piel",
+      "Renovación con enzimas",
+      "Revitalización profunda",
+      "Efecto lifting",
+      "Ideal para pieles apagadas y envejecidas"
+    ],
+    imagen: purezaBasicaSvg,
+    alt: "Higiene Facial Suprema"
+  },
+  {
+    id: 22,
+    nombre: "Eterna Juventud 2 en 1",
+    precio: "89,00€",
+    duracion: "75 min",
+    frecuencia: "1 sesión personalizada",
+    descripcion: "Higiene facial + rejuvenecimiento en un solo tratamiento.",
+    descripcionLarga: "Higiene facial + rejuvenecimiento en un solo tratamiento. Combina extracción con activos de alta concentración y tecnología avanzada para reafirmar y alisar la piel. Ideal para quienes buscan resultados sin perder tiempo. Efecto flash inmediato y beneficios a largo plazo.",
+    pasos: [
+      "Higiene facial completa con extracción",
+      "Aplicación de activos de alta concentración",
+      "Tecnología avanzada para reafirmar",
+      "Alisamiento de la piel",
+      "Efecto flash inmediato"
+    ],
+    beneficios: [
+      "Combina limpieza y rejuvenecimiento",
+      "Resultados inmediatos",
+      "Reafirma y alisa la piel",
+      "Ahorra tiempo",
+      "Beneficios a largo plazo"
+    ],
+    imagen: purezaCompletaSvg,
+    alt: "Eterna Juventud 2 en 1"
+  },
+  {
+    id: 23,
+    nombre: "Ice skin - crioterapia facial",
+    precio: "89,00€",
+    duracion: "60 min",
+    frecuencia: "1 sesión semanal",
+    descripcion: "Tratamiento de crioterapia facial para desinflamar, tonificar y redefinir la piel.",
+    descripcionLarga: "Tratamiento de crioterapia facial para desinflamar, tonificar y redefinir la piel. Ideal para pieles cansadas, con flacidez o signos de fatiga. Proporciona efecto tensor, revitalizante y reafirmante desde la primera sesión.",
+    pasos: [
+      "Preparación de la piel",
+      "Aplicación de crioterapia facial",
+      "Desinflamación y tonificación",
+      "Redefinición del óvalo facial",
+      "Efecto tensor inmediato"
+    ],
+    beneficios: [
+      "Desinflamación inmediata",
+      "Tonificación de la piel",
+      "Redefinición del óvalo facial",
+      "Efecto tensor y revitalizante",
+      "Ideal para pieles cansadas y con flacidez"
+    ],
+    imagen: descansoVitalidadSvg,
+    alt: "Ice skin - crioterapia facial"
+  },
+  {
+    id: 24,
+    nombre: "Lifting Lumínico",
+    precio: "89,00€",
+    duracion: "60 min",
+    frecuencia: "1 o 2 sesiones a la semana",
+    descripcion: "Fotobioestimulación para un efecto lifting inmediato.",
+    descripcionLarga: "Fotobioestimulación para un efecto lifting inmediato. Luz LED de alta intensidad que reafirma, redefine el óvalo facial y devuelve la jugosidad. Se adapta a cada tipo de piel y necesidad.",
+    pasos: [
+      "Evaluación del tipo de piel",
+      "Aplicación de luz LED de alta intensidad",
+      "Reafirmación de la piel",
+      "Redefinición del óvalo facial",
+      "Devolución de la jugosidad"
+    ],
+    beneficios: [
+      "Efecto lifting inmediato",
+      "Reafirma la piel",
+      "Redefine el óvalo facial",
+      "Devuelve la jugosidad",
+      "Adaptable a cada tipo de piel"
+    ],
+    imagen: purezaCompletaSvg,
+    alt: "Lifting Lumínico"
+  },
+  {
+    id: 25,
+    nombre: "Oxigenación profunda - higiene facial completa con extracción",
+    precio: "61,00€",
+    duracion: "60 min",
+    frecuencia: "1 sesión al mes",
+    descripcion: "Limpieza y oxigenación para pieles maduras.",
+    descripcionLarga: "Limpieza y oxigenación para pieles maduras. Elimina impurezas, revitaliza e hidrata. Estimula la regeneración celular. Ideal para preparar la piel para tratamientos posteriores.",
+    pasos: [
+      "Limpieza profunda de la piel",
+      "Extracción de impurezas",
+      "Oxigenación celular",
+      "Revitalización e hidratación",
+      "Estimulación de la regeneración celular"
+    ],
+    beneficios: [
+      "Elimina impurezas profundas",
+      "Revitaliza e hidrata",
+      "Estimula la regeneración celular",
+      "Ideal para pieles maduras",
+      "Prepara para tratamientos posteriores"
+    ],
+    imagen: renovacionProfundaSvg,
+    alt: "Oxigenación profunda"
+  },
+  {
+    id: 26,
+    nombre: "La cápsula del tiempo",
+    precio: "89,00€",
+    duracion: "75 min",
+    frecuencia: "Tratamiento personalizado",
+    descripcion: "Tratamiento que fusiona aparatología, activos de alto rendimiento y masajes específicos para regeneración, reafirmación y rejuvenecimiento.",
+    descripcionLarga: "Tratamiento que fusiona aparatología, activos de alto rendimiento y masajes específicos para regeneración, reafirmación y rejuvenecimiento. Efecto visible desde la primera sesión. Totalmente personalizado.",
+    pasos: [
+      "Evaluación personalizada",
+      "Fusión de aparatología avanzada",
+      "Aplicación de activos de alto rendimiento",
+      "Masajes específicos",
+      "Regeneración, reafirmación y rejuvenecimiento"
+    ],
+    beneficios: [
+      "Efecto visible desde la primera sesión",
+      "Totalmente personalizado",
+      "Regeneración completa",
+      "Reafirmación de la piel",
+      "Rejuvenecimiento integral"
+    ],
+    imagen: purezaCompletaSvg,
+    alt: "La cápsula del tiempo"
+  },
+  {
+    id: 27,
+    nombre: "Revitalización profunda con dermapen",
+    precio: "99,00€",
+    duracion: "75 min",
+    frecuencia: "Según necesidad",
+    descripcion: "Microneedling con Dermapen para potenciar la absorción de activos rejuvenecedores, estimular colágeno y elastina.",
+    descripcionLarga: "Microneedling con Dermapen para potenciar la absorción de activos rejuvenecedores, estimular colágeno y elastina. Ideal para mejorar textura, firmeza y renovar sin procedimientos agresivos.",
+    pasos: [
+      "Preparación de la piel",
+      "Microneedling con Dermapen",
+      "Potenciación de la absorción de activos",
+      "Estimulación de colágeno y elastina",
+      "Mejora de textura y firmeza"
+    ],
+    beneficios: [
+      "Estimula colágeno y elastina",
+      "Mejora textura y firmeza",
+      "Renovación sin procedimientos agresivos",
+      "Potencia la absorción de activos",
+      "Resultados progresivos"
+    ],
+    imagen: renovacionCristalSvg,
+    alt: "Revitalización profunda con dermapen"
   }
 ];
 
