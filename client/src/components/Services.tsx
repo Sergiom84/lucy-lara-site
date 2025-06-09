@@ -51,9 +51,11 @@ const services = [
     id: 5,
     title: "Otros Tratamientos",
     description: "Descubre nuestra gama completa de tratamientos personalizados para satisfacer todas tus necesidades de belleza.",
-    price: "Consultar",
+    price: "Desde 15€",
     image: micropigmentacion2,
-    alt: "Tratamiento de micropigmentación"
+    alt: "Otros tratamientos especializados",
+    link: "/otros-tratamientos",
+    linkText: "Ver tratamientos"
   }
 ];
 
