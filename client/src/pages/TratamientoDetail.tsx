@@ -28,159 +28,156 @@ interface TratamientoFacial {
 const tratamientosFaciales: TratamientoFacial[] = [
   {
     id: 1,
-    nombre: "Renovación Profunda",
-    precio: "61€",
-    duracion: "60 min",
-    frecuencia: "1 vez al mes",
-    descripcion: "Tratamiento de limpieza profunda que hidrata, revitaliza y equilibra la piel.",
-    descripcionLarga: "Nuestro tratamiento de Renovación Profunda es la higiene facial completa perfecta para mantener tu piel limpia, hidratada y radiante. Este tratamiento combina técnicas tradicionales de limpieza con productos premium para lograr una piel equilibrada y revitalizada.",
+    nombre: "Limpieza de Cutis Simple",
+    precio: "30€",
+    duracion: "30 min",
+    frecuencia: "Cada 15 días",
+    descripcion: "Limpieza básica que desmaquilla, limpia y tonifica la piel dejándola fresca y renovada.",
+    descripcionLarga: "La Limpieza de Cutis Simple es el tratamiento perfecto para mantener tu piel limpia y fresca. Este tratamiento básico pero efectivo desmaquilla profundamente, limpia y tonifica la piel, siendo ideal para el mantenimiento regular de la salud cutánea.",
     pasos: [
-      "Limpieza de la piel junto con su tonificación",
-      "Exfoliación mecánica suave",
-      "Extracción de comedones para una oxigenación y limpieza de la piel",
-      "Masaje relajante junto con una mascarilla acorde de las necesidades de la piel",
-      "Acabamos el tratamiento con una crema finalizadora"
+      "Desmaquillado completo del rostro",
+      "Limpieza profunda de la piel",
+      "Tonificación para equilibrar el pH cutáneo",
+      "Hidratación final según tipo de piel"
     ],
     beneficios: [
-      "Limpieza profunda de los poros",
-      "Hidratación intensiva",
-      "Mejora la textura de la piel",
-      "Equilibra la producción de grasa",
-      "Proporciona luminosidad natural"
+      "Eliminación completa del maquillaje",
+      "Piel limpia y fresca",
+      "Poros libres de impurezas",
+      "Equilibrio del pH cutáneo",
+      "Preparación ideal para otros tratamientos"
     ],
-    imagen: renovacionProfundaSvg,
-    alt: "Tratamiento facial de renovación profunda"
+    imagen: purezaBasicaSvg,
+    alt: "Limpieza de cutis simple"
   },
   {
     id: 2,
-    nombre: "Renovación de Cristal",
-    precio: "71€",
-    duracion: "70 min",
+    nombre: "Exfoliación",
+    precio: "35€",
+    duracion: "30 min",
     frecuencia: "1 vez al mes",
-    descripcion: "Higiene facial completa con microdermoabrasión que hidrata, pule y oxigena.",
-    descripcionLarga: "La Renovación de Cristal utiliza la técnica de microdermoabrasión para eliminar las células muertas de la superficie de la piel, revelando una piel más suave, luminosa y rejuvenecida. Este tratamiento avanzado es ideal para mejorar la textura y apariencia general de la piel.",
+    descripcion: "Exfoliación profunda que elimina células muertas y revela una piel más suave y luminosa.",
+    descripcionLarga: "La Exfoliación es un tratamiento esencial para renovar la superficie de la piel. Elimina las células muertas acumuladas, mejora la textura cutánea y prepara la piel para absorber mejor los productos de cuidado, revelando un cutis más suave y luminoso.",
     pasos: [
-      "Limpieza de la piel junto con su tonificación",
-      "Extracción de comedones para una oxigenación y limpieza de la piel",
-      "Microdermoabrasión que exfolia en profundidad, suaviza la textura de la piel y aporta luminosidad",
-      "Elimina las células muertas e imperfecciones",
-      "Masaje relajante junto con una mascarilla acorde de las necesidades de la piel",
-      "Acabamos el tratamiento con una crema finalizadora"
+      "Limpieza previa de la piel",
+      "Aplicación de exfoliante específico",
+      "Masaje circular para eliminar células muertas",
+      "Retirada del producto con agua tibia",
+      "Tonificación e hidratación final"
     ],
     beneficios: [
-      "Exfoliación profunda y efectiva",
-      "Reducción de líneas finas",
-      "Mejora la luminosidad de la piel",
-      "Suaviza la textura cutánea",
-      "Estimula la regeneración celular"
+      "Renovación celular acelerada",
+      "Textura de piel más suave",
+      "Mayor luminosidad facial",
+      "Mejor absorción de productos",
+      "Estimulación de la circulación"
     ],
     imagen: renovacionCristalSvg,
-    alt: "Tratamiento facial renovación de cristal con microdermoabrasión"
+    alt: "Exfoliación facial profesional"
   },
   {
     id: 3,
-    nombre: "Descanso y Vitalidad",
-    precio: "71€",
-    duracion: "70 min",
+    nombre: "Higiene + Extracción",
+    precio: "45€",
+    duracion: "60 min",
     frecuencia: "1 vez al mes",
-    descripcion: "Higiene facial completa con presoterapia ocular que reduce bolsas, ojeras y fatiga ocular.",
-    descripcionLarga: "El tratamiento Descanso y Vitalidad combina una higiene facial completa con presoterapia ocular específica para el contorno de ojos. Es perfecto para quienes buscan rejuvenecer la mirada y reducir los signos de fatiga ocular.",
+    descripcion: "Limpieza profunda con extracción de comedones para purificar los poros y oxigenar la piel.",
+    descripcionLarga: "La Higiene + Extracción es un tratamiento completo que combina limpieza profunda con extracción manual de comedones. Ideal para pieles con tendencia grasa o con impurezas, este tratamiento purifica los poros en profundidad y oxigena la piel.",
     pasos: [
-      "Limpieza de la piel junto con su tonificación",
-      "Exfoliación mecánica",
-      "Extracción de comedones para una oxigenación y limpieza de la piel",
-      "Finalizamos el tratamiento con las gafas de presoterapia",
-      "Reducen bolsas, ojeras y fatiga ocular, dejando la mirada más luminosa y descansada"
+      "Desmaquillado y limpieza inicial",
+      "Vaporización para abrir los poros",
+      "Extracción manual de comedones",
+      "Aplicación de tónico desinfectante",
+      "Mascarilla calmante",
+      "Hidratación final personalizada"
     ],
     beneficios: [
-      "Reduce bolsas y ojeras",
-      "Disminuye la fatiga ocular",
-      "Ilumina la mirada",
-      "Mejora la circulación en el contorno de ojos",
-      "Efecto relajante y descansado"
+      "Poros profundamente limpios",
+      "Eliminación de puntos negros",
+      "Oxigenación celular mejorada",
+      "Prevención de imperfecciones",
+      "Piel más clara y uniforme"
     ],
-    imagen: descansoVitalidadSvg,
-    alt: "Tratamiento facial descanso y vitalidad con presoterapia ocular"
+    imagen: renovacionProfundaSvg,
+    alt: "Higiene facial con extracción"
   },
   {
     id: 4,
-    nombre: "Equilibrio Total",
-    precio: "79€",
-    duracion: "80 min",
-    frecuencia: "1 vez al mes",
-    descripcion: "Higiene facial con presoterapia que revitaliza la cara y el cuerpo.",
-    descripcionLarga: "Nuestro tratamiento más completo que combina higiene facial profesional con presoterapia corporal. Equilibrio Total ofrece una experiencia de bienestar integral que revitaliza tanto tu rostro como tu cuerpo, proporcionando una sensación de ligereza y renovación total.",
+    nombre: "Higiene + Peeling",
+    precio: "55€",
+    duracion: "60 min",
+    frecuencia: "1 vez cada 2 meses",
+    descripcion: "Tratamiento que combina higiene facial con peeling químico para renovar y rejuvenecer la piel.",
+    descripcionLarga: "La Higiene + Peeling es un tratamiento avanzado que combina la limpieza profunda con un peeling químico suave. Este procedimiento renueva las capas superficiales de la piel, mejora la textura y reduce imperfecciones, proporcionando un cutis más joven y radiante.",
     pasos: [
-      "El tratamiento va acompañado de presoterapia en piernas",
-      "Activa la circulación, reduce la retención de líquidos",
-      "Proporciona una sensación de ligereza y bienestar integral",
-      "La higiene consta de limpieza de la piel junto con su tonificación",
-      "Exfoliación mecánica, extracción de comedones",
-      "Masaje relajante junto con una mascarilla acorde de las necesidades de la piel",
-      "Acabamos el tratamiento con una crema finalizadora"
+      "Limpieza y preparación de la piel",
+      "Aplicación de peeling químico específico",
+      "Tiempo de actuación controlado",
+      "Neutralización del peeling",
+      "Mascarilla calmante post-peeling",
+      "Protección solar obligatoria"
     ],
     beneficios: [
-      "Mejora la circulación sanguínea",
-      "Reduce la retención de líquidos",
-      "Sensación de ligereza en las piernas",
-      "Rostro limpio y revitalizado",
-      "Bienestar integral cuerpo-mente"
+      "Renovación celular acelerada",
+      "Reducción de manchas superficiales",
+      "Mejora de líneas finas",
+      "Textura más uniforme",
+      "Estimulación del colágeno"
     ],
     imagen: equilibrioTotalSvg,
-    alt: "Tratamiento facial equilibrio total con presoterapia"
+    alt: "Higiene facial con peeling"
   },
   {
     id: 5,
-    nombre: "Pureza y Frescura Básica",
-    precio: "55€",
-    duracion: "45 min",
-    frecuencia: "Según necesidad",
-    descripcion: "Higiene facial básica, hidratante y revitalizante.",
-    descripcionLarga: "El tratamiento Pureza y Frescura Básica es ideal para pieles que buscan una limpieza suave pero efectiva. Este ritual esencial limpia y revitaliza la piel sin extracciones agresivas, siendo perfecto para pieles sensibles o como mantenimiento regular.",
+    nombre: "Higiene + Radiofrecuencia",
+    precio: "70€",
+    duracion: "75 min",
+    frecuencia: "1 vez al mes",
+    descripcion: "Limpieza facial completa con radiofrecuencia para tensar, reafirmar y rejuvenecer la piel.",
+    descripcionLarga: "La Higiene + Radiofrecuencia combina una limpieza facial profunda con tecnología de radiofrecuencia. Este tratamiento estimula la producción natural de colágeno, tensa la piel, reduce la flacidez y proporciona un efecto lifting natural inmediato.",
     pasos: [
-      "El ritual esencial para limpiar y revitalizar la piel sin extracción",
-      "Incluye limpieza profunda, tonificación",
-      "Exfoliación mecánica suave, aplicación de ampolla hidratante",
-      "Masaje relajante, mascarilla adaptada a tu piel",
-      "Crema final para una hidratación duradera",
-      "Tratamiento para pieles que no necesiten una limpieza en profundidad"
+      "Limpieza profunda inicial",
+      "Preparación de la piel para radiofrecuencia",
+      "Aplicación de gel conductor",
+      "Tratamiento con radiofrecuencia en zonas específicas",
+      "Mascarilla tensor post-tratamiento",
+      "Hidratación y protección final"
     ],
     beneficios: [
-      "Limpieza suave pero efectiva",
-      "Hidratación profunda",
-      "Apto para pieles sensibles",
-      "Revitaliza el cutis",
-      "Mantenimiento regular de la piel"
+      "Efecto tensor inmediato",
+      "Estimulación del colágeno",
+      "Reducción de flacidez",
+      "Mejora del óvalo facial",
+      "Piel más firme y tonificada"
     ],
-    imagen: purezaBasicaSvg,
-    alt: "Tratamiento facial pureza y frescura básica"
+    imagen: descansoVitalidadSvg,
+    alt: "Higiene facial con radiofrecuencia"
   },
   {
     id: 6,
-    nombre: "Pureza y Frescura Completa",
-    precio: "89€",
-    duracion: "75 min",
+    nombre: "Higiene + LED",
+    precio: "60€",
+    duracion: "60 min",
     frecuencia: "1 vez al mes",
-    descripcion: "Higiene facial completa con fotoestimulación Led que hidrata, revitaliza y equilibra la piel.",
-    descripcionLarga: "Nuestro tratamiento más avanzado que incorpora tecnología LED de última generación. La fotoestimulación LED activa la regeneración celular natural, mejora la hidratación y proporciona un efecto anti-edad visible, dejando la piel revitalizada y luminosa.",
+    descripcion: "Limpieza facial con terapia LED para regenerar, calmar y revitalizar la piel en profundidad.",
+    descripcionLarga: "La Higiene + LED es un tratamiento innovador que combina limpieza facial profunda con fototerapia LED. Esta tecnología de luz estimula la regeneración celular, calma la inflamación y revitaliza la piel, proporcionando resultados visibles desde la primera sesión.",
     pasos: [
-      "Limpieza de la piel junto con su tonificación",
-      "Exfoliación mecánica, extracción de comedones para una oxigenación y limpieza de la piel",
-      "Realizando la higiene comenzaremos con el tratamiento de fotoestimulación Led",
-      "Activa la regeneración celular, mejora la hidratación",
-      "Aporta un efecto calmante, dejando la piel revitalizada y luminosa",
-      "Masaje relajante junto con una mascarilla acorde de las necesidades de la piel",
-      "Acabamos el tratamiento con una crema finalizadora"
+      "Limpieza y preparación facial completa",
+      "Extracción si es necesaria",
+      "Aplicación de mascarilla específica",
+      "Sesión de fototerapia LED (15-20 minutos)",
+      "Retirada de mascarilla",
+      "Hidratación y protección final"
     ],
     beneficios: [
-      "Estimula la regeneración celular",
-      "Efecto anti-edad visible",
-      "Mejora la producción de colágeno",
-      "Calma y reduce la inflamación",
-      "Luminosidad y vitalidad excepcional"
+      "Regeneración celular acelerada",
+      "Efecto antiinflamatorio",
+      "Estimulación del colágeno",
+      "Mejora de la textura cutánea",
+      "Luminosidad y vitalidad aumentada"
     ],
     imagen: purezaCompletaSvg,
-    alt: "Tratamiento facial pureza y frescura completa con Led"
+    alt: "Higiene facial con terapia LED"
   }
 ];
 

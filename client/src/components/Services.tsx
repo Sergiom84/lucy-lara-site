@@ -11,7 +11,7 @@ const services = [
     id: 1,
     title: "Tratamientos Faciales",
     description: "Rejuvenece tu piel con nuestros tratamientos personalizados que combinan técnicas avanzadas y productos naturales.",
-    price: "Desde 55€",
+    price: "Desde 30€",
     image: tratamientoFacial,
     alt: "Tratamiento facial profesional en Centro de Estética Lucy Lara",
     link: "/tratamientos-faciales",
