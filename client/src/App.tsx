@@ -10,6 +10,7 @@ import TratamientosFaciales from "@/pages/TratamientosFaciales";
 import TratamientoDetail from "@/pages/TratamientoDetail";
 import Micropigmentacion from "@/pages/Micropigmentacion";
 import EliminacionVello from "@/pages/EliminacionVello";
+import TratamientosCorporales from "@/pages/TratamientosCorporales";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Chatbot from "@/components/Chatbot";
 import { useAnalytics } from "./hooks/use-analytics";
@@ -26,6 +27,7 @@ function Router() {
       <Route path="/tratamiento-facial/:id" component={TratamientoDetail} />
       <Route path="/micropigmentacion" component={Micropigmentacion} />
       <Route path="/eliminacion-vello" component={EliminacionVello} />
+      <Route path="/tratamientos-corporales" component={TratamientosCorporales} />
       <Route component={NotFound} />
     </Switch>
   );

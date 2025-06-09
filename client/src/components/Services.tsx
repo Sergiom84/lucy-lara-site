@@ -21,9 +21,11 @@ const services = [
     id: 2,
     title: "Tratamientos Corporales",
     description: "Mima tu cuerpo con nuestros tratamientos que combinan técnicas de relajación y productos revitalizantes.",
-    price: "Desde 60€",
+    price: "Desde 40€",
     image: "https://images.unsplash.com/photo-1519824145371-296894a0daa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-    alt: "Tratamientos corporales"
+    alt: "Tratamientos corporales",
+    link: "/tratamientos-corporales",
+    linkText: "Ver tratamientos"
   },
   {
     id: 3,
