@@ -218,6 +218,246 @@ const tratamientosFaciales: TratamientoFacial[] = [
     ],
     imagen: equilibrioTotalSvg,
     alt: "Equilibrio puro - tratamiento cosmético"
+  },
+  {
+    id: 13,
+    nombre: "Luz antiacne - tratamiento intensivo bioestimulación",
+    precio: "79,00€",
+    duracion: "60 min",
+    frecuencia: "1 vez por semana",
+    descripcion: "Tratamiento enfocado en pieles con acné inflamatorio o brotes recurrentes.",
+    pasos: [
+      "Preparación específica para piel con acné",
+      "Fotobioestimulación en múltiples sesiones",
+      "Reducción de la inflamación",
+      "Prevención de nuevas imperfecciones"
+    ],
+    imagen: purezaCompletaSvg,
+    alt: "Luz antiacne - bioestimulación"
+  },
+  {
+    id: 14,
+    nombre: "Renovación profunda - higiene facial completa",
+    precio: "61,00€",
+    duracion: "60 min",
+    frecuencia: "1 vez al mes",
+    descripcion: "Tratamiento completo de limpieza profunda con extracción de impurezas.",
+    pasos: [
+      "Limpieza de la piel junto con su tonificación",
+      "Extracción de comedones",
+      "Mascarilla astringente y purificante",
+      "Acabamos con crema refrescante"
+    ],
+    imagen: renovacionProfundaSvg,
+    alt: "Renovación profunda - higiene facial completa"
+  },
+  {
+    id: 15,
+    nombre: "Stop acné - higiene facial completa + fotobioestimulación",
+    precio: "89,00€",
+    duracion: "75 min",
+    frecuencia: "1 vez en semana",
+    descripcion: "Higiene facial con extracción potenciada con fotobioestimulación.",
+    pasos: [
+      "Higiene facial completa con extracción",
+      "Aplicación de fotobioestimulación específica",
+      "Reducción de inflamaciones",
+      "Cicatrización de marcas de acné"
+    ],
+    imagen: purezaCompletaSvg,
+    alt: "Stop acné con fotobioestimulación"
+  },
+  {
+    id: 16,
+    nombre: "Luz pura - hig. facial completa + microdermoabrasión + cosmética antimanchas",
+    precio: "71,00€",
+    duracion: "70 min",
+    frecuencia: "1 vez al mes",
+    descripcion: "Recupera la claridad y uniformidad de tu piel con esta higiene diseñada para combatir las manchas.",
+    pasos: [
+      "Exfolia, renueva y unifica",
+      "Microdermoabrasión con punta de diamante",
+      "Aplicación de activos despigmentantes",
+      "Mejora de la luminosidad"
+    ],
+    imagen: renovacionCristalSvg,
+    alt: "Luz pura - microdermoabrasión antimanchas"
+  },
+  {
+    id: 17,
+    nombre: "Luz renovada - Fotorejuvenecimiento antimanchas",
+    precio: "89,00€",
+    duracion: "60 min",
+    frecuencia: "1 sesión cada 2 semanas (mínimo 6 sesiones)",
+    descripcion: "Gracias a la tecnología de luz pulsada intensa (IPL), este tratamiento actúa directamente sobre la hiperpigmentación.",
+    pasos: [
+      "Aplicación de tecnología IPL",
+      "Actuación directa sobre hiperpigmentación",
+      "Estimulación de la producción de colágeno",
+      "Unificación del tono"
+    ],
+    imagen: purezaCompletaSvg,
+    alt: "Luz renovada - fotorejuvenecimiento IPL"
+  },
+  {
+    id: 18,
+    nombre: "Skin glow - dermapen antimanchas",
+    precio: "99,00€",
+    duracion: "75 min",
+    frecuencia: "Cada 2 semanas",
+    descripcion: "Tratamiento para pieles con hiperpigmentación, este tratamiento combina dermapen con activos despigmentantes.",
+    pasos: [
+      "Evaluación del tipo de piel",
+      "Aplicación de dermapen con activos despigmentantes",
+      "Tratamiento adaptado y personalizado",
+      "Unificación del tono de la piel"
+    ],
+    imagen: renovacionCristalSvg,
+    alt: "Skin glow - dermapen antimanchas"
+  },
+  {
+    id: 19,
+    nombre: "Luz perfecta - Tratamiento facial cosmético despigmentante",
+    precio: "65,00€",
+    duracion: "60 min",
+    frecuencia: "1 sesión semanal durante el primer mes, luego 1 cada 15 días",
+    descripcion: "Este tratamiento es la opción perfecta para quienes buscan atenuar el tono desigual y devolver la vitalidad a su rostro sin recurrir a aparatología.",
+    pasos: [
+      "Limpieza con emulsión específica",
+      "Peeling enzimático con ácidos despigmentantes",
+      "Masaje con cóctel despigmentante",
+      "Crema + protector solar SPF 50"
+    ],
+    imagen: equilibrioTotalSvg,
+    alt: "Luz perfecta - tratamiento despigmentante"
+  },
+  {
+    id: 20,
+    nombre: "Flash de juventud - Fotorejuvenecimiento",
+    precio: "89,00€",
+    duracion: "60 min",
+    frecuencia: "1 vez cada 15 días",
+    descripcion: "Fotorejuvenecimiento facial para una piel radiante. Utiliza la última tecnología en fotorejuvenecimiento para estimular la producción de colágeno, reducir arrugas y mejorar la elasticidad de la piel.",
+    pasos: [
+      "Evaluación personalizada de la piel",
+      "Aplicación de tecnología de fotorejuvenecimiento",
+      "Estimulación de la producción de colágeno",
+      "Protocolo 100% personalizado"
+    ],
+    imagen: purezaCompletaSvg,
+    alt: "Flash de juventud - fotorejuvenecimiento"
+  },
+  {
+    id: 21,
+    nombre: "Higiene Facial Suprema",
+    precio: "55,00€",
+    duracion: "45 min",
+    frecuencia: "1 vez al mes",
+    descripcion: "Tratamiento de limpieza profunda sin extracción, diseñado para pieles que han perdido su luz.",
+    pasos: [
+      "Limpieza profunda sin extracción",
+      "Aplicación de enzimas renovadoras",
+      "Cócteles revitalizantes",
+      "Masaje lifting"
+    ],
+    imagen: purezaBasicaSvg,
+    alt: "Higiene Facial Suprema"
+  },
+  {
+    id: 22,
+    nombre: "Eterna Juventud 2 en 1",
+    precio: "89,00€",
+    duracion: "75 min",
+    frecuencia: "1 sesión personalizada",
+    descripcion: "Higiene facial + rejuvenecimiento en un solo tratamiento.",
+    pasos: [
+      "Higiene facial completa con extracción",
+      "Aplicación de activos de alta concentración",
+      "Tecnología avanzada para reafirmar",
+      "Efecto flash inmediato"
+    ],
+    imagen: purezaCompletaSvg,
+    alt: "Eterna Juventud 2 en 1"
+  },
+  {
+    id: 23,
+    nombre: "Ice skin - crioterapia facial",
+    precio: "89,00€",
+    duracion: "60 min",
+    frecuencia: "1 sesión semanal",
+    descripcion: "Tratamiento de crioterapia facial para desinflamar, tonificar y redefinir la piel.",
+    pasos: [
+      "Preparación de la piel",
+      "Aplicación de crioterapia facial",
+      "Desinflamación y tonificación",
+      "Efecto tensor inmediato"
+    ],
+    imagen: descansoVitalidadSvg,
+    alt: "Ice skin - crioterapia facial"
+  },
+  {
+    id: 24,
+    nombre: "Lifting Lumínico",
+    precio: "89,00€",
+    duracion: "60 min",
+    frecuencia: "1 o 2 sesiones a la semana",
+    descripcion: "Fotobioestimulación para un efecto lifting inmediato.",
+    pasos: [
+      "Evaluación del tipo de piel",
+      "Aplicación de luz LED de alta intensidad",
+      "Reafirmación de la piel",
+      "Redefinición del óvalo facial"
+    ],
+    imagen: purezaCompletaSvg,
+    alt: "Lifting Lumínico"
+  },
+  {
+    id: 25,
+    nombre: "Oxigenación profunda - higiene facial completa con extracción",
+    precio: "61,00€",
+    duracion: "60 min",
+    frecuencia: "1 sesión al mes",
+    descripcion: "Limpieza y oxigenación para pieles maduras.",
+    pasos: [
+      "Limpieza profunda de la piel",
+      "Extracción de impurezas",
+      "Oxigenación celular",
+      "Estimulación de la regeneración celular"
+    ],
+    imagen: renovacionProfundaSvg,
+    alt: "Oxigenación profunda"
+  },
+  {
+    id: 26,
+    nombre: "La cápsula del tiempo",
+    precio: "89,00€",
+    duracion: "75 min",
+    frecuencia: "Tratamiento personalizado",
+    descripcion: "Tratamiento que fusiona aparatología, activos de alto rendimiento y masajes específicos para regeneración, reafirmación y rejuvenecimiento.",
+    pasos: [
+      "Evaluación personalizada",
+      "Fusión de aparatología avanzada",
+      "Aplicación de activos de alto rendimiento",
+      "Regeneración, reafirmación y rejuvenecimiento"
+    ],
+    imagen: purezaCompletaSvg,
+    alt: "La cápsula del tiempo"
+  },
+  {
+    id: 27,
+    nombre: "Revitalización profunda con dermapen",
+    precio: "99,00€",
+    duracion: "75 min",
+    frecuencia: "Según necesidad",
+    descripcion: "Microneedling con Dermapen para potenciar la absorción de activos rejuvenecedores, estimular colágeno y elastina.",
+    pasos: [
+      "Preparación de la piel",
+      "Microneedling con Dermapen",
+      "Potenciación de la absorción de activos",
+      "Estimulación de colágeno y elastina"
+    ],
+    imagen: renovacionCristalSvg,
+    alt: "Revitalización profunda con dermapen"
   }
 ];
 
