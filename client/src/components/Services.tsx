@@ -29,9 +29,11 @@ const services = [
     id: 3,
     title: "Eliminación del Vello",
     description: "Disfruta de una piel suave y libre de vello con nuestros métodos efectivos, seguros y de larga duración.",
-    price: "Desde 35€",
+    price: "Desde 5€",
     image: eliminacionVello,
-    alt: "Tratamiento profesional de eliminación de vello con láser en Centro de Estética Lucy Lara"
+    alt: "Tratamiento profesional de eliminación de vello con láser en Centro de Estética Lucy Lara",
+    link: "/eliminacion-vello",
+    linkText: "Ver métodos"
   },
   {
     id: 4,
