@@ -181,7 +181,7 @@ const productosData: ProductosData = {
     ingredientes: "Filtros físicos y químicos, Ácido Hialurónico, Colágeno y Pigmentos que aportan color.",
     presentacion: "50 ml",
     modo_uso: "Aplicar por la mañana o cada vez que se precise. Reaplicar cada 2 horas en caso de exposición solar intensa.",
-    precio: "36€",
+    precio: "28,30€",
     imagen: protectorSolar,
     alt: "Protector solar 50+ Lucy Lara"
   },
@@ -199,7 +199,7 @@ const productosData: ProductosData = {
     ingredientes: "Filtros físicos y químicos, Ácido Hialurónico, Colágeno y Pigmentos que aportan color.",
     presentacion: "50 ml",
     modo_uso: "Aplicar por la mañana o cada vez que se precise. Reaplicar cada 2 horas en caso de exposición solar intensa.",
-    precio: "37€",
+    precio: "27€",
     imagen: protectorSolarColor,
     alt: "Protector solar con color Lucy Lara"
   },
@@ -216,7 +216,7 @@ const productosData: ProductosData = {
     ingredientes: "Vitamina C 4%, Ginkgo Biloba 1%, DMAE 2% y Phytoproteoglycanos 15%",
     presentacion: "30 ml",
     modo_uso: "Aplicar por la mañana y por la noche con un suave masaje. A continuación, aplicar su crema habitual.",
-    precio: "28€",
+    precio: "39,60€",
     imagen: serumVitaminaC,
     alt: "Sérum Vitamina C Lucy Lara"
   },

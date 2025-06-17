@@ -46,7 +46,7 @@ const productos = [
     id: 1,
     titulo: "Crema Contorno de Ojos",
     descripcion: "Lifting periocular. Reductor de bolsas.",
-    precio: "35€",
+    precio: "46,70€",
     imagen: cremaContornoOjos,
     alt: "Crema contorno de ojos Lucy Lara"
   },
@@ -54,7 +54,7 @@ const productos = [
     id: 2,
     titulo: "Crema Cuidado Piel con Manchas",
     descripcion: "Cuidado diario de la piel con tendencia pigmentaria",
-    precio: "30€",
+    precio: "42,50€",
     imagen: cremaPielManchas,
     alt: "Crema cuidado piel con manchas Lucy Lara"
   },
@@ -62,7 +62,7 @@ const productos = [
     id: 3,
     titulo: "Crema Despigmentante",
     descripcion: "Acción Despigmentante",
-    precio: "28€",
+    precio: "52,58€",
     imagen: cremaDespigmentante,
     alt: "Crema despigmentante Lucy Lara"
   },
@@ -70,7 +70,7 @@ const productos = [
     id: 4,
     titulo: "Crema Efecto Seda",
     descripcion: "Reafirmante facial",
-    precio: "39€",
+    precio: "32,80€",
     imagen: cremaEfectoSeda,
     alt: "Crema efecto seda Lucy Lara"
   },
@@ -78,7 +78,7 @@ const productos = [
     id: 5,
     titulo: "Crema Hidratante Oil-Free",
     descripcion: "Hidratación Facial Oil-Free Piel Grasa",
-    precio: "40€",
+    precio: "34,20€",
     imagen: cremaHidratanteOilFree,
     alt: "Crema hidratante oil-free Lucy Lara"
   },
@@ -86,7 +86,7 @@ const productos = [
     id: 6,
     titulo: "Espuma Limpiadora",
     descripcion: "Mousse Limpiadora",
-    precio: "41€",
+    precio: "21,50€",
     imagen: espumaLimpiadora,
     alt: "Espuma limpiadora Lucy Lara"
   },
