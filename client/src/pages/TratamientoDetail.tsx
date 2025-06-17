@@ -4,8 +4,9 @@ import { Link, useParams } from "wouter";
 import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import renovacionProfundaSvg from "@/assets/svg/renovacion-profunda.svg";
-import renovacionCristalSvg from "@/assets/svg/renovacion-cristal.svg";
+import renovacionProfundaImg from "@/assets/images/renovacion_profunda.png";
+import renovacionCristalImg from "@/assets/images/renovacion_cristal.png";
+import purezaFrescuraImg from "@/assets/images/pureza_frescura.png";
 import descansoVitalidadSvg from "@/assets/svg/descanso-vitalidad.svg";
 import equilibrioTotalSvg from "@/assets/svg/equilibrio-total.svg";
 import purezaBasicaSvg from "@/assets/svg/pureza-basica.svg";
@@ -48,7 +49,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Elimina impurezas y comedones",
       "Proporciona nutrición específica según tipo de piel"
     ],
-    imagen: renovacionProfundaSvg,
+    imagen: renovacionProfundaImg,
     alt: "Renovación profunda - higiene facial completa"
   },
   {
@@ -74,7 +75,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Elimina células muertas e imperfecciones",
       "Hidrata, pule y oxigena la piel"
     ],
-    imagen: renovacionCristalSvg,
+    imagen: renovacionCristalImg,
     alt: "Renovación de cristal con microdermoabrasión"
   },
   {
@@ -151,7 +152,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "No requiere extracción",
       "Aporta frescura y vitalidad"
     ],
-    imagen: purezaBasicaSvg,
+    imagen: purezaFrescuraImg,
     alt: "Pureza y frescura - higiene facial"
   },
   {
@@ -377,7 +378,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Oxigenación celular",
       "Efecto astringente y purificante"
     ],
-    imagen: renovacionProfundaSvg,
+    imagen: renovacionProfundaImg,
     alt: "Renovación profunda - higiene facial completa"
   },
   {
@@ -430,7 +431,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Prepara la piel para absorber mejor tratamientos",
       "Aspecto fresco y rejuvenecido"
     ],
-    imagen: renovacionCristalSvg,
+    imagen: renovacionCristalImg,
     alt: "Luz pura - microdermoabrasión antimanchas"
   },
   {
@@ -482,7 +483,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Unifica el tono",
       "Tratamiento personalizado"
     ],
-    imagen: renovacionCristalSvg,
+    imagen: renovacionCristalImg,
     alt: "Skin glow - dermapen antimanchas"
   },
   {
@@ -660,7 +661,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Ideal para pieles maduras",
       "Prepara para tratamientos posteriores"
     ],
-    imagen: renovacionProfundaSvg,
+    imagen: renovacionProfundaImg,
     alt: "Oxigenación profunda"
   },
   {
@@ -710,7 +711,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Potencia la absorción de activos",
       "Resultados progresivos"
     ],
-    imagen: renovacionCristalSvg,
+    imagen: renovacionCristalImg,
     alt: "Revitalización profunda con dermapen"
   }
 ];
