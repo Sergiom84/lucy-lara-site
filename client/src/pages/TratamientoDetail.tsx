@@ -9,7 +9,6 @@ import renovacionCristalImg from "@/assets/images/renovacion_cristal.png";
 import purezaFrescuraImg from "@/assets/images/pureza_frescura.png";
 import descansoVitalidadSvg from "@/assets/svg/descanso-vitalidad.svg";
 import equilibrioTotalSvg from "@/assets/svg/equilibrio-total.svg";
-import purezaBasicaSvg from "@/assets/svg/pureza-basica.svg";
 import purezaCompletaSvg from "@/assets/svg/pureza-completa.svg";
 
 interface TratamientoFacial {
@@ -203,7 +202,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Ideal para pieles sensibles y reactivas",
       "Efecto refrescante y reparador"
     ],
-    imagen: purezaBasicaSvg,
+    imagen: purezaFrescuraImg,
     alt: "Brisa de seda - higiene facial suave"
   },
   {
@@ -561,7 +560,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Efecto lifting",
       "Ideal para pieles apagadas y envejecidas"
     ],
-    imagen: purezaBasicaSvg,
+    imagen: purezaFrescuraImg,
     alt: "Higiene Facial Suprema"
   },
   {
