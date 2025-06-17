@@ -50,7 +50,7 @@ const productosData: ProductosData = {
     ingredientes: "Colágeno Natural 5%, Ácido Hialurónico de bajo peso molecular, Matrixyl 3000 2%. Rhamnosoft 1%, Argireline® 5%, Eyeseryl® 10%, Alfa-Bisabolol 0.5%, Aceite de Germen de Trigo y Aceite de Jojoba.",
     presentacion: "30 ml",
     modo_uso: "Aplicar a toques por la mañana y por la noche sobre el contorno de los ojos.",
-    precio: "35€",
+    precio: "46,70€",
     imagen: cremaContornoOjos,
     alt: "Crema contorno de ojos Lucy Lara"
   },
@@ -67,7 +67,7 @@ const productosData: ProductosData = {
     ingredientes: "Factor Natural de Hidratación 5%, Isoflavonas de Soja Liposomadas 2%, Moléculas señal derivadas de la leche activadas y estabilizadas 5%, Glicerol 3%, Lisado de Bifidobacterias 5%, Aloe Vera, Activos de Bellis Perennis 4%, Polipéptido Bioactivos (Citoquinas) 0.5%, Filtro solar",
     presentacion: "50 ml",
     modo_uso: "Aplicar por la mañana como crema de día sobre cara, cuello y escote. Repetir la aplicación en caso de exposición solar intensa. Recomendamos aplicar protección solar máxima a diario.",
-    precio: "30€",
+    precio: "42,50€",
     imagen: cremaPielManchas,
     alt: "Crema cuidado piel con manchas Lucy Lara"
   },
@@ -83,7 +83,7 @@ const productosData: ProductosData = {
     ingredientes: "Ácido Kójico 4%, Fitico 2%, Glicólico 2%, Arbutina 3%, Nicotinamida 1%. Extracto de Regaliz 0.1% y Péptidos Despigmentantes.",
     presentacion: "30 ml",
     modo_uso: "Aplicar por la noche sobre la mancha específica a tratar o repartir cuatro gotas entre frente, mejillas y barbilla y extender sin frotar en exceso. Recomendamos aplicar protección solar máxima a diario y no lavar el rostro con jabón para evitar resecar la piel en exceso. En caso de irritación, suspender temporalmente el tratamiento e intentar repetir su uso probando con menos cantidad.",
-    precio: "28€",
+    precio: "52,58€",
     imagen: cremaDespigmentante,
     alt: "Crema despigmentante Lucy Lara"
   },
@@ -99,7 +99,7 @@ const productosData: ProductosData = {
     ingredientes: "DMAE, Vitamina C, Ácido Tióctico, Glicerol, Aloe Vera y Vitamina E.",
     presentacion: "50 ml",
     modo_uso: "Aplicar por la mañana y por la noche sobre cara, cuello y escote. Su contenido en Vitamina C puede producir irritación en pieles sensibles.",
-    precio: "39€",
+    precio: "32,80€",
     imagen: cremaEfectoSeda,
     alt: "Crema efecto seda Lucy Lara"
   },
@@ -115,7 +115,7 @@ const productosData: ProductosData = {
     ingredientes: "Acido Glicólico tamponado 2%, Factor Natural de Hidratación 1%, Aloe Vera, Filtro Solar, Mimosa 5%, Calendula 2%, Alfa-Bisabolol 0.5%, Derivado de Aguacate seborregulador 0.9% y Base oil-free.",
     presentacion: "50 ml",
     modo_uso: "Aplicar por la mañana y por la noche con un suave masaje. Podría imitar si se aplica sobre una piel excesivamente desengrasada con jabón o soluciones alcohólicas.",
-    precio: "40€",
+    precio: "34,20€",
     imagen: cremaHidratanteOilFree,
     alt: "Crema hidratante oil-free Lucy Lara"
   },
@@ -132,7 +132,7 @@ const productosData: ProductosData = {
     ingredientes: "Ácido Glicólico, Avena, Manzanilla y base Foam de limpieza.",
     presentacion: "150 ml",
     modo_uso: "Con el rostro humedecido, extender con las manos con un suave masaje. Retirar con abundante agua y aplicar Tónico Facial.",
-    precio: "41€",
+    precio: "21,50€",
     imagen: espumaLimpiadora,
     alt: "Espuma limpiadora Lucy Lara"
   },
@@ -148,7 +148,7 @@ const productosData: ProductosData = {
     ingredientes: "Aceite de Rosa Mosqueta.",
     presentacion: "30 ml",
     modo_uso: "Aplicar por la mañana y por la noche con un suave masaje. A continuación, aplicar su crema habitual.",
-    precio: "23€",
+    precio: "29,55€",
     imagen: gelRosaMosqueta,
     alt: "Gel Rosa Mosqueta Lucy Lara"
   },
@@ -163,7 +163,7 @@ const productosData: ProductosData = {
     ingredientes: "Aceite Almendras Dulces 10%, Emolientes de Cadena Media 6%, Glicerina 5%, Extractos de Avena 3%, Manzanilla 3%, Siliconas hidratantes y Excipiente emoliente facial exento de ceras.",
     presentacion: "200 ml",
     modo_uso: "Aplicar con un algodón o disco desmaquillador en cara y cuello. Retirar con un disco desmaquillador húmedo y aplicar Tónico Facial. Uso diario.",
-    precio: "45€",
+    precio: "16,50€",
     imagen: lecheLimpiadoraFacial,
     alt: "Leche limpiadora facial Lucy Lara"
   },
