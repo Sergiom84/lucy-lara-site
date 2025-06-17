@@ -48,10 +48,20 @@ const Header = () => {
           <span>centrodebelleza@centroesteticalucylara.es</span>
         </div>
         <div className="flex items-center space-x-3">
-          <a href="#" className="text-gray-700 hover:text-[#8b2154]">
+          <a 
+            href="https://www.facebook.com/CBLUCYLARA/" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-700 hover:text-[#8b2154]"
+          >
             <Facebook className="h-5 w-5" />
           </a>
-          <a href="#" className="text-gray-700 hover:text-[#8b2154]">
+          <a 
+            href="https://www.instagram.com/esteticalucylara/?hl=es" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-700 hover:text-[#8b2154]"
+          >
             <Instagram className="h-5 w-5" />
           </a>
         </div>
@@ -92,8 +102,12 @@ const Header = () => {
               
               {/* Icons - Removed User icon */}
               <div className="flex items-center space-x-4 ml-4">
-                <a href="#" className="text-white hover:text-[#8b2154]">
-                  <Search className="h-5 w-5" />
+                <a 
+                  href={isHomePage ? "#reserva" : "/#reserva"} 
+                  className="text-white hover:text-[#8b2154]"
+                  title="Reservar cita"
+                >
+                  <Phone className="h-5 w-5" />
                 </a>
                 <a href="#" className="text-white hover:text-[#8b2154]">
                   <ShoppingBag className="h-5 w-5" />

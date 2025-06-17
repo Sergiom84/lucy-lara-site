@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { 
   MapPin, Phone, Mail, Clock, 
-  Facebook, Instagram, Twitter, Dribbble
+  Facebook, Instagram, Calendar, MessageCircle
 } from "lucide-react";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
@@ -31,6 +31,33 @@ const Booking = () => {
   });
   const [submitting, setSubmitting] = useState(false);
   
+  // Lista de servicios disponibles
+  const services = [
+    "Renovación profunda - higiene facial completa",
+    "Renovación de cristal - higiene facial con microdermoabrasión",
+    "Descanso y vitalidad - higiene facial con presoterapia ocular",
+    "Equilibrio total - higiene facial con presoterapia",
+    "Pureza y frescura - higiene facial",
+    "Micropigmentación - Cejas",
+    "Micropigmentación - Línea de ojos superior",
+    "Micropigmentación - Línea de ojos inferior",
+    "Micropigmentación - Labios completos",
+    "Eliminación del vello - Depilación eléctrica",
+    "Eliminación del vello - Fotodepilación SHR",
+    "Eliminación del vello - Cera chocolate",
+    "Masaje relajante - Un respiro para tu cuerpo y mente",
+    "Masaje terapéutico - Manos que sanan",
+    "Lifting y tinte de pestañas",
+    "Hidrolinfa",
+    "Acupuntura"
+  ];
+
+  // Horarios disponibles
+  const timeSlots = [
+    "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "13:00", "13:30",
+    "16:00", "16:30", "17:00", "17:30", "18:00", "18:30", "19:00", "19:30"
+  ];
+  
   // Handle form input changes
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -41,7 +68,7 @@ const Booking = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Simple validation
+    // Validación
     if (!formData.name || !formData.email || !formData.phone || !formData.service || !formData.date || !formData.time) {
       toast({
         title: "Error en el formulario",
@@ -62,8 +89,8 @@ const Booking = () => {
       
       // Show success message
       toast({
-        title: "Reserva enviada",
-        description: "Nos pondremos en contacto contigo a la mayor brevedad para confirmar tu cita.",
+        title: "Reserva enviada correctamente",
+        description: "Nos pondremos en contacto contigo a la mayor brevedad para confirmar tu cita. También recibirás un correo de confirmación.",
         variant: "default"
       });
       
@@ -88,288 +115,265 @@ const Booking = () => {
       setSubmitting(false);
     }
   };
-  
-  // Animation variants
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2
-      }
-    }
-  };
-  
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
-  };
 
   return (
-    <section id="reserva" className="bg-white py-16 md:py-24">
+    <section id="reserva" className="py-16 bg-gradient-to-br from-neutral via-white to-neutral">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row gap-12">
-          {/* Booking Form */}
+        <div className="max-w-4xl mx-auto">
+          {/* Header */}
           <motion.div 
-            className="lg:w-1/2"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.1 }}
-            variants={containerVariants}
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >
-            <motion.h2 
-              className="font-playfair text-3xl md:text-4xl font-semibold mb-6"
-              variants={itemVariants}
-            >
+            <h2 className="font-playfair text-4xl md:text-5xl font-semibold mb-6 text-accent">
               Reserva tu cita
-            </motion.h2>
-            
-            <motion.p 
-              className="text-textLight mb-8"
-              variants={itemVariants}
+            </h2>
+            <p className="text-textLight text-lg max-w-2xl mx-auto leading-relaxed">
+              Completa el formulario y nos pondremos en contacto contigo para confirmar tu cita. 
+              También puedes contactarnos directamente por teléfono o WhatsApp.
+            </p>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            {/* Formulario */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-2xl shadow-xl p-8 lg:p-10"
             >
-              Completa el formulario y nos pondremos en contacto contigo para confirmar tu cita. También puedes contactarnos directamente por teléfono o WhatsApp.
-            </motion.p>
-            
-            <motion.form 
-              className="space-y-6"
-              onSubmit={handleSubmit}
-              variants={containerVariants}
-            >
-              <motion.div 
-                className="grid grid-cols-1 md:grid-cols-2 gap-6"
-                variants={containerVariants}
-              >
-                <motion.div variants={itemVariants}>
-                  <label htmlFor="name" className="block text-sm font-medium text-textDark mb-1">
-                    Nombre completo
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  {/* Nombre completo */}
+                  <div>
+                    <label className="block text-sm font-medium text-textDark mb-2">
+                      Nombre completo
+                    </label>
+                    <input
+                      type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors"
+                      placeholder="Tu nombre completo"
+                      required
+                    />
+                  </div>
+
+                  {/* Email */}
+                  <div>
+                    <label className="block text-sm font-medium text-textDark mb-2">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors"
+                      placeholder="tu@email.com"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6">
+                  {/* Teléfono */}
+                  <div>
+                    <label className="block text-sm font-medium text-textDark mb-2">
+                      Teléfono
+                    </label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors"
+                      placeholder="Tu número de teléfono"
+                      required
+                    />
+                  </div>
+
+                  {/* Servicio */}
+                  <div>
+                    <label className="block text-sm font-medium text-textDark mb-2">
+                      Servicio
+                    </label>
+                    <select
+                      name="service"
+                      value={formData.service}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors"
+                      required
+                    >
+                      <option value="">Seleccionar servicio</option>
+                      {services.map((service, index) => (
+                        <option key={index} value={service}>
+                          {service}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6">
+                  {/* Fecha preferida */}
+                  <div>
+                    <label className="block text-sm font-medium text-textDark mb-2">
+                      Fecha preferida
+                    </label>
+                    <input
+                      type="date"
+                      name="date"
+                      value={formData.date}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors"
+                      min={new Date().toISOString().split('T')[0]}
+                      required
+                    />
+                  </div>
+
+                  {/* Hora preferida */}
+                  <div>
+                    <label className="block text-sm font-medium text-textDark mb-2">
+                      Hora preferida
+                    </label>
+                    <select
+                      name="time"
+                      value={formData.time}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors"
+                      required
+                    >
+                      <option value="">Seleccionar hora</option>
+                      {timeSlots.map((time, index) => (
+                        <option key={index} value={time}>
+                          {time}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+
+                {/* Mensaje opcional */}
+                <div>
+                  <label className="block text-sm font-medium text-textDark mb-2">
+                    Mensaje (opcional)
                   </label>
-                  <input 
-                    type="text" 
-                    id="name" 
-                    name="name" 
-                    value={formData.name}
+                  <textarea
+                    name="message"
+                    value={formData.message}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
+                    rows={4}
+                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors resize-none"
+                    placeholder="Cuéntanos cualquier detalle adicional sobre tu cita..."
                   />
-                </motion.div>
-                
-                <motion.div variants={itemVariants}>
-                  <label htmlFor="email" className="block text-sm font-medium text-textDark mb-1">
-                    Email
-                  </label>
-                  <input 
-                    type="email" 
-                    id="email" 
-                    name="email" 
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
-                  />
-                </motion.div>
-              </motion.div>
-              
-              <motion.div 
-                className="grid grid-cols-1 md:grid-cols-2 gap-6"
-                variants={containerVariants}
-              >
-                <motion.div variants={itemVariants}>
-                  <label htmlFor="phone" className="block text-sm font-medium text-textDark mb-1">
-                    Teléfono
-                  </label>
-                  <input 
-                    type="tel" 
-                    id="phone" 
-                    name="phone" 
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
-                  />
-                </motion.div>
-                
-                <motion.div variants={itemVariants}>
-                  <label htmlFor="service" className="block text-sm font-medium text-textDark mb-1">
-                    Servicio
-                  </label>
-                  <select 
-                    id="service" 
-                    name="service" 
-                    value={formData.service}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
-                  >
-                    <option value="">Seleccionar servicio</option>
-                    <option value="facial">Tratamiento Facial</option>
-                    <option value="massage">Masaje Terapéutico</option>
-                    <option value="manicure">Manicura y Pedicura</option>
-                    <option value="hair">Tratamiento Capilar</option>
-                    <option value="body">Tratamiento Corporal</option>
-                    <option value="makeup">Maquillaje Profesional</option>
-                  </select>
-                </motion.div>
-              </motion.div>
-              
-              <motion.div 
-                className="grid grid-cols-1 md:grid-cols-2 gap-6"
-                variants={containerVariants}
-              >
-                <motion.div variants={itemVariants}>
-                  <label htmlFor="date" className="block text-sm font-medium text-textDark mb-1">
-                    Fecha preferida
-                  </label>
-                  <input 
-                    type="date" 
-                    id="date" 
-                    name="date" 
-                    value={formData.date}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
-                  />
-                </motion.div>
-                
-                <motion.div variants={itemVariants}>
-                  <label htmlFor="time" className="block text-sm font-medium text-textDark mb-1">
-                    Hora preferida
-                  </label>
-                  <select 
-                    id="time" 
-                    name="time" 
-                    value={formData.time}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
-                  >
-                    <option value="">Seleccionar hora</option>
-                    <option value="10:00">10:00</option>
-                    <option value="11:00">11:00</option>
-                    <option value="12:00">12:00</option>
-                    <option value="13:00">13:00</option>
-                    <option value="16:00">16:00</option>
-                    <option value="17:00">17:00</option>
-                    <option value="18:00">18:00</option>
-                    <option value="19:00">19:00</option>
-                  </select>
-                </motion.div>
-              </motion.div>
-              
-              <motion.div variants={itemVariants}>
-                <label htmlFor="message" className="block text-sm font-medium text-textDark mb-1">
-                  Mensaje (opcional)
-                </label>
-                <textarea 
-                  id="message" 
-                  name="message" 
-                  rows={4} 
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
-                />
-              </motion.div>
-              
-              <motion.div variants={itemVariants}>
-                <button 
-                  type="submit" 
-                  className="w-full bg-accent hover:bg-accentDark text-white py-3 rounded-lg transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
+                </div>
+
+                {/* Botón de envío */}
+                <button
+                  type="submit"
                   disabled={submitting}
+                  className="w-full bg-accent hover:bg-accentDark text-white py-4 px-6 rounded-lg font-semibold text-lg transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {submitting ? "Enviando..." : "Solicitar Cita"}
                 </button>
-              </motion.div>
-            </motion.form>
-          </motion.div>
-          
-          {/* Contact Information */}
-          <motion.div 
-            className="lg:w-1/2"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.1 }}
-            variants={containerVariants}
-          >
-            <motion.div 
-              className="bg-neutralDark p-8 rounded-2xl h-full"
-              variants={itemVariants}
+              </form>
+            </motion.div>
+
+            {/* Información de contacto */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="space-y-8"
             >
-              <h3 className="font-playfair text-2xl font-semibold mb-6">
-                Información de contacto
-              </h3>
-              
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-primary/30 rounded-full flex items-center justify-center text-accent mt-1">
-                    <MapPin size={20} />
+              {/* Información del centro */}
+              <div className="bg-white rounded-2xl shadow-xl p-8">
+                <h3 className="font-playfair text-2xl font-semibold mb-6 text-accent">
+                  Información del centro
+                </h3>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-4">
+                    <MapPin className="text-accent mt-1 flex-shrink-0" size={20} />
+                    <div>
+                      <p className="font-medium text-textDark">Dirección</p>
+                      <p className="text-textLight">Calle Alegría de la Huerta 22<br />28041 - Madrid</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-medium text-lg mb-1">Dirección</h4>
-                    <p className="text-textLight">Calle Alegría de la Huerta 22, 28041 - Madrid</p>
+                  <div className="flex items-start gap-4">
+                    <Phone className="text-accent mt-1 flex-shrink-0" size={20} />
+                    <div>
+                      <p className="font-medium text-textDark">Teléfonos</p>
+                      <p className="text-textLight">91 505 20 67<br />684 203 633</p>
+                    </div>
                   </div>
-                </div>
-                
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-primary/30 rounded-full flex items-center justify-center text-accent mt-1">
-                    <Phone size={20} />
+                  <div className="flex items-start gap-4">
+                    <Mail className="text-accent mt-1 flex-shrink-0" size={20} />
+                    <div>
+                      <p className="font-medium text-textDark">Email</p>
+                      <p className="text-textLight">centrodebelleza@centroesteticalucylara.es</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-medium text-lg mb-1">Teléfono</h4>
-                    <p className="text-textLight">91 505 20 67 | 684 203 633</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-primary/30 rounded-full flex items-center justify-center text-accent mt-1">
-                    <Mail size={20} />
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-lg mb-1">Email</h4>
-                    <p className="text-textLight">centrodebelleza@centroesteticalucylara.es</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-primary/30 rounded-full flex items-center justify-center text-accent mt-1">
-                    <Clock size={20} />
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-lg mb-1">Horario</h4>
-                    <p className="text-textLight">Lunes a viernes: 10:00 - 13:30</p>
-                    <p className="text-textLight">Lunes a viernes: 16:00 - 19:30</p>
-                    <p className="text-textLight">Fines de semana: Cerrado</p>
+                  <div className="flex items-start gap-4">
+                    <Clock className="text-accent mt-1 flex-shrink-0" size={20} />
+                    <div>
+                      <p className="font-medium text-textDark">Horarios</p>
+                      <p className="text-textLight">Lunes a viernes: 10:00 - 13:30<br />16:00 - 19:30</p>
+                    </div>
                   </div>
                 </div>
               </div>
-              
-              <div className="mt-8" id="contacto">
-                <h4 className="font-medium text-lg mb-4">Síguenos en redes sociales</h4>
+
+              {/* WhatsApp */}
+              <div className="bg-green-50 border border-green-200 rounded-2xl p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <MessageCircle className="text-green-600" size={24} />
+                  <h4 className="font-semibold text-green-800">¿Prefieres WhatsApp?</h4>
+                </div>
+                <p className="text-green-700 mb-4 text-sm">
+                  Contáctanos directamente por WhatsApp para una respuesta más rápida
+                </p>
+                <a 
+                  href="https://wa.me/34684203633" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-medium transition-colors"
+                >
+                  <MessageCircle size={18} className="mr-2" />
+                  Escribir por WhatsApp
+                </a>
+              </div>
+
+              {/* Redes sociales */}
+              <div className="bg-white rounded-2xl shadow-xl p-6">
+                <h4 className="font-semibold text-textDark mb-4">Síguenos en redes sociales</h4>
                 <div className="flex space-x-4">
-                  <a href="#" className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-accent hover:bg-accent hover:text-white transition-colors">
-                    <Facebook size={18} />
+                  <a 
+                    href="https://www.facebook.com/CBLUCYLARA/" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-blue-600 hover:bg-blue-700 p-3 rounded-full transition-colors"
+                  >
+                    <Facebook size={20} className="text-white" />
                   </a>
-                  <a href="#" className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-accent hover:bg-accent hover:text-white transition-colors">
-                    <Instagram size={18} />
-                  </a>
-                  <a href="#" className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-accent hover:bg-accent hover:text-white transition-colors">
-                    <Twitter size={18} />
-                  </a>
-                  <a href="#" className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-accent hover:bg-accent hover:text-white transition-colors">
-                    <Dribbble size={18} />
+                  <a 
+                    href="https://www.instagram.com/esteticalucylara/?hl=es" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-gradient-to-br from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 p-3 rounded-full transition-colors"
+                  >
+                    <Instagram size={20} className="text-white" />
                   </a>
                 </div>
-              </div>
-              
-              <div className="mt-8">
-                {/* Google Map */}
-                <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.349854262797!2d-3.7031678231309764!3d40.37895205710547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4227c8ff4a748d%3A0x31f055f4d6e0bbb5!2sC.%20Alegr%C3%ADa%20de%20la%20Huerta%2C%2022%2C%2028041%20Madrid!5e0!3m2!1ses!2ses!4v1716647810279!5m2!1ses!2ses" 
-                  width="100%" 
-                  height="200" 
-                  style={{ border: 0, borderRadius: '0.75rem' }}
-                  allowFullScreen 
-                  loading="lazy" 
-                  title="Ubicación del centro"
-                />
               </div>
             </motion.div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

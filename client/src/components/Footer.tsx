@@ -120,6 +120,28 @@ const Footer = () => {
           </div>
         </div>
         
+        {/* Social Media Icons */}
+        <div className="border-t border-gray-700 pt-6 mb-6">
+          <div className="flex justify-center space-x-6">
+            <a 
+              href="https://www.facebook.com/CBLUCYLARA/" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gray-700 hover:bg-accent p-3 rounded-full transition-colors duration-300"
+            >
+              <Facebook size={20} className="text-white" />
+            </a>
+            <a 
+              href="https://www.instagram.com/esteticalucylara/?hl=es" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gray-700 hover:bg-accent p-3 rounded-full transition-colors duration-300"
+            >
+              <Instagram size={20} className="text-white" />
+            </a>
+          </div>
+        </div>
+
         {/* Footer Bottom */}
         <div className="border-t border-gray-700 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
