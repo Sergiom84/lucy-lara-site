@@ -1,4 +1,4 @@
-import { pgTable, text, serial, integer, date, time, boolean } from "drizzle-orm/pg-core";
+import { pgTable, text, serial, integer, date, time, boolean, timestamp } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
@@ -20,19 +20,19 @@ export type User = typeof users.$inferSelect;
 // Service model
 export const services = pgTable("services", {
   id: serial("id").primaryKey(),
-  title: text("title").notNull(),
+  name: text("name").notNull(),
   description: text("description").notNull(),
   price: text("price").notNull(),
-  image: text("image").notNull(),
-  alt: text("alt").notNull(),
+  duration: text("duration").notNull(),
+  category: text("category").notNull(),
 });
 
 export const insertServiceSchema = createInsertSchema(services).pick({
-  title: true,
+  name: true,
   description: true,
   price: true,
-  image: true,
-  alt: true,
+  duration: true,
+  category: true,
 });
 
 export type InsertService = z.infer<typeof insertServiceSchema>;
@@ -49,7 +49,7 @@ export const bookings = pgTable("bookings", {
   time: text("time").notNull(),
   message: text("message"),
   processed: boolean("processed").default(false),
-  createdAt: text("created_at").notNull(),
+  createdAt: timestamp("created_at").notNull().defaultNow(),
 });
 
 export const insertBookingSchema = createInsertSchema(bookings)
@@ -80,21 +80,17 @@ export type Booking = typeof bookings.$inferSelect;
 // Testimonial model
 export const testimonials = pgTable("testimonials", {
   id: serial("id").primaryKey(),
-  text: text("text").notNull(),
   name: text("name").notNull(),
-  initials: text("initials").notNull(),
-  since: text("since").notNull(),
-  color: text("color").notNull(),
-  stars: integer("stars").notNull(),
+  content: text("content").notNull(),
+  rating: integer("rating").notNull(),
+  service: text("service").notNull(),
 });
 
 export const insertTestimonialSchema = createInsertSchema(testimonials).pick({
-  text: true,
   name: true,
-  initials: true,
-  since: true,
-  color: true,
-  stars: true,
+  content: true,
+  rating: true,
+  service: true,
 });
 
 export type InsertTestimonial = z.infer<typeof insertTestimonialSchema>;
