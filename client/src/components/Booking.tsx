@@ -64,8 +64,8 @@ const Booking = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
   
-  // Handle form submission
-  const handleSubmit = async (e: React.FormEvent) => {
+  // Handle form submission with Google Forms
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
     // Validación
@@ -81,29 +81,57 @@ const Booking = () => {
     try {
       setSubmitting(true);
       
-      // Send form data to backend
-      await apiRequest('POST', '/api/booking', formData);
+      // Google Forms URL - Reemplaza con tu URL de Google Forms
+      const googleFormUrl = "https://docs.google.com/forms/d/e/YOUR_GOOGLE_FORM_ID/formResponse";
       
-      // Track form submission event
-      trackEvent('booking_submitted', 'form', 'booking_form');
+      // Crear FormData para Google Forms
+      const googleFormData = new FormData();
+      // Estos IDs necesitan ser reemplazados con los IDs reales de tu formulario de Google
+      googleFormData.append('entry.123456789', formData.name); // Campo nombre
+      googleFormData.append('entry.987654321', formData.email); // Campo email
+      googleFormData.append('entry.111111111', formData.phone); // Campo teléfono
+      googleFormData.append('entry.222222222', formData.service); // Campo servicio
+      googleFormData.append('entry.333333333', formData.date); // Campo fecha
+      googleFormData.append('entry.444444444', formData.time); // Campo hora
+      googleFormData.append('entry.555555555', formData.message || ''); // Campo mensaje
       
-      // Show success message
-      toast({
-        title: "Reserva enviada correctamente",
-        description: "Nos pondremos en contacto contigo a la mayor brevedad para confirmar tu cita. También recibirás un correo de confirmación.",
-        variant: "default"
+      // Enviar a Google Forms
+      fetch(googleFormUrl, {
+        method: 'POST',
+        body: googleFormData,
+        mode: 'no-cors' // Necesario para Google Forms
+      }).then(() => {
+        // Track form submission event
+        trackEvent('booking_submitted', 'form', 'google_forms');
+        
+        // Show success message
+        toast({
+          title: "Reserva enviada correctamente",
+          description: "Hemos recibido tu solicitud de cita. Nos pondremos en contacto contigo a la mayor brevedad para confirmar la disponibilidad.",
+          variant: "default"
+        });
+        
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          service: "",
+          date: "",
+          time: "",
+          message: ""
+        });
+      }).catch((error) => {
+        console.error("Error submitting to Google Forms:", error);
+        toast({
+          title: "Error al enviar",
+          description: "Hubo un problema al enviar el formulario. Por favor, inténtalo de nuevo o contáctanos directamente.",
+          variant: "destructive"
+        });
+      }).finally(() => {
+        setSubmitting(false);
       });
       
-      // Reset form
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        service: "",
-        date: "",
-        time: "",
-        message: ""
-      });
     } catch (error) {
       console.error("Error submitting form:", error);
       toast({
@@ -111,7 +139,6 @@ const Booking = () => {
         description: "Hubo un problema al enviar el formulario. Por favor, inténtalo de nuevo más tarde.",
         variant: "destructive"
       });
-    } finally {
       setSubmitting(false);
     }
   };
