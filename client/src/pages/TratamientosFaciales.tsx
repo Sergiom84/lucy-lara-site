@@ -4,8 +4,9 @@ import { Link } from "wouter";
 import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import renovacionProfundaSvg from "@/assets/svg/renovacion-profunda.svg";
-import renovacionCristalSvg from "@/assets/svg/renovacion-cristal.svg";
+import renovacionProfundaImg from "@/assets/images/renovacion_profunda.png";
+import renovacionCristalImg from "@/assets/images/renovacion_cristal.png";
+import purezaFrescuraImg from "@/assets/images/pureza_frescura.png";
 import descansoVitalidadSvg from "@/assets/svg/descanso-vitalidad.svg";
 import equilibrioTotalSvg from "@/assets/svg/equilibrio-total.svg";
 import purezaBasicaSvg from "@/assets/svg/pureza-basica.svg";
@@ -39,7 +40,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Masaje relajante junto con una mascarilla acorde de las necesidades de la piel",
       "Acabamos el tratamiento con una crema finalizadora"
     ],
-    imagen: renovacionProfundaSvg,
+    imagen: renovacionProfundaImg,
     alt: "Renovación profunda - higiene facial completa"
   },
   {
@@ -56,7 +57,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Masaje relajante junto con una mascarilla",
       "Acabamos el tratamiento con una crema finalizadora"
     ],
-    imagen: renovacionCristalSvg,
+    imagen: renovacionCristalImg,
     alt: "Renovación de cristal con microdermoabrasión"
   },
   {
@@ -104,7 +105,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Masaje relajante, mascarilla adaptada",
       "Crema final para hidratación duradera"
     ],
-    imagen: purezaBasicaSvg,
+    imagen: purezaFrescuraImg,
     alt: "Pureza y frescura - higiene facial"
   },
   {
