@@ -94,7 +94,7 @@ const productos = [
     id: 7,
     titulo: "Gel Rosa Mosqueta",
     descripcion: "Regenerador Celular",
-    precio: "23€",
+    precio: "29,55€",
     imagen: gelRosaMosqueta,
     alt: "Gel Rosa Mosqueta regenerador celular Lucy Lara"
   },
@@ -102,7 +102,7 @@ const productos = [
     id: 8,
     titulo: "Leche Limpiadora Facial",
     descripcion: "Limpieza Facial Hidratante",
-    precio: "45€",
+    precio: "16,50€",
     imagen: lecheLimpiadoraFacial,
     alt: "Leche limpiadora facial Lucy Lara"
   },
@@ -110,7 +110,7 @@ const productos = [
     id: 9,
     titulo: "Protector Solar 50+",
     descripcion: "Hidratación con Protección Solar",
-    precio: "36€",
+    precio: "28,30€",
     imagen: protectorSolar,
     alt: "Protector solar con hidratación Lucy Lara"
   },
@@ -118,7 +118,7 @@ const productos = [
     id: 10,
     titulo: "Protector Solar 50+ Color",
     descripcion: "Hidratación con Protección Solar",
-    precio: "37€",
+    precio: "27€",
     imagen: protectorSolarColor,
     alt: "Protector solar con color Lucy Lara"
   },
@@ -126,7 +126,7 @@ const productos = [
     id: 11,
     titulo: "Sérum Vitamina C",
     descripcion: "Sérum Efecto Lifting",
-    precio: "28€",
+    precio: "39,60€",
     imagen: serumVitaminaC,
     alt: "Sérum Vitamina C efecto lifting Lucy Lara"
   },
