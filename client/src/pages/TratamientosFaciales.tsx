@@ -249,7 +249,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Mascarilla astringente y purificante",
       "Acabamos con crema refrescante"
     ],
-    imagen: renovacionProfundaSvg,
+    imagen: renovacionProfundaImg,
     alt: "Renovación profunda - higiene facial completa"
   },
   {
@@ -281,7 +281,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Aplicación de activos despigmentantes",
       "Mejora de la luminosidad"
     ],
-    imagen: renovacionCristalSvg,
+    imagen: renovacionCristalImg,
     alt: "Luz pura - microdermoabrasión antimanchas"
   },
   {
@@ -313,7 +313,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Tratamiento adaptado y personalizado",
       "Unificación del tono de la piel"
     ],
-    imagen: renovacionCristalSvg,
+    imagen: renovacionCristalImg,
     alt: "Skin glow - dermapen antimanchas"
   },
   {
@@ -425,7 +425,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Oxigenación celular",
       "Estimulación de la regeneración celular"
     ],
-    imagen: renovacionProfundaSvg,
+    imagen: renovacionProfundaImg,
     alt: "Oxigenación profunda"
   },
   {
@@ -457,7 +457,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Potenciación de la absorción de activos",
       "Estimulación de colágeno y elastina"
     ],
-    imagen: renovacionCristalSvg,
+    imagen: renovacionCristalImg,
     alt: "Revitalización profunda con dermapen"
   }
 ];
