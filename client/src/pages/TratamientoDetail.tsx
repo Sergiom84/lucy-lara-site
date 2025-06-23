@@ -13,6 +13,8 @@ import iceSkinImg from "@assets/Ice Skin - crioterapia facial_1750672325625.jpg"
 import eternaJuventudImg from "@assets/Eterna Juventud 2 en 1_1750672327131.jpg";
 import descansoVitalidadSvg from "@/assets/svg/descanso-vitalidad.svg";
 import equilibrioTotalSvg from "@/assets/svg/equilibrio-total.svg";
+import descansoVitalidadImg from "@assets/Descanso y vitalidad - higiene facial completa con presoterapia facial_1750692485135.jpg";
+import tratamientosGeneralImg from "@assets/image_1750692562300.png";
 import purezaCompletaSvg from "@/assets/svg/pureza-completa.svg";
 
 interface TratamientoFacial {
@@ -52,7 +54,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Elimina impurezas y comedones",
       "Proporciona nutrición específica según tipo de piel"
     ],
-    imagen: renovacionProfundaImg,
+    imagen: tratamientosGeneralImg,
     alt: "Renovación profunda - higiene facial completa"
   },
   {
@@ -103,7 +105,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Hidrata y revitaliza la piel",
       "Oxigena y limpia los poros"
     ],
-    imagen: descansoVitalidadSvg,
+    imagen: descansoVitalidadImg,
     alt: "Descanso y vitalidad con presoterapia ocular"
   },
   {
@@ -381,7 +383,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Oxigenación celular",
       "Efecto astringente y purificante"
     ],
-    imagen: renovacionProfundaImg,
+    imagen: tratamientosGeneralImg,
     alt: "Renovación profunda - higiene facial completa"
   },
   {
@@ -434,7 +436,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Prepara la piel para absorber mejor tratamientos",
       "Aspecto fresco y rejuvenecido"
     ],
-    imagen: renovacionCristalImg,
+    imagen: tratamientosGeneralImg,
     alt: "Luz pura - microdermoabrasión antimanchas"
   },
   {
@@ -486,7 +488,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Unifica el tono",
       "Tratamiento personalizado"
     ],
-    imagen: renovacionCristalImg,
+    imagen: tratamientosGeneralImg,
     alt: "Skin glow - dermapen antimanchas"
   },
   {
@@ -664,7 +666,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Ideal para pieles maduras",
       "Prepara para tratamientos posteriores"
     ],
-    imagen: renovacionProfundaImg,
+    imagen: tratamientosGeneralImg,
     alt: "Oxigenación profunda"
   },
   {

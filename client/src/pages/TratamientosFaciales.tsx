@@ -431,7 +431,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Oxigenación celular",
       "Estimulación de la regeneración celular"
     ],
-    imagen: renovacionProfundaImg,
+    imagen: tratamientosGeneralImg,
     alt: "Oxigenación profunda"
   },
   {
