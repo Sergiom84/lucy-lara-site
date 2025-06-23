@@ -11,6 +11,8 @@ import luzCalmanteImg from "@assets/Luz calmante - fotoestimulación para la pie
 import higieneFacialSupremaImg from "@assets/Higiene Facial Suprema_1750671075793.jpg";
 import iceSkinImg from "@assets/Ice Skin - crioterapia facial_1750672325625.jpg";
 import eternaJuventudImg from "@assets/Eterna Juventud 2 en 1_1750672327131.jpg";
+import descansoVitalidadImg from "@assets/Descanso y vitalidad - higiene facial completa con presoterapia facial_1750692485135.jpg";
+import tratamientosGeneralImg from "@assets/image_1750692562300.png";
 import descansoVitalidadSvg from "@/assets/svg/descanso-vitalidad.svg";
 import equilibrioTotalSvg from "@/assets/svg/equilibrio-total.svg";
 import purezaBasicaSvg from "@/assets/svg/pureza-basica.svg";
@@ -44,7 +46,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Masaje relajante junto con una mascarilla acorde de las necesidades de la piel",
       "Acabamos el tratamiento con una crema finalizadora"
     ],
-    imagen: renovacionProfundaImg,
+    imagen: tratamientosGeneralImg,
     alt: "Renovación profunda - higiene facial completa"
   },
   {
@@ -77,7 +79,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Extracción de comedones",
       "Gafas de presoterapia que reducen bolsas, ojeras y fatiga ocular"
     ],
-    imagen: descansoVitalidadSvg,
+    imagen: descansoVitalidadImg,
     alt: "Descanso y vitalidad con presoterapia ocular"
   },
   {
@@ -253,7 +255,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Mascarilla astringente y purificante",
       "Acabamos con crema refrescante"
     ],
-    imagen: renovacionProfundaImg,
+    imagen: tratamientosGeneralImg,
     alt: "Renovación profunda - higiene facial completa"
   },
   {
@@ -285,7 +287,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Aplicación de activos despigmentantes",
       "Mejora de la luminosidad"
     ],
-    imagen: renovacionCristalImg,
+    imagen: tratamientosGeneralImg,
     alt: "Luz pura - microdermoabrasión antimanchas"
   },
   {
@@ -317,7 +319,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Tratamiento adaptado y personalizado",
       "Unificación del tono de la piel"
     ],
-    imagen: renovacionCristalImg,
+    imagen: tratamientosGeneralImg,
     alt: "Skin glow - dermapen antimanchas"
   },
   {
