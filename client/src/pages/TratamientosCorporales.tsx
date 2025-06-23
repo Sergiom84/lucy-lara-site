@@ -66,7 +66,7 @@ const tratamientosCorporales: TratamientoCorporal[] = [
       "Presión terapéutica dirigida",
       "Evaluación personalizada de dolencias"
     ],
-    imagen: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+    imagen: "/attached_assets/Manos que sanan_1750678840064.png",
     alt: "Masaje terapéutico especializado",
     icono: <Hand className="w-8 h-8" />
   }
