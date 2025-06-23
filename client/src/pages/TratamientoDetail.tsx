@@ -7,6 +7,8 @@ import Footer from "@/components/Footer";
 import renovacionProfundaImg from "@/assets/images/renovacion_profunda.png";
 import renovacionCristalImg from "@/assets/images/renovacion_cristal.png";
 import purezaFrescuraImg from "@/assets/images/pureza_frescura.png";
+import luzCalmanteImg from "@assets/Luz calmante - fotoestimulación para la piel sensible_1750671080945.jpg";
+import higieneFacialSupremaImg from "@assets/Higiene Facial Suprema_1750671075793.jpg";
 import descansoVitalidadSvg from "@/assets/svg/descanso-vitalidad.svg";
 import equilibrioTotalSvg from "@/assets/svg/equilibrio-total.svg";
 import purezaCompletaSvg from "@/assets/svg/pureza-completa.svg";
@@ -278,7 +280,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Efecto antiinflamatorio",
       "Reparación sin agresión"
     ],
-    imagen: purezaCompletaSvg,
+    imagen: luzCalmanteImg,
     alt: "Luz calmante - fotobioestimulación"
   },
   {
@@ -560,7 +562,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Efecto lifting",
       "Ideal para pieles apagadas y envejecidas"
     ],
-    imagen: purezaFrescuraImg,
+    imagen: higieneFacialSupremaImg,
     alt: "Higiene Facial Suprema"
   },
   {
