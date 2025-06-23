@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useReducer, ReactNode } from 'react';
+import React, { createContext, useContext, useReducer, ReactNode, useEffect } from 'react';
 
 export interface CartItem {
   id: number;
@@ -97,12 +97,54 @@ const cartReducer = (state: CartState, action: CartAction): CartState => {
   }
 };
 
-export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [state, dispatch] = useReducer(cartReducer, {
+// Función para cargar el carrito desde localStorage
+const loadCartFromStorage = (): CartState => {
+  if (typeof window === 'undefined') {
+    // En el servidor, devolver estado inicial
+    return {
+      items: [],
+      totalItems: 0,
+      totalAmount: 0
+    };
+  }
+
+  try {
+    const savedCart = localStorage.getItem('cart');
+    if (savedCart) {
+      const parsedCart = JSON.parse(savedCart);
+      // Validar que el carrito tenga la estructura correcta
+      if (parsedCart && Array.isArray(parsedCart.items)) {
+        return parsedCart;
+      }
+    }
+  } catch (error) {
+    console.error('Error loading cart from localStorage:', error);
+  }
+  return {
     items: [],
     totalItems: 0,
     totalAmount: 0
-  });
+  };
+};
+
+// Función para guardar el carrito en localStorage
+const saveCartToStorage = (state: CartState) => {
+  if (typeof window === 'undefined') return;
+  
+  try {
+    localStorage.setItem('cart', JSON.stringify(state));
+  } catch (error) {
+    console.error('Error saving cart to localStorage:', error);
+  }
+};
+
+export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+  const [state, dispatch] = useReducer(cartReducer, loadCartFromStorage());
+
+  // Guardar en localStorage cada vez que el estado cambie
+  useEffect(() => {
+    saveCartToStorage(state);
+  }, [state]);
 
   return (
     <CartContext.Provider value={{ state, dispatch }}>

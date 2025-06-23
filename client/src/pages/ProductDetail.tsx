@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft, ShoppingCart } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { useCart } from "../contexts/CartContext";
 import cremaContornoOjos from "../assets/images/Crema_cortono_de_ojos.png";
 import cremaPielManchas from "../assets/images/Crema_cuidado_Piel_con_Machas.png";
 import cremaDespigmentante from "../assets/images/Crema_Despigmentación.png";
@@ -242,6 +243,7 @@ const ProductDetail = () => {
   const [, params] = useRoute("/productos/:id");
   const [producto, setProducto] = useState<Producto | null>(null);
   const [loading, setLoading] = useState(true);
+  const { dispatch } = useCart();
 
   useEffect(() => {
     if (params && params.id) {
@@ -357,7 +359,21 @@ const ProductDetail = () => {
                 <p className="text-textLight">{producto.modo_uso}</p>
               </div>
               
-              <button className="bg-accent hover:bg-accentDark text-white px-8 py-3 rounded-full transition-colors inline-flex items-center">
+              <button 
+                onClick={() => {
+                  console.log('Agregando producto al carrito desde detalle:', producto.titulo);
+                  dispatch({
+                    type: 'ADD_ITEM',
+                    payload: {
+                      id: producto.id,
+                      name: producto.titulo,
+                      price: parseFloat(producto.precio.replace('€', '').replace(',', '.')),
+                      image: producto.imagen
+                    }
+                  });
+                }}
+                className="bg-accent hover:bg-accentDark text-white px-8 py-3 rounded-full transition-colors inline-flex items-center"
+              >
                 <ShoppingCart size={18} className="mr-2" />
                 Añadir al carrito
               </button>
