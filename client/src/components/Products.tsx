@@ -199,51 +199,54 @@ const Products = () => {
                 whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05)" }}
                 transition={{ duration: 0.3 }}
               >
-                <div onClick={() => window.location.href = `/productos/${producto.id}`}>
-                  <div className="h-64 w-full overflow-hidden" style={{ borderRadius: "8px 8px 0 0" }}>
-                    <img 
-                      src={producto.imagen} 
-                      alt={producto.alt} 
-                      className="w-full h-full object-contain object-center p-4"
-                    />
-                  </div>
-                  <div className="p-6">
+                <div className="h-64 w-full overflow-hidden cursor-pointer" style={{ borderRadius: "8px 8px 0 0" }} onClick={() => window.location.href = `/productos/${producto.id}`}>
+                  <img 
+                    src={producto.imagen} 
+                    alt={producto.alt} 
+                    className="w-full h-full object-contain object-center p-4"
+                  />
+                </div>
+                <div className="p-6">
+                  <div className="cursor-pointer" onClick={() => window.location.href = `/productos/${producto.id}`}>
                     <h3 className="font-playfair text-xl font-semibold mb-2">
                       {producto.titulo}
                     </h3>
                     <p className="text-textLight mb-4">
                       {producto.descripcion}
                     </p>
-                    <div className="flex justify-between items-center">
-                      <span className="text-accent font-medium">
-                        {producto.precio}
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-accent font-medium">
+                      {producto.precio}
+                    </span>
+                    <div className="flex items-center gap-2">
+                      <button
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          console.log('Agregando producto al carrito:', producto.titulo);
+                          dispatch({
+                            type: 'ADD_ITEM',
+                            payload: {
+                              id: producto.id,
+                              name: producto.titulo,
+                              price: parseFloat(producto.precio.replace('€', '').replace(',', '.')),
+                              image: producto.imagen
+                            }
+                          });
+                        }}
+                        className="bg-accent text-white p-2 rounded-full hover:bg-accent/90 transition-colors z-10 relative"
+                        title="Agregar al carrito"
+                      >
+                        <ShoppingCart size={16} />
+                      </button>
+                      <span 
+                        className="text-accent hover:text-accentDark font-medium flex items-center gap-1 group cursor-pointer"
+                        onClick={() => window.location.href = `/productos/${producto.id}`}
+                      >
+                        Ver detalle 
+                        <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                       </span>
-                      <div className="flex items-center gap-2">
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            dispatch({
-                              type: 'ADD_ITEM',
-                              payload: {
-                                id: producto.id,
-                                name: producto.titulo,
-                                price: parseFloat(producto.precio.replace('€', '').replace(',', '.')),
-                                image: producto.imagen
-                              }
-                            });
-                          }}
-                          className="bg-accent text-white p-2 rounded-full hover:bg-accent/90 transition-colors"
-                          title="Agregar al carrito"
-                        >
-                          <ShoppingCart size={16} />
-                        </button>
-                        <span 
-                          className="text-accent hover:text-accentDark font-medium flex items-center gap-1 group"
-                        >
-                          Ver detalle 
-                          <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-                        </span>
-                      </div>
                     </div>
                   </div>
                 </div>
