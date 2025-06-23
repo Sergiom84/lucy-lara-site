@@ -4,6 +4,7 @@ import { ArrowLeft, Clock, Euro, Info, Heart, Hand } from "lucide-react";
 import { Link } from "wouter";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import manosQueSananImg from "@assets/Manos que sanan_1750678840064.png";
 
 interface TratamientoCorporal {
   id: number;
@@ -66,7 +67,7 @@ const tratamientosCorporales: TratamientoCorporal[] = [
       "Presión terapéutica dirigida",
       "Evaluación personalizada de dolencias"
     ],
-    imagen: "/attached_assets/Manos que sanan_1750678840064.png",
+    imagen: manosQueSananImg,
     alt: "Masaje terapéutico especializado",
     icono: <Hand className="w-8 h-8" />
   }
