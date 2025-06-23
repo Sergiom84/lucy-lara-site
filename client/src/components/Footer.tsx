@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { 
   MapPin, Phone, Mail, Clock, 
-  Facebook, Instagram, Twitter, Dribbble
+  Facebook, Instagram
 } from "lucide-react";
 
 const Footer = () => {
@@ -57,18 +57,13 @@ const Footer = () => {
               Tu centro de belleza y bienestar donde cuidamos de ti con los tratamientos más avanzados y personalizados.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-accent transition-colors">
+              <a href="https://www.facebook.com/CBLUCYLARA/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-accent transition-colors">
                 <Facebook size={18} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-accent transition-colors">
+              <a href="https://www.instagram.com/esteticalucylara/?hl=es" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-accent transition-colors">
                 <Instagram size={18} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-accent transition-colors">
-                <Twitter size={18} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-accent transition-colors">
-                <Dribbble size={18} />
-              </a>
+
             </div>
           </div>
           

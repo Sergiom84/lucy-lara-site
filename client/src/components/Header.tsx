@@ -17,7 +17,6 @@ const Header = () => {
   const navLinks = [
     { href: isHomePage ? "#productos" : "/#productos", label: "Productos" },
     { href: isHomePage ? "#promociones" : "/#promociones", label: "Promociones" },
-    { href: isHomePage ? "#galeria" : "/#galeria", label: "Galería" },
     { href: isHomePage ? "#contacto" : "/#contacto", label: "Contacto" }
   ];
 
