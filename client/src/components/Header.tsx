@@ -112,9 +112,17 @@ const Header = () => {
                 >
                   <Phone className="h-5 w-5" />
                 </a>
-                <a href="#" className="text-white hover:text-[#8b2154]">
+                <button 
+                  onClick={() => setCartOpen(true)}
+                  className="text-white hover:text-[#8b2154] relative"
+                >
                   <ShoppingBag className="h-5 w-5" />
-                </a>
+                  {state.totalItems > 0 && (
+                    <span className="absolute -top-2 -right-2 bg-accent text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                      {state.totalItems}
+                    </span>
+                  )}
+                </button>
               </div>
             </div>
           </nav>
@@ -170,6 +178,9 @@ const Header = () => {
           )}
         </AnimatePresence>
       </header>
+      
+      {/* Cart Dropdown */}
+      <CartDropdown isOpen={cartOpen} onClose={() => setCartOpen(false)} />
     </>
   );
 };

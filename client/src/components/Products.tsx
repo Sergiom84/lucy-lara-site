@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ShoppingCart } from "lucide-react";
 import { Link } from "wouter";
+import { useCart } from "../contexts/CartContext";
 // Importar imágenes directamente
 import centro1 from "../assets/images/Nuestro_centro1.jpg";
 import centro2 from "../assets/images/Nuestro_centro2.jpg";
@@ -141,6 +142,7 @@ const productos = [
 ];
 
 const Products = () => {
+  const { dispatch } = useCart();
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -216,12 +218,32 @@ const Products = () => {
                       <span className="text-accent font-medium">
                         {producto.precio}
                       </span>
-                      <span 
-                        className="text-accent hover:text-accentDark font-medium flex items-center gap-1 group"
-                      >
-                        Ver detalle 
-                        <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-                      </span>
+                      <div className="flex items-center gap-2">
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            dispatch({
+                              type: 'ADD_ITEM',
+                              payload: {
+                                id: producto.id,
+                                name: producto.titulo,
+                                price: parseFloat(producto.precio.replace('€', '').replace(',', '.')),
+                                image: producto.imagen
+                              }
+                            });
+                          }}
+                          className="bg-accent text-white p-2 rounded-full hover:bg-accent/90 transition-colors"
+                          title="Agregar al carrito"
+                        >
+                          <ShoppingCart size={16} />
+                        </button>
+                        <span 
+                          className="text-accent hover:text-accentDark font-medium flex items-center gap-1 group"
+                        >
+                          Ver detalle 
+                          <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
