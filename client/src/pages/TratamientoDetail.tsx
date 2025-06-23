@@ -9,6 +9,8 @@ import renovacionCristalImg from "@/assets/images/renovacion_cristal.png";
 import purezaFrescuraImg from "@/assets/images/pureza_frescura.png";
 import luzCalmanteImg from "@assets/Luz calmante - fotoestimulación para la piel sensible_1750671080945.jpg";
 import higieneFacialSupremaImg from "@assets/Higiene Facial Suprema_1750671075793.jpg";
+import iceSkinImg from "@assets/Ice Skin - crioterapia facial_1750672325625.jpg";
+import eternaJuventudImg from "@assets/Eterna Juventud 2 en 1_1750672327131.jpg";
 import descansoVitalidadSvg from "@/assets/svg/descanso-vitalidad.svg";
 import equilibrioTotalSvg from "@/assets/svg/equilibrio-total.svg";
 import purezaCompletaSvg from "@/assets/svg/pureza-completa.svg";
@@ -587,7 +589,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Ahorra tiempo",
       "Beneficios a largo plazo"
     ],
-    imagen: purezaCompletaSvg,
+    imagen: eternaJuventudImg,
     alt: "Eterna Juventud 2 en 1"
   },
   {
@@ -612,7 +614,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Efecto tensor y revitalizante",
       "Ideal para pieles cansadas y con flacidez"
     ],
-    imagen: descansoVitalidadSvg,
+    imagen: iceSkinImg,
     alt: "Ice skin - crioterapia facial"
   },
   {
