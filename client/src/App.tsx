@@ -15,6 +15,7 @@ import OtrosTratamientos from "@/pages/OtrosTratamientos";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Chatbot from "@/components/Chatbot";
 import { useAnalytics } from "./hooks/use-analytics";
+import { CartProvider } from "./contexts/CartContext";
 
 function Router() {
   // Track page views when routes change
@@ -38,12 +39,14 @@ function Router() {
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Router />
-        <Toaster />
-        <WhatsAppButton />
-        <Chatbot />
-      </TooltipProvider>
+      <CartProvider>
+        <TooltipProvider>
+          <Router />
+          <Toaster />
+          <WhatsAppButton />
+          <Chatbot />
+        </TooltipProvider>
+      </CartProvider>
     </QueryClientProvider>
   );
 }

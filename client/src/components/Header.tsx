@@ -4,11 +4,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone, Mail, Facebook, Instagram, Search, ShoppingBag } from "lucide-react";
 import LogoTransparent from "../assets/images/nuevo-logo.webp";
 import logoFigura from "../assets/images/logo-figura.webp";
+import { useCart } from "../contexts/CartContext";
+import CartDropdown from "./CartDropdown";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [cartOpen, setCartOpen] = useState(false);
   const [location] = useLocation();
   const [scrolled, setScrolled] = useState(false);
+  const { state } = useCart();
   
   // Determine if we're on the home page or a product page
   const isHomePage = location === "/";
