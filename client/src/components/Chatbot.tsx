@@ -15,7 +15,7 @@ const Chatbot = () => {
   const [messages, setMessages] = useState<Message[]>([
     { 
       id: 1, 
-      text: "¡Hola! Soy el asistente virtual de Beauty&Wellness. ¿En qué puedo ayudarte hoy?", 
+      text: "¡Hola! Soy el asistente virtual del Centro de Belleza Lucy Lara. ¿En qué puedo ayudarte?", 
       isUser: false 
     }
   ]);
@@ -105,7 +105,7 @@ const Chatbot = () => {
           >
             {/* Header */}
             <div className="bg-accent text-white p-4 flex justify-between items-center">
-              <span className="font-medium">Asistente Virtual</span>
+              <span className="font-medium">Asistente Lucy Lara</span>
               <button onClick={toggleChatbot} className="text-white">
                 <X size={20} />
               </button>
