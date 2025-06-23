@@ -108,38 +108,23 @@ export const getBotResponse = (message: string): string => {
   return 'No estoy seguro de cómo ayudarte con eso. Puedo informarte sobre nuestros tratamientos faciales, micropigmentación, eliminación del vello, masajes, productos o ayudarte a reservar una cita. ¿Sobre qué te gustaría saber?';
 };
 
-// Para integración futura con DeepSeek
-export const getDeepSeekResponse = async (message: string, apiKey: string): Promise<string> => {
+// Integración con DeepSeek para respuestas inteligentes
+export const getDeepSeekResponse = async (message: string): Promise<string> => {
   try {
-    const response = await fetch('https://api.deepseek.com/v1/chat/completions', {
+    const response = await fetch('/api/chatbot', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${apiKey}`
       },
-      body: JSON.stringify({
-        model: 'deepseek-chat',
-        messages: [
-          {
-            role: 'system',
-            content: BUSINESS_CONTEXT
-          },
-          {
-            role: 'user',
-            content: message
-          }
-        ],
-        max_tokens: 300,
-        temperature: 0.7
-      })
+      body: JSON.stringify({ message }),
     });
 
     if (!response.ok) {
-      throw new Error('Error en la API de DeepSeek');
+      throw new Error('Error en la API del chatbot');
     }
 
     const data = await response.json();
-    return data.choices[0].message.content;
+    return data.response;
   } catch (error) {
     console.error('Error calling DeepSeek API:', error);
     // Fallback to local responses

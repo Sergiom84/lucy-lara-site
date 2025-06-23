@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageSquare, X, Send } from "lucide-react";
-import { getBotResponse } from "@/lib/chatbot-responses";
+import { getBotResponse, getDeepSeekResponse } from "@/lib/chatbot-responses";
 import { trackEvent } from "@/lib/analytics";
 
 interface Message {
@@ -38,7 +38,7 @@ const Chatbot = () => {
   };
 
   // Send a message
-  const sendMessage = () => {
+  const sendMessage = async () => {
     if (inputText.trim() === "") return;
 
     // Add user message
