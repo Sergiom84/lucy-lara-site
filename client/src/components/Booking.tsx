@@ -1,10 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { 
-  MapPin, Phone, Mail, Clock, 
-  Facebook, Instagram, Calendar, MessageCircle
-} from "lucide-react";
-import { apiRequest } from "@/lib/queryClient";
+import { Calendar, Clock, Phone, Facebook, Instagram } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { trackEvent } from "@/lib/analytics";
 
@@ -57,14 +53,12 @@ const Booking = () => {
     "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "13:00", "13:30",
     "16:00", "16:30", "17:00", "17:30", "18:00", "18:30", "19:00", "19:30"
   ];
-  
-  // Handle form input changes
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
-  
-  // Handle form submission with Google Forms
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -121,13 +115,7 @@ const Booking = () => {
         description: "Hubo un problema al enviar el formulario. Por favor, inténtalo de nuevo o contáctanos directamente.",
         variant: "destructive"
       });
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      toast({
-        title: "Error al enviar",
-        description: "Hubo un problema al enviar el formulario. Por favor, inténtalo de nuevo más tarde.",
-        variant: "destructive"
-      });
+    } finally {
       setSubmitting(false);
     }
   };
@@ -153,119 +141,113 @@ const Booking = () => {
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <div className="grid lg:grid-cols-2 gap-12">
             {/* Formulario */}
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
+              className="bg-white rounded-2xl shadow-xl p-8"
+              initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="bg-white rounded-2xl shadow-xl p-8 lg:p-10"
             >
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  {/* Nombre completo */}
-                  <div>
-                    <label className="block text-sm font-medium text-textDark mb-2">
-                      Nombre completo
-                    </label>
-                    <input
-                      type="text"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors"
-                      placeholder="Tu nombre completo"
-                      required
-                    />
-                  </div>
-
-                  {/* Email */}
-                  <div>
-                    <label className="block text-sm font-medium text-textDark mb-2">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors"
-                      placeholder="tu@email.com"
-                      required
-                    />
-                  </div>
+                {/* Nombre */}
+                <div>
+                  <label className="block text-sm font-medium text-textDark mb-2">
+                    Nombre completo *
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors"
+                    placeholder="Tu nombre completo"
+                  />
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
-                  {/* Teléfono */}
-                  <div>
-                    <label className="block text-sm font-medium text-textDark mb-2">
-                      Teléfono
-                    </label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors"
-                      placeholder="Tu número de teléfono"
-                      required
-                    />
-                  </div>
-
-                  {/* Servicio */}
-                  <div>
-                    <label className="block text-sm font-medium text-textDark mb-2">
-                      Servicio
-                    </label>
-                    <select
-                      name="service"
-                      value={formData.service}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors"
-                      required
-                    >
-                      <option value="">Seleccionar servicio</option>
-                      {services.map((service, index) => (
-                        <option key={index} value={service}>
-                          {service}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
+                {/* Email */}
+                <div>
+                  <label className="block text-sm font-medium text-textDark mb-2">
+                    Email *
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors"
+                    placeholder="tu@email.com"
+                  />
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
-                  {/* Fecha preferida */}
+                {/* Teléfono */}
+                <div>
+                  <label className="block text-sm font-medium text-textDark mb-2">
+                    Teléfono *
+                  </label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors"
+                    placeholder="Tu número de teléfono"
+                  />
+                </div>
+
+                {/* Servicio */}
+                <div>
+                  <label className="block text-sm font-medium text-textDark mb-2">
+                    Servicio deseado *
+                  </label>
+                  <select
+                    name="service"
+                    value={formData.service}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors"
+                  >
+                    <option value="">Selecciona un servicio</option>
+                    {services.map((service, index) => (
+                      <option key={index} value={service}>
+                        {service}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                {/* Fecha y hora */}
+                <div className="grid sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-textDark mb-2">
-                      Fecha preferida
+                      Fecha preferida *
                     </label>
                     <input
                       type="date"
                       name="date"
                       value={formData.date}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors"
-                      min={new Date().toISOString().split('T')[0]}
                       required
+                      min={new Date().toISOString().split('T')[0]}
+                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors"
                     />
                   </div>
-
-                  {/* Hora preferida */}
                   <div>
                     <label className="block text-sm font-medium text-textDark mb-2">
-                      Hora preferida
+                      Hora preferida *
                     </label>
                     <select
                       name="time"
                       value={formData.time}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors"
                       required
+                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors"
                     >
-                      <option value="">Seleccionar hora</option>
+                      <option value="">Selecciona una hora</option>
                       {timeSlots.map((time, index) => (
                         <option key={index} value={time}>
                           {time}
@@ -303,66 +285,51 @@ const Booking = () => {
 
             {/* Información de contacto */}
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
+              className="space-y-6"
+              initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="space-y-8"
             >
-              {/* Información del centro */}
-              <div className="bg-white rounded-2xl shadow-xl p-8">
-                <h3 className="font-playfair text-2xl font-semibold mb-6 text-accent">
-                  Información del centro
-                </h3>
-                <div className="space-y-4">
-                  <div className="flex items-start gap-4">
-                    <MapPin className="text-accent mt-1 flex-shrink-0" size={20} />
+              {/* Información de contacto */}
+              <div className="bg-white rounded-2xl shadow-xl p-6">
+                <h4 className="font-semibold text-textDark mb-4">Información de contacto</h4>
+                <div className="space-y-3">
+                  <div className="flex items-center">
+                    <Phone size={18} className="text-accent mr-3" />
                     <div>
-                      <p className="font-medium text-textDark">Dirección</p>
-                      <p className="text-textLight">Calle Alegría de la Huerta 22<br />28041 - Madrid</p>
+                      <p className="font-medium">91 505 20 67</p>
+                      <p className="text-sm text-textLight">684 203 633</p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-4">
-                    <Phone className="text-accent mt-1 flex-shrink-0" size={20} />
+                  <div className="flex items-center">
+                    <Calendar size={18} className="text-accent mr-3" />
                     <div>
-                      <p className="font-medium text-textDark">Teléfonos</p>
-                      <p className="text-textLight">91 505 20 67<br />684 203 633</p>
+                      <p className="font-medium">Lunes a viernes</p>
+                      <p className="text-sm text-textLight">10:00-13:30 y 16:00-19:30</p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-4">
-                    <Mail className="text-accent mt-1 flex-shrink-0" size={20} />
+                  <div className="flex items-center">
+                    <Clock size={18} className="text-accent mr-3" />
                     <div>
-                      <p className="font-medium text-textDark">Email</p>
-                      <p className="text-textLight">centrodebelleza@centroesteticalucylara.es</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <Clock className="text-accent mt-1 flex-shrink-0" size={20} />
-                    <div>
-                      <p className="font-medium text-textDark">Horarios</p>
-                      <p className="text-textLight">Lunes a viernes: 10:00 - 13:30<br />16:00 - 19:30</p>
+                      <p className="font-medium">Dirección</p>
+                      <p className="text-sm text-textLight">Calle Alegría de la Huerta 22, 28041 Madrid</p>
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* WhatsApp */}
-              <div className="bg-green-50 border border-green-200 rounded-2xl p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <MessageCircle className="text-green-600" size={24} />
-                  <h4 className="font-semibold text-green-800">¿Prefieres WhatsApp?</h4>
-                </div>
-                <p className="text-green-700 mb-4 text-sm">
-                  Contáctanos directamente por WhatsApp para una respuesta más rápida
-                </p>
+              <div className="bg-white rounded-2xl shadow-xl p-6">
+                <h4 className="font-semibold text-textDark mb-4">Contacto rápido</h4>
                 <a 
-                  href="https://wa.me/34684203633" 
-                  target="_blank" 
+                  href="https://wa.me/34684203633?text=Hola,%20me%20gustaría%20solicitar%20una%20cita%20en%20el%20Centro%20de%20Estética%20Lucy%20Lara"
+                  target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-medium transition-colors"
+                  className="inline-flex items-center bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full transition-colors font-medium"
                 >
-                  <MessageCircle size={18} className="mr-2" />
-                  Escribir por WhatsApp
+                  <Phone size={18} className="mr-2" />
+                  WhatsApp
                 </a>
               </div>
 
