@@ -4,9 +4,10 @@ import { Link } from "wouter";
 import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import renovacionProfundaImg from "@/assets/images/renovacion_profunda.png";
-import renovacionCristalImg from "@/assets/images/renovacion_cristal.png";
-import purezaFrescuraImg from "@/assets/images/pureza_frescura.png";
+import higieneSupremaImg from "../../../attached_assets/Higiene Facial Suprema_1750665963558.jpg";
+import luzCalmanteImg from "../../../attached_assets/Luz calmante - fotoestimulación para la piel sensible_1750665963555.jpg";
+import iceSkinImg from "../../../attached_assets/Ice Skin - crioterapia facial_1750665963556.jpg";
+import eternaJuventudImg from "../../../attached_assets/Eterna Juventud 2 en 1_1750665963559.jpg";
 import descansoVitalidadSvg from "@/assets/svg/descanso-vitalidad.svg";
 import equilibrioTotalSvg from "@/assets/svg/equilibrio-total.svg";
 import purezaBasicaSvg from "@/assets/svg/pureza-basica.svg";
@@ -40,8 +41,8 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Masaje relajante junto con una mascarilla acorde de las necesidades de la piel",
       "Acabamos el tratamiento con una crema finalizadora"
     ],
-    imagen: renovacionProfundaImg,
-    alt: "Renovación profunda - higiene facial completa"
+    imagen: higieneSupremaImg,
+    alt: "Higiene Facial Suprema"
   },
   {
     id: 2,
@@ -57,8 +58,8 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Masaje relajante junto con una mascarilla",
       "Acabamos el tratamiento con una crema finalizadora"
     ],
-    imagen: renovacionCristalImg,
-    alt: "Renovación de cristal con microdermoabrasión"
+    imagen: iceSkinImg,
+    alt: "Ice Skin - crioterapia facial"
   },
   {
     id: 3,
@@ -73,8 +74,8 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Extracción de comedones",
       "Gafas de presoterapia que reducen bolsas, ojeras y fatiga ocular"
     ],
-    imagen: descansoVitalidadSvg,
-    alt: "Descanso y vitalidad con presoterapia ocular"
+    imagen: luzCalmanteImg,
+    alt: "Luz calmante - fotoestimulación para la piel sensible"
   },
   {
     id: 4,
@@ -89,8 +90,8 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Masaje relajante con mascarilla",
       "Acabamos con crema finalizadora"
     ],
-    imagen: equilibrioTotalSvg,
-    alt: "Equilibrio total con presoterapia"
+    imagen: eternaJuventudImg,
+    alt: "Eterna Juventud 2 en 1"
   },
   {
     id: 5,
