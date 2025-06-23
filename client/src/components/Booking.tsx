@@ -65,7 +65,7 @@ const Booking = () => {
   };
   
   // Handle form submission with Google Forms
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     // Validación
@@ -81,28 +81,18 @@ const Booking = () => {
     try {
       setSubmitting(true);
       
-      // Google Forms URL - Reemplaza con tu URL de Google Forms
-      const googleFormUrl = "https://docs.google.com/forms/d/e/YOUR_GOOGLE_FORM_ID/formResponse";
-      
-      // Crear FormData para Google Forms
-      const googleFormData = new FormData();
-      // Estos IDs necesitan ser reemplazados con los IDs reales de tu formulario de Google
-      googleFormData.append('entry.123456789', formData.name); // Campo nombre
-      googleFormData.append('entry.987654321', formData.email); // Campo email
-      googleFormData.append('entry.111111111', formData.phone); // Campo teléfono
-      googleFormData.append('entry.222222222', formData.service); // Campo servicio
-      googleFormData.append('entry.333333333', formData.date); // Campo fecha
-      googleFormData.append('entry.444444444', formData.time); // Campo hora
-      googleFormData.append('entry.555555555', formData.message || ''); // Campo mensaje
-      
-      // Enviar a Google Forms
-      fetch(googleFormUrl, {
+      // Enviar al backend
+      const response = await fetch('/api/booking', {
         method: 'POST',
-        body: googleFormData,
-        mode: 'no-cors' // Necesario para Google Forms
-      }).then(() => {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
         // Track form submission event
-        trackEvent('booking_submitted', 'form', 'google_forms');
+        trackEvent('booking_submitted', 'form', 'backend');
         
         // Show success message
         toast({
@@ -121,17 +111,16 @@ const Booking = () => {
           time: "",
           message: ""
         });
-      }).catch((error) => {
-        console.error("Error submitting to Google Forms:", error);
-        toast({
-          title: "Error al enviar",
-          description: "Hubo un problema al enviar el formulario. Por favor, inténtalo de nuevo o contáctanos directamente.",
-          variant: "destructive"
-        });
-      }).finally(() => {
-        setSubmitting(false);
+      } else {
+        throw new Error('Error en el servidor');
+      }
+    } catch (error) {
+      console.error("Error submitting booking:", error);
+      toast({
+        title: "Error al enviar",
+        description: "Hubo un problema al enviar el formulario. Por favor, inténtalo de nuevo o contáctanos directamente.",
+        variant: "destructive"
       });
-      
     } catch (error) {
       console.error("Error submitting form:", error);
       toast({
