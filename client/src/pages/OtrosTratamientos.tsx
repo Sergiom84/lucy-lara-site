@@ -4,6 +4,8 @@ import { ArrowLeft, Clock, Euro, Info, Eye, Droplets, Zap } from "lucide-react";
 import { Link } from "wouter";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import hidrolinfaImg from "@assets/Hidrolinfa_1750680637700.png";
+import acupunturaImg from "@assets/Acupuntura_1750680637702.png";
 
 interface OtroTratamiento {
   id: number;
@@ -75,7 +77,7 @@ const otrosTratamientos: OtroTratamiento[] = [
       "Sin efectos secundarios",
       "Resultados progresivos y acumulativos"
     ],
-    imagen: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+    imagen: hidrolinfaImg,
     alt: "Tratamiento de hidrolinfa - desintoxicación",
     icono: <Droplets className="w-8 h-8" />
   },
@@ -102,7 +104,7 @@ const otrosTratamientos: OtroTratamiento[] = [
       "Agujas estériles de un solo uso",
       "Profesional certificado en acupuntura"
     ],
-    imagen: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+    imagen: acupunturaImg,
     alt: "Tratamiento de acupuntura profesional",
     icono: <Zap className="w-8 h-8" />
   }
