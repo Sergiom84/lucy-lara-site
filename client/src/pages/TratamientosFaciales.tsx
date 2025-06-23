@@ -536,11 +536,11 @@ const TratamientosFaciales = () => {
                   whileHover={{ y: -8 }}
                 >
                   {/* Imagen del tratamiento */}
-                  <div className="h-48 overflow-hidden">
+                  <div className="h-48 overflow-hidden bg-gray-50 flex items-center justify-center">
                     <img 
                       src={tratamiento.imagen} 
                       alt={tratamiento.alt} 
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain"
                     />
                   </div>
                   

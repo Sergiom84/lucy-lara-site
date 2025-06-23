@@ -770,11 +770,13 @@ const TratamientoDetail = () => {
             {/* Imagen */}
             <div className="lg:order-1">
               <div className="bg-white rounded-xl p-8 shadow-lg">
-                <img 
-                  src={tratamiento.imagen} 
-                  alt={tratamiento.alt} 
-                  className="w-full h-80 object-cover rounded-lg"
-                />
+                <div className="h-80 bg-gray-50 rounded-lg flex items-center justify-center overflow-hidden">
+                  <img 
+                    src={tratamiento.imagen} 
+                    alt={tratamiento.alt} 
+                    className="w-full h-full object-contain"
+                  />
+                </div>
               </div>
             </div>
             
