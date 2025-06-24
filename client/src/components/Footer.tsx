@@ -1,4 +1,3 @@
-import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { 
   MapPin, Phone, Mail, Clock, 
@@ -6,135 +5,83 @@ import {
 } from "lucide-react";
 
 const Footer = () => {
-  // Navigation categories
-  const services = [
-    { href: "#", label: "Tratamientos Faciales" },
-    { href: "#", label: "Masajes Terapéuticos" },
-    { href: "#", label: "Manicura y Pedicura" },
-    { href: "#", label: "Tratamientos Capilares" },
-    { href: "#", label: "Tratamientos Corporales" },
-    { href: "#", label: "Maquillaje Profesional" }
-  ];
-  
-  const quickLinks = [
-    { href: "#inicio", label: "Inicio" },
-    { href: "#servicios", label: "Servicios" },
-    { href: "#galeria", label: "Galería" },
-    { href: "#testimonios", label: "Testimonios" },
-    { href: "#reserva", label: "Reservar" },
-    { href: "#contacto", label: "Contacto" }
-  ];
-  
-  const contactInfo = [
-    { 
-      icon: <MapPin size={16} className="mt-1 text-accent" />, 
-      text: "Calle Alegría de la Huerta 22, 28041 - Madrid" 
-    },
-    { 
-      icon: <Phone size={16} className="mt-1 text-accent" />, 
-      text: "91 505 20 67 | 684 203 633" 
-    },
-    { 
-      icon: <Mail size={16} className="mt-1 text-accent" />, 
-      text: "centrodebelleza@centroesteticalucylara.es" 
-    },
-    { 
-      icon: <Clock size={16} className="mt-1 text-accent" />, 
-      text: "Lunes a viernes: 10:00 - 13:30\n16:00 - 19:30" 
-    }
-  ];
-
   return (
     <footer className="bg-textDark text-white py-12">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-          {/* Company Info */}
-          <div>
-            <h3 className="text-xl font-playfair font-semibold mb-4">
-              Centro de Estética <span className="text-accent">Lucy Lara</span>
-            </h3>
-            <p className="text-gray-400 mb-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
+          {/* Centro Info */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="text-2xl font-bold text-accent mb-4">Centro de Estética Lucy Lara</h3>
+            <p className="text-gray-400 mb-6 leading-relaxed">
               Tu centro de belleza y bienestar donde cuidamos de ti con los tratamientos más avanzados y personalizados.
             </p>
+            
+            {/* Social Media Icons */}
             <div className="flex space-x-4">
-              <a href="https://www.facebook.com/CBLUCYLARA/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-accent transition-colors">
-                <Facebook size={18} />
-              </a>
-              <a href="https://www.instagram.com/esteticalucylara/?hl=es" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-accent transition-colors">
-                <Instagram size={18} />
-              </a>
-
+              <motion.a
+                href="https://www.facebook.com/CBLUCYLARA/"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
+              >
+                <Facebook size={20} />
+              </motion.a>
+              <motion.a
+                href="https://www.instagram.com/esteticalucylara/?hl=es"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-2 rounded-full hover:from-purple-600 hover:to-pink-600 transition-colors"
+              >
+                <Instagram size={20} />
+              </motion.a>
             </div>
-          </div>
-          
-          {/* Services Links */}
-          <div>
-            <h4 className="text-lg font-medium mb-4">Servicios</h4>
-            <ul className="space-y-2">
-              {services.map((service, index) => (
-                <li key={index}>
-                  <a 
-                    href={service.href} 
-                    className="text-gray-400 hover:text-accent transition-colors"
-                  >
-                    {service.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-          
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-lg font-medium mb-4">Enlaces rápidos</h4>
-            <ul className="space-y-2">
-              {quickLinks.map((link, index) => (
-                <li key={index}>
-                  <a 
-                    href={link.href} 
-                    className="text-gray-400 hover:text-accent transition-colors"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-          
+          </motion.div>
+
           {/* Contact Info */}
-          <div>
-            <h4 className="text-lg font-medium mb-4">Contacto</h4>
-            <ul className="space-y-3">
-              {contactInfo.map((info, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  {info.icon}
-                  <span className="text-gray-400 whitespace-pre-line">{info.text}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-        
-        {/* Social Media Icons */}
-        <div className="border-t border-gray-700 pt-6 mb-6">
-          <div className="flex justify-center space-x-6">
-            <a 
-              href="https://www.facebook.com/CBLUCYLARA/" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-gray-700 hover:bg-accent p-3 rounded-full transition-colors duration-300"
-            >
-              <Facebook size={20} className="text-white" />
-            </a>
-            <a 
-              href="https://www.instagram.com/esteticalucylara/?hl=es" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-gray-700 hover:bg-accent p-3 rounded-full transition-colors duration-300"
-            >
-              <Instagram size={20} className="text-white" />
-            </a>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="text-xl font-semibold text-accent mb-4">Contacto</h3>
+            <div className="space-y-3 text-gray-400">
+              <div className="flex items-start gap-3">
+                <MapPin size={16} className="mt-1 text-accent" />
+                <span className="text-sm leading-relaxed">
+                  Calle Alegría de la Huerta 22, 28041 - Madrid
+                </span>
+              </div>
+              <div className="flex items-start gap-3">
+                <Phone size={16} className="mt-1 text-accent" />
+                <span className="text-sm leading-relaxed">
+                  91 505 20 67 | 684 203 633
+                </span>
+              </div>
+              <div className="flex items-start gap-3">
+                <Mail size={16} className="mt-1 text-accent" />
+                <span className="text-sm leading-relaxed">
+                  centrodebelleza@centroesteticalucylara.es
+                </span>
+              </div>
+              <div className="flex items-start gap-3">
+                <Clock size={16} className="mt-1 text-accent" />
+                <span className="text-sm leading-relaxed">
+                  Lunes a viernes: 10:00 - 13:30<br />
+                  16:00 - 19:30
+                </span>
+              </div>
+            </div>
+          </motion.div>
         </div>
 
         {/* Footer Bottom */}
