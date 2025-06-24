@@ -15,7 +15,7 @@ const Chatbot = () => {
   const [messages, setMessages] = useState<Message[]>([
     { 
       id: 1, 
-      text: "¡Hola! Soy LucyBot 💅✨, tu asistente del Centro de Estética Lucy Lara. ¿Te ayudo con información sobre tratamientos faciales?", 
+      text: "¡Hola! Soy LucyBot 💅✨, tu asistente del Centro de Estética Lucy Lara. ¿En qué puedo ayudarte?", 
       isUser: false 
     }
   ]);
