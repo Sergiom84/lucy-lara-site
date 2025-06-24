@@ -41,29 +41,48 @@ const Chatbot = () => {
   const sendMessage = async () => {
     if (inputText.trim() === "") return;
 
-    // Add user message
     const userMessage = {
       id: messages.length + 1,
       text: inputText,
       isUser: true
     };
-    setMessages([...messages, userMessage]);
+    setMessages(prev => [...prev, userMessage]);
     
-    // Track user message
+    const currentInput = inputText;
+    setInputText("");
+    
     trackEvent('chatbot_message_sent', 'engagement', 'chatbot');
 
-    // Get bot response
-    setTimeout(() => {
+    try {
+      const response = await fetch('/api/chatbot', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ message: currentInput }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
       const botResponse = {
         id: messages.length + 2,
-        text: getBotResponse(inputText),
+        text: data.response,
         isUser: false
       };
       setMessages(prev => [...prev, botResponse]);
-    }, 500);
-
-    // Clear input
-    setInputText("");
+      
+    } catch (error) {
+      console.error('Error getting bot response:', error);
+      const botResponse = {
+        id: messages.length + 2,
+        text: "Lo siento, no puedo procesar tu consulta. Contacta al 91 505 20 67.",
+        isUser: false
+      };
+      setMessages(prev => [...prev, botResponse]);
+    }
   };
 
   // Handle Enter key
