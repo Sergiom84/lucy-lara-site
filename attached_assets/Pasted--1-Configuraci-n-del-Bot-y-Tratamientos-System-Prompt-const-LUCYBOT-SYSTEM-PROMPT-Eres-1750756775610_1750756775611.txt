@@ -1,0 +1,83 @@
+// 📌 1. Configuración del Bot y Tratamientos (System Prompt)
+const LUCYBOT_SYSTEM_PROMPT = `
+Eres "LucyBot", el asistente virtual exclusivo del **Salón de Belleza Lucy Lara** 💅✨.  
+Solo respondes preguntas sobre tratamientos faciales, precios y políticas del salón.  
+
+### 💆 **TRATAMIENTOS FACIALES** (Precio | Duración | Frecuencia | Descripción):  
+1. **Renovación profunda**: 61€ | 45-60 min | 1/mes → Limpieza profunda + exfoliación mecánica + extracción + mascarilla personalizada.  
+2. **Renovación de cristal**: 71€ | 60 min | 1/mes → Microdermoabrasión + oxigenación + mascarilla revitalizante.  
+3. **Descanso y vitalidad**: 71€ | 60 min | 1/mes → Higiene facial + presoterapia ocular (reduce bolsas/ojeras).  
+4. **Equilibrio total**: 79€ | 75 min | 1/mes → Higiene facial + presoterapia en piernas.  
+5. **Luz antiacné**: 79€ | 60 min | 1/semana → Fotobioestimulación para reducir inflamación y brotes.  
+6. **Luz pura**: 71€ | 60 min | 1/mes → Microdermoabrasión + cosmética antimanchas.  
+7. **Calma profunda**: 61€ | 60 min | 1/mes → Peeling enzimático + mascarilla calmante (para pieles sensibles).  
+8. **Stop acné**: 89€ | 60 min | 1/semana → Higiene facial + fotobioestimulación para acné activo.  
+*(... lista completa con los 27 tratamientos ...)*  
+
+### 📜 **POLÍTICAS**:  
+- 💰 **Pago**: Efectivo, tarjeta.  
+- ⏰ **Horario**: Lunes a Sábado (9:00 - 19:00).  
+- 📅 **Reservas**: Por teléfono o en recepción.  
+
+### 🚫 **REGLAS**:  
+- Si te preguntan sobre otros temas, responde: *"Lo siento, solo puedo ayudarte con información de Lucy Lara. ¿Necesitas detalles de algún tratamiento?"* 🙅‍♀️  
+- Sé **exacta** con precios y duraciones. Usa emojis (💖, ✨, 💆‍♀️).  
+`;
+
+// 📌 2. Función para Consultar al Bot (API de DeepSeek)
+async function consultarLucyBot(preguntaUsuario) {
+  const API_KEY = "TU_API_KEY_AQUÍ";  // 🔑 Reemplaza con tu API Key de DeepSeek
+  
+  try {
+    const respuesta = await fetch("https://api.deepseek.com/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${API_KEY}`
+      },
+      body: JSON.stringify({
+        model: "deepseek-chat",
+        messages: [
+          {
+            role: "system",
+            content: LUCYBOT_SYSTEM_PROMPT  // Inyecta el prompt completo
+          },
+          {
+            role: "user",
+            content: preguntaUsuario
+          }
+        ],
+        temperature: 0.3  // Respuestas precisas (sin inventar)
+      })
+    });
+
+    const data = await respuesta.json();
+    return data.choices[0].message.content;
+
+  } catch (error) {
+    console.error("Error al consultar el bot:", error);
+    return "¡Ups! Ahora no puedo responder. Por favor, intenta más tarde.";
+  }
+}
+
+// 📌 3. Ejemplo de Uso en tu Web (Interfaz Básica)
+document.addEventListener("DOMContentLoaded", () => {
+  const chatForm = document.getElementById("chat-form");  // Formulario HTML
+  const userInput = document.getElementById("user-input");  // Input de texto
+  const chatBox = document.getElementById("chat-box");     // Div para mostrar respuestas
+
+  chatForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const pregunta = userInput.value.trim();
+    if (!pregunta) return;
+
+    // Muestra la pregunta del usuario
+    chatBox.innerHTML += `<div class="user-msg">Tú: ${pregunta}</div>`;
+    userInput.value = "";
+
+    // Consulta al bot y muestra la respuesta
+    const respuesta = await consultarLucyBot(pregunta);
+    chatBox.innerHTML += `<div class="bot-msg">LucyBot: ${respuesta}</div>`;
+    chatBox.scrollTop = chatBox.scrollHeight;  // Auto-scroll
+  });
+});
