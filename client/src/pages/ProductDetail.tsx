@@ -358,24 +358,12 @@ const ProductDetail = () => {
                 <p className="text-textLight">{producto.modo_uso}</p>
               </div>
               
-              <button 
-                onClick={() => {
-                  console.log('Agregando producto al carrito desde detalle:', producto.titulo);
-                  dispatch({
-                    type: 'ADD_ITEM',
-                    payload: {
-                      id: producto.id,
-                      name: producto.titulo,
-                      price: parseFloat(producto.precio.replace('€', '').replace(',', '.')),
-                      image: producto.imagen
-                    }
-                  });
-                }}
+              <a 
+                href="#reserva"
                 className="bg-accent hover:bg-accentDark text-white px-8 py-3 rounded-full transition-colors inline-flex items-center"
               >
-                <ShoppingCart size={18} className="mr-2" />
-                Añadir al carrito
-              </button>
+                Solicitar información
+              </a>
             </motion.div>
           </div>
         </div>
