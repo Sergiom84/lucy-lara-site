@@ -9,8 +9,6 @@ interface BookingFormData {
   email: string;
   phone: string;
   service: string;
-  date: string;
-  time: string;
   message: string;
 }
 
@@ -21,8 +19,6 @@ const Booking = () => {
     email: "",
     phone: "",
     service: "",
-    date: "",
-    time: "",
     message: ""
   });
   const [submitting, setSubmitting] = useState(false);
@@ -63,7 +59,7 @@ const Booking = () => {
     e.preventDefault();
     
     // Validación
-    if (!formData.name || !formData.email || !formData.phone || !formData.service || !formData.date || !formData.time) {
+    if (!formData.name || !formData.email || !formData.phone || !formData.service) {
       toast({
         title: "Error en el formulario",
         description: "Por favor, completa todos los campos obligatorios.",
@@ -101,8 +97,6 @@ const Booking = () => {
           email: "",
           phone: "",
           service: "",
-          date: "",
-          time: "",
           message: ""
         });
       } else {
@@ -136,8 +130,8 @@ const Booking = () => {
               Solicita información
             </h2>
             <p className="text-textLight text-lg max-w-2xl mx-auto leading-relaxed">
-              Completa el formulario y nos pondremos en contacto contigo para confirmar tu cita. 
-              También puedes contactarnos directamente por teléfono o WhatsApp.
+              Completa el formulario y nos pondremos en contacto contigo. 
+              También puedes llamarnos directamente por teléfono o WhatsApp.
             </p>
           </motion.div>
 
@@ -220,42 +214,7 @@ const Booking = () => {
                   </select>
                 </div>
 
-                {/* Fecha y hora */}
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-textDark mb-2">
-                      Fecha preferida *
-                    </label>
-                    <input
-                      type="date"
-                      name="date"
-                      value={formData.date}
-                      onChange={handleInputChange}
-                      required
-                      min={new Date().toISOString().split('T')[0]}
-                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-textDark mb-2">
-                      Hora preferida *
-                    </label>
-                    <select
-                      name="time"
-                      value={formData.time}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors"
-                    >
-                      <option value="">Selecciona una hora</option>
-                      {timeSlots.map((time, index) => (
-                        <option key={index} value={time}>
-                          {time}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
+
 
                 {/* Mensaje opcional */}
                 <div>
@@ -268,7 +227,7 @@ const Booking = () => {
                     onChange={handleInputChange}
                     rows={4}
                     className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors resize-none"
-                    placeholder="Cuéntanos cualquier detalle adicional sobre tu cita..."
+                    placeholder="Cuéntanos cualquier duda que te surja sobre los tratamientos o productos."
                   />
                 </div>
 
@@ -278,7 +237,7 @@ const Booking = () => {
                   disabled={submitting}
                   className="w-full bg-accent hover:bg-accentDark text-white py-4 px-6 rounded-lg font-semibold text-lg transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {submitting ? "Enviando..." : "Solicitar Cita"}
+                  {submitting ? "Enviando..." : "Enviar"}
                 </button>
               </form>
             </motion.div>
