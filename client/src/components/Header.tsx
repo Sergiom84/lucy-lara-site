@@ -1,18 +1,15 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Phone, Mail, Facebook, Instagram, Search, ShoppingBag } from "lucide-react";
+import { Menu, X, Phone, Mail, Facebook, Instagram, Search } from "lucide-react";
 import LogoTransparent from "../assets/images/nuevo-logo.webp";
 import logoFigura from "../assets/images/logo-figura.webp";
-import { useCart } from "../contexts/CartContext";
-import CartDropdown from "./CartDropdown";
+
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [cartOpen, setCartOpen] = useState(false);
   const [location] = useLocation();
   const [scrolled, setScrolled] = useState(false);
-  const { state } = useCart();
   
   // Determine if we're on the home page or a product page
   const isHomePage = location === "/";
@@ -99,31 +96,9 @@ const Header = () => {
                   {link.label}
                 </a>
               ))}
+
               
-              {/* Divider */}
-              <span className="text-gray-300 text-xl font-light ml-4">|</span>
-              
-              {/* Icons - Removed User icon */}
-              <div className="flex items-center space-x-4 ml-4">
-                <a 
-                  href={isHomePage ? "#reserva" : "/#reserva"} 
-                  className="text-white hover:text-[#8b2154]"
-                  title="Reservar cita"
-                >
-                  <Phone className="h-5 w-5" />
-                </a>
-                <button 
-                  onClick={() => setCartOpen(true)}
-                  className="text-white hover:text-[#8b2154] relative"
-                >
-                  <ShoppingBag className="h-5 w-5" />
-                  {state.totalItems > 0 && (
-                    <span className="absolute -top-2 -right-2 bg-accent text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                      {state.totalItems}
-                    </span>
-                  )}
-                </button>
-              </div>
+
             </div>
           </nav>
           
@@ -160,27 +135,12 @@ const Header = () => {
                     {link.label}
                   </motion.a>
                 ))}
-                <motion.div 
-                  className="flex items-center space-x-4 py-2"
-                  initial={{ x: -20, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  transition={{ delay: navLinks.length * 0.1 }}
-                >
-                  <a href="#" className="text-white hover:text-[#8b2154]">
-                    <Search className="h-5 w-5" />
-                  </a>
-                  <a href="#" className="text-white hover:text-[#8b2154]">
-                    <ShoppingBag className="h-5 w-5" />
-                  </a>
-                </motion.div>
+
               </div>
             </motion.div>
           )}
         </AnimatePresence>
       </header>
-      
-      {/* Cart Dropdown */}
-      <CartDropdown isOpen={cartOpen} onClose={() => setCartOpen(false)} />
     </>
   );
 };

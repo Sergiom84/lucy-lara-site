@@ -127,7 +127,7 @@ const Hero = () => {
             href="#reserva" 
             className="bg-transparent border border-white hover:bg-white/10 text-white px-8 py-3 rounded-none text-lg transition-colors"
           >
-            Reservar cita
+            Solicitar información
           </a>
         </motion.div>
       </div>

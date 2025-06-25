@@ -133,7 +133,7 @@ const Booking = () => {
             viewport={{ once: true }}
           >
             <h2 className="font-playfair text-4xl md:text-5xl font-semibold mb-6 text-accent">
-              Reserva tu cita
+              Solicita información
             </h2>
             <p className="text-textLight text-lg max-w-2xl mx-auto leading-relaxed">
               Completa el formulario y nos pondremos en contacto contigo para confirmar tu cita. 

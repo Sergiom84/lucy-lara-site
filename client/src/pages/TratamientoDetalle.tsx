@@ -361,7 +361,7 @@ const TratamientoDetalle = () => {
               Reserva tu cita para el tratamiento {tratamiento.nombre} y experimenta los beneficios de nuestros cuidados profesionales.
             </p>
             <button className="bg-accent hover:bg-accentDark text-white py-3 px-8 rounded-full text-lg font-semibold transition-colors">
-              Reservar Ahora - {tratamiento.precio}
+              Solicitar información - {tratamiento.precio}
             </button>
           </motion.div>
         </div>
