@@ -810,7 +810,7 @@ const TratamientoDetail = () => {
               </p>
               
               <button className="bg-accent hover:bg-accentDark text-white px-8 py-3 rounded-full transition-colors font-medium text-lg">
-                Reservar cita
+                Solicitar información
               </button>
             </div>
           </motion.div>
@@ -876,7 +876,7 @@ const TratamientoDetail = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-accent hover:bg-accentDark text-white px-8 py-3 rounded-full transition-colors font-medium">
-                Reservar cita
+                Solicitar información
               </button>
               <Link 
                 href="/tratamientos-faciales"
