@@ -272,12 +272,10 @@ const TratamientosCorporales = () => {
               Reserva tu sesión de masaje y desconecta del estrés diario. Tu cuerpo y mente te lo agradecerán.
             </p>
             <a 
-              href="https://wa.me/34123456789" 
-              target="_blank" 
-              rel="noopener noreferrer"
+              href="#reserva"
               className="inline-flex items-center bg-white text-accent px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
-              Reservar sesión
+              Solicitar información
             </a>
           </motion.div>
         </div>

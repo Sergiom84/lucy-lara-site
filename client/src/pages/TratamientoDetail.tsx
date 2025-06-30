@@ -809,9 +809,12 @@ const TratamientoDetail = () => {
                 {tratamiento.descripcionLarga}
               </p>
               
-              <button className="bg-accent hover:bg-accentDark text-white px-8 py-3 rounded-full transition-colors font-medium text-lg">
+              <a 
+                href="#reserva"
+                className="bg-accent hover:bg-accentDark text-white px-8 py-3 rounded-full transition-colors font-medium text-lg inline-block"
+              >
                 Solicitar información
-              </button>
+              </a>
             </div>
           </motion.div>
           
@@ -875,9 +878,12 @@ const TratamientoDetail = () => {
               Reserva tu cita ahora y experimenta los beneficios de nuestro tratamiento {tratamiento.nombre}.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-accent hover:bg-accentDark text-white px-8 py-3 rounded-full transition-colors font-medium">
+              <a 
+                href="#reserva"
+                className="bg-accent hover:bg-accentDark text-white px-8 py-3 rounded-full transition-colors font-medium inline-block"
+              >
                 Solicitar información
-              </button>
+              </a>
               <Link 
                 href="/tratamientos-faciales"
                 className="border border-accent text-accent hover:bg-accent hover:text-white px-8 py-3 rounded-full transition-colors font-medium"

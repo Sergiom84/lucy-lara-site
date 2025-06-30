@@ -360,9 +360,12 @@ const TratamientoDetalle = () => {
             <p className="text-textLight mb-6 max-w-2xl mx-auto">
               Reserva tu cita para el tratamiento {tratamiento.nombre} y experimenta los beneficios de nuestros cuidados profesionales.
             </p>
-            <button className="bg-accent hover:bg-accentDark text-white py-3 px-8 rounded-full text-lg font-semibold transition-colors">
+            <a 
+              href="#reserva"
+              className="bg-accent hover:bg-accentDark text-white py-3 px-8 rounded-full text-lg font-semibold transition-colors inline-block"
+            >
               Solicitar información - {tratamiento.precio}
-            </button>
+            </a>
           </motion.div>
         </div>
       </main>
