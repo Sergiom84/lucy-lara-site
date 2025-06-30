@@ -33,41 +33,39 @@ interface TratamientoFacial {
   alt: string;
 }
 
-// Datos de tratamientos faciales actualizados según información del Excel
+// Datos de tratamientos faciales ordenados alfabéticamente A-Z
 const tratamientosFaciales: TratamientoFacial[] = [
   {
     id: 1,
-    nombre: "Renovación profunda - higiene facial completa",
-    precio: "61,00€",
-    duracion: "60 min",
+    nombre: "Brisa de seda - higiene facial suave",
+    precio: "55,00€",
+    duracion: "45 min",
     frecuencia: "1 vez al mes",
-    descripcion: "Tratamiento de limpieza profunda que hidrata, revitaliza y equilibra la piel.",
+    descripcion: "Una limpieza delicada diseñada para pieles sensibles y reactivas.",
     pasos: [
       "Limpieza de la piel junto con su tonificación",
-      "Exfoliación mecánica",
-      "Extracción de comedones para una oxigenación y limpieza de la piel",
-      "Masaje relajante junto con una mascarilla acorde de las necesidades de la piel",
-      "Acabamos el tratamiento con una crema finalizadora"
+      "Peeling enzimático",
+      "Masaje relajante con mascarilla calmante",
+      "Crema refrescante y reparadora"
     ],
-    imagen: renovacionProfundaImg,
-    alt: "Renovación profunda - higiene facial completa"
+    imagen: purezaBasicaSvg,
+    alt: "Brisa de seda - higiene facial suave"
   },
   {
     id: 2,
-    nombre: "Renovación de cristal - higiene facial completa con microdermoabrasión",
-    precio: "71,00€",
-    duracion: "70 min",
+    nombre: "Calma profunda - higiene facial completa",
+    precio: "61,00€",
+    duracion: "60 min",
     frecuencia: "1 vez al mes",
-    descripcion: "Tratamiento de limpieza profunda que hidrata, pule y oxigena.",
+    descripcion: "Un tratamiento de limpieza profunda adaptado a pieles sensibles.",
     pasos: [
       "Limpieza de la piel junto con su tonificación",
-      "Extracción de comedones para una oxigenación y limpieza de la piel",
-      "Microdermoabrasión que exfolia en profundidad",
-      "Masaje relajante junto con una mascarilla",
-      "Acabamos el tratamiento con una crema finalizadora"
+      "Peeling enzimático",
+      "Extracción cuidadosa para liberar los poros",
+      "Crema refrescante que calma y reduce rojeces"
     ],
-    imagen: renovacionCristalImg,
-    alt: "Renovación de cristal con microdermoabrasión"
+    imagen: descansoVitalidadSvg,
+    alt: "Calma profunda - higiene facial completa"
   },
   {
     id: 3,
@@ -87,19 +85,19 @@ const tratamientosFaciales: TratamientoFacial[] = [
   },
   {
     id: 4,
-    nombre: "Equilibrio total - higiene facial con presoterapia",
-    precio: "79€",
-    duracion: "80 min",
-    frecuencia: "1 vez al mes",
-    descripcion: "Tratamiento de limpieza profunda que hidrata, revitaliza la cara y el cuerpo.",
+    nombre: "Equilibrio puro - tratamiento cosmético regulador",
+    precio: "65,00€",
+    duracion: "60 min",
+    frecuencia: "1 vez por semana",
+    descripcion: "Tratamiento sin aparatología que trabaja únicamente con la línea Dermo controle.",
     pasos: [
-      "Presoterapia en piernas que activa la circulación",
-      "Higiene facial completa",
-      "Masaje relajante con mascarilla",
-      "Acabamos con crema finalizadora"
+      "Aplicación de la línea Dermo controle",
+      "Regulación de la producción de sebo",
+      "Minimización de los poros",
+      "Matificación sin deshidratación"
     ],
     imagen: equilibrioTotalSvg,
-    alt: "Equilibrio total con presoterapia"
+    alt: "Equilibrio puro - tratamiento cosmético"
   },
   {
     id: 5,
