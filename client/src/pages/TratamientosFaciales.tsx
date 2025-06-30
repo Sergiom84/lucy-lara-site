@@ -227,7 +227,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Reducción de la inflamación",
       "Prevención de nuevas imperfecciones"
     ],
-    imagen: purezaCompletaSvg,
+    imagen: luzAntiacneImg,
     alt: "Luz antiacne - bioestimulación"
   },
   {

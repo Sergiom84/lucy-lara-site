@@ -9,11 +9,14 @@ import renovacionProfundaImg from "@assets/Renovación profunda - higiene facial
 import renovacionCristalImg from "@assets/Renovación de cristal - higiene facial completa con microdermoabrasion._1751276942401.jpg";
 import purezaFrescuraImg from "@assets/Pureza y frescura - higiene facial_1751276942401.png";
 import luzCalmanteImg from "@assets/Luz calmante - fotobioestimulación para la piel sensible._1751276942398.png";
-import ritualSerenidadImg from "@assets/Ritual serenidad - hig. facial + fotobioestimulación + cuidado específico._1751276942391.png";
-import stopAcneImg from "@assets/Stop acné - higiene facial completa + fotobioestimulación_1751276942392.png";
+import ritualSerenidadImg from "@assets/Ritual serenidad - hig. facial + fotobioestimulación + cuidado específico. v1_1751288541110.png";
+import stopAcneImg from "@assets/Stop acné - higiene facial completa + fotobioestimulación_1751288548565.png";
 import descansoVitalidadImg from "@assets/Descanso y vitalidad - higiene facial completa con presoterapia ocular._1751276942394.png";
 import equilibrioPuroImg from "@assets/Equilibrio puro - tratamiento cosmético regulador._1751276942396.png";
-import luzAntiacneImg from "@assets/Luz antiacne - tratamiento intensivo bioestimulación._1751276942396.png";
+import luzAntiacneImg from "@assets/Luz antiacne - tratamiento intensivo bioestimulación._1751288522827.png";
+import laCapsulaTiempoImg from "@assets/La cápsula del tiempo_1751288451864.png";
+import liftingLuminicoImg from "@assets/Lifting Lumínico_1751288510915.png";
+import luzRenovadaImg from "@assets/Luz renovada - Fotorejuvenecimiento antimanchas._1751288529816.png";
 import luzPuraImg from "@assets/Luz pura - hig. facial completa + microdermoabrasion + cosmética antimanchas._1751276942399.png";
 import purezaEquilibranteImg from "@assets/Pureza equilibrante - higiene facial suave._1751276942400.png";
 import descansoVitalidadSvg from "@/assets/svg/descanso-vitalidad.svg";
@@ -263,7 +266,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Refuerza la barrera protectora",
       "Tratamiento global sin agresión"
     ],
-    imagen: purezaCompletaSvg,
+    imagen: ritualSerenidadImg,
     alt: "Ritual serenidad con fotobioestimulación"
   },
   {
@@ -363,7 +366,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Tratamiento específico para acné",
       "Resultados progresivos"
     ],
-    imagen: purezaCompletaSvg,
+    imagen: luzAntiacneImg,
     alt: "Luz antiacne - bioestimulación"
   },
   {
@@ -467,7 +470,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Aporta firmeza",
       "Piel visiblemente rejuvenecida"
     ],
-    imagen: purezaCompletaSvg,
+    imagen: luzRenovadaImg,
     alt: "Luz renovada - fotorejuvenecimiento IPL"
   },
   {
@@ -645,7 +648,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Devuelve la jugosidad",
       "Adaptable a cada tipo de piel"
     ],
-    imagen: purezaCompletaSvg,
+    imagen: liftingLuminicoImg,
     alt: "Lifting Lumínico"
   },
   {
@@ -695,7 +698,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Reafirmación de la piel",
       "Rejuvenecimiento integral"
     ],
-    imagen: purezaCompletaSvg,
+    imagen: laCapsulaTiempoImg,
     alt: "La cápsula del tiempo"
   },
   {
