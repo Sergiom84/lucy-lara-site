@@ -415,7 +415,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Perfecto para brotes activos",
       "Mejora la textura de la piel"
     ],
-    imagen: purezaCompletaSvg,
+    imagen: stopAcneImg,
     alt: "Stop acné con fotobioestimulación"
   },
   {
@@ -495,7 +495,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Unifica el tono",
       "Tratamiento personalizado"
     ],
-    imagen: equilibrioPuroImg,
+    imagen: luzRenovadaImg,
     alt: "Skin glow - dermapen antimanchas"
   },
   {
