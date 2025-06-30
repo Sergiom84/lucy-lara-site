@@ -101,134 +101,118 @@ const tratamientosFaciales: TratamientoFacial[] = [
   },
   {
     id: 5,
-    nombre: "Pureza y frescura - higiene facial",
-    precio: "55€",
-    duracion: "45 min",
-    frecuencia: "Según necesidad",
-    descripcion: "Higiene facial básica, hidratante y revitalizante.",
+    nombre: "Equilibrio total - higiene facial con presoterapia",
+    precio: "79€",
+    duracion: "80 min",
+    frecuencia: "1 vez al mes",
+    descripcion: "Tratamiento de limpieza profunda que hidrata, revitaliza la cara y el cuerpo.",
     pasos: [
-      "Limpieza profunda, tonificación",
-      "Exfoliación mecánica",
-      "Masaje relajante, mascarilla adaptada",
-      "Crema final para hidratación duradera"
+      "Presoterapia en piernas que activa la circulación",
+      "Higiene facial completa",
+      "Masaje relajante con mascarilla",
+      "Acabamos con crema finalizadora"
     ],
-    imagen: purezaFrescuraImg,
-    alt: "Pureza y frescura - higiene facial"
+    imagen: equilibrioTotalSvg,
+    alt: "Equilibrio total con presoterapia"
   },
   {
     id: 6,
-    nombre: "Pureza y frescura - higiene facial",
-    precio: "89€",
+    nombre: "Eterna Juventud 2 en 1",
+    precio: "89,00€",
     duracion: "75 min",
-    frecuencia: "1 vez al mes",
-    descripcion: "Tratamiento de limpieza profunda que hidrata, revitaliza y equilibra la piel.",
+    frecuencia: "1 sesión personalizada",
+    descripcion: "Higiene facial + rejuvenecimiento en un solo tratamiento.",
     pasos: [
-      "Limpieza de la piel junto con su tonificación",
-      "Exfoliación mecánica",
-      "Tratamiento de fotoestimulación Led",
-      "Masaje relajante con mascarilla personalizada"
+      "Higiene facial completa con extracción",
+      "Aplicación de activos de alta concentración",
+      "Tecnología avanzada para reafirmar",
+      "Efecto flash inmediato"
     ],
-    imagen: purezaCompletaSvg,
-    alt: "Pureza y frescura con LED"
+    imagen: stopAcneImg,
+    alt: "Eterna Juventud 2 en 1"
   },
   {
     id: 7,
-    nombre: "Brisa de seda - higiene facial suave",
-    precio: "55,00€",
-    duracion: "45 min",
-    frecuencia: "1 vez al mes",
-    descripcion: "Una limpieza delicada diseñada para pieles sensibles y reactivas.",
+    nombre: "Flash de juventud - Fotorejuvenecimiento",
+    precio: "89,00€",
+    duracion: "60 min",
+    frecuencia: "1 vez cada 15 días",
+    descripcion: "Fotorejuvenecimiento facial para una piel radiante. Utiliza la última tecnología en fotorejuvenecimiento para estimular la producción de colágeno, reducir arrugas y mejorar la elasticidad de la piel.",
     pasos: [
-      "Limpieza de la piel junto con su tonificación",
-      "Peeling enzimático",
-      "Masaje relajante con mascarilla calmante",
-      "Crema refrescante y reparadora"
+      "Evaluación personalizada de la piel",
+      "Aplicación de tecnología de fotorejuvenecimiento",
+      "Estimulación de la producción de colágeno",
+      "Protocolo 100% personalizado"
     ],
-    imagen: purezaBasicaSvg,
-    alt: "Brisa de seda - higiene facial suave"
+    imagen: purezaCompletaSvg,
+    alt: "Flash de juventud - fotorejuvenecimiento"
   },
   {
     id: 8,
-    nombre: "Calma profunda - higiene facial completa",
-    precio: "61,00€",
-    duracion: "60 min",
-    frecuencia: "1 vez al mes",
-    descripcion: "Un tratamiento de limpieza profunda adaptado a pieles sensibles.",
-    pasos: [
-      "Limpieza de la piel junto con su tonificación",
-      "Peeling enzimático",
-      "Extracción cuidadosa para liberar los poros",
-      "Crema refrescante que calma y reduce rojeces"
-    ],
-    imagen: descansoVitalidadSvg,
-    alt: "Calma profunda - higiene facial completa"
-  },
-  {
-    id: 9,
-    nombre: "Ritual serenidad - hig. facial + fotobioestimulación + cuidado específico",
-    precio: "89,00€",
-    duracion: "75 min",
-    frecuencia: "1 vez al mes",
-    descripcion: "Una combinación perfecta para pieles sensibles que necesitan un tratamiento global.",
-    pasos: [
-      "Higiene facial suave sin agresión",
-      "Cosmética especializada en calmar la piel",
-      "Fotobioestimulación Led",
-      "Refuerza la barrera protectora de la piel"
-    ],
-    imagen: purezaCompletaSvg,
-    alt: "Ritual serenidad con fotobioestimulación"
-  },
-  {
-    id: 10,
-    nombre: "Luz calmante - fotobioestimulación para la piel sensible",
-    precio: "89,00€",
-    duracion: "60 min",
-    frecuencia: "1 vez en semana",
-    descripcion: "La fotobioestimulación trabaja en profundidad para regenerar y calmar la piel.",
-    pasos: [
-      "Preparación específica para piel sensible",
-      "Aplicación de fotobioestimulación Led",
-      "Trabaja en profundidad para regenerar",
-      "Efecto antiinflamatorio y reparador"
-    ],
-    imagen: luzCalmanteImg,
-    alt: "Luz calmante - fotobioestimulación"
-  },
-  {
-    id: 11,
-    nombre: "Pureza equilibrante - higiene facial suave",
+    nombre: "Higiene Facial Suprema",
     precio: "55,00€",
     duracion: "45 min",
     frecuencia: "1 vez al mes",
-    descripcion: "Limpieza profunda sin extracción para pieles grasas y mixtas.",
+    descripcion: "Tratamiento de limpieza profunda sin extracción, diseñado para pieles que han perdido su luz.",
     pasos: [
-      "Limpieza profunda específica para pieles grasas",
-      "Línea reguladora del exceso de grasa",
-      "Afinamiento del poro",
-      "Equilibrio sin sensación de tirantez"
+      "Limpieza profunda sin extracción",
+      "Aplicación de enzimas renovadoras",
+      "Cócteles revitalizantes",
+      "Masaje lifting"
     ],
-    imagen: equilibrioTotalSvg,
-    alt: "Pureza equilibrante - higiene facial suave"
+    imagen: ritualSerenidadImg,
+    alt: "Higiene Facial Suprema"
+  },
+  {
+    id: 9,
+    nombre: "Ice skin - crioterapia facial",
+    precio: "89,00€",
+    duracion: "60 min",
+    frecuencia: "1 sesión semanal",
+    descripcion: "Tratamiento de crioterapia facial para desinflamar, tonificar y redefinir la piel.",
+    pasos: [
+      "Preparación de la piel",
+      "Aplicación de crioterapia facial",
+      "Desinflamación y tonificación",
+      "Efecto tensor inmediato"
+    ],
+    imagen: luzCalmanteImg,
+    alt: "Ice skin - crioterapia facial"
+  },
+  {
+    id: 10,
+    nombre: "La cápsula del tiempo",
+    precio: "89,00€",
+    duracion: "75 min",
+    frecuencia: "Tratamiento personalizado",
+    descripcion: "Tratamiento que fusiona aparatología, activos de alto rendimiento y masajes específicos para regeneración, reafirmación y rejuvenecimiento.",
+    pasos: [
+      "Evaluación personalizada",
+      "Fusión de aparatología avanzada",
+      "Aplicación de activos de alto rendimiento",
+      "Regeneración, reafirmación y rejuvenecimiento"
+    ],
+    imagen: purezaCompletaSvg,
+    alt: "La cápsula del tiempo"
+  },
+  {
+    id: 11,
+    nombre: "Lifting Lumínico",
+    precio: "89,00€",
+    duracion: "60 min",
+    frecuencia: "1 o 2 sesiones a la semana",
+    descripcion: "Fotobioestimulación para un efecto lifting inmediato.",
+    pasos: [
+      "Evaluación del tipo de piel",
+      "Aplicación de luz LED de alta intensidad",
+      "Reafirmación de la piel",
+      "Redefinición del óvalo facial"
+    ],
+    imagen: purezaCompletaSvg,
+    alt: "Lifting Lumínico"
   },
   {
     id: 12,
-    nombre: "Equilibrio puro - tratamiento cosmético regulador",
-    precio: "65,00€",
-    duracion: "60 min",
-    frecuencia: "1 vez por semana",
-    descripcion: "Tratamiento sin aparatología que trabaja únicamente con la línea Dermo controle.",
-    pasos: [
-      "Aplicación de la línea Dermo controle",
-      "Regulación de la producción de sebo",
-      "Minimización de los poros",
-      "Matificación sin deshidratación"
-    ],
-    imagen: equilibrioTotalSvg,
-    alt: "Equilibrio puro - tratamiento cosmético"
-  },
-  {
-    id: 13,
     nombre: "Luz antiacne - tratamiento intensivo bioestimulación",
     precio: "79,00€",
     duracion: "60 min",
@@ -244,20 +228,36 @@ const tratamientosFaciales: TratamientoFacial[] = [
     alt: "Luz antiacne - bioestimulación"
   },
   {
-    id: 14,
-    nombre: "Renovación profunda - higiene facial completa",
-    precio: "61,00€",
+    id: 13,
+    nombre: "Luz calmante - fotobioestimulación para la piel sensible",
+    precio: "89,00€",
     duracion: "60 min",
-    frecuencia: "1 vez al mes",
-    descripcion: "Tratamiento completo de limpieza profunda con extracción de impurezas.",
+    frecuencia: "1 vez en semana",
+    descripcion: "La fotobioestimulación trabaja en profundidad para regenerar y calmar la piel.",
     pasos: [
-      "Limpieza de la piel junto con su tonificación",
-      "Extracción de comedones",
-      "Mascarilla astringente y purificante",
-      "Acabamos con crema refrescante"
+      "Preparación específica para piel sensible",
+      "Aplicación de fotobioestimulación Led",
+      "Trabaja en profundidad para regenerar",
+      "Efecto antiinflamatorio y reparador"
     ],
-    imagen: equilibrioPuroImg,
-    alt: "Renovación profunda - higiene facial completa"
+    imagen: luzCalmanteImg,
+    alt: "Luz calmante - fotobioestimulación"
+  },
+  {
+    id: 14,
+    nombre: "Luz perfecta - Tratamiento facial cosmético despigmentante",
+    precio: "65,00€",
+    duracion: "60 min",
+    frecuencia: "1 sesión semanal durante el primer mes, luego 1 cada 15 días",
+    descripcion: "Este tratamiento es la opción perfecta para quienes buscan atenuar el tono desigual y devolver la vitalidad a su rostro sin recurrir a aparatología.",
+    pasos: [
+      "Limpieza con emulsión específica",
+      "Peeling enzimático con ácidos despigmentantes",
+      "Masaje con cóctel despigmentante",
+      "Crema + protector solar SPF 50"
+    ],
+    imagen: equilibrioTotalSvg,
+    alt: "Luz perfecta - tratamiento despigmentante"
   },
   {
     id: 15,
