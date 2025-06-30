@@ -58,7 +58,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Elimina impurezas y comedones",
       "Proporciona nutrición específica según tipo de piel"
     ],
-    imagen: tratamientosGeneralImg,
+    imagen: renovacionProfundaImg,
     alt: "Renovación profunda - higiene facial completa"
   },
   {
@@ -387,7 +387,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Oxigenación celular",
       "Efecto astringente y purificante"
     ],
-    imagen: tratamientosGeneralImg,
+    imagen: luzAntiacneImg,
     alt: "Renovación profunda - higiene facial completa"
   },
   {
@@ -440,7 +440,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Prepara la piel para absorber mejor tratamientos",
       "Aspecto fresco y rejuvenecido"
     ],
-    imagen: tratamientosGeneralImg,
+    imagen: luzPuraImg,
     alt: "Luz pura - microdermoabrasión antimanchas"
   },
   {
@@ -492,7 +492,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Unifica el tono",
       "Tratamiento personalizado"
     ],
-    imagen: tratamientosGeneralImg,
+    imagen: equilibrioPuroImg,
     alt: "Skin glow - dermapen antimanchas"
   },
   {
@@ -670,7 +670,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Ideal para pieles maduras",
       "Prepara para tratamientos posteriores"
     ],
-    imagen: tratamientosGeneralImg,
+    imagen: purezaEquilibranteImg,
     alt: "Oxigenación profunda"
   },
   {
