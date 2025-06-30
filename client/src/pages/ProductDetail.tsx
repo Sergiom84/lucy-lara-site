@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Booking from "@/components/Booking";
 import cremaContornoOjos from "../assets/images/Crema_cortono_de_ojos.png";
 import cremaPielManchas from "../assets/images/Crema_cuidado_Piel_con_Machas.png";
 import cremaDespigmentante from "../assets/images/Crema_Despigmentación.png";
@@ -369,6 +370,7 @@ const ProductDetail = () => {
         </div>
       </main>
       
+      <Booking />
       <Footer />
     </div>
   );

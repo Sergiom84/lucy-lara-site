@@ -4,6 +4,7 @@ import { Link, useParams } from "wouter";
 import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Booking from "@/components/Booking";
 import renovacionProfundaImg from "@/assets/images/renovacion_profunda.png";
 import renovacionCristalImg from "@/assets/images/renovacion_cristal.png";
 import purezaFrescuraImg from "@/assets/images/pureza_frescura.png";
@@ -895,6 +896,7 @@ const TratamientoDetail = () => {
         </div>
       </main>
       
+      <Booking />
       <Footer />
     </div>
   );

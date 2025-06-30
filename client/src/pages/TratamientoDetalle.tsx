@@ -4,6 +4,7 @@ import { Link, useParams } from "wouter";
 import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Booking from "@/components/Booking";
 import renovacionProfundaSvg from "@/assets/svg/renovacion-profunda.svg";
 import renovacionCristalSvg from "@/assets/svg/renovacion-cristal.svg";
 import descansoVitalidadSvg from "@/assets/svg/descanso-vitalidad.svg";
@@ -370,6 +371,7 @@ const TratamientoDetalle = () => {
         </div>
       </main>
       
+      <Booking />
       <Footer />
     </div>
   );
