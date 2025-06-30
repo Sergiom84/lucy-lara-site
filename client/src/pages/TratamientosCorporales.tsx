@@ -4,6 +4,7 @@ import { ArrowLeft, Clock, Euro, Info, Heart, Hand } from "lucide-react";
 import { Link } from "wouter";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Booking from "../components/Booking";
 import manosQueSananImg from "@assets/Manos que sanan_1750678840064.png";
 
 interface TratamientoCorporal {
@@ -281,6 +282,7 @@ const TratamientosCorporales = () => {
         </div>
       </main>
       
+      <Booking />
       <Footer />
     </div>
   );
