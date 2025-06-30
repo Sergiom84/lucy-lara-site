@@ -258,7 +258,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Mascarilla astringente y purificante",
       "Acabamos con crema refrescante"
     ],
-    imagen: tratamientosGeneralImg,
+    imagen: equilibrioPuroImg,
     alt: "Renovación profunda - higiene facial completa"
   },
   {
@@ -290,7 +290,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Aplicación de activos despigmentantes",
       "Mejora de la luminosidad"
     ],
-    imagen: tratamientosGeneralImg,
+    imagen: luzPuraImg,
     alt: "Luz pura - microdermoabrasión antimanchas"
   },
   {
@@ -322,7 +322,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Tratamiento adaptado y personalizado",
       "Unificación del tono de la piel"
     ],
-    imagen: tratamientosGeneralImg,
+    imagen: luzAntiacneImg,
     alt: "Skin glow - dermapen antimanchas"
   },
   {
@@ -434,7 +434,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Oxigenación celular",
       "Estimulación de la regeneración celular"
     ],
-    imagen: tratamientosGeneralImg,
+    imagen: purezaEquilibranteImg,
     alt: "Oxigenación profunda"
   },
   {

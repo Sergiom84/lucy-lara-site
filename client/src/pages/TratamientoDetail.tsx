@@ -5,16 +5,19 @@ import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Booking from "@/components/Booking";
-import renovacionProfundaImg from "@/assets/images/renovacion_profunda.png";
-import renovacionCristalImg from "@/assets/images/renovacion_cristal.png";
-import purezaFrescuraImg from "@/assets/images/pureza_frescura.png";
-import luzCalmanteImg from "@assets/Luz calmante - fotoestimulación para la piel sensible_1750671080945.jpg";
-import higieneFacialSupremaImg from "@assets/Higiene Facial Suprema_1750671075793.jpg";
-import iceSkinImg from "@assets/Ice Skin - crioterapia facial_1750672325625.jpg";
-import eternaJuventudImg from "@assets/Eterna Juventud 2 en 1_1750672327131.jpg";
+import renovacionProfundaImg from "@assets/Renovación profunda - higiene facial completa_1751276942402.png";
+import renovacionCristalImg from "@assets/Renovación de cristal - higiene facial completa con microdermoabrasion._1751276942401.jpg";
+import purezaFrescuraImg from "@assets/Pureza y frescura - higiene facial_1751276942401.png";
+import luzCalmanteImg from "@assets/Luz calmante - fotobioestimulación para la piel sensible._1751276942398.png";
+import ritualSerenidadImg from "@assets/Ritual serenidad - hig. facial + fotobioestimulación + cuidado específico._1751276942391.png";
+import stopAcneImg from "@assets/Stop acné - higiene facial completa + fotobioestimulación_1751276942392.png";
+import descansoVitalidadImg from "@assets/Descanso y vitalidad - higiene facial completa con presoterapia ocular._1751276942394.png";
+import equilibrioPuroImg from "@assets/Equilibrio puro - tratamiento cosmético regulador._1751276942396.png";
+import luzAntiacneImg from "@assets/Luz antiacne - tratamiento intensivo bioestimulación._1751276942396.png";
+import luzPuraImg from "@assets/Luz pura - hig. facial completa + microdermoabrasion + cosmética antimanchas._1751276942399.png";
+import purezaEquilibranteImg from "@assets/Pureza equilibrante - higiene facial suave._1751276942400.png";
 import descansoVitalidadSvg from "@/assets/svg/descanso-vitalidad.svg";
 import equilibrioTotalSvg from "@/assets/svg/equilibrio-total.svg";
-import descansoVitalidadImg from "@assets/Descanso y vitalidad - higiene facial completa con presoterapia facial_1750692485135.jpg";
 import tratamientosGeneralImg from "@assets/image_1750692562300.png";
 import purezaCompletaSvg from "@/assets/svg/pureza-completa.svg";
 
@@ -567,7 +570,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Efecto lifting",
       "Ideal para pieles apagadas y envejecidas"
     ],
-    imagen: higieneFacialSupremaImg,
+    imagen: ritualSerenidadImg,
     alt: "Higiene Facial Suprema"
   },
   {
@@ -592,7 +595,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Ahorra tiempo",
       "Beneficios a largo plazo"
     ],
-    imagen: eternaJuventudImg,
+    imagen: stopAcneImg,
     alt: "Eterna Juventud 2 en 1"
   },
   {
@@ -617,7 +620,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
       "Efecto tensor y revitalizante",
       "Ideal para pieles cansadas y con flacidez"
     ],
-    imagen: iceSkinImg,
+    imagen: luzCalmanteImg,
     alt: "Ice skin - crioterapia facial"
   },
   {
