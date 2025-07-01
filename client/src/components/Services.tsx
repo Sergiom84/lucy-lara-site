@@ -152,22 +152,7 @@ const Services = () => {
             </motion.div>
           ))}
         </motion.div>
-        
-        {/* View All Button */}
-        <motion.div 
-          className="mt-12 text-center"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.6, duration: 0.8 }}
-        >
-          <a 
-            href="#reserva" 
-            className="inline-block bg-accent hover:bg-accentDark text-white px-8 py-3 rounded-full transition-colors"
-          >
-            Ver todos los servicios
-          </a>
-        </motion.div>
+
       </div>
     </section>
   );
