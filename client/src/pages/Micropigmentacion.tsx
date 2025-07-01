@@ -155,31 +155,7 @@ const Micropigmentacion = () => {
                     <span className="font-medium">{tratamientoMicropigmentacion.duracion}</span>
                   </div>
 
-                  {/* Precios */}
-                  <div className="mb-8">
-                    <h3 className="font-semibold text-lg mb-4 flex items-center">
-                      <Euro size={20} className="text-accent mr-2" />
-                      Precios por tratamiento
-                    </h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                      <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                        <span>Cejas</span>
-                        <span className="font-semibold text-accent">{tratamientoMicropigmentacion.precios.cejas}</span>
-                      </div>
-                      <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                        <span>Línea ojos superior</span>
-                        <span className="font-semibold text-accent">{tratamientoMicropigmentacion.precios.lineaOjosSuperior}</span>
-                      </div>
-                      <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                        <span>Línea ojos inferior</span>
-                        <span className="font-semibold text-accent">{tratamientoMicropigmentacion.precios.lineaOjosInferior}</span>
-                      </div>
-                      <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                        <span>Labios completos</span>
-                        <span className="font-semibold text-accent">{tratamientoMicropigmentacion.precios.labiosCompletos}</span>
-                      </div>
-                    </div>
-                  </div>
+
                 </div>
               </div>
             </motion.div>
@@ -283,7 +259,7 @@ const Micropigmentacion = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center bg-white text-accent px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                Reservar consulta
+                Solicitar valoración y precio
               </a>
             </motion.div>
           </motion.div>

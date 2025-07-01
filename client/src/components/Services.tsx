@@ -42,7 +42,7 @@ const services = [
     id: 4,
     title: "Micropigmentación",
     description: "Realza tus rasgos naturales con técnicas de pigmentación semi-permanente para cejas, labios y ojos.",
-    price: "Desde 280€",
+    price: "",
     image: micropigmentacion,
     alt: "Servicio de micropigmentación profesional para hombres y mujeres",
     link: "/micropigmentacion",
