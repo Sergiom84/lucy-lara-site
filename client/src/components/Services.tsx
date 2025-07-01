@@ -5,6 +5,7 @@ import eliminacionVello from "../assets/images/Eliminación_Vello_Tamara.jpg";
 import micropigmentacion from "../assets/images/Micropigmentación_Alex.jpg";
 import micropigmentacion2 from "../assets/images/micropigmentacion2.jpg";
 import tratamientoFacial from "../assets/images/tratamiento 8.jpg";
+import otrosTratamientosImg from "@assets/image_1751373288528.png";
 
 const services = [
   {
@@ -52,7 +53,7 @@ const services = [
     title: "Otros Tratamientos",
     description: "Descubre nuestra gama completa de tratamientos personalizados para satisfacer todas tus necesidades de belleza.",
     price: "Desde 15€",
-    image: micropigmentacion2,
+    image: otrosTratamientosImg,
     alt: "Otros tratamientos especializados",
     link: "/otros-tratamientos",
     linkText: "Ver tratamientos"
