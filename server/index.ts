@@ -1,8 +1,12 @@
 import express, { type Request, Response, NextFunction } from "express";
+import cors from "cors";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
 
 const app = express();
+// Configuración de CORS
+const allowedOrigin = process.env.FRONTEND_ORIGIN || '*';
+app.use(cors({ origin: allowedOrigin, credentials: true }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
@@ -44,7 +48,8 @@ app.use((req, res, next) => {
     const message = err.message || "Internal Server Error";
 
     res.status(status).json({ message });
-    throw err;
+    // Solo loguear el error, no volver a lanzarlo
+    console.error(err);
   });
 
   // importantly only setup vite in development and after

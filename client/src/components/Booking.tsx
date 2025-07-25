@@ -67,7 +67,25 @@ const Booking = () => {
       });
       return;
     }
-    
+    // Validación extra de email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      toast({
+        title: "Email no válido",
+        description: "Introduce un email válido.",
+        variant: "destructive"
+      });
+      return;
+    }
+    // Validación de teléfono simple
+    if (formData.phone.length < 6) {
+      toast({
+        title: "Teléfono no válido",
+        description: "Introduce un teléfono válido.",
+        variant: "destructive"
+      });
+      return;
+    }
     try {
       setSubmitting(true);
       
@@ -100,7 +118,12 @@ const Booking = () => {
           message: ""
         });
       } else {
-        throw new Error('Error en el servidor');
+        const errorData = await response.json();
+        toast({
+          title: "Error en el servidor",
+          description: errorData.message || 'Hubo un problema al enviar el formulario. Por favor, inténtalo de nuevo o contáctanos directamente.',
+          variant: "destructive"
+        });
       }
     } catch (error) {
       console.error("Error submitting booking:", error);
@@ -235,7 +258,7 @@ const Booking = () => {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="w-full bg-accent hover:bg-accentDark text-white py-4 px-6 rounded-lg font-semibold text-lg transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className={`w-full bg-accent hover:bg-accentDark text-white py-4 px-6 rounded-lg font-semibold text-lg transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed ${submitting ? 'animate-pulse' : ''}`}
                 >
                   {submitting ? "Enviando..." : "Enviar"}
                 </button>
