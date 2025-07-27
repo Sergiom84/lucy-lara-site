@@ -7,23 +7,32 @@ import { setupVite, serveStatic, log } from "./vite";
 
 const app = express();
 
-// Configuración de seguridad con Helmet
+// Configuración de seguridad con Helmet (más permisiva para debugging)
 app.use(helmet({
-  contentSecurityPolicy: {
+  contentSecurityPolicy: process.env.NODE_ENV === 'production' ? {
     directives: {
       defaultSrc: ["'self'"],
       styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
       fontSrc: ["'self'", "https://fonts.gstatic.com"],
       imgSrc: ["'self'", "data:", "https:", "blob:"],
-      scriptSrc: ["'self'", "'unsafe-inline'"],
-      connectSrc: ["'self'", "https://api.deepseek.com"]
+      scriptSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'"],
+      connectSrc: ["'self'", "https://api.deepseek.com"],
+      frameSrc: ["'self'", "https:"],
+      objectSrc: ["'none'"],
+      baseUri: ["'self'"]
     }
-  }
+  } : false, // Disable CSP in development
+  crossOriginEmbedderPolicy: false
 }));
 
 // Configuración CORS segura
 const allowedOrigins = process.env.NODE_ENV === 'production' 
-  ? ['https://centroesteticalucylara.es', 'https://www.centroesteticalucylara.es']
+  ? [
+      'https://centroesteticalucylara.com', 
+      'https://www.centroesteticalucylara.com',
+      'https://centroesteticalucylara.es',
+      'https://www.centroesteticalucylara.es'
+    ]
   : ['http://localhost:5000', 'http://localhost:5173', 'http://127.0.0.1:5000'];
 
 app.use(cors({ 
@@ -127,8 +136,10 @@ app.use((req, res, next) => {
   // ALWAYS serve the app on port 5000
   // this serves both the API and the client.
   // It is the only port that is not firewalled.
-  const port = 5000;
-  server.listen(port, "127.0.0.1", () => {
-    log(`serving on port ${port}`);
+  const port = process.env.PORT || 5000;
+  const host = process.env.NODE_ENV === 'production' ? '0.0.0.0' : '127.0.0.1';
+  
+  server.listen(Number(port), host, () => {
+    log(`serving on port ${port} (${host})`);
   });
 })();
