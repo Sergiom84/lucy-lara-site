@@ -18,7 +18,7 @@ const Header = () => {
   const navLinks = [
     { href: isHomePage ? "#productos" : "/#productos", label: "Productos" },
     { href: isHomePage ? "#promociones" : "/#promociones", label: "Promociones" },
-    { href: isHomePage ? "#reserva" : "/#reserva", label: "Contacto" }
+    { href: isHomePage ? "#booking" : "/#booking", label: "Contacto" }
   ];
 
   // Handle scroll effect for sticky header

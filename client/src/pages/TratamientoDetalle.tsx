@@ -347,27 +347,6 @@ const TratamientoDetalle = () => {
               ))}
             </div>
           </motion.div>
-          
-          {/* CTA Final */}
-          <motion.div 
-            className="bg-accent/10 rounded-xl p-8 text-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            <h3 className="font-playfair text-2xl font-semibold mb-4">
-              ¿Listo para transformar tu piel?
-            </h3>
-            <p className="text-textLight mb-6 max-w-2xl mx-auto">
-              Reserva tu cita para el tratamiento {tratamiento.nombre} y experimenta los beneficios de nuestros cuidados profesionales.
-            </p>
-            <a 
-              href="#reserva"
-              className="bg-accent hover:bg-accentDark text-white py-3 px-8 rounded-full text-lg font-semibold transition-colors inline-block"
-            >
-              Solicitar información - {tratamiento.precio}
-            </a>
-          </motion.div>
         </div>
       </main>
       

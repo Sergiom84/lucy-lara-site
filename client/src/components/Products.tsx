@@ -272,6 +272,60 @@ const Products = () => {
             ))}
           </motion.div>
         </motion.div>
+
+        {/* Google Maps Section */}
+        <motion.div 
+          className="mb-12"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          variants={containerVariants}
+        >
+          <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 max-w-6xl mx-auto">
+            <motion.div 
+              className="relative overflow-hidden rounded-xl shadow-lg"
+              variants={itemVariants}
+            >
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3040.4764085835172!2d-3.698148323600177!3d40.35395965945663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4226e706291469%3A0xe1e19330e842b9d8!2sCentro%20de%20Belleza%20y%20est%C3%A9tica%20integral%20Lucy%20Lara%2C%20Ciudad%20de%20los%20Angeles!5e0!3m2!1sen!2ses!4v1753605430390!5m2!1sen!2ses" 
+                width="100%" 
+                height="450" 
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full h-[300px] md:h-[450px] rounded-xl"
+                title="Ubicación Centro de Belleza Lucy Lara"
+              />
+            </motion.div>
+            <motion.div 
+              className="mt-6 grid md:grid-cols-2 gap-6"
+              variants={itemVariants}
+            >
+              <div className="text-center md:text-left">
+                <h4 className="font-semibold text-lg text-textDark mb-2">📍 Dirección</h4>
+                <p className="text-textLight">
+                  C. de la Alegría de la Huerta, 22<br />
+                  Villaverde, 28041 Madrid
+                </p>
+              </div>
+              <div className="text-center md:text-right">
+                <h4 className="font-semibold text-lg text-textDark mb-2">🚗 Cómo llegar</h4>
+                <a 
+                  href="https://maps.app.goo.gl/FHzgta6fuTCstQBp9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-accent hover:text-accent/80 transition-colors font-medium"
+                >
+                  Ver indicaciones
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

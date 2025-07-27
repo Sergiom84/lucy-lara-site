@@ -260,25 +260,6 @@ const TratamientosCorporales = () => {
               </div>
             </div>
           </motion.div>
-
-          {/* Call to action */}
-          <motion.div 
-            variants={itemVariants}
-            className="text-center bg-gradient-to-r from-accent to-accentDark rounded-xl p-8 text-white mt-12"
-          >
-            <h3 className="font-playfair text-2xl font-semibold mb-4">
-              ¿Necesitas un momento de relajación?
-            </h3>
-            <p className="mb-6 text-white/90">
-              Reserva tu sesión de masaje y desconecta del estrés diario. Tu cuerpo y mente te lo agradecerán.
-            </p>
-            <a 
-              href="#reserva"
-              className="inline-flex items-center bg-white text-accent px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
-              Solicitar información
-            </a>
-          </motion.div>
         </div>
       </main>
       

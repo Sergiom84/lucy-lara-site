@@ -5,38 +5,83 @@ import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 const testimonials = [
   {
     id: 1,
-    text: "Los tratamientos faciales son increíbles. Mi piel nunca ha lucido tan bien y el ambiente es realmente relajante. El personal es muy profesional y atento.",
-    name: "María Sánchez",
-    initials: "MS",
-    since: "Cliente desde 2021",
+    text: "Experiencia muy agradable. El peeling dejó mi piel renovada y con una sensación de frescura increíble. Tamara es una muy buena profesional y persona, me asesoró muchísimo con el cuidado en casa. Volveré sin duda con el tratamiento por el que iba. Tenemos mucha suerte de tener un sitio que está a este nivel de calidad en la Ciudad de Los Ángeles. Gracias por todo",
+    name: "Victoria Navarrete",
+    initials: "VN",
+    since: "Hace 2 meses",
     color: "primary",
     stars: 5
   },
   {
     id: 2,
-    text: "He probado varios centros de belleza, pero ninguno como este. Los masajes son terapéuticos y el personal realmente entiende lo que necesitas. Totalmente recomendado.",
-    name: "Carlos López",
-    initials: "CL",
-    since: "Cliente desde 2022",
+    text: "Como clienta habitual desde hace años, solo puedo decir que, los tratamientos que ofrecen, no solo destacan por su calidad y resultados. (Además, siempre cuentan con nuevos tratamientos y tecnologías). Pero para mí, lo que realmente diferencia a este centro de otros, es el seguimiento y el mimo con el que nos cuidan a cada una de nosotras, porque siempre se aseguran y supervisan, que el tratamiento funcione y ¡haya buenos resultados! ¡Merece la pena conocer este centro y a su maravilloso equipo chicas! 😊",
+    name: "Ana Herreros",
+    initials: "AH",
+    since: "Hace 3 meses",
     color: "secondary",
     stars: 5
   },
   {
     id: 3,
-    text: "Llevo viniendo desde que abrieron y la calidad nunca ha bajado. Los tratamientos capilares han transformado mi cabello y el ambiente siempre es acogedor.",
-    name: "Laura García",
-    initials: "LG",
-    since: "Cliente desde 2020",
+    text: "La atención personalizada y muy profesional genera máxima confianza y efectividad con los tratamientos. Altamente recomendable. En trato inmejorable",
+    name: "Pilar Losada",
+    initials: "PL",
+    since: "Hace 2 semanas",
     color: "primary",
-    stars: 4.5
+    stars: 5
   },
   {
     id: 4,
-    text: "El servicio de manicura y pedicura es excelente. Los diseños son preciosos y duran muchísimo. Además, el personal es muy amable y las instalaciones muy limpias.",
-    name: "Ana Martínez",
-    initials: "AM",
-    since: "Cliente desde 2022",
+    text: "Muy buena experiencia con la depilación. Además, Tamara me ha asesorado y aconsejado desde la sinceridad y profesionalidad. Se agradece una atención tan empática. Totalmente recomendable 😊",
+    name: "Victoria Serna Villaverde",
+    initials: "VS",
+    since: "Hace 3 semanas",
     color: "secondary",
+    stars: 5
+  },
+  {
+    id: 5,
+    text: "Hace unos meses que voy hacerme el láser y la eléctrica, y desde el primer día me han aconsejado qué tipo de depilación hacerme y cada vez que voy son un encanto, tanto Lucy como Tamara. Os lo recomiendo.",
+    name: "María Luisa Romeo",
+    initials: "MR",
+    since: "Hace 1 mes",
+    color: "primary",
+    stars: 5
+  },
+  {
+    id: 6,
+    text: "Me hice un masaje descontracturante y noté mucha mejoría en la zona de espalda y cuello. Muy buen trato y ambiente tranquilo.",
+    name: "Luisma Garrote Manjón",
+    initials: "LG",
+    since: "Hace 2 meses",
+    color: "secondary",
+    stars: 5
+  },
+  {
+    id: 7,
+    text: "El trato es excelente te asesoran personalmente sobre el tratamiento que necesitas en mi caso para depilación con láser, muy contenta con la experiencia 😊",
+    name: "María Robles",
+    initials: "MR",
+    since: "Hace 5 meses",
+    color: "primary",
+    stars: 5
+  },
+  {
+    id: 8,
+    text: "En mi experiencia con la depilación eléctrica, he tenido unos resultados muy satisfactorios. He probado en diferentes centros, y aún este es el mejor. Hacen un trabajo de calidad además de tener un trato inmejorable con el cliente. Realizan su trabajo con mucha profesionalidad y cariño además de recomendarte de manera especial tratamientos más acordes para ti. Eficacia y buenos resultados.",
+    name: "María Finez",
+    initials: "MF",
+    since: "Hace 4 años",
+    color: "secondary",
+    stars: 5
+  },
+  {
+    id: 9,
+    text: "Después de haber ido varias sesiones, le doy un máximo de ⭐, ya que estoy reduciendo el vello canoso, tan difícil de erradicar, y el trato es buenísimo, y los costes del tratamiento me parecen asequibles. Lo recomiendo 100%.",
+    name: "Eva Fernández",
+    initials: "EF",
+    since: "Hace 2 años",
+    color: "primary",
     stars: 5
   }
 ];
@@ -45,6 +90,18 @@ const Testimonials = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [slideWidth, setSlideWidth] = useState(100);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  // Function to get avatar background color
+  const getAvatarColorClass = (color: string) => {
+    switch (color) {
+      case 'primary':
+        return 'bg-primary';
+      case 'secondary':
+        return 'bg-secondary';
+      default:
+        return 'bg-accent';
+    }
+  };
 
   // Update slide width on window resize
   useEffect(() => {
@@ -145,7 +202,7 @@ const Testimonials = () => {
                     </div>
                     <p className="text-textLight italic mb-4">"{testimonial.text}"</p>
                     <div className="flex items-center">
-                      <div className={`w-12 h-12 bg-${testimonial.color} rounded-full flex items-center justify-center text-accent font-medium`}>
+                      <div className={`w-12 h-12 ${getAvatarColorClass(testimonial.color)} rounded-full flex items-center justify-center text-white font-medium`}>
                         {testimonial.initials}
                       </div>
                       <div className="ml-3">

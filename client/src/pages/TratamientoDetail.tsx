@@ -815,13 +815,6 @@ const TratamientoDetail = () => {
               <p className="text-lg text-textLight mb-8 leading-relaxed">
                 {tratamiento.descripcionLarga}
               </p>
-              
-              <a 
-                href="#reserva"
-                className="bg-accent hover:bg-accentDark text-white px-8 py-3 rounded-full transition-colors font-medium text-lg inline-block"
-              >
-                Solicitar información
-              </a>
             </div>
           </motion.div>
           
@@ -868,35 +861,6 @@ const TratamientoDetail = () => {
                   </div>
                 ))}
               </div>
-            </div>
-          </motion.div>
-          
-          {/* Call to action final */}
-          <motion.div 
-            className="text-center bg-white rounded-xl p-8 shadow-lg"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            <h3 className="font-playfair text-2xl font-semibold mb-4">
-              ¿Listo para transformar tu piel?
-            </h3>
-            <p className="text-textLight mb-6 max-w-2xl mx-auto">
-              Reserva tu cita ahora y experimenta los beneficios de nuestro tratamiento {tratamiento.nombre}.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="#reserva"
-                className="bg-accent hover:bg-accentDark text-white px-8 py-3 rounded-full transition-colors font-medium inline-block"
-              >
-                Solicitar información
-              </a>
-              <Link 
-                href="/tratamientos-faciales"
-                className="border border-accent text-accent hover:bg-accent hover:text-white px-8 py-3 rounded-full transition-colors font-medium"
-              >
-                Ver otros tratamientos
-              </Link>
             </div>
           </motion.div>
         </div>

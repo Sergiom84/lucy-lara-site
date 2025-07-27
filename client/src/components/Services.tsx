@@ -141,7 +141,7 @@ const Services = () => {
                     </Link>
                   ) : (
                     <a 
-                      href="#reserva" 
+                      href="#booking" 
                       className="text-accent hover:text-accentDark font-medium flex items-center gap-1 group"
                     >
                       Reservar 

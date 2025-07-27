@@ -358,13 +358,6 @@ const ProductDetail = () => {
                 <h2 className="font-medium text-lg mb-3">Modo de uso</h2>
                 <p className="text-textLight">{producto.modo_uso}</p>
               </div>
-              
-              <a 
-                href="#reserva"
-                className="bg-accent hover:bg-accentDark text-white px-8 py-3 rounded-full transition-colors inline-flex items-center"
-              >
-                Solicitar información
-              </a>
             </motion.div>
           </div>
         </div>

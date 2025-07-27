@@ -75,10 +75,11 @@ const Hero = () => {
               zIndex: currentSlide === index ? 10 : 0,
             }}
           >
-            <div 
-              className="absolute inset-0 bg-cover bg-center"
+            <img 
+              src={src}
+              alt={`Slide ${index + 1}`}
+              className="absolute inset-0 w-full h-full object-cover object-center"
               style={{
-                backgroundImage: `url(${src})`,
                 filter: 'brightness(0.85)',
               }}
             />
@@ -124,7 +125,7 @@ const Hero = () => {
             Nuestros servicios
           </a>
           <a 
-            href="#reserva" 
+            href="#booking" 
             className="bg-transparent border border-white hover:bg-white/10 text-white px-8 py-3 rounded-none text-lg transition-colors"
           >
             Solicitar información

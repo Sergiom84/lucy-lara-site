@@ -5,7 +5,7 @@ import Welcome from "@/components/Welcome";
 import Services from "@/components/Services";
 import Products from "@/components/Products";
 import Testimonials from "@/components/Testimonials";
-import Booking from "@/components/Booking";
+import BookingImproved from "@/components/BookingImproved";
 import Footer from "@/components/Footer";
 
 const Home = () => {
@@ -30,7 +30,7 @@ const Home = () => {
       <Services />
       <Products />
       <Testimonials />
-      <Booking />
+      <BookingImproved />
       <Footer />
     </div>
   );
