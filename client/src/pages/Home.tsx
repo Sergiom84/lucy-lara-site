@@ -12,13 +12,13 @@ const Home = () => {
   return (
     <div className="font-inter text-textDark bg-neutral">
       <Helmet>
-        <title>Centro de Belleza y Bienestar - Beauty&Wellness</title>
-        <meta name="description" content="Descubre nuestros tratamientos de belleza y bienestar. Reserva tu cita online y déjate mimar por nuestro equipo de profesionales." />
-        <meta property="og:title" content="Centro de Belleza y Bienestar - Beauty&Wellness" />
-        <meta property="og:description" content="Tratamientos de belleza y bienestar de alta calidad. Reserva tu cita online." />
+        <title>Centro de Estética Lucy Lara Madrid | Tratamientos Faciales y Corporales</title>
+        <meta name="description" content="Centro de estética en Madrid Villaverde. Tratamientos faciales, depilación láser, micropigmentación, presoterapia. Más de 15 años de experiencia. ¡Reserva ya!" />
+        <meta property="og:title" content="Centro de Estética Lucy Lara Madrid | Tratamientos Faciales y Corporales" />
+        <meta property="og:description" content="Centro de estética en Madrid Villaverde. Tratamientos faciales, depilación láser, micropigmentación, presoterapia. Más de 15 años de experiencia." />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://images.unsplash.com/photo-1470259078422-826894b933aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080" />
-        <meta property="og:url" content="https://beautywellness.com" />
+        <meta property="og:image" content="/images/logo-lucylara.png" />
+        <meta property="og:url" content="https://centroesteticalucylara.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
