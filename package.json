@@ -9,7 +9,7 @@
     "dev:client": "vite",
     "build:client": "vite build",
     "build:server": "esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
-    "copy:images": "node -e \"const fs=require('fs');const path=require('path');const src='public/images';const dst='dist/public/images';if(!fs.existsSync(dst))fs.mkdirSync(dst,{recursive:true});fs.readdirSync(src).filter(f=>f.endsWith('.webp')||f.endsWith('.png')).forEach(f=>fs.copyFileSync(path.join(src,f),path.join(dst,f)));\"",
+    "copy:images": "node copy-images.mjs",
     "build": "npm run build:client && npm run build:server && npm run copy:images",
     "start": "cross-env NODE_ENV=production node dist/index.js",
     "check": "tsc",
