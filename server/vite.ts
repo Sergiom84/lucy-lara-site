@@ -71,12 +71,28 @@ export async function setupVite(app: Express, server: Server) {
 
 export function serveStatic(app: Express) {
   const distPath = path.resolve(__dirname, "..", "dist", "public");
+  const distRootPath = path.resolve(__dirname, "..", "dist");
 
   if (!fs.existsSync(distPath)) {
     throw new Error(
       `Could not find the build directory: ${distPath}, make sure to build the client first`,
     );
   }
+
+  // Serve images from top-level images directory (for static site compatibility)
+  app.use('/images', express.static(path.join(distRootPath, 'images'), {
+    setHeaders: (res, path) => {
+      if (path.endsWith('.webp')) {
+        res.setHeader('Content-Type', 'image/webp');
+      } else if (path.endsWith('.png')) {
+        res.setHeader('Content-Type', 'image/png');
+      } else if (path.endsWith('.jpg') || path.endsWith('.jpeg')) {
+        res.setHeader('Content-Type', 'image/jpeg');
+      }
+      // Enable caching for images
+      res.setHeader('Cache-Control', 'public, max-age=31536000');
+    }
+  }));
 
   // Serve static files with proper headers
   app.use(express.static(distPath, {
