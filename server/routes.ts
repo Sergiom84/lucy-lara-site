@@ -85,7 +85,27 @@ async function getChatbotResponse(message: string): Promise<string> {
   try {
     const DEEPSEEK_API_KEY = process.env.DEEPSEEK_API_KEY;
     if (!DEEPSEEK_API_KEY) {
-      return "Lo siento, el servicio de chat no está disponible en este momento. Por favor, contacta directamente al 91 505 20 67.";
+      console.log('⚠️ DEEPSEEK_API_KEY not configured, using fallback response');
+      return `¡Hola! 👋 Soy LucyBot, tu asistente del Centro de Estética Lucy Lara ✨
+      
+📍 **Estamos ubicados en:** C. de la Alegría de la Huerta, 22, Villaverde, Madrid
+
+📞 **Contáctanos:**
+• Teléfono: 91 505 20 67
+• WhatsApp: 684 203 633
+• Email: celucylar@gmail.com
+
+🕒 **Horarios:**
+Lunes a Viernes: 10:00-13:30 y 16:00-19:30
+
+💅 **Nuestros servicios principales:**
+• Tratamientos faciales (Renovación profunda, Ice Skin, Lifting Lumínico)
+• Micropigmentación (cejas, línea de ojos, labios)
+• Depilación láser y eléctrica
+• Masajes relajantes y terapéuticos
+• Acupuntura
+
+Para más información específica o reservas, llámanos al 91 505 20 67 😊💖`;
     }
 
     const LUCYBOT_SYSTEM_PROMPT = `

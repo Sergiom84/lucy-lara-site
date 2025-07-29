@@ -53,13 +53,13 @@ const sources = [
     dst: path.join(__dirname, 'dist', 'images'),
     name: 'client/public/images → dist/images'
   },
-  // From top-level public/images to dist/images (fallback)
+  // From top-level images to dist/images (legacy images)
   { 
-    src: path.join(__dirname, 'public', 'images'), 
+    src: path.join(__dirname, 'images'), 
     dst: path.join(__dirname, 'dist', 'images'),
-    name: 'public/images → dist/images'
+    name: 'images → dist/images'
   },
-  // From attached_assets to dist/images (for your uploaded assets)
+  // From attached_assets to dist/images (for uploaded assets)
   { 
     src: path.join(__dirname, 'attached_assets'), 
     dst: path.join(__dirname, 'dist', 'images'),
