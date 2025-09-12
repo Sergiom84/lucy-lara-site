@@ -25,7 +25,7 @@ class EmailService {
     this.salonEmail = process.env.SALON_EMAIL || 'celucylar@gmail.com';
     
     const gmailUser = process.env.GMAIL_USER || 'celucylar@gmail.com';
-    const gmailPass = process.env.GMAIL_PASS || 'ytxc flbc amnp gwwm';
+    const gmailPass = process.env.GMAIL_PASS || '';
 
     this.config = {
       service: 'gmail',

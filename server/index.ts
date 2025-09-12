@@ -7,22 +7,41 @@ import { setupVite, serveStatic, log } from "./vite";
 
 const app = express();
 
-// Configuración de seguridad con Helmet (más permisiva para debugging)
+// Configuración de seguridad con Helmet mejorada
 app.use(helmet({
   contentSecurityPolicy: process.env.NODE_ENV === 'production' ? {
     directives: {
       defaultSrc: ["'self'"],
+      styleSrc: ["'self'", "https://fonts.googleapis.com", "https://cdn.jsdelivr.net"],
+      fontSrc: ["'self'", "https://fonts.gstatic.com"],
+      imgSrc: ["'self'", "data:", "blob:", "https://images.unsplash.com", "https://cdn.jsdelivr.net"],
+      scriptSrc: ["'self'", "https://cdn.jsdelivr.net"],
+      connectSrc: ["'self'", "https://api.deepseek.com", "wss://lucia-lara-site.onrender.com"],
+      frameSrc: ["'self'", "https://calendly.com"],
+      objectSrc: ["'none'"],
+      baseUri: ["'self'"],
+      formAction: ["'self'"],
+      upgradeInsecureRequests: []
+    }
+  } : {
+    directives: {
+      defaultSrc: ["'self'"],
       styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
       fontSrc: ["'self'", "https://fonts.gstatic.com"],
-      imgSrc: ["'self'", "data:", "https:", "blob:"],
+      imgSrc: ["'self'", "data:", "blob:", "https:", "*"],
       scriptSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'"],
-      connectSrc: ["'self'", "https://api.deepseek.com"],
+      connectSrc: ["'self'", "ws://localhost:*", "http://localhost:*", "https://api.deepseek.com"],
       frameSrc: ["'self'", "https:"],
       objectSrc: ["'none'"],
       baseUri: ["'self'"]
     }
-  } : false, // Disable CSP in development
-  crossOriginEmbedderPolicy: false
+  },
+  crossOriginEmbedderPolicy: false,
+  hsts: process.env.NODE_ENV === 'production' ? {
+    maxAge: 31536000,
+    includeSubDomains: true,
+    preload: true
+  } : false
 }));
 
 // Configuración CORS segura

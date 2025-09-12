@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone, Mail, Facebook, Instagram, Search } from "lucide-react";
+import OptimizedImage from "./ui/OptimizedImage";
 import LogoTransparent from "../assets/images/nuevo-logo.webp";
 import logoFigura from "../assets/images/logo-figura.webp";
 
@@ -74,10 +75,13 @@ const Header = () => {
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
               <span className="flex items-center">
-                <img 
+                <OptimizedImage
                   src={logoFigura} 
                   alt="Logo Lucy Lara" 
-                  className="h-12 w-auto" 
+                  className="h-12 w-auto"
+                  priority={true}
+                  width={48}
+                  height={48}
                 />
               </span>
             </Link>

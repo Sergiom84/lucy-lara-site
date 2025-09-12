@@ -101,7 +101,8 @@ export class MemStorage implements IStorage {
       ...insertBooking, 
       id,
       processed: false,
-      createdAt: new Date()
+      createdAt: new Date(),
+      message: insertBooking.message || null
     };
     this.bookings.set(id, booking);
     return booking;

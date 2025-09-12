@@ -55,7 +55,7 @@ const Products = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
   };
 
-  const handleProductClick = (id) => {
+  const handleProductClick = (id: number) => {
     // Aquí podríamos implementar la navegación a la página de detalle del producto
     window.open(`/productos/${id}`, '_blank');
   };
