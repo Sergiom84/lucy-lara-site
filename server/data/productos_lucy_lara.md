@@ -5,9 +5,9 @@
 - **Nombre:** Centro de Estética Lucy Lara
 - **Dirección:** C. de la Alegría de la Huerta, 22, Villaverde, 28041 Madrid
 - **Horario:** Lunes a Viernes, 10:00-13:30 y 16:00-19:30
-- **Teléfonos:** 91 505 20 67 | 684 203 633
+- **Teléfonos:** 91 505 20 67 | 684203633
 - **Email:** celucylar@gmail.com
-- **WhatsApp:** 684 203 633
+- **WhatsApp:** 684203633
 - **Redes Sociales:** 
   - Facebook: @CBLUCYLARA
   - Instagram: @esteticalucylara
@@ -503,7 +503,7 @@
 ## ❓ PREGUNTAS FRECUENTES
 
 ### Reservas y Citas
-- **¿Cómo reservar?** Por teléfono (91 505 20 67), WhatsApp (684 203 633) o formulario web
+- **¿Cómo reservar?** Por teléfono (91 505 20 67), WhatsApp (684203633) o formulario web
 - **¿Se puede cancelar?** Sí, con 24h de antelación
 - **¿Hay lista de espera?** Sí, para citas urgentes
 - **¿Aceptan tarjeta?** Sí, efectivo y tarjeta
@@ -564,8 +564,8 @@ Los precios mostrados en este documento son los precios base actuales. Sin embar
 - **Masajes:** Precio fijo por sesión completa
 
 **Para información de precios específicos o promociones actuales, contactar:**
-- Teléfono: 91 505 20 67 / 684 203 633
-- WhatsApp: 684 203 633
+- Teléfono: 91 505 20 67 / 684203633
+- WhatsApp: 684203633
 - Email: celucylar@gmail.com
 
 ## 🎁 PROMOCIONES Y PAQUETES
@@ -583,7 +583,7 @@ El centro ofrece regularmente:
 
 - **Dirección completa:** C. de la Alegría de la Huerta, 22, Villaverde, 28041 Madrid
 - **Teléfono fijo:** 91 505 20 67
-- **Móvil/WhatsApp:** 684 203 633
+- **Móvil/WhatsApp:** 684203633
 - **Email:** celucylar@gmail.com
 - **Facebook:** @CBLUCYLARA
 - **Instagram:** @esteticalucylara

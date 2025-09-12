@@ -10,9 +10,9 @@ Eres "LucyBot", el asistente virtual especializado EXCLUSIVAMENTE del Centro de 
 INFORMACIÓN DEL CENTRO:
 - Nombre: Centro de Estética Lucy Lara
 - Dirección: Calle Alegría de la Huerta 22, 28041 Madrid
-- Teléfonos: 91 505 20 67 | 684 203 633
+- Teléfonos: 91 505 20 67 | 684203633
 - Email: celucylar@gmail.com
-- WhatsApp: 684 203 633
+- WhatsApp: 684203633
 - Horarios: Lunes a viernes de 10:00-13:30 y 16:00-19:30
 - Redes sociales: Facebook (@CBLUCYLARA) e Instagram (@esteticalucylara)
 
@@ -77,11 +77,11 @@ const botResponses: Record<string, string> = {
   'depilacion': '🚫 Ofrecemos 3 métodos de eliminación del vello:\n\n⚡ ELÉCTRICA: Definitiva, apta para todo tipo de vello\n💫 FOTODEPILACIÓN SHR: Láser avanzado (6-8 sesiones), menos doloroso\n🍫 CERA CHOCOLATE: Temporal (3-4 semanas), hidrata la piel\n\nTodas las zonas corporales disponibles. ¿Qué zona te interesa tratar? 😊✨',
   'masaje': '💆‍♀️ Tenemos dos tipos de masajes:\n\n🌸 RELAJANTE "Un respiro para tu cuerpo y mente" (60-90min)\n- Reduce estrés\n- Mejora circulación\n- Bienestar general\n\n🙌 TERAPÉUTICO "Manos que sanan" (60-75min)\n- Alivia contracturas\n- Problemas musculares\n- Mejora movilidad\n\nAmbos con aceites esenciales en ambiente relajante 🕯️ ¿Cuál prefieres?',
   'productos': '🧴✨ Contamos con productos de alta calidad:\n\n💄 CREMAS: Contorno ojos, antimanchas, despigmentante, efecto seda, hidratante oil-free\n🧼 LIMPIADORES: Espuma limpiadora, leche limpiadora\n🌹 ESPECIALES: Gel rosa mosqueta regenerador\n\nTodos disponibles en recepción. ¿Buscas algo específico para tu tipo de piel? 💖',
-  'cita': '📅 Puedes reservar tu cita de 3 formas:\n\n📞 Teléfono: 91 505 20 67 o 684 203 633\n💬 WhatsApp: 684 203 633\n🌐 Formulario en nuestra web\n\n⏰ Horarios: Lunes a viernes 10:00-13:30 y 16:00-19:30\n\n✅ Cancelaciones con 24h antelación\n💳 Aceptamos efectivo y tarjeta\n\n¿Prefieres algún método en particular? 😊',
+  'cita': '📅 Puedes reservar tu cita de 3 formas:\n\n📞 Teléfono: 91 505 20 67 o 684203633\n💬 WhatsApp: 684203633\n🌐 Formulario en nuestra web\n\n⏰ Horarios: Lunes a viernes 10:00-13:30 y 16:00-19:30\n\n✅ Cancelaciones con 24h antelación\n💳 Aceptamos efectivo y tarjeta\n\n¿Prefieres algún método en particular? 😊',
   'horario': '⏰ Nuestros horarios son:\n\n📅 LUNES A VIERNES:\n🌅 Mañanas: 10:00 - 13:30\n🌆 Tardes: 16:00 - 19:30\n\n🚫 Sábados y domingos: CERRADO\n\n¿En qué horario te viene mejor para tu cita? 💖',
   'ubicacion': '📍 Nos encontramos en:\n\nC. de la Alegría de la Huerta, 22\nVillaverde, 28041 Madrid\n\n🚇 TRANSPORTE:\n• Metro L3: Villaverde Alto\n• Bus: Líneas 78, 79, 123\n\n¡Es una zona muy accesible! ¿Necesitas más indicaciones para llegar? 😊',
-  'contacto': '📞 CONTACTO:\n\n☎️ Teléfonos: 91 505 20 67 | 684 203 633\n💬 WhatsApp: 684 203 633\n📧 Email: celucylar@gmail.com\n\n📱 REDES SOCIALES:\n• Facebook: @CBLUCYLARA\n• Instagram: @esteticalucylara\n\n¿Por cuál prefieres contactarnos? ✨',
-  'precios': '💰 Los precios varían según:\n\n🎯 Tipo de tratamiento\n📏 Zona a tratar\n🔢 Número de sesiones\n🎁 Promociones vigentes\n\n📞 Para información detallada: 91 505 20 67\n💬 WhatsApp: 684 203 633\n\n¡También tenemos promociones y paquetes especiales! 💖✨',
+  'contacto': '📞 CONTACTO:\n\n☎️ Teléfonos: 91 505 20 67 | 684203633\n💬 WhatsApp: 684203633\n📧 Email: celucylar@gmail.com\n\n📱 REDES SOCIALES:\n• Facebook: @CBLUCYLARA\n• Instagram: @esteticalucylara\n\n¿Por cuál prefieres contactarnos? ✨',
+  'precios': '💰 Los precios varían según:\n\n🎯 Tipo de tratamiento\n📏 Zona a tratar\n🔢 Número de sesiones\n🎁 Promociones vigentes\n\n📞 Para información detallada: 91 505 20 67\n💬 WhatsApp: 684203633\n\n¡También tenemos promociones y paquetes especiales! 💖✨',
   'acupuntura': '🌿 Ofrecemos ACUPUNTURA (45-60min):\n\n✅ Técnica milenaria\n✅ Alivia dolores\n✅ Reduce estrés y ansiedad\n✅ Mejora circulación\n✅ Equilibrio general\n\nIncluye consulta + tratamiento personalizado. Muy efectiva para el bienestar 🧘‍♀️💖',
   'hidrolinfa': '💧 HIDROLINFA (45-60min):\n\n✅ Drenaje linfático avanzado\n✅ Reduce retención de líquidos\n✅ Mejora circulación\n✅ Piernas más ligeras\n✅ Efecto relajante\n\nIdeal para piernas cansadas y hinchazón. ¿Sufres de retención de líquidos? 💖',
   'pestañas': '👁️✨ LIFTING Y TINTE DE PESTAÑAS (45-60min):\n\n✅ Curvado permanente\n✅ Tinte del color que elijas\n✅ Sin necesidad de rímel\n✅ Dura 6-8 semanas\n✅ Mirada más expresiva\n\n¡Despierta con pestañas perfectas! 💖 ¿Te interesa? 😊',

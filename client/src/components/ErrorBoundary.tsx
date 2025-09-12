@@ -128,7 +128,7 @@ class ErrorBoundary extends Component<Props, State> {
                     className="inline-flex items-center gap-1 text-primary hover:text-primary/80 transition-colors"
                   >
                     <Phone className="w-4 h-4" />
-                    <span className="text-sm font-medium">684 203 633</span>
+                    <span className="text-sm font-medium">684203633</span>
                   </a>
                 </div>
               </div>

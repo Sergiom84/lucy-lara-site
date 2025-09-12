@@ -259,7 +259,7 @@ const Booking = () => {
                     91 505 20 67
                   </a>
                   <a href="tel:684203633" className="text-primary font-bold hover:underline">
-                    684 203 633
+                    684203633
                   </a>
                 </div>
               </div>
@@ -548,7 +548,7 @@ const Booking = () => {
                         </a>
                         <br />
                         <a href="tel:684203633" className="text-textLight hover:text-accent transition-colors">
-                          684 203 633
+                          684203633
                         </a>
                       </div>
                     </div>

@@ -42,7 +42,7 @@ const Header = () => {
       <div className="bg-[#f8e3cf] text-[#333] py-2 flex justify-center items-center gap-8 sticky top-0 z-50">
         <div className="flex items-center text-sm">
           <Phone className="h-4 w-4 mr-1 text-[#8b2154]" /> 
-          <span>91 505 20 67 | 684 203 633</span>
+          <span>91 505 20 67 | 684203633</span>
         </div>
         <div className="flex items-center text-sm">
           <Mail className="h-4 w-4 mr-1 text-[#8b2154]" /> 

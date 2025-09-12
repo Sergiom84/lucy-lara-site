@@ -169,7 +169,7 @@ class EmailService {
                 <p style="margin: 0;">
                   📍 Centro de Estética Lucy Lara<br>
                   C. de la Alegría de la Huerta, 22, Villaverde, 28041 Madrid<br>
-                  📞 91 505 20 67 | 684 203 633
+                  📞 91 505 20 67 | 684203633
                 </p>
               </div>
             </div>
@@ -256,7 +256,7 @@ class EmailService {
                     📞 91 505 20 67
                   </a>
                   <a href="tel:684203633" style="background-color: #25d366; color: white; padding: 12px 20px; text-decoration: none; border-radius: 25px; font-weight: bold; margin: 5px; display: inline-block;">
-                    📱 684 203 633
+                    📱 684203633
                   </a>
                 </div>
               </div>
