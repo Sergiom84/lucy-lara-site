@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { trackEvent } from "@/lib/analytics";
 
 const WhatsAppButton = () => {
-  const whatsappNumber = "34684202633";
+  const whatsappNumber = "34684203633";
   
   // Handle click event for analytics tracking
   const handleClick = () => {
