@@ -18,7 +18,7 @@ const envSchema = z.object({
   SALON_EMAIL: z.string().email('Invalid salon email').default('celucylar@gmail.com'),
   
   // External APIs
-  DEEPSEEK_API_KEY: z.string().optional(),
+  OPENAI_API_KEY: z.string().optional(),
   
   // Security
   SESSION_SECRET: z.string().min(32, 'Session secret must be at least 32 characters').optional(),
@@ -123,7 +123,7 @@ export function getEnvironmentStatus() {
     port: env.PORT,
     databaseConnected: !!env.DATABASE_URL,
     emailConfigured: emailConfig.enabled,
-    deepseekAvailable: !!env.DEEPSEEK_API_KEY,
+    openaiAvailable: !!env.OPENAI_API_KEY,
     securityEnabled: isProduction,
     timestamp: new Date().toISOString(),
   };

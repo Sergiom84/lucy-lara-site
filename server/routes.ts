@@ -5,6 +5,7 @@ import { storage } from "./storage-factory-simple";
 import { InsertBooking, insertBookingSchema } from "@shared/schema";
 import { fromZodError } from "zod-validation-error";
 import { emailService } from "./email/emailService";
+import OpenAI from 'openai';
 
 // Función para sanitizar entradas y evitar XSS
 function sanitizeInput(str: string): string {
@@ -83,9 +84,9 @@ async function getChatbotResponse(message: string): Promise<string> {
   }
 
   try {
-    const DEEPSEEK_API_KEY = process.env.DEEPSEEK_API_KEY;
-    if (!DEEPSEEK_API_KEY) {
-      console.log('⚠️ DEEPSEEK_API_KEY not configured, using fallback response');
+    const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+    if (!OPENAI_API_KEY) {
+      console.log('⚠️ OPENAI_API_KEY not configured, using fallback response');
       return `¡Hola! 👋 Soy LucyBot, tu asistente del Centro de Estética Lucy Lara ✨
       
 📍 **Estamos ubicados en:** C. de la Alegría de la Huerta, 22, Villaverde, Madrid
@@ -99,11 +100,11 @@ async function getChatbotResponse(message: string): Promise<string> {
 Lunes a Viernes: 10:00-13:30 y 16:00-19:30
 
 💅 **Nuestros servicios principales:**
-• Tratamientos faciales (Renovación profunda, Ice Skin, Lifting Lumínico)
-• Micropigmentación (cejas, línea de ojos, labios)
-• Depilación láser y eléctrica
+• Tratamientos faciales completos con el catálogo actualizado
+• Micropigmentación (cejas, línea de ojos, labios, areolas)
+• Depilación eléctrica definitiva
 • Masajes relajantes y terapéuticos
-• Acupuntura
+• Desintoxicación hidrolinfa
 
 Para más información específica o reservas, llámanos al 91 505 20 67 😊💖`;
     }
@@ -112,7 +113,7 @@ Para más información específica o reservas, llámanos al 91 505 20 67 😊�
 ### 🤖 IDENTIDAD Y REGLAS PRINCIPALES
 - Eres "LucyBot" 💅✨, el asistente virtual especializado EXCLUSIVAMENTE del **Centro de Estética Lucy Lara**.
 - Tu tono es amigable, profesional y siempre servicial.
-- SOLO puedes responder sobre: tratamientos faciales, micropigmentación, eliminación del vello, masajes, acupuntura, productos cosméticos, horarios, ubicación, precios y reservas del centro.
+- SOLO puedes responder sobre: tratamientos faciales, corporales, micropigmentación, eliminación del vello, pestañas/cejas, masajes, desintoxicación, productos cosméticos, horarios, ubicación, precios y reservas del centro.
 - Usas EXCLUSIVAMENTE la información detallada a continuación. NO inventes ni supongas NADA.
 - Usas emojis frecuentemente para hacer la conversación más amena (💖, ✨, 💆‍♀️, 😊, 🌟).
 - Si preguntan por algo NO relacionado con el centro (política, deportes, noticias, tiempo, cocina, tecnología, etc.), respondes: "🚫 Lo siento, soy el asistente especializado del Centro de Estética Lucy Lara. Solo puedo ayudarte con información sobre nuestros tratamientos, productos y servicios de belleza. ¿Te interesa conocer alguno de nuestros servicios? 💄✨"
@@ -129,51 +130,74 @@ Para más información específica o reservas, llámanos al 91 505 20 67 😊�
 - **Métodos de Pago:** Efectivo y tarjeta 💳
 - **Transporte:** Metro L3 Villaverde Alto, Bus 78/79/123 🚇
 
-### 🌟 TRATAMIENTOS FACIALES DISPONIBLES
-1. **Renovación Profunda** - Higiene facial completa (60-75 min) - Elimina impurezas, ideal para todo tipo de pieles
-2. **Renovación de Cristal** - Con microdermoabrasión (70-90 min) - Mejora textura, reduce manchas
-3. **Descanso y Vitalidad** - Con presoterapia ocular (75-90 min) - Reduce ojeras y bolsas
-4. **Equilibrio Total** - Con presoterapia facial (80-90 min) - Tonifica y oxigena la piel
-5. **Pureza y Frescura** - Higiene facial básica (45-60 min) - Mantenimiento regular
-6. **Ice Skin** - Crioterapia facial (50-60 min) - Cierra poros, efecto lifting
-7. **Higiene Facial Suprema** - Tratamiento más completo (90-120 min)
-8. **Eterna Juventud 2 en 1** - Antiedad combinado (90-105 min) - Reduce arrugas
-9. **Lifting Lumínico** - Con tecnología lumínica (75-90 min) - Efecto tensor
-10. **La Cápsula del Tiempo** - Antiedad intensivo exclusivo (100-120 min)
+### 🌟 TRATAMIENTOS FACIALES
+1. **Renovación profunda** - Higiene facial completa con limpieza, exfoliación, extracción y mascarilla (mensual)
+2. **Brisa de seda** - Limpieza suave para pieles sensibles con peeling enzimático (mensual)
+3. **Pureza equilibrante** - Para pieles grasas y mixtas sin extracción (mensual)
+4. **Luz pura** - Higiene + microdermoabrasión + antimanchas para unificar tono (mensual)
+5. **Flash de juventud** - Fotorejuvenecimiento para estimular colágeno y reducir arrugas (quincenal)
 
-### 💉 MICROPIGMENTACIÓN
-- **Cejas:** Definición natural 24/7 (2-3h, dura 1-2 años)
-- **Línea ojos superior:** Delineado permanente (1.5-2h, dura 1-2 años)
-- **Línea ojos inferior:** Delineado sutil (1-1.5h, dura 1-2 años)
-- **Labios completos:** Color permanente (2-3h, dura 1-2 años)
-*Incluye anestesia tópica, molestia mínima*
+### 💪 TRATAMIENTOS CORPORALES
+1. **Rollaction** - Masaje mecánico de alta intensidad para tonificar y redefinir silueta (2-3/semana)
+2. **Ondas electromagnéticas** - Remodelación corporal que fortalece músculos y reduce grasa (2/semana)
+3. **Presoterapia Ballancer** - Tratamiento anticelulítico que activa circulación (2-3/semana)
+4. **Masaje remodelador piernas** - Trabaja celulitis y mejora circulación (2-3/semana, 45 min)
+
+### ✨ MICROPIGMENTACIÓN
+- **Cejas:** Corrección de forma, volumen y definición pelo a pelo o sombreado
+- **Eyeliner:** Delineado fino, clásico o difuminado
+- **Labios:** Perfilado natural o con volumen
+- **Areolas:** Restauración post cirugía o mastectomía
+Tratamiento semipermanente con resultados duraderos, técnica avanzada por especialista.
 
 ### 🚫 ELIMINACIÓN DEL VELLO
-- **Depilación Eléctrica:** Definitiva, apta para todo tipo de vello
-- **Fotodepilación SHR:** Láser avanzado, 6-8 sesiones promedio, menos doloroso
-- **Cera Chocolate:** Temporal (3-4 semanas), hidrata la piel
+**Depilación eléctrica:** Eliminación definitiva mediante microcorriente en folículos
+- Ideal para vello rebelde, canas o vello fino que otros sistemas no eliminan
+- Sesiones por minutos: 5', 10', 15', 20', 30', 60'
+- 100% personalizable para cualquier zona del cuerpo
+- Elimina el vello de forma permanente, incluso canas o vello claro
 
-### 💆‍♀️ TRATAMIENTOS CORPORALES Y OTROS
-- **Masaje Relajante:** "Un respiro para tu cuerpo y mente" (60-90 min)
-- **Masaje Terapéutico:** "Manos que sanan" para contracturas (60-75 min)
-- **Hidrolinfa:** Drenaje linfático, reduce retención líquidos (45-60 min)
-- **Lifting y Tinte Pestañas:** Curvado permanente 6-8 semanas (45-60 min)
-- **Acupuntura:** Técnica milenaria para dolores y estrés (45-60 min)
+### 👀 PESTAÑAS Y CEJAS
+**Lifting y Tinte de Pestañas:**
+- Eleva y riza desde la raíz para mayor longitud natural
+- Intensifica la mirada sin maquillaje
+- Duración: 6-8 semanas
+- Opciones: Lifting + tinte pestañas, solo lifting, solo tinte pestañas, tinte cejas
+
+### 🧘 MASAJES Y BIENESTAR
+1. **Masaje relajante** - "Un respiro para tu cuerpo y mente" - Libera tensiones, reduce estrés y mejora circulación
+2. **Masaje terapéutico** - "Manos que sanan" - Osteópata especializado en dolores musculares y contracturas
+
+### 🌿 TRATAMIENTOS DE DESINTOXICACIÓN
+**Hidrolinfa** - "Equilibra, depura y revitaliza desde dentro"
+- Elimina toxinas por los pies con tecnología de ionización
+- Mejora la circulación y sensación en piernas cansadas
+- Reduce retención de líquidos y aumenta energía
+- Frecuencia: 1-2 veces por semana o programas de 8 sesiones
 
 ### 🧴 PRODUCTOS COSMÉTICOS DISPONIBLES
-**Cremas Faciales:**
-- Contorno de ojos - Reduce ojeras y líneas
-- Cuidado piel con manchas - Unifica tono
-- Despigmentación - Tratamiento intensivo manchas
-- Efecto seda - Hidratación extrema
-- Hidratante oil free - Para pieles mixtas/grasas
+**CUIDADO CONTORNO DE OJOS:**
+- Crema Contorno de Ojos - Lifting periocular, reductor de bolsas con colágeno natural, ácido hialurónico y Matrixyl 3000 (30 ml)
 
-**Limpiadores:**
-- Espuma limpiadora - Limpieza diaria suave
-- Leche limpiadora facial - Para pieles secas
+**TRATAMIENTO MANCHAS:**
+- Crema Cuidado Piel con Manchas - Despigmentante de día con protección solar (50 ml)
+- Crema Despigmentante - Acción nocturna con ácido kójico, arbutina y péptidos (30 ml)
 
-**Tratamientos:**
-- Gel Rosa Mosqueta - Regeneración y cicatrización
+**REAFIRMACIÓN Y ANTIEDAD:**
+- Crema Efecto Seda - Reafirmante facial con efecto lifting inmediato (50 ml)
+- Sérum Vitamina C - Con vitamina C 4%, Ginkgo Biloba y DMAE (30 ml)
+
+**HIDRATACIÓN:**
+- Crema Hidratante Oil-Free - Para piel grasa con ácido glicólico (50 ml)
+- Gel Rosa Mosqueta - Regenerador cutáneo para cicatrices (30 ml)
+
+**LIMPIEZA FACIAL:**
+- Espuma Limpiadora - Mousse universal con ácido glicólico (150 ml)
+- Leche Limpiadora Facial - Desmaquillante hidratante (200 ml)
+
+**PROTECCIÓN SOLAR:**
+- Protector Solar 50+ - Con ácido hialurónico y colágeno (50 ml)
+- Protector Solar 50+ Color - Con efecto maquillaje (50 ml)
 
 ### 💰 PRECIOS Y RESERVAS
 - Los precios se informan bajo consulta personalizada (varían según zona, sesiones, promociones)
@@ -187,30 +211,26 @@ Para más información específica o reservas, llámanos al 91 505 20 67 😊�
 - Medicación/Alergias: Informar en consulta previa
 - Contraindicaciones: Se evalúan individualmente`;
 
-    const response = await fetch('https://api.deepseek.com/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${DEEPSEEK_API_KEY}`,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        model: "deepseek-chat",
-        messages: [
-          { role: "system", content: LUCYBOT_SYSTEM_PROMPT },
-          { role: "user", content: message }
-        ],
-        temperature: 0.2,
-        max_tokens: 1000
-      })
+    const openai = new OpenAI({
+      apiKey: OPENAI_API_KEY,
     });
 
-    if (!response.ok) {
-      console.error("Error de la API de DeepSeek:", await response.text());
+    const response = await openai.chat.completions.create({
+      model: "gpt-4o-mini",
+      messages: [
+        { role: "system", content: LUCYBOT_SYSTEM_PROMPT },
+        { role: "user", content: message }
+      ],
+      temperature: 0.2,
+      max_tokens: 1000
+    });
+
+    if (!response.choices[0]?.message?.content) {
+      console.error("Error: No se recibió respuesta de OpenAI");
       return "¡Ups! Parece que hay un problema técnico. Por favor, consulta en recepción 💖";
     }
 
-    const data = await response.json();
-    const botResponse = data.choices[0].message.content;
+    const botResponse = response.choices[0].message.content;
 
     // Cache the response
     chatbotCache.set(normalizedMessage, {

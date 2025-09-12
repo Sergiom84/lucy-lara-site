@@ -131,8 +131,8 @@ export const getBotResponse = (message: string): string => {
   return '🤔 No estoy seguro de cómo ayudarte con eso. Recuerda que solo puedo informarte sobre el Centro de Estética Lucy Lara: tratamientos faciales, micropigmentación, eliminación del vello, masajes, productos y reservas 💖 ¿Hay algún servicio específico que te interese? ✨';
 };
 
-// Integración con DeepSeek para respuestas inteligentes
-export const getDeepSeekResponse = async (message: string): Promise<string> => {
+// Integración con OpenAI para respuestas inteligentes
+export const getOpenAIResponse = async (message: string): Promise<string> => {
   try {
     const response = await fetch('/api/chatbot', {
       method: 'POST',
@@ -149,8 +149,11 @@ export const getDeepSeekResponse = async (message: string): Promise<string> => {
     const data = await response.json();
     return data.response;
   } catch (error) {
-    console.error('Error calling DeepSeek API:', error);
+    console.error('Error calling OpenAI API:', error);
     // Fallback to local responses
     return getBotResponse(message);
   }
 };
+
+// Mantenemos compatibilidad con el nombre anterior por si acaso
+export const getDeepSeekResponse = getOpenAIResponse;

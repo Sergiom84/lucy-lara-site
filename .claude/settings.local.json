@@ -12,7 +12,9 @@
       "Bash(taskkill:*)",
       "Bash(netstat:*)",
       "Bash(findstr:*)",
-      "Bash(lsof:*)"
+      "Bash(lsof:*)",
+      "Bash(dir)",
+      "Bash(git reset:*)"
     ],
     "deny": [],
     "ask": []
