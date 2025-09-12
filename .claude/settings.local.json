@@ -14,7 +14,10 @@
       "Bash(findstr:*)",
       "Bash(lsof:*)",
       "Bash(dir)",
-      "Bash(git reset:*)"
+      "Bash(git reset:*)",
+      "Bash(xargs kill:*)",
+      "Bash(PORT=5001 npm run dev:server)",
+      "Bash(PORT=5002 npm run dev:server)"
     ],
     "deny": [],
     "ask": []
