@@ -611,7 +611,7 @@ const Booking = () => {
                   Contáctanos directamente por WhatsApp para una respuesta más rápida.
                 </p>
                 <a 
-                  href="https://wa.me/34684203633" 
+                  href="https://wa.me/34684203633?text=Hola!%20Me%20gustar%C3%ADa%20información%20sobre%20los%20tratamientos%20del%20Centro%20de%20Estética%20Lucy%20Lara" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-white text-green-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"

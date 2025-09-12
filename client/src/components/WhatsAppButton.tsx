@@ -3,6 +3,7 @@ import { trackEvent } from "@/lib/analytics";
 
 const WhatsAppButton = () => {
   const whatsappNumber = "34684203633";
+  const whatsappMessage = encodeURIComponent("Hola! Me gustaría información sobre los tratamientos del Centro de Estética Lucy Lara");
   
   // Handle click event for analytics tracking
   const handleClick = () => {
@@ -11,7 +12,9 @@ const WhatsAppButton = () => {
 
   return (
     <motion.a 
-      href={`https://wa.me/${whatsappNumber}`}
+      href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+      target="_blank"
+      rel="noopener noreferrer"
       className="fixed bottom-8 right-8 w-16 h-16 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-colors z-20"
       onClick={handleClick}
       initial={{ scale: 0, opacity: 0 }}
