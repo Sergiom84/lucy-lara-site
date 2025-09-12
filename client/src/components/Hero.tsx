@@ -55,7 +55,7 @@ const Hero = () => {
   };
   
   return (
-    <section id="inicio" className="relative h-[85vh] min-h-[650px] overflow-hidden bg-gray-800 -mt-[6.5rem]">
+    <section id="inicio" className="relative h-[100vh] min-h-[500px] sm:h-[85vh] sm:min-h-[650px] overflow-hidden bg-gray-800 -mt-[5rem] sm:-mt-[6.5rem]">
       {/* Precarga de imágenes - invisible pero ayuda a evitar destellos */}
       <div className="hidden">
         {carouselImages.map((src, i) => (
@@ -78,20 +78,20 @@ const Hero = () => {
             <img 
               src={src}
               alt={`Slide ${index + 1}`}
-              className="absolute inset-0 w-full h-full object-cover object-center"
+              className="absolute inset-0 w-full h-full object-cover object-center sm:object-center"
               style={{
-                filter: 'brightness(0.85)',
+                filter: 'brightness(0.8) saturate(1.1)',
               }}
             />
             {/* Overlay para mejorar la visibilidad del texto y crear gradiente superior */}
-            <div className="absolute inset-0 bg-gradient-to-b from-[#3a3a3a]/90 to-transparent h-64" />
-            <div className="absolute inset-0 bg-black opacity-20" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#3a3a3a]/95 via-transparent to-black/20 h-full sm:h-64" />
+            <div className="absolute inset-0 bg-black opacity-30 sm:opacity-20" />
           </div>
         ))}
       </div>
       
       {/* Contenido del slider */}
-      <div className="relative z-20 container mx-auto px-4 h-full flex flex-col items-center justify-center text-center mt-16">
+      <div className="relative z-20 container mx-auto px-4 h-full flex flex-col items-center justify-center text-center mt-8 sm:mt-16">
         <motion.div 
           className="max-w-4xl mx-auto"
           initial={{ opacity: 0 }}
@@ -99,34 +99,34 @@ const Hero = () => {
           transition={{ duration: 1 }}
         >
           <motion.h1 
-            className="text-4xl md:text-5xl lg:text-6xl font-playfair font-light text-white mb-6"
+            className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-playfair font-light text-white mb-4 sm:mb-6 px-4"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             Centro de Estética Lucy Lara
           </motion.h1>
-          <div className="h-[1px] bg-white/60 w-full my-6"></div>
-          <p className="text-xl md:text-2xl text-white uppercase tracking-wider font-light mb-8">
+          <div className="h-[1px] bg-white/60 w-3/4 sm:w-full my-4 sm:my-6 mx-auto"></div>
+          <p className="text-lg sm:text-xl md:text-2xl text-white uppercase tracking-wider font-light mb-6 sm:mb-8 px-4">
             Relájate y renueva tu belleza
           </p>
         </motion.div>
         
         <motion.div 
-          className="flex flex-col sm:flex-row gap-4 mt-8"
+          className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-8 px-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <a 
             href="#servicios" 
-            className="bg-[#8b2154] hover:bg-[#7a1c49] text-white px-8 py-3 rounded-none text-lg transition-colors"
+            className="bg-[#8b2154] hover:bg-[#7a1c49] text-white px-6 sm:px-8 py-3 rounded-none text-base sm:text-lg transition-colors w-full sm:w-auto text-center"
           >
             Nuestros servicios
           </a>
           <a 
             href="#booking" 
-            className="bg-transparent border border-white hover:bg-white/10 text-white px-8 py-3 rounded-none text-lg transition-colors"
+            className="bg-transparent border border-white hover:bg-white/10 text-white px-6 sm:px-8 py-3 rounded-none text-base sm:text-lg transition-colors w-full sm:w-auto text-center"
           >
             Solicitar información
           </a>
@@ -134,12 +134,12 @@ const Hero = () => {
       </div>
       
       {/* Indicadores (puntos) */}
-      <div className="absolute bottom-10 left-0 right-0 flex justify-center space-x-3 z-20">
+      <div className="absolute bottom-6 sm:bottom-10 left-0 right-0 flex justify-center space-x-3 z-20">
         {carouselImages.map((_, i) => (
           <button 
             key={i} 
             onClick={() => goToSlide(i)}
-            className={`w-2 h-2 rounded-full ${i === currentSlide ? 'bg-white' : 'bg-white/40'}`}
+            className={`w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full transition-colors ${i === currentSlide ? 'bg-white' : 'bg-white/40'}`}
             aria-label={`Diapositiva ${i + 1}`}
           />
         ))}

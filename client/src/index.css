@@ -176,5 +176,38 @@ html {
 
 /* Offset for fixed header when using anchor links */
 section[id] {
-  scroll-margin-top: 6rem; /* Ajustado para el header sticky */
+  scroll-margin-top: 5rem; /* Mobile first */
+}
+
+@media (min-width: 640px) {
+  section[id] {
+    scroll-margin-top: 6rem; /* Desktop */
+  }
+}
+
+/* Mobile-specific fixes */
+@media (max-width: 767px) {
+  /* Ensure mobile viewport is handled correctly */
+  html, body {
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Fix font sizes on mobile */
+  .font-playfair {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  
+  /* Improve touch targets */
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Fix modal and dropdown z-index on mobile */
+  .modal, .dropdown {
+    position: fixed;
+    z-index: 9999;
+  }
 }

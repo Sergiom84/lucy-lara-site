@@ -39,38 +39,40 @@ const Header = () => {
   return (
     <>
       {/* Promo Bar with contact info */}
-      <div className="bg-[#f8e3cf] text-[#333] py-2 flex justify-center items-center gap-8 sticky top-0 z-50">
-        <div className="flex items-center text-sm">
-          <Phone className="h-4 w-4 mr-1 text-[#8b2154]" /> 
-          <span>91 505 20 67 | 684203633</span>
-        </div>
-        <div className="flex items-center text-sm">
-          <Mail className="h-4 w-4 mr-1 text-[#8b2154]" /> 
-          <span>centrodebelleza@centroesteticalucylara.es</span>
-        </div>
-        <div className="flex items-center space-x-3">
-          <a 
-            href="https://www.facebook.com/CBLUCYLARA/" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-700 hover:text-[#8b2154]"
-          >
-            <Facebook className="h-5 w-5" />
-          </a>
-          <a 
-            href="https://www.instagram.com/esteticalucylara/?hl=es" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-700 hover:text-[#8b2154]"
-          >
-            <Instagram className="h-5 w-5" />
-          </a>
+      <div className="bg-[#f8e3cf] text-[#333] py-2 px-4 sticky top-0 z-50">
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-8 text-xs sm:text-sm">
+          <div className="flex items-center">
+            <Phone className="h-3 w-3 sm:h-4 sm:w-4 mr-1 text-[#8b2154]" /> 
+            <span className="whitespace-nowrap">91 505 20 67 | 684203633</span>
+          </div>
+          <div className="hidden sm:flex items-center">
+            <Mail className="h-4 w-4 mr-1 text-[#8b2154]" /> 
+            <span className="truncate max-w-[200px] md:max-w-none">centrodebelleza@centroesteticalucylara.es</span>
+          </div>
+          <div className="flex items-center space-x-3">
+            <a 
+              href="https://www.facebook.com/CBLUCYLARA/" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-700 hover:text-[#8b2154] transition-colors"
+            >
+              <Facebook className="h-4 w-4 sm:h-5 sm:w-5" />
+            </a>
+            <a 
+              href="https://www.instagram.com/esteticalucylara/?hl=es" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-700 hover:text-[#8b2154] transition-colors"
+            >
+              <Instagram className="h-4 w-4 sm:h-5 sm:w-5" />
+            </a>
+          </div>
         </div>
       </div>
       
       {/* Main Header - More Translucent */}
-      <header className={`sticky top-[2.5rem] z-50 bg-[#3a3a3a]/35 backdrop-blur-[1px] text-white transition-all duration-300 ${scrolled ? "shadow-md" : ""}`}>
-        <div className="container mx-auto px-4 py-2 flex justify-between items-center">
+      <header className={`sticky top-[2rem] sm:top-[2.5rem] z-50 bg-[#3a3a3a]/35 backdrop-blur-[1px] text-white transition-all duration-300 ${scrolled ? "shadow-md" : ""}`}>
+        <div className="container mx-auto px-4 py-2 flex justify-between items-center min-h-[3rem]">
           {/* Logo Image - Using transparent logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
@@ -78,7 +80,7 @@ const Header = () => {
                 <OptimizedImage
                   src={logoFigura} 
                   alt="Logo Lucy Lara" 
-                  className="h-12 w-auto"
+                  className="h-10 w-auto sm:h-12"
                   priority={true}
                   width={48}
                   height={48}
@@ -89,29 +91,27 @@ const Header = () => {
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center">
-            <div className="flex space-x-6 items-center">
+            <div className="flex space-x-4 lg:space-x-6 items-center">
               {navLinks.map((link, index) => (
                 <a 
                   key={index}
                   href={link.href} 
-                  className={`text-white hover:text-[#8b2154] transition-colors relative py-2 px-1 uppercase text-sm tracking-wide
+                  className={`text-white hover:text-[#8b2154] transition-colors relative py-2 px-1 uppercase text-xs lg:text-sm tracking-wide whitespace-nowrap
                     ${location === link.href ? "border-b border-[#8b2154]" : ""}`}
                 >
                   {link.label}
                 </a>
               ))}
-
-              
-
             </div>
           </nav>
           
           {/* Mobile Navigation Button */}
           <button 
-            className="md:hidden text-white focus:outline-none" 
+            className="md:hidden text-white focus:outline-none p-2 rounded-md hover:bg-white/10 transition-colors" 
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle mobile menu"
           >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
         
@@ -119,18 +119,18 @@ const Header = () => {
         <AnimatePresence>
           {mobileMenuOpen && (
             <motion.div 
-              className="md:hidden bg-[#3a3a3a]/35 backdrop-blur-[1px] absolute w-full shadow-md z-20"
+              className="md:hidden bg-[#3a3a3a]/95 backdrop-blur-sm absolute w-full shadow-lg z-20 border-t border-white/10"
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="container mx-auto px-4 py-3 flex flex-col space-y-3">
+              <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
                 {navLinks.map((link, index) => (
                   <motion.a 
                     key={index}
                     href={link.href}
-                    className="text-white hover:text-[#8b2154] py-2 transition-colors uppercase text-sm tracking-wide"
+                    className="text-white hover:text-[#8b2154] py-3 px-2 transition-colors uppercase text-sm tracking-wide border-b border-white/10 last:border-b-0"
                     onClick={handleLinkClick}
                     initial={{ x: -20, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
@@ -139,7 +139,6 @@ const Header = () => {
                     {link.label}
                   </motion.a>
                 ))}
-
               </div>
             </motion.div>
           )}

@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="bg-textDark text-white py-12">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-8">
           {/* Centro Info */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -16,8 +16,8 @@ const Footer = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold text-accent mb-4">Centro de Estética Lucy Lara</h3>
-            <p className="text-gray-400 mb-6 leading-relaxed">
+            <h3 className="text-xl sm:text-2xl font-bold text-accent mb-4">Centro de Estética Lucy Lara</h3>
+            <p className="text-gray-400 mb-6 leading-relaxed text-sm sm:text-base">
               Tu centro de belleza y bienestar donde cuidamos de ti con los tratamientos más avanzados y personalizados.
             </p>
             
@@ -53,29 +53,29 @@ const Footer = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-xl font-semibold text-accent mb-4">Contacto</h3>
+            <h3 className="text-lg sm:text-xl font-semibold text-accent mb-4">Contacto</h3>
             <div className="space-y-3 text-gray-400">
               <div className="flex items-start gap-3">
-                <MapPin size={16} className="mt-1 text-accent" />
-                <span className="text-sm leading-relaxed">
+                <MapPin size={16} className="mt-1 text-accent flex-shrink-0" />
+                <span className="text-xs sm:text-sm leading-relaxed">
                   Calle Alegría de la Huerta 22, 28041 - Madrid
                 </span>
               </div>
               <div className="flex items-start gap-3">
-                <Phone size={16} className="mt-1 text-accent" />
-                <span className="text-sm leading-relaxed">
+                <Phone size={16} className="mt-1 text-accent flex-shrink-0" />
+                <span className="text-xs sm:text-sm leading-relaxed">
                   91 505 20 67 | 684203633
                 </span>
               </div>
               <div className="flex items-start gap-3">
-                <Mail size={16} className="mt-1 text-accent" />
-                <span className="text-sm leading-relaxed">
+                <Mail size={16} className="mt-1 text-accent flex-shrink-0" />
+                <span className="text-xs sm:text-sm leading-relaxed break-all sm:break-normal">
                   centrodebelleza@centroesteticalucylara.es
                 </span>
               </div>
               <div className="flex items-start gap-3">
-                <Clock size={16} className="mt-1 text-accent" />
-                <span className="text-sm leading-relaxed">
+                <Clock size={16} className="mt-1 text-accent flex-shrink-0" />
+                <span className="text-xs sm:text-sm leading-relaxed">
                   Lunes a viernes: 10:00 - 13:30<br />
                   16:00 - 19:30
                 </span>
@@ -86,18 +86,18 @@ const Footer = () => {
 
         {/* Footer Bottom */}
         <div className="border-t border-gray-700 pt-6">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-accent text-sm mb-4 md:mb-0">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-accent text-xs sm:text-sm text-center md:text-left">
               © {new Date().getFullYear()} Centro de Estética Lucy Lara. Todos los derechos reservados.
             </p>
-            <div className="flex space-x-6">
-              <a href="#" className="text-gray-400 hover:text-accent text-sm transition-colors">
+            <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-6 items-center">
+              <a href="#" className="text-gray-400 hover:text-accent text-xs sm:text-sm transition-colors">
                 Política de Privacidad
               </a>
-              <a href="#" className="text-gray-400 hover:text-accent text-sm transition-colors">
+              <a href="#" className="text-gray-400 hover:text-accent text-xs sm:text-sm transition-colors">
                 Términos y Condiciones
               </a>
-              <a href="#" className="text-gray-400 hover:text-accent text-sm transition-colors">
+              <a href="#" className="text-gray-400 hover:text-accent text-xs sm:text-sm transition-colors">
                 Cookies
               </a>
             </div>
