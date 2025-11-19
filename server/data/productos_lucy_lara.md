@@ -15,7 +15,7 @@
 ## 🌟 TRATAMIENTOS FACIALES
 
 ### Renovación Profunda - Higiene Facial Completa
-- **Precio:** 61,00€
+- **Precio:** 65,00€
 - **Descripción:** Tratamiento de limpieza profunda que hidrata, revitaliza y equilibra la piel
 - **Pasos:** Limpieza de la piel junto con su tonificación, exfoliación mecánica, extracción de comedones para una oxigenación y limpieza de la piel, masaje relajante junto con una mascarilla acorde de las necesidades de la piel y acabamos el tratamiento con una crema finalizadora
 - **Frecuencia:** 1 vez al mes
@@ -59,7 +59,7 @@
 - **Frecuencia:** 1 vez al mes
 
 ### Calma Profunda - Higiene Facial Completa
-- **Precio:** 61,00€
+- **Precio:** 65,00€
 - **Descripción:** Un tratamiento de limpieza profunda adaptado a pieles sensibles
 - **Pasos:** Limpieza de la piel junto con su tonificación, peeling enzimático, extracción cuidadosa para liberar los poros, seguido de un masaje relajante junto con una mascarilla calmante y finalizamos el tratamiento con una crema refrescante y reparadora que calma, reduce las rojeces y fortalece la barrera cutánea
 - **Frecuencia:** 1 vez al mes
@@ -137,7 +137,7 @@
 - **Frecuencia:** 1 vez al mes
 
 ### Eterna Juventud 2 en 1
-- **Precio:** 89,00€
+- **Precio:** 99,00€
 - **Descripción:** Higiene facial + rejuvenecimiento en un solo tratamiento. Combina extracción con activos de alta concentración y tecnología avanzada para reafirmar y alisar la piel. Ideal para quienes buscan resultados sin perder tiempo. Efecto flash inmediato y beneficios a largo plazo
 - **Frecuencia:** 1 sesión personalizada
 
@@ -152,7 +152,7 @@
 - **Frecuencia:** 1 o 2 sesiones a la semana
 
 ### Oxigenación Profunda - Higiene Facial con Extracción
-- **Precio:** 61,00€
+- **Precio:** 65,00€
 - **Descripción:** Limpieza y oxigenación para pieles maduras. Elimina impurezas, revitaliza e hidrata. Estimula la regeneración celular. Ideal para preparar la piel para tratamientos posteriores
 - **Frecuencia:** 1 sesión al mes
 

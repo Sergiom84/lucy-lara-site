@@ -57,7 +57,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
   {
     id: 2,
     nombre: "Calma profunda - higiene facial completa",
-    precio: "61,00€",
+    precio: "65,00€",
     duracion: "60 min",
     frecuencia: "1 vez al mes",
     descripcion: "Un tratamiento de limpieza profunda adaptado a pieles sensibles.",
@@ -121,7 +121,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
   {
     id: 6,
     nombre: "Eterna Juventud 2 en 1",
-    precio: "89,00€",
+    precio: "99,00€",
     duracion: "75 min",
     frecuencia: "1 sesión personalizada",
     descripcion: "Higiene facial + rejuvenecimiento en un solo tratamiento.",
@@ -297,7 +297,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
   {
     id: 17,
     nombre: "Oxigenación profunda - higiene facial completa con extracción",
-    precio: "61,00€",
+    precio: "65,00€",
     duracion: "60 min",
     frecuencia: "1 sesión al mes",
     descripcion: "Limpieza y oxigenación para pieles maduras.",
@@ -362,7 +362,7 @@ const tratamientosFaciales: TratamientoFacial[] = [
   {
     id: 21,
     nombre: "Renovación profunda - higiene facial completa",
-    precio: "61,00€",
+    precio: "65,00€",
     duracion: "60 min",
     frecuencia: "1 vez al mes",
     descripcion: "Tratamiento completo de limpieza profunda con extracción de impurezas.",
