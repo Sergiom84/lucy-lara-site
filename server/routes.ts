@@ -6,7 +6,13 @@ import { InsertBooking, insertBookingSchema } from "@shared/schema";
 import { fromZodError } from "zod-validation-error";
 import { emailService } from "./email/emailService";
 import OpenAI from 'openai';
-import { buildKnowledgeContext, searchChatbotKnowledge } from "./chatbot/knowledge";
+import {
+  buildKnowledgeContext,
+  buildTreatmentOverviewContext,
+  fetchTreatmentOverview,
+  isTreatmentOverviewQuery,
+  searchChatbotKnowledge,
+} from "./chatbot/knowledge";
 
 // Función para sanitizar entradas y evitar XSS
 function sanitizeInput(str: string): string {
@@ -93,12 +99,32 @@ async function getChatbotResponse(message: string): Promise<string> {
     
     const parsedMaxResults = Number(process.env.CHATBOT_KNOWLEDGE_MAX_RESULTS || "8");
     const maxResults = Number.isFinite(parsedMaxResults) && parsedMaxResults > 0 ? parsedMaxResults : 8;
-    const knowledgeItems = await searchChatbotKnowledge(message, maxResults);
-    if (knowledgeItems.length === 0) {
-      return "No encontré esa información en la base de datos actual del centro. Si quieres, te ayudo a reformular la consulta.";
+    const parsedOverviewLimit = Number(process.env.CHATBOT_TREATMENT_OVERVIEW_PER_CATEGORY || "2");
+    const overviewLimit =
+      Number.isFinite(parsedOverviewLimit) && parsedOverviewLimit > 0
+        ? Math.min(parsedOverviewLimit, 5)
+        : 2;
+
+    let knowledgeContext: string;
+    if (isTreatmentOverviewQuery(message)) {
+      const treatmentOverview = await fetchTreatmentOverview(overviewLimit);
+      if (treatmentOverview.length > 0) {
+        knowledgeContext = buildTreatmentOverviewContext(treatmentOverview);
+      } else {
+        const fallbackItems = await searchChatbotKnowledge(message, maxResults);
+        if (fallbackItems.length === 0) {
+          return "No encontré esa información en la base de datos actual del centro. Si quieres, te ayudo a reformular la consulta.";
+        }
+        knowledgeContext = buildKnowledgeContext(fallbackItems, message);
+      }
+    } else {
+      const knowledgeItems = await searchChatbotKnowledge(message, maxResults);
+      if (knowledgeItems.length === 0) {
+        return "No encontré esa información en la base de datos actual del centro. Si quieres, te ayudo a reformular la consulta.";
+      }
+      knowledgeContext = buildKnowledgeContext(knowledgeItems, message);
     }
 
-    const knowledgeContext = buildKnowledgeContext(knowledgeItems);
     const LUCYBOT_SYSTEM_PROMPT = `
 ### IDENTIDAD
 Eres LucyBot, asistente del Centro de Estética Lucy Lara.
@@ -108,14 +134,18 @@ Responde EXCLUSIVAMENTE con información del bloque \"CONTEXTO_SUPABASE\".
 No uses memoria previa, no uses información externa y no inventes datos.
 
 ### COMPORTAMIENTO
+- Responde exactamente lo que se pregunta y evita información no solicitada.
 - Si faltan datos exactos en el contexto, dilo claramente.
 - Si hay varias coincidencias, enuméralas y pide confirmar cuál desea.
-- Responde en español, claro y breve.
-- Longitud objetivo: entre 1 y 3 frases y entre 40 y 90 palabras.
-- Si la consulta es de lista/comparación, usa como máximo 3 bullets.
+- Si la pregunta es binaria (sí/no) y el contexto lo permite, empieza por "Sí" o "No".
+- Si la pregunta incluye varios datos (ej: dirección y horario), responde todos en el mismo mensaje.
+- Responde en español claro y breve.
+- Longitud objetivo: entre 1 y 3 frases y entre 25 y 80 palabras.
+- Si la consulta es de lista/comparación, usa como máximo 6 bullets.
 - Incluye siempre el dato clave solicitado (por ejemplo precio, frecuencia o duración) cuando esté disponible.
-- No añadas introducciones innecesarias ni cierres largos.
-- Si la pregunta no está relacionada con productos o tratamientos del centro, responde que solo puedes ayudar con información del centro.
+- No añadas introducciones ni cierres innecesarios.
+- Solo puedes responder información del centro que exista en el contexto: tratamientos, productos, precios, duración, frecuencia, dirección, horarios, contacto y métodos de pago.
+- Si el dato no aparece en el contexto, indícalo y pide una reformulación breve.
 
 ### CONTEXTO_SUPABASE
 ${knowledgeContext}
