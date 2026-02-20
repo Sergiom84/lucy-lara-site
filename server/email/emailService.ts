@@ -20,12 +20,14 @@ class EmailService {
   private transporter: nodemailer.Transporter | null = null;
   private config: EmailConfig;
   private salonEmail: string;
+  private isConfigured: boolean;
 
   constructor() {
     this.salonEmail = process.env.SALON_EMAIL || 'celucylar@gmail.com';
     
     const gmailUser = process.env.GMAIL_USER || 'celucylar@gmail.com';
     const gmailPass = process.env.GMAIL_PASS || '';
+    this.isConfigured = Boolean(gmailUser && gmailPass);
 
     this.config = {
       service: 'gmail',
@@ -44,6 +46,13 @@ class EmailService {
     console.log('🔑 Gmail Pass configured:', this.config.auth.pass ? 'SÍ (length: ' + this.config.auth.pass.length + ')' : 'NO');
     console.log('⚙️ Service:', this.config.service);
     console.log('📍 Salon Email:', this.salonEmail);
+
+    if (!this.isConfigured) {
+      console.warn('⚠️ Email desactivado: faltan credenciales GMAIL_USER/GMAIL_PASS');
+      console.log('================================================================\n');
+      this.transporter = null;
+      return;
+    }
     
     try {
       this.transporter = nodemailer.createTransport(this.config);
@@ -386,7 +395,7 @@ class EmailService {
   }
 
   public async verifyConnection(): Promise<boolean> {
-    if (!this.transporter) {
+    if (!this.transporter || !this.isConfigured) {
       return false;
     }
 
