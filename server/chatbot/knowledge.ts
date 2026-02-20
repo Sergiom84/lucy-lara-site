@@ -185,7 +185,12 @@ export function isTreatmentOverviewQuery(queryText: string): boolean {
     q.includes("tratamiento") ||
     q.includes("tratamientos") ||
     q.includes("servicio") ||
-    q.includes("servicios");
+    q.includes("servicios") ||
+    q.includes("haceis") ||
+    q.includes("ofreceis") ||
+    q.includes("teneis") ||
+    q.includes("carta") ||
+    q.includes("menu");
 
   const asksList =
     q.includes("que ") ||
@@ -193,7 +198,9 @@ export function isTreatmentOverviewQuery(queryText: string): boolean {
     q.includes("dispon") ||
     q.includes("teneis") ||
     q.includes("ofreceis") ||
-    q.includes("lista");
+    q.includes("haceis") ||
+    q.includes("lista") ||
+    q.includes("hay");
 
   const isSpecific =
     q.includes("precio") ||
@@ -219,17 +226,20 @@ export function buildTreatmentOverviewContext(items: TreatmentOverviewItem[]): s
     grouped.get(item.category)!.push(item);
   }
 
-  const lines: string[] = [];
+  const lines: string[] = [
+    "CATEGORÍAS DE TRATAMIENTOS DISPONIBLES (resumen para orientar al cliente):",
+  ];
   grouped.forEach((categoryItems, category) => {
-    lines.push(`${category}:`);
-    for (const item of categoryItems) {
-      const parts = [`- ${item.name}`];
-      if (item.price_text) parts.push(`precio ${item.price_text}`);
-      if (item.frequency) parts.push(`frecuencia ${item.frequency}`);
-      if (item.duration) parts.push(`duración ${item.duration}`);
-      lines.push(parts.join(" | "));
-    }
+    const priceRange = categoryItems
+      .map((i) => i.price_text)
+      .filter(Boolean);
+    const priceHint = priceRange.length > 0 ? ` (desde ${priceRange[0]})` : "";
+    lines.push(`- ${category}: ${categoryItems.length} opciones${priceHint}`);
   });
+  lines.push("");
+  lines.push(
+    "INSTRUCCIÓN: NO listes todos los tratamientos. Menciona solo las categorías y pregunta al cliente cuál le interesa para darle detalle.",
+  );
 
   return lines.join("\n");
 }
