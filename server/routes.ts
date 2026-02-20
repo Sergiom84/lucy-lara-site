@@ -111,6 +111,10 @@ No uses memoria previa, no uses información externa y no inventes datos.
 - Si faltan datos exactos en el contexto, dilo claramente.
 - Si hay varias coincidencias, enuméralas y pide confirmar cuál desea.
 - Responde en español, claro y breve.
+- Longitud objetivo: entre 1 y 3 frases y entre 40 y 90 palabras.
+- Si la consulta es de lista/comparación, usa como máximo 3 bullets.
+- Incluye siempre el dato clave solicitado (por ejemplo precio, frecuencia o duración) cuando esté disponible.
+- No añadas introducciones innecesarias ni cierres largos.
 - Si la pregunta no está relacionada con productos o tratamientos del centro, responde que solo puedes ayudar con información del centro.
 
 ### CONTEXTO_SUPABASE
@@ -128,7 +132,7 @@ ${knowledgeContext}
         { role: "user", content: message }
       ],
       temperature: 0.2,
-      max_tokens: 1000
+      max_tokens: 220
     });
 
     if (!response.choices[0]?.message?.content) {
