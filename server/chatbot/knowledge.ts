@@ -26,7 +26,7 @@ const DEFAULT_MAX_RESULTS = 8;
 
 function getSupabaseConfig() {
   const url = process.env.SUPABASE_URL?.replace(/\/$/, "");
-  const key = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_ANON_KEY;
+  const key = process.env.SUPABASE_ANON_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
   return { url, key };
 }
 
@@ -181,18 +181,27 @@ export async function fetchTreatmentOverview(maxPerCategory = 2): Promise<Treatm
 
 export function isTreatmentOverviewQuery(queryText: string): boolean {
   const q = normalizeText(queryText);
-  const asksAboutTreatments =
+  const asksAboutProducts = q.includes("producto") || q.includes("productos");
+
+  const mentionsTreatmentArea =
     q.includes("tratamiento") ||
     q.includes("tratamientos") ||
     q.includes("servicio") ||
     q.includes("servicios") ||
-    q.includes("haceis") ||
-    q.includes("ofreceis") ||
-    q.includes("teneis") ||
+    q.includes("facial") ||
+    q.includes("faciales") ||
+    q.includes("faciles") ||
+    q.includes("corporal") ||
+    q.includes("corporales") ||
+    q.includes("masaje") ||
+    q.includes("masajes") ||
+    q.includes("laser") ||
+    q.includes("depil") ||
+    q.includes("micropigment") ||
     q.includes("carta") ||
     q.includes("menu");
 
-  const asksList =
+  const asksListOrOffer =
     q.includes("que ") ||
     q.includes("cuales") ||
     q.includes("dispon") ||
@@ -202,15 +211,19 @@ export function isTreatmentOverviewQuery(queryText: string): boolean {
     q.includes("lista") ||
     q.includes("hay");
 
+  const asksAboutTreatments = mentionsTreatmentArea || asksListOrOffer;
+
   const isSpecific =
     q.includes("precio") ||
     q.includes("cuanto") ||
+    q.includes("incluye") ||
+    q.includes("que lleva") ||
     q.includes("duracion") ||
     q.includes("frecuencia") ||
     q.includes("horario") ||
     q.includes("direccion");
 
-  return asksAboutTreatments && asksList && !isSpecific;
+  return asksAboutTreatments && asksListOrOffer && !asksAboutProducts && !isSpecific;
 }
 
 export function buildTreatmentOverviewContext(items: TreatmentOverviewItem[]): string {
